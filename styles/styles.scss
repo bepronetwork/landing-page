@@ -427,6 +427,12 @@ p {
 .bg-blue {
   background-color: $blue;
 }
+.bg-white {
+  background-color: $white;
+}
+.bg-gray {
+  background-color: $gray;
+}
 
 .color-blue {
   color: $blue;
@@ -436,6 +442,12 @@ p {
 }
 .color-purple {
   color: $purple;
+}
+.color-white {
+  color: $white;
+  a, a:visited, a:focus {
+    color: $white;
+  }
 }
 
 .circle-1 {
@@ -524,6 +536,17 @@ p {
     flex-direction: column;
     justify-content: center;
   }
+
+  @media (max-width: 900px) {
+    flex-direction: column !important;
+    &.reverse {
+      flex-direction: column;
+    }
+    .col-content {
+      width: 100%;
+      min-height: auto;
+    }
+  }
 }
 
 .landing-hero {
@@ -535,14 +558,15 @@ p {
   }
   .slides {
     position: absolute;
-    bottom: 0px;
+    width: 100%;
+    bottom: $m;
     overflow: hidden;
   }
 }
 
 @keyframes scroll1 {
 	0% { transform: translateX(0); }
-	50% { transform: translateX(-1250px)}
+	50% { transform: translateX(calc(-2700px + 100vw))}
   100% { transform: translateX(0)}
 }
 @keyframes scroll2 {
@@ -558,7 +582,7 @@ p {
   background-image: url('../assets/projs-1.png');
   background-repeat: no-repeat;
   background-size: cover;
-  animation: scroll1 60s ease-in-out infinite;
+  animation: scroll1 60s linear infinite;
 }
 .slide-2 {
   display: block;
@@ -567,5 +591,104 @@ p {
   background-image: url('../assets/projs-2.png');
   background-repeat: no-repeat;
   background-size: cover;
-  animation: scroll2 60s ease-in-out infinite;
+  animation: scroll2 60s linear infinite;
+}
+
+.logos-container {
+  display: flex;
+  flex-wrap: wrap;
+  .logo-wrap {
+    display: flex;
+    justify-content: center;
+    width: 33%;
+    height: 300px;
+    align-items: center;
+    border-right: 1px solid rgba($black, 0.5);
+    border-bottom: 1px solid rgba($black, 0.5);
+  }
+}
+
+.footer-container {
+  display: flex;
+  width: 100%;;
+  flex-wrap: wrap;
+  .footer-wrap {
+    padding: $m*2;
+    flex-direction: column;
+    width: 33%;
+    min-height: 300px;
+    align-items: left;
+    border-right: 1px solid rgba($white, 0.2);
+    border-bottom: 1px solid rgba($white, 0.2);
+  }
+}
+
+.backed-logos {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.logo1 {
+  width: 209.45px;
+  height: 48px;
+  background-image: url('../assets/logo1.png');
+}
+.logo2 {
+  width: 160.78px;
+  height: 64px;
+  background-image: url('../assets/logo2.png');
+}
+.logo3 {
+  width: 231.27px;
+  height: 64px;
+  background-image: url('../assets/logo3.png');
+}
+.logo4 {
+  width: 261px;
+  height: 54px;
+  background-image: url('../assets/logo4.png');
+}
+.logo5 {
+  width: 184.06px;
+  height: 42px;
+  background-image: url('../assets/logo5.png');
+}
+.logo6 {
+  width: 184.74px;
+  height: 52px;
+  background-image: url('../assets/logo6.png');
+}
+.logo7 {
+  width: 139.49px;
+  height: 64px;
+  background-image: url('../assets/logo7.png');
+}
+.logo8 {
+  width: 157.83px;
+  height: 48px;
+  background-image: url('../assets/logo8.png');
+}
+
+.docsImg {
+  width: 500px;
+  height: 320px;
+  background-image: url('../assets/bepro-docs.jpg');
+  background-size: cover;
+  border-radius: 8px;
+  box-shadow: 1px 3px 8px rgba($black, 0.2);
+  margin: $m*4 0px;
+}
+
+.community {
+  min-height: 600px;
+}
+
+.bepro-logo {
+  display: inline-block;
+  width: 174px;
+  height: 54.04px;
+  background-image: url('../assets/bepro-logo.png');
+  background-size: cover;
+  margin-bottom: $m;
 }
