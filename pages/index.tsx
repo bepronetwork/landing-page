@@ -25,7 +25,16 @@ export default function Home() {
         </div>
 
         <div className="landing-hero bg-blue">
-          <h1 className="h1 color-white">Use bepro.network to do merges</h1>
+          <div className="rotator-wrapper">
+            <h1 className="h2 color-white">Use bepro.network to&nbsp;
+              <span className="rotator">
+                <span>resolve disputes</span>
+                <span>do merges</span>
+                <span>do settlements</span>
+                <span>propose bounties</span>
+              </span>
+            </h1>
+          </div>
           <div className="slides">
             <div className="slide-1"></div>
             <div className="slide-2"></div>

@@ -553,15 +553,13 @@ p {
   position: relative;
   min-height: 80vh;
   text-align: center;
-  h1 {
-    padding-top: $m*6;
-  }
+  padding-top: $m*6;
   .slides {
-    position: absolute;
-    width: 100%;
-    bottom: $m;
-    overflow: hidden;
-  }
+      position: absolute;
+      width: 100%;
+      bottom: $m;
+      overflow: hidden;
+    }
 }
 
 @keyframes scroll1 {
@@ -600,11 +598,19 @@ p {
   .logo-wrap {
     display: flex;
     justify-content: center;
-    width: 33%;
+    width: 33.3%;
     height: 300px;
     align-items: center;
     border-right: 1px solid rgba($black, 0.5);
     border-bottom: 1px solid rgba($black, 0.5);
+  }
+  @media (max-width: 900px) {
+    flex-direction: column !important;
+    width: 100%;
+    .logo-wrap {
+      width: 100%;
+      height: auto;
+    }
   }
 }
 
@@ -615,7 +621,7 @@ p {
   .footer-wrap {
     padding: $m*2;
     flex-direction: column;
-    width: 33%;
+    width: 33.3%;
     min-height: 300px;
     align-items: left;
     border-right: 1px solid rgba($white, 0.2);
@@ -691,4 +697,63 @@ p {
   background-image: url('../assets/bepro-logo.png');
   background-size: cover;
   margin-bottom: $m;
+}
+
+
+/* Hero text rotator
+*/
+.rotator-wrapper {
+  position: relative;
+}
+.rotator-wrapper span {
+  display: inline-block;
+  min-width: 260px;
+  text-align: left;
+}
+.rotator-wrapper span span {
+  position: absolute;
+  top: -0px;
+  opacity: 0;
+  animation: rotateWord 18s linear infinite 0s;
+  color: $white;
+  // border-bottom: 4px solid $white;
+}
+.rotator-wrapper span span:nth-child(2) {
+  animation-delay: 3s;
+}
+.rotator-wrapper span span:nth-child(3) {
+  animation-delay: 6s;
+}
+.rotator-wrapper span span:nth-child(4) {
+  animation-delay: 9s;
+}
+.rotator-wrapper span span:nth-child(5) {
+  animation-delay: 12s;
+}
+@keyframes rotateWord {
+  0% {
+    opacity: 0;
+  }
+  2% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  5% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  15% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  20% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
