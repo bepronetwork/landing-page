@@ -24,6 +24,9 @@ body {
   font-family: 'fontBold', sans-serif;
   font-size: 54px;
   line-height: 120%;
+  @media (max-width: 900px) {
+    font-size: 28px;
+  }
 }
 .h2 {
   font-family: 'fontBold', sans-serif;
@@ -62,11 +65,15 @@ body {
 p {
   font-size: 16px;
   line-height: 160%;
+  @media (max-width: 900px) {
+    font-size: 14px;
+    line-height: 140%;
+  }
 }
 
 .p-small {
   font-size: 14px;
-  line-height: 160%;
+  line-height: 140%;
 }
 
 .text-bold {
@@ -450,6 +457,10 @@ p {
   }
 }
 
+.strong {
+  font-weight: bold;
+}
+
 .circle-1 {
   width: 64px;
   height: 64px;
@@ -545,8 +556,13 @@ p {
     .col-content {
       width: 100%;
       min-height: auto;
+      padding: $m*4 $m*2;
     }
   }
+}
+
+.hero {
+  padding: $m*4 0px;
 }
 
 .landing-hero {
@@ -605,11 +621,13 @@ p {
     border-bottom: 1px solid rgba($black, 0.5);
   }
   @media (max-width: 900px) {
-    flex-direction: column !important;
     width: 100%;
     .logo-wrap {
-      width: 100%;
-      height: auto;
+      width: 50%;
+      height: 200px;
+      .backed-logos {
+        transform: scale(0.6);
+      }
     }
   }
 }
@@ -626,6 +644,29 @@ p {
     align-items: left;
     border-right: 1px solid rgba($white, 0.2);
     border-bottom: 1px solid rgba($white, 0.2);
+  }
+  ul {
+    list-style: none;
+    li {
+      margin: 0px 0px $m/2;
+      padding: 0px;
+      a {
+        color: $gray;
+        text-decoration: none;
+        &:visited, &:active,
+        &:focus {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  @media (max-width: 900px) {
+    width: 100%;
+    .footer-wrap {
+      width: 100%;
+      height: auto;
+
+    }
   }
 }
 
@@ -685,7 +726,12 @@ p {
   box-shadow: 1px 3px 8px rgba($black, 0.2);
   margin: $m*4 0px;
 }
+.bepro-runkit {
+  background-color: $gray-200;
+  width: 80%;
+  height: 280px;
 
+}
 .community {
   min-height: 600px;
 }
@@ -698,6 +744,29 @@ p {
   background-size: cover;
   margin-bottom: $m;
 }
+
+.about-people {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $bg-shadow;
+  border-radius: $m/2;
+  min-height: 120px;
+  padding: $m*3 $m;
+  margin-bottom: $m*2;
+  height: 280px;
+  transition: 0.8 ease-in-out;
+  &:hover {
+    background-color: lighten($bg-shadow, 5);
+  }
+  .avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
+    margin-bottom: $m;
+  }
+}
+
 
 
 /* Hero text rotator
@@ -712,11 +781,12 @@ p {
 }
 .rotator-wrapper span span {
   position: absolute;
+  display: inline-block;
   top: -0px;
   opacity: 0;
-  animation: rotateWord 18s linear infinite 0s;
+  animation: rotateWord 12s linear infinite 0s;
   color: $white;
-  // border-bottom: 4px solid $white;
+  width: auto;
 }
 .rotator-wrapper span span:nth-child(2) {
   animation-delay: 3s;
@@ -749,6 +819,7 @@ p {
   20% {
     opacity: 0;
     transform: translateY(30px);
+    border-bottom: 4px solid transparent;
   }
   80% {
     opacity: 0;
