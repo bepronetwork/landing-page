@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next'
 import React from 'react'
 import Footer from '../components/footer'
-
+import Embed from 'react-runkit'
 
 export default function Home() {
 
@@ -142,10 +142,27 @@ export default function Home() {
         <div className="d-flex align-items-center justify-content-between cols bg-white">
           <div className="col-content">
             <div className="d-flex align-items-center justify-content-center">
-              <span className="bepro-runkit">Bepro-js runkit</span>
+              <div className="bepro-runkit">
+                <Embed source={`
+const {StakingContract} = require("bepro-js");
+
+/* Create Instance */
+let staking = new StakingContract({tokenAddress : "0x7a7748bd6f9bac76c2f3fcb29723227e3376cbb2", opt : {web3Connection : 'https://kovan.infura.io/v3' } });
+
+/* Login with Metamask/Web3 Wallet */
+await staking.login();
+
+/* Deploy Staking Contract */
+let res = await staking.deploy();
+
+/* Access methods easily */
+let availableTokens = await staking.availableTokens();
+                `} />
+              </div>
+
             </div>
           </div>
-          <div className="col-content bg-gray">
+          <div className="col-content bg-gray my-runkit">
             <p className="smallCaption color-white">Documentation</p>
             <h4 className="h4 color-white">Build the future on BEPRO</h4>
             <p className="p color-white">Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>

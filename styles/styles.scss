@@ -200,6 +200,9 @@ p {
     padding: 0px;
     list-style: none;
     margin-left: $m * 2;
+    @media (max-width: 900px) {
+      margin-left: 0px;
+    }
     li {
       margin-left: $m;
     }
@@ -250,6 +253,7 @@ p {
 
     }
   }
+
 }
 
 .subnav-item {
@@ -546,6 +550,9 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    &.my-runkit {
+      min-height: 640px;
+    }
   }
 
   @media (max-width: 900px) {
@@ -571,11 +578,16 @@ p {
   text-align: center;
   padding-top: $m*6;
   .slides {
-      position: absolute;
-      width: 100%;
-      bottom: $m;
-      overflow: hidden;
+    position: absolute;
+    width: 100%;
+    bottom: $m;
+    overflow: hidden;
+  }
+  @media (max-width: 900px) {
+    .h2 {
+      font-size: 28px;
     }
+  }
 }
 
 @keyframes scroll1 {
@@ -585,7 +597,17 @@ p {
 }
 @keyframes scroll2 {
 	0% { transform: translateX(0); }
-	50% { transform: translateX(calc(-1540px))}
+	50% { transform: translateX(calc(-3080px + 100vw))}
+  100% { transform: translateX(calc(0))}
+}
+@keyframes scroll1-mobile {
+	0% { transform: translateX(0); }
+	50% { transform: translateX(calc(-1350px + 100vw))}
+  100% { transform: translateX(0)}
+}
+@keyframes scroll2-mobile {
+	0% { transform: translateX(0); }
+	50% { transform: translateX(calc(-1540px + 100vw))}
   100% { transform: translateX(calc(0))}
 }
 
@@ -596,7 +618,12 @@ p {
   background-image: url('../assets/projs-1.png');
   background-repeat: no-repeat;
   background-size: cover;
-  animation: scroll1 60s linear infinite;
+  animation: scroll1 80s linear infinite;
+  @media (max-width: 900px) {
+    animation: scroll1-mobile 40s linear infinite;
+    width: 1350px;
+    height: 70px;
+  }
 }
 .slide-2 {
   display: block;
@@ -605,7 +632,12 @@ p {
   background-image: url('../assets/projs-2.png');
   background-repeat: no-repeat;
   background-size: cover;
-  animation: scroll2 60s linear infinite;
+  animation: scroll2 80s linear infinite;
+  @media (max-width: 900px) {
+    animation: scroll2-mobile 40s linear infinite;
+    width: 1540px;
+    height: 70px;
+  }
 }
 
 .logos-container {
@@ -728,10 +760,11 @@ p {
 }
 .bepro-runkit {
   background-color: $gray-200;
-  width: 80%;
-  height: 280px;
+  width: 100%;
+  height: auto;
 
 }
+
 .community {
   min-height: 600px;
 }
@@ -776,17 +809,27 @@ p {
 }
 .rotator-wrapper span {
   display: inline-block;
-  min-width: 260px;
+  width: 260px;
   text-align: left;
+  @media (max-width: 900px) {
+    display: block;
+    margin: 0px auto;
+  }
 }
 .rotator-wrapper span span {
   position: absolute;
   display: inline-block;
   top: -0px;
   opacity: 0;
-  animation: rotateWord 12s linear infinite 0s;
+  animation: rotateWord 12s ease-in-out infinite 0s;
   color: $white;
   width: auto;
+  padding-bottom: 4px;
+  @media (max-width: 900px) {
+    top: 36px;
+    width: 260px;
+    text-align: center;
+  }
 }
 .rotator-wrapper span span:nth-child(2) {
   animation-delay: 3s;
@@ -819,7 +862,7 @@ p {
   20% {
     opacity: 0;
     transform: translateY(30px);
-    border-bottom: 4px solid transparent;
+    border-bottom: 4px solid white;
   }
   80% {
     opacity: 0;
