@@ -1,9 +1,34 @@
 import { GetStaticProps } from 'next'
-import React from 'react'
+import React, { useEffect } from 'react'
 import Footer from '../components/footer'
 import Embed from 'react-runkit'
+import { useState } from 'react';
+import GithubMicroService from '../services/github-microservice';
 
 export default function Home() {
+
+  const [totalDevelopers, setTotalDevelopers] = useState(0);
+  const [openIssues, setOpenIssues] = useState(0);
+  const [beprosStaked, setBeprosStaked] = useState(0);
+  const [tokensStaked, setTokensStaked] = useState(0);
+
+  useEffect(() => {
+    getTotalDevelopers();
+    getNetworkStats();
+  }, []);
+
+  const getTotalDevelopers = async () => {
+    const resp = await GithubMicroService.getTotalDevelopers();
+    setTotalDevelopers(resp.data);
+  }
+
+  const getNetworkStats = async () => {
+    const resp = await GithubMicroService.getNetworkStats();
+
+    setOpenIssues(resp.data?.openIssues);
+    setBeprosStaked(resp.data?.beprosStaked);
+    setTokensStaked(resp.data?.tokensStaked);
+  }
 
   return (
       <>
@@ -62,11 +87,11 @@ export default function Home() {
           <div className="col-content">
             <div className="net-stats d-flex align-items-center justify-content-center">
               <div className="item text-center mr-3">
-                <h3 className="h3 color-white">+30</h3>
+                <h3 className="h3 color-white">+{openIssues}</h3>
                 <p className="p-small">Open issues</p>
               </div>
               <div className="item text-center">
-                <h3 className="h3 color-white">300K</h3>
+                <h3 className="h3 color-white">{tokensStaked}</h3>
                 <p className="p-small">$USD</p>
               </div>
             </div>
@@ -86,7 +111,7 @@ export default function Home() {
                 <p className="p-small">Open issues</p>
               </div>
               <div className="item text-center">
-                <h3 className="h3 color-white">+30</h3>
+                <h3 className="h3 color-white">+{beprosStaked}</h3>
                 <p className="p-small">$BEPRO</p>
               </div>
             </div>
@@ -178,8 +203,8 @@ let availableTokens = await staking.availableTokens();
                 <p className="p-small color-white">Open issues</p>
               </div>
               <div className="item text-center mr-3">
-                <h3 className="h3 color-white">+30</h3>
-                <p className="p-small color-white">$BEPRO</p>
+              <h3 className="h3 color-white">+{totalDevelopers}</h3>
+                <p className="p-small color-white">Developers</p>
               </div>
           <div className="item text-center">
             <h3 className="h3 color-white">+30</h3>
