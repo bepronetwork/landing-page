@@ -102,6 +102,10 @@ p {
   text-transform: uppercase;
   padding-left: $m;
   padding-right: $m;
+  min-width: 90px;
+  @media (max-width: 900px) {
+    min-width: auto;
+  }
 }
 
 .btn-lg {
@@ -429,6 +433,9 @@ p {
 .bg-shadow {
   background-color: $bg-shadow;
 }
+.bg-dark-gray {
+  background-color: $dark-gray;
+}
 .bg-opac {
   background-color: rgba($white, 0.1);
 }
@@ -443,6 +450,20 @@ p {
 }
 .bg-gray {
   background-color: $gray;
+}
+
+.bg-security {
+  background-image: url('../assets/security.png');
+  background-repeat: no-repeat;
+  background-size: 360px;
+  background-position: 20% center;
+  @media (max-width: 900px) {
+    background-position: -80px center;
+  }
+}
+.security-labels {
+  position: absolute;
+  bottom: $m;
 }
 
 .color-blue {
@@ -574,7 +595,7 @@ p {
 
 .landing-hero {
   position: relative;
-  min-height: 80vh;
+  min-height: 600px;
   text-align: center;
   padding-top: $m*6;
   .slides {
@@ -584,6 +605,7 @@ p {
     overflow: hidden;
   }
   @media (max-width: 900px) {
+    min-height: 420px;
     .h2 {
       font-size: 28px;
     }
@@ -644,6 +666,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   .logo-wrap {
+    position: relative;
     display: flex;
     justify-content: center;
     width: 33.3%;
@@ -748,6 +771,16 @@ p {
   height: 48px;
   background-image: url('../assets/logo8.png');
 }
+.logo-red4sec {
+  width: 134px;
+  height: 66px;
+  background-image: url('../assets/red4sec.png');
+}
+.logo-certik {
+  width: 218px;
+  height: 53px;
+  background-image: url('../assets/certik.png');
+}
 
 .docsImg {
   width: 500px;
@@ -776,6 +809,14 @@ p {
   background-image: url('../assets/bepro-logo.png');
   background-size: cover;
   margin-bottom: $m;
+}
+
+.bepro-logo-white {
+  display: inline-block;
+  width: 103.4px;
+  height: 32px;
+  background-image: url('../assets/bepro-logo-white.png');
+  background-size: cover;
 }
 
 .about-people {
