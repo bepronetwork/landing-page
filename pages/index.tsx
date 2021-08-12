@@ -34,12 +34,8 @@ export default function Home() {
       <>
         <div className="main-nav d-flex align-items-center justify-content-between">
           <div className="d-flex">
-            <a href="/">
-              <img
-                className="logo"
-                src="https://64.media.tumblr.com/3cf2d2b58643cb6f46b42a652771b73b/e8afc16b16e16514-bc/s250x400/191e77982d8901585030f596d3e90935d42099ed.png"
-                alt=""
-              />
+            <a href="/" className="logo">
+              <span className="bepro-logo-white"></span>
             </a>
             <ul className="nav-links">
               <li><a href="https://docs.bepro.network/">Docs</a></li>
@@ -52,6 +48,7 @@ export default function Home() {
         </div>
 
         <div className="landing-hero bg-blue">
+            <p className="smallCaption">Decentralized Development at Scale</p>
           <div className="rotator-wrapper">
             <h1 className="h2 color-white">Use bepro.network to&nbsp;
               <span className="rotator">
@@ -119,7 +116,7 @@ export default function Home() {
         </div>
 
         <div className="d-flex align-items-center justify-content-between flex-column pt-5">
-          <h1 className="h1 color-white">Backed by</h1>
+          <h1 className="h1 color-white pb-5">Backed by</h1>
           <div className="logos-container">
 
             <div className="logo-wrap">
@@ -150,6 +147,25 @@ export default function Home() {
           </div>
         </div>
 
+        <div className="d-flex align-items-center justify-content-between flex-column text-center pt-5 bg-dark-gray">
+          <p className="smallCaption color-gray">Audited and approved</p>
+          <h1 className="h1 color-white pb-5">A secure protocol for money</h1>
+          <div className="logos-container w-100">
+            <div className="logo-wrap w-50">
+              <span className="backed-logos logo-certik"></span>
+              <p className="smallCaption color-gray security-labels">Security audit</p>
+            </div>
+            <div className="logo-wrap w-50">
+              <span className="backed-logos logo-red4sec"></span>
+              <p className="smallCaption color-gray security-labels">Security audit</p>
+            </div>
+            <div className="logo-wrap w-100 text-center flex-column bg-security">
+              <h1 className="h1 color-white">$150,000</h1>
+              <p className="smallCaption color-gray">Bug bounty</p>
+            </div>
+          </div>
+        </div>
+
         <div className="d-flex align-items-center justify-content-between cols bg-white">
           <div className="col-content">
             <p className="smallCaption color-blue">Documentation</p>
@@ -164,7 +180,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="d-flex align-items-center justify-content-between cols bg-white">
+      <div className="d-flex align-items-center justify-content-between cols bg-white overflow-hidden">
           <div className="col-content">
             <div className="d-flex align-items-center justify-content-center">
               <div className="bepro-runkit">
