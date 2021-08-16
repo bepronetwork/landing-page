@@ -850,12 +850,12 @@ p {
 }
 .rotator-wrapper span {
   display: inline-block;
-  width: 260px;
+  width: 180px;
   text-align: left;
-  @media (max-width: 900px) {
-    display: block;
-    margin: 0px auto;
-  }
+  // @media (max-width: 900px) {
+  //   display: block;
+  //   margin: 0px auto;
+  // }
 }
 .rotator-wrapper span span {
   position: absolute;
@@ -865,12 +865,12 @@ p {
   animation: rotateWord 12s ease-in-out infinite 0s;
   color: $white;
   width: auto;
-  padding-bottom: 4px;
-  @media (max-width: 900px) {
-    top: 36px;
-    width: 260px;
-    text-align: center;
-  }
+  padding-bottom: 2px;
+  // @media (max-width: 900px) {
+  //   top: 24px;
+  //   width: 180px;
+  //   text-align: center;
+  // }
 }
 .rotator-wrapper span span:nth-child(2) {
   animation-delay: 3s;
@@ -903,7 +903,7 @@ p {
   20% {
     opacity: 0;
     transform: translateY(30px);
-    border-bottom: 4px solid white;
+    border-bottom: 2px solid white;
   }
   80% {
     opacity: 0;

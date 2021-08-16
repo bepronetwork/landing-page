@@ -48,16 +48,17 @@ export default function Home() {
         </div>
 
         <div className="landing-hero bg-blue">
-            <p className="smallCaption">Decentralized Development at Scale</p>
+          <h1 className="h2 color-white ml-2 mr-2">Decentralized Development at Scale</h1>
+
           <div className="rotator-wrapper">
-            <h1 className="h2 color-white">Use bepro.network to&nbsp;
+            <p className="color-white">Use bepro.network to&nbsp;
               <span className="rotator">
                 <span>resolve disputes</span>
                 <span>do merges</span>
                 <span>do settlements</span>
                 <span>propose bounties</span>
               </span>
-            </h1>
+            </p>
           </div>
           <div className="slides">
             <div className="slide-1"></div>
