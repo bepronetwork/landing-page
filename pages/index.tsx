@@ -18,16 +18,24 @@ export default function Home() {
   }, []);
 
   const getTotalDevelopers = async () => {
-    const resp = await GithubMicroService.getTotalDevelopers();
-    setTotalDevelopers(resp.data);
+    try {
+      const resp = await GithubMicroService.getTotalDevelopers();
+      setTotalDevelopers(resp.data);
+    } catch (error) {
+      console.log('error:', error);
+    }
   }
 
   const getNetworkStats = async () => {
-    const resp = await GithubMicroService.getNetworkStats();
+    try {
+      const resp = await GithubMicroService.getNetworkStats();
 
-    setOpenIssues(resp.data?.openIssues);
-    setBeprosStaked(resp.data?.beprosStaked);
-    setTokensStaked(resp.data?.tokensStaked);
+      setOpenIssues(resp.data?.openIssues);
+      setBeprosStaked(resp.data?.beprosStaked);
+      setTokensStaked(resp.data?.tokensStaked);
+    } catch (error) {
+      console.log('error:', error);
+    }
   }
 
   return (
