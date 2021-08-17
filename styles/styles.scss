@@ -73,7 +73,13 @@ p {
 
 .p-small {
   font-size: 14px;
-  line-height: 140%;
+}
+.p-big {
+  font-size: 20px;
+  line-height: 160%;
+  @media (max-width: 900px) {
+    font-size: 16px
+  }
 }
 
 .text-bold {
@@ -852,6 +858,9 @@ p {
   display: inline-block;
   width: 180px;
   text-align: left;
+  @media (max-width: 900px) {
+    width: 140px;
+  }
   // @media (max-width: 900px) {
   //   display: block;
   //   margin: 0px auto;

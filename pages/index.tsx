@@ -59,7 +59,7 @@ export default function Home() {
           <h1 className="h2 color-white ml-2 mr-2">Decentralized Development at Scale</h1>
 
           <div className="rotator-wrapper">
-            <p className="color-white">Use bepro.network to&nbsp;
+            <p className="p-big color-white">Use bepro.network to&nbsp;
               <span className="rotator">
                 <span>resolve disputes</span>
                 <span>do merges</span>
@@ -93,11 +93,11 @@ export default function Home() {
           <div className="col-content">
             <div className="net-stats d-flex align-items-center justify-content-center">
               <div className="item text-center mr-3">
-                <h3 className="h3 color-white">+{openIssues}</h3>
+                <h3 className="h1 color-white">+{openIssues}</h3>
                 <p className="p-small">Open issues</p>
               </div>
               <div className="item text-center">
-                <h3 className="h3 color-white">{tokensStaked}</h3>
+                <h3 className="h1 color-white">{tokensStaked}</h3>
                 <p className="p-small">$USD</p>
               </div>
             </div>
@@ -113,11 +113,11 @@ export default function Home() {
           <div className="col-content">
             <div className="net-stats d-flex align-items-center justify-content-center">
               <div className="item text-center mr-3">
-                <h3 className="h3 color-white">+30</h3>
+                <h3 className="h1 color-white">+30</h3>
                 <p className="p-small">Open issues</p>
               </div>
               <div className="item text-center">
-                <h3 className="h3 color-white">+{beprosStaked}</h3>
+                <h3 className="h1 color-white">+{beprosStaked}</h3>
                 <p className="p-small">$BEPRO</p>
               </div>
             </div>
@@ -224,15 +224,15 @@ let availableTokens = await staking.availableTokens();
           <h1 className="h1 color-white mb-5">Join our the development on <a href="#">Github</a></h1>
           <div className="net-stats d-flex align-items-center justify-content-center">
               <div className="item text-center mr-3">
-                <h3 className="h3 color-white">+30</h3>
+                <h3 className="h1 color-white">+30</h3>
                 <p className="p-small color-white">Open issues</p>
               </div>
               <div className="item text-center mr-3">
-              <h3 className="h3 color-white">+{totalDevelopers}</h3>
+              <h3 className="h1 color-white">+{totalDevelopers}</h3>
                 <p className="p-small color-white">Developers</p>
               </div>
           <div className="item text-center">
-            <h3 className="h3 color-white">+30</h3>
+            <h3 className="h1 color-white">+30</h3>
             <p className="p-small color-white">$BEPRO</p>
           </div>
             </div>
