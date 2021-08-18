@@ -8,27 +8,18 @@ import GithubMicroService from '../services/github-microservice';
 export default function Home() {
 
   const [totalDevelopers, setTotalDevelopers] = useState(0);
-  const [openIssues, setOpenIssues] = useState(0);
-  const [beprosStaked, setBeprosStaked] = useState(0);
-  const [tokensStaked, setTokensStaked] = useState(0);
+  const [stats, setStats] = useState({openIssues: 0, beprosStaked: 0, tokensStaked: 0});
+  const appLink = process.env.NEXT_PUBLIC_APP_URL;
 
-  useEffect(() => {
-    getTotalDevelopers();
-    getNetworkStats();
-  }, []);
+  function initialize() {
+    GithubMicroService.getNetworkStats()
+                      .then(r => setStats(r.data));
 
-  const getTotalDevelopers = async () => {
-    const resp = await GithubMicroService.getTotalDevelopers();
-    setTotalDevelopers(resp.data);
+    GithubMicroService.getTotalDevelopers()
+                      .then(r => setTotalDevelopers(r.data));
   }
 
-  const getNetworkStats = async () => {
-    const resp = await GithubMicroService.getNetworkStats();
-
-    setOpenIssues(resp.data?.openIssues);
-    setBeprosStaked(resp.data?.beprosStaked);
-    setTokensStaked(resp.data?.tokensStaked);
-  }
+  useEffect(initialize, [])
 
   return (
       <>
@@ -47,7 +38,7 @@ export default function Home() {
             </ul>
           </div>
           <div className="d-flex flex-row align-items-center">
-            <button className="btn btn-md btn-white">App</button>
+            <a className="btn btn-md btn-white" href={appLink}>App</a>
           </div>
         </div>
 
@@ -86,12 +77,12 @@ export default function Home() {
           </div>
           <div className="col-content">
             <div className="net-stats d-flex align-items-center justify-content-center">
-              <div className="item text-center mr-3">
-                <h3 className="h3 color-white">+{openIssues}</h3>
+              <div className="item text-center mr-3 color-white">
+                <h3 className="h3 color-white">+{stats.openIssues}</h3>
                 <p className="p-small">Open issues</p>
               </div>
               <div className="item text-center">
-                <h3 className="h3 color-white">{tokensStaked}</h3>
+                <h3 className="h3 color-white">{stats.tokensStaked}</h3>
                 <p className="p-small">$USD</p>
               </div>
             </div>
@@ -106,12 +97,12 @@ export default function Home() {
           </div>
           <div className="col-content">
             <div className="net-stats d-flex align-items-center justify-content-center">
-              <div className="item text-center mr-3">
-                <h3 className="h3 color-white">+30</h3>
+              <div className="item text-center mr-3 color-white">
+                <h3 className="h3 color-white">+{stats.openIssues}</h3>
                 <p className="p-small">Open issues</p>
               </div>
               <div className="item text-center">
-                <h3 className="h3 color-white">+{beprosStaked}</h3>
+                <h3 className="h3 color-white">+{stats.beprosStaked}</h3>
                 <p className="p-small">$BEPRO</p>
               </div>
             </div>
@@ -199,15 +190,15 @@ let availableTokens = await staking.availableTokens();
           <h1 className="h1 color-white mb-5">Join our the development on <a href="#">Github</a></h1>
           <div className="net-stats d-flex align-items-center justify-content-center">
               <div className="item text-center mr-3">
-                <h3 className="h3 color-white">+30</h3>
-                <p className="p-small color-white">Open issues</p>
+                <h3 className="h3 color-white">+{stats.openIssues}</h3>
+                <p className="p-small">Open issues</p>
               </div>
               <div className="item text-center mr-3">
               <h3 className="h3 color-white">+{totalDevelopers}</h3>
                 <p className="p-small color-white">Developers</p>
               </div>
           <div className="item text-center">
-            <h3 className="h3 color-white">+30</h3>
+            <h3 className="h3 color-white">+{stats.beprosStaked}</h3>
             <p className="p-small color-white">$BEPRO</p>
           </div>
             </div>
