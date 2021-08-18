@@ -4,7 +4,7 @@ import Footer from '../components/footer'
 
 
 export default function About() {
-
+  const appLink = process.env.NEXT_PUBLIC_APP_URL;
   return (
       <>
         <div className="main-nav d-flex align-items-center justify-content-between">
@@ -22,7 +22,7 @@ export default function About() {
             </ul>
           </div>
           <div className="d-flex flex-row align-items-center">
-            <button className="btn btn-md btn-white">App</button>
+            <a className="btn btn-md btn-white" href={appLink}>App</a>
           </div>
         </div>
 
