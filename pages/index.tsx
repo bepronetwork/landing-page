@@ -51,6 +51,10 @@ export default function Home() {
             </ul>
           </div>
           <div className="d-flex flex-row align-items-center">
+            {/* <ul className="nav-links lang">
+              <li><a href="#">CZ</a></li>
+              <li><a href="#">CH</a></li>
+            </ul> */}
             <button className="btn btn-md btn-white">App</button>
           </div>
         </div>
@@ -180,7 +184,7 @@ export default function Home() {
             <p className="smallCaption color-blue">Documentation</p>
             <h4 className="h4 color-blue">Build the future on BEPRO</h4>
             <p className="p color-blue">Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-            <button className="btn btn-md btn-primary w-25">View docs</button>
+            <a href="https://docs.bepro.network/" className="btn btn-md btn-primary w-25">View docs</a>
           </div>
           <div className="col-content bg-gray">
             <div className="d-flex align-items-center justify-content-center">
@@ -221,7 +225,7 @@ let availableTokens = await staking.availableTokens();
 
         <div className="community d-flex align-items-center justify-content-center text-center flex-column bg-gray">
           <p className="caption color-white trans">Community</p>
-          <h1 className="h1 color-white mb-5">Join our the development on <a href="#">Github</a></h1>
+          <h1 className="h1 color-white mb-5">Join our the development on <a href="https://github.com/bepronetwork">Github</a></h1>
           <div className="net-stats d-flex align-items-center justify-content-center">
               <div className="item text-center mr-3">
                 <h3 className="h1 color-white">+30</h3>

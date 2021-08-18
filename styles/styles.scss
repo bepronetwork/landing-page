@@ -78,7 +78,7 @@ p {
   font-size: 20px;
   line-height: 160%;
   @media (max-width: 900px) {
-    font-size: 16px
+    font-size: 16px;
   }
 }
 
@@ -209,7 +209,7 @@ p {
     margin: 0px;
     padding: 0px;
     list-style: none;
-    margin-left: $m * 2;
+    margin-left: $m*2;
     @media (max-width: 900px) {
       margin-left: 0px;
     }
@@ -232,6 +232,14 @@ p {
         color: $white;
         text-decoration: none;
         border-bottom: 2px solid rgba($white, 0.3);
+      }
+    }
+    &.lang {
+      margin-left: auto;
+      margin-right: $m;
+      li {
+        margin-left: auto;
+        margin-right: $m/2;
       }
     }
   }
@@ -591,6 +599,11 @@ p {
       width: 100%;
       min-height: auto;
       padding: $m*4 $m*2;
+    }
+  }
+  @media (min-width: 1440px) {
+    .col-content {
+      padding: $m*3 10%;
     }
   }
 }

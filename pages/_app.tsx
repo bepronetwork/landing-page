@@ -5,7 +5,13 @@ import Head from 'next/head'
 export default function App({ Component, pageProps }: AppProps) {
   return <>
     <Head>
-      <title>Bepronetwork</title>
+      <title>Bepro.network - Web 3.0 codebase protocol</title>
+      <meta content="Bepro.network - Web 3.0 codebase protocol" property="og:title" />
+      <meta content="Decentralized Development at Scale." name="description" />
+      <meta content="Decentralized Development at Scale." property="og:description" />
+      <meta content="Bepro.network - Web 3.0 codebase protocol" property="twitter:title" />
+      <link href="../assets/favicon.png" rel="shortcut icon" type="image/x-icon" />
+      <link href="../assets/favicon.png" rel="apple-touch-icon" />
       <script src='https://embed.runkit.com'></script>
 
     </Head>
