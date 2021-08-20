@@ -25,12 +25,8 @@ export default function Home() {
       <>
         <div className="main-nav d-flex align-items-center justify-content-between">
           <div className="d-flex">
-            <a href="/">
-              <img
-                className="logo"
-                src="https://64.media.tumblr.com/3cf2d2b58643cb6f46b42a652771b73b/e8afc16b16e16514-bc/s250x400/191e77982d8901585030f596d3e90935d42099ed.png"
-                alt=""
-              />
+            <a href="/" className="logo">
+              <span className="bepro-logo-white"></span>
             </a>
             <ul className="nav-links">
               <li><a href="https://docs.bepro.network/">Docs</a></li>
@@ -43,15 +39,17 @@ export default function Home() {
         </div>
 
         <div className="landing-hero bg-blue">
+          <h1 className="h2 color-white ml-2 mr-2">Decentralized Development at Scale</h1>
+
           <div className="rotator-wrapper">
-            <h1 className="h2 color-white">Use bepro.network to&nbsp;
+            <p className="p-big color-white">Use bepro.network to&nbsp;
               <span className="rotator">
                 <span>resolve disputes</span>
                 <span>do merges</span>
                 <span>do settlements</span>
                 <span>propose bounties</span>
               </span>
-            </h1>
+            </p>
           </div>
           <div className="slides">
             <div className="slide-1"></div>
@@ -77,12 +75,12 @@ export default function Home() {
           </div>
           <div className="col-content">
             <div className="net-stats d-flex align-items-center justify-content-center">
-              <div className="item text-center mr-3 color-white">
-                <h3 className="h3 color-white">+{stats.openIssues}</h3>
+              <div className="item text-center mr-3">
+                <h3 className="h1 color-white">+{stats.openIssues}</h3>
                 <p className="p-small">Open issues</p>
               </div>
               <div className="item text-center">
-                <h3 className="h3 color-white">{stats.tokensStaked}</h3>
+                <h3 className="h1 color-white">{stats.tokensStaked}</h3>
                 <p className="p-small">$USD</p>
               </div>
             </div>
@@ -97,12 +95,12 @@ export default function Home() {
           </div>
           <div className="col-content">
             <div className="net-stats d-flex align-items-center justify-content-center">
-              <div className="item text-center mr-3 color-white">
-                <h3 className="h3 color-white">+{stats.openIssues}</h3>
+              <div className="item text-center mr-3">
+                <h3 className="h1 color-white">+{stats.openIssues}</h3>
                 <p className="p-small">Open issues</p>
               </div>
               <div className="item text-center">
-                <h3 className="h3 color-white">+{stats.beprosStaked}</h3>
+                <h3 className="h1 color-white">+{stats.beprosStaked}</h3>
                 <p className="p-small">$BEPRO</p>
               </div>
             </div>
@@ -110,7 +108,7 @@ export default function Home() {
         </div>
 
         <div className="d-flex align-items-center justify-content-between flex-column pt-5">
-          <h1 className="h1 color-white">Backed by</h1>
+          <h1 className="h1 color-white pb-5">Backed by</h1>
           <div className="logos-container">
 
             <div className="logo-wrap">
@@ -141,12 +139,31 @@ export default function Home() {
           </div>
         </div>
 
+        <div className="d-flex align-items-center justify-content-between flex-column text-center pt-5 bg-dark-gray">
+          <p className="smallCaption color-gray">Audited and approved</p>
+          <h1 className="h1 color-white pb-5">A secure protocol for money</h1>
+          <div className="logos-container w-100">
+            <div className="logo-wrap w-50">
+              <span className="backed-logos logo-certik"></span>
+              <p className="smallCaption color-gray security-labels">Security audit</p>
+            </div>
+            <div className="logo-wrap w-50">
+              <span className="backed-logos logo-red4sec"></span>
+              <p className="smallCaption color-gray security-labels">Security audit</p>
+            </div>
+            <div className="logo-wrap w-100 text-center flex-column bg-security">
+              <h1 className="h1 color-white">$150,000</h1>
+              <p className="smallCaption color-gray">Bug bounty</p>
+            </div>
+          </div>
+        </div>
+
         <div className="d-flex align-items-center justify-content-between cols bg-white">
           <div className="col-content">
             <p className="smallCaption color-blue">Documentation</p>
             <h4 className="h4 color-blue">Build the future on BEPRO</h4>
             <p className="p color-blue">Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-            <button className="btn btn-md btn-primary w-25">View docs</button>
+            <a href="https://docs.bepro.network/" className="btn btn-md btn-primary w-25">View docs</a>
           </div>
           <div className="col-content bg-gray">
             <div className="d-flex align-items-center justify-content-center">
@@ -155,7 +172,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="d-flex align-items-center justify-content-between cols bg-white">
+      <div className="d-flex align-items-center justify-content-between cols bg-white overflow-hidden">
           <div className="col-content">
             <div className="d-flex align-items-center justify-content-center">
               <div className="bepro-runkit">
@@ -187,18 +204,18 @@ let availableTokens = await staking.availableTokens();
 
         <div className="community d-flex align-items-center justify-content-center text-center flex-column bg-gray">
           <p className="caption color-white trans">Community</p>
-          <h1 className="h1 color-white mb-5">Join our the development on <a href="#">Github</a></h1>
+          <h1 className="h1 color-white mb-5">Join our the development on <a href="https://github.com/bepronetwork">Github</a></h1>
           <div className="net-stats d-flex align-items-center justify-content-center">
               <div className="item text-center mr-3">
-                <h3 className="h3 color-white">+{stats.openIssues}</h3>
-                <p className="p-small">Open issues</p>
+                <h3 className="h1 color-white">+{stats.openIssues}</h3>
+                <p className="p-small color-white">Open issues</p>
               </div>
               <div className="item text-center mr-3">
-              <h3 className="h3 color-white">+{totalDevelopers}</h3>
+              <h3 className="h1 color-white">+{totalDevelopers}</h3>
                 <p className="p-small color-white">Developers</p>
               </div>
           <div className="item text-center">
-            <h3 className="h3 color-white">+{stats.beprosStaked}</h3>
+            <h3 className="h1 color-white">+{stats.beprosStaked}</h3>
             <p className="p-small color-white">$BEPRO</p>
           </div>
             </div>

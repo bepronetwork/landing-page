@@ -73,7 +73,13 @@ p {
 
 .p-small {
   font-size: 14px;
-  line-height: 140%;
+}
+.p-big {
+  font-size: 20px;
+  line-height: 160%;
+  @media (max-width: 900px) {
+    font-size: 16px;
+  }
 }
 
 .text-bold {
@@ -102,6 +108,10 @@ p {
   text-transform: uppercase;
   padding-left: $m;
   padding-right: $m;
+  min-width: 90px;
+  @media (max-width: 900px) {
+    min-width: auto;
+  }
 }
 
 .btn-lg {
@@ -199,7 +209,7 @@ p {
     margin: 0px;
     padding: 0px;
     list-style: none;
-    margin-left: $m * 2;
+    margin-left: $m*2;
     @media (max-width: 900px) {
       margin-left: 0px;
     }
@@ -222,6 +232,14 @@ p {
         color: $white;
         text-decoration: none;
         border-bottom: 2px solid rgba($white, 0.3);
+      }
+    }
+    &.lang {
+      margin-left: auto;
+      margin-right: $m;
+      li {
+        margin-left: auto;
+        margin-right: $m/2;
       }
     }
   }
@@ -429,6 +447,9 @@ p {
 .bg-shadow {
   background-color: $bg-shadow;
 }
+.bg-dark-gray {
+  background-color: $dark-gray;
+}
 .bg-opac {
   background-color: rgba($white, 0.1);
 }
@@ -443,6 +464,20 @@ p {
 }
 .bg-gray {
   background-color: $gray;
+}
+
+.bg-security {
+  background-image: url('../assets/security.png');
+  background-repeat: no-repeat;
+  background-size: 360px;
+  background-position: 20% center;
+  @media (max-width: 900px) {
+    background-position: -80px center;
+  }
+}
+.security-labels {
+  position: absolute;
+  bottom: $m;
 }
 
 .color-blue {
@@ -566,6 +601,11 @@ p {
       padding: $m*4 $m*2;
     }
   }
+  @media (min-width: 1441px) {
+    .col-content {
+      padding: $m*3 10%;
+    }
+  }
 }
 
 .hero {
@@ -574,7 +614,7 @@ p {
 
 .landing-hero {
   position: relative;
-  min-height: 80vh;
+  min-height: 600px;
   text-align: center;
   padding-top: $m*6;
   .slides {
@@ -584,6 +624,7 @@ p {
     overflow: hidden;
   }
   @media (max-width: 900px) {
+    min-height: 420px;
     .h2 {
       font-size: 28px;
     }
@@ -644,6 +685,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   .logo-wrap {
+    position: relative;
     display: flex;
     justify-content: center;
     width: 33.3%;
@@ -748,6 +790,16 @@ p {
   height: 48px;
   background-image: url('../assets/logo8.png');
 }
+.logo-red4sec {
+  width: 134px;
+  height: 66px;
+  background-image: url('../assets/red4sec.png');
+}
+.logo-certik {
+  width: 218px;
+  height: 53px;
+  background-image: url('../assets/certik.png');
+}
 
 .docsImg {
   width: 500px;
@@ -776,6 +828,14 @@ p {
   background-image: url('../assets/bepro-logo.png');
   background-size: cover;
   margin-bottom: $m;
+}
+
+.bepro-logo-white {
+  display: inline-block;
+  width: 103.4px;
+  height: 32px;
+  background-image: url('../assets/bepro-logo-white.png');
+  background-size: cover;
 }
 
 .about-people {
@@ -809,12 +869,15 @@ p {
 }
 .rotator-wrapper span {
   display: inline-block;
-  width: 260px;
+  width: 180px;
   text-align: left;
   @media (max-width: 900px) {
-    display: block;
-    margin: 0px auto;
+    width: 140px;
   }
+  // @media (max-width: 900px) {
+  //   display: block;
+  //   margin: 0px auto;
+  // }
 }
 .rotator-wrapper span span {
   position: absolute;
@@ -824,12 +887,12 @@ p {
   animation: rotateWord 12s ease-in-out infinite 0s;
   color: $white;
   width: auto;
-  padding-bottom: 4px;
-  @media (max-width: 900px) {
-    top: 36px;
-    width: 260px;
-    text-align: center;
-  }
+  padding-bottom: 2px;
+  // @media (max-width: 900px) {
+  //   top: 24px;
+  //   width: 180px;
+  //   text-align: center;
+  // }
 }
 .rotator-wrapper span span:nth-child(2) {
   animation-delay: 3s;
@@ -862,7 +925,7 @@ p {
   20% {
     opacity: 0;
     transform: translateY(30px);
-    border-bottom: 4px solid white;
+    border-bottom: 2px solid white;
   }
   80% {
     opacity: 0;
