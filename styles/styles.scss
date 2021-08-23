@@ -633,12 +633,12 @@ p {
 
 @keyframes scroll1 {
 	0% { transform: translateX(0); }
-	50% { transform: translateX(calc(-2700px + 100vw))}
+	50% { transform: translateX(calc(-2314.29px + 100vw))}
   100% { transform: translateX(0)}
 }
 @keyframes scroll2 {
 	0% { transform: translateX(0); }
-	50% { transform: translateX(calc(-3080px + 100vw))}
+	50% { transform: translateX(calc(-2640px + 100vw))}
   100% { transform: translateX(calc(0))}
 }
 @keyframes scroll1-mobile {
@@ -654,8 +654,8 @@ p {
 
 .slide-1 {
   display: block;
-  width: 2700px;
-  height: 140px;
+  width: 2314.29px;
+  height: 120px;
   background-image: url('../assets/projs-1.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -668,8 +668,8 @@ p {
 }
 .slide-2 {
   display: block;
-  width: 3080px;
-  height: 140px;
+  width: 2640px;
+  height: 120px;
   background-image: url('../assets/projs-2.png');
   background-repeat: no-repeat;
   background-size: cover;
