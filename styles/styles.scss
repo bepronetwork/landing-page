@@ -483,6 +483,9 @@ p {
 .color-blue {
   color: $blue;
 }
+.color-green {
+  color: $green;
+}
 .color-secondary {
   color: $secondary;
 }
@@ -816,6 +819,25 @@ p {
   height: auto;
 
 }
+
+.git-stats {
+  padding: $m*4 0px;
+  .git-issue {
+    min-height: 160px;
+    border-bottom: 4px solid $blue;
+    padding: $m 0px;
+    margin-bottom: $m*2;
+  }
+
+  .git-stats-chart {
+    width: 100%;
+    min-height: 280px;
+    background-color: $gray;
+    margin-bottom: $m*2;
+  }
+}
+
+
 
 .community {
   min-height: 600px;
