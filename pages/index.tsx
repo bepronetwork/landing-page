@@ -4,8 +4,9 @@ import Footer from '../components/footer'
 import Embed from 'react-runkit'
 import { useState } from 'react';
 import GithubMicroService from '../services/github-microservice';
-// import { Line } from 'chart.js';
 import { Line } from 'react-chartjs-2';
+import { defaults } from 'react-chartjs-2';
+
 
 export default function Home() {
 
@@ -22,6 +23,9 @@ export default function Home() {
   }
 
   useEffect(initialize, [])
+
+
+  defaults.font.family = 'fontRegular';
 
 
   const chartData = {
