@@ -4,6 +4,8 @@ import Footer from '../components/footer'
 import Embed from 'react-runkit'
 import { useState } from 'react';
 import GithubMicroService from '../services/github-microservice';
+// import { Line } from 'chart.js';
+import { Line } from 'react-chartjs-2';
 
 export default function Home() {
 
@@ -20,6 +22,30 @@ export default function Home() {
   }
 
   useEffect(initialize, [])
+
+
+  const chartData = {
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    datasets: [{
+      label: 'Volume',
+      data: [65, 59, 80, 81, 26, 55, 40],
+      backgroundColor: '#4250e4',
+      borderColor: '#4250e4',
+      tension: 0.2
+    }]
+  };
+  const chartOptions = {
+    maintainAspectRatio: false,
+    scales: {
+      yAxes: [
+        {
+          ticks: {
+            beginAtZero: true,
+          },
+        },
+      ],
+    },
+  };
 
   return (
       <>
@@ -245,7 +271,9 @@ let availableTokens = await staking.availableTokens();
             <div className="row">
               <div className="col">
                 <p className="smallCaption">Development activity</p>
-                <div className="git-stats-chart"></div>
+                <div className="git-stats-chart">
+                  <Line data={chartData} options={chartOptions} />
+                </div>
               </div>
             </div>
 
