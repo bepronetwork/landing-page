@@ -4,6 +4,9 @@ import Footer from '../components/footer'
 import Embed from 'react-runkit'
 import { useState } from 'react';
 import GithubMicroService from '../services/github-microservice';
+import { Line } from 'react-chartjs-2';
+import { defaults } from 'react-chartjs-2';
+
 
 export default function Home() {
 
@@ -20,6 +23,33 @@ export default function Home() {
   }
 
   useEffect(initialize, [])
+
+
+  defaults.font.family = 'fontRegular';
+
+
+  const chartData = {
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    datasets: [{
+      label: 'Volume',
+      data: [65, 59, 80, 81, 26, 55, 40],
+      backgroundColor: '#4250e4',
+      borderColor: '#4250e4',
+      tension: 0.2
+    }]
+  };
+  const chartOptions = {
+    maintainAspectRatio: false,
+    scales: {
+      yAxes: [
+        {
+          ticks: {
+            beginAtZero: true,
+          },
+        },
+      ],
+    },
+  };
 
   return (
       <>
@@ -70,7 +100,7 @@ export default function Home() {
         <div className="d-flex align-items-center justify-content-between cols bg">
           <div className="col-content bg-shade">
             <p className="smallCaption">DEVELOPERS</p>
-            <h4 className="h4 color-white">Find issues to work</h4>
+            <h4 className="h3 color-white">Find issues to work</h4>
           <p className="p">Connect with builders and other developers and trade your commits, review and work for rewards in USDC.</p>
           </div>
           <div className="col-content">
@@ -90,7 +120,7 @@ export default function Home() {
         <div className="d-flex align-items-center justify-content-between cols reverse bg">
           <div className="col-content bg-shade">
             <p className="smallCaption">CURATION</p>
-            <h4 className="h4 color-white">Curate the system</h4>
+            <h4 className="h3 color-white">Curate the system</h4>
           <p className="p">Create proposals of bounty distributions & curate the Bepro Network by creating disputes whenever you don´t agree with a bounty distribution of how much each contributor should receive.</p>
           </div>
           <div className="col-content">
@@ -161,7 +191,7 @@ export default function Home() {
         <div className="d-flex align-items-center justify-content-between cols bg-white">
           <div className="col-content">
             <p className="smallCaption color-blue">Documentation</p>
-            <h4 className="h4 color-blue">Build the future on BEPRO</h4>
+            <h4 className="h3 color-blue">Build the future on BEPRO</h4>
             <p className="p color-blue">Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
             <a href="https://docs.bepro.network/" className="btn btn-md btn-primary w-25">View docs</a>
           </div>
@@ -197,12 +227,64 @@ let availableTokens = await staking.availableTokens();
           </div>
           <div className="col-content bg-gray my-runkit">
             <p className="smallCaption color-white">Documentation</p>
-            <h4 className="h4 color-white">Build the future on BEPRO</h4>
+            <h4 className="h3 color-white">Build the future on BEPRO</h4>
             <p className="p color-white">Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
           </div>
         </div>
 
-        <div className="community d-flex align-items-center justify-content-center text-center flex-column bg-gray">
+        <div className="git-stats bg-white">
+          <div className="container">
+
+            <div className="row pb-3">
+              <div className="col-md-12">
+                <h4 className="h3 color-blue">Latest activity</h4>
+              </div>
+            </div>
+
+            <div className="row">
+              <div className="col-md-4">
+                <div className="git-issue d-flex justify-content-between flex-column">
+                  <h4 className="h4 color-blue">Smart Contracts for Bet Settlement</h4>
+                  <div className="d-flex justify-content-between">
+                    <span className="smallCaption color-green">Merged - 3 Jul</span>
+                    <span className="smallCaption color-gray"> 500k $bepro</span>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-4">
+                <div className="git-issue d-flex justify-content-between flex-column">
+                  <h4 className="h4 color-blue">Blockchain for Advanced Bio Fuels - Supply Traceability [@Kigreen]</h4>
+                  <div className="d-flex justify-content-between">
+                    <span className="smallCaption color-green">Merged - 3 Jul</span>
+                    <span className="smallCaption color-gray"> 500k $bepro</span>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-4">
+                <div className="git-issue d-flex justify-content-between flex-column">
+                  <h4 className="h4 color-blue">Create Vue app for bepro-js documentation</h4>
+                  <div className="d-flex justify-content-between">
+                    <span className="smallCaption color-green">Merged - 3 Jul</span>
+                    <span className="smallCaption color-gray"> 500k $bepro</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div className="row">
+              <div className="col">
+                <p className="smallCaption">Development activity</p>
+                <div className="git-stats-chart">
+                  <Line data={chartData} options={chartOptions} />
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div className="community d-flex align-items-center justify-content-center text-center flex-column bg-blue">
           <p className="caption color-white trans">Community</p>
           <h1 className="h1 color-white mb-5">Join our the development on <a href="https://github.com/bepronetwork">Github</a></h1>
           <div className="net-stats d-flex align-items-center justify-content-center">
