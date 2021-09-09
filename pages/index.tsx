@@ -41,7 +41,7 @@ export default function Home() {
   const dateFormatter = new Intl.DateTimeFormat('en-GB', {month: 'short', day: 'numeric'});
 
   function parseChartData(response) {
-    const origin = response.data;
+    const origin = response?.data || {};
     const monthFormatter = new Intl.DateTimeFormat('en-GB', {month: 'long'});
     const pair = (date) => [monthFormatter.format(date), origin[date]];
 
@@ -81,7 +81,7 @@ export default function Home() {
                       .then(setChartData)
 
     GithubMicroService.getLastPullRequests()
-                      .then(response => setPrData(response.data));
+                      .then(response => setPrData(response?.data || []));
   }
 
   function renderPrColumn({title, updatedAt, amount}) {
