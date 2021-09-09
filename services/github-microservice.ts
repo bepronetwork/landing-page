@@ -11,4 +11,12 @@ export default class GithubMicroService {
   static async getNetworkStats() {
     return await client.get('/networkstats');
   }
+
+  static async getLastPullRequests() {
+    return await client.get(`/pullrequests/last/3`);
+  }
+
+  static async getRepoStats() {
+    return await client.get(`/repostats`);
+  }
 }
