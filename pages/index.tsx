@@ -7,8 +7,6 @@ import GithubMicroService from '../services/github-microservice';
 import { Line } from 'react-chartjs-2';
 import { defaults } from 'react-chartjs-2';
 
-const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-
 interface DataSet {
   data: (string|number)[],
   backgroundColor: string,
@@ -40,11 +38,12 @@ export default function Home() {
   const [chartData, setChartData] = useState<ChartData>();
   const [prData, setPrData] = useState<PRData[]>([]);
   const appLink = process.env.NEXT_PUBLIC_APP_URL;
-  const dateFormatter = new Intl.DateTimeFormat('default', {month: 'short', day: 'numeric'});
+  const dateFormatter = new Intl.DateTimeFormat('en-GB', {month: 'short', day: 'numeric'});
 
   function parseChartData(response) {
     const origin = response.data;
-    const pair = (date) => [monthNames[+new Date(+date).getMonth()], origin[date]];
+    const monthFormatter = new Intl.DateTimeFormat('en-GB', {month: 'long'});
+    const pair = (date) => [monthFormatter.format(date), origin[date]];
 
     const makeChartData = (pairs) => {
       const labels: string[] = [];
