@@ -7,12 +7,67 @@ import GithubMicroService from '../services/github-microservice';
 import { Line } from 'react-chartjs-2';
 import { defaults } from 'react-chartjs-2';
 
+interface DataSet {
+  data: (string|number)[],
+  backgroundColor: string,
+  borderColor: string,
+  tension: number,
+  label: string,
+}
+
+interface ChartData {
+  labels: string[],
+  datasets: DataSet[]
+}
+
+interface PRData {
+  title: string;
+  body: string;
+  amount: number;
+  id: number;
+  issueId: string;
+  githubId: string;
+  updatedAt: string;
+  createdAt: string;
+}
 
 export default function Home() {
 
   const [totalDevelopers, setTotalDevelopers] = useState(0);
   const [stats, setStats] = useState({openIssues: 0, beprosStaked: 0, tokensStaked: 0});
+  const [chartData, setChartData] = useState<ChartData>();
+  const [prData, setPrData] = useState<PRData[]>([]);
   const appLink = process.env.NEXT_PUBLIC_APP_URL;
+  const dateFormatter = new Intl.DateTimeFormat('en-GB', {month: 'short', day: 'numeric'});
+
+  function parseChartData(response) {
+    const origin = response?.data || {};
+    const monthFormatter = new Intl.DateTimeFormat('en-GB', {month: 'long'});
+    const pair = (date) => [monthFormatter.format(date), origin[date]];
+
+    const makeChartData = (pairs) => {
+      const labels: string[] = [];
+      const data: number[] = [];
+
+      pairs.forEach(([month, total]) => {
+        labels.push(month);
+        data.push(total);
+      })
+
+      return ({
+        labels,
+        datasets: [{
+          data,
+          backgroundColor: '#4250e4',
+          borderColor: '#4250e4',
+          tension: 0.2,
+          label: `Volume`,
+        }]
+      })
+    }
+
+    return makeChartData(Object.keys(origin).map(pair))
+  }
 
   function initialize() {
     GithubMicroService.getNetworkStats()
@@ -20,6 +75,28 @@ export default function Home() {
 
     GithubMicroService.getTotalDevelopers()
                       .then(r => setTotalDevelopers(r.data));
+
+    GithubMicroService.getRepoStats()
+                      .then(parseChartData)
+                      .then(setChartData)
+
+    GithubMicroService.getLastPullRequests()
+                      .then(response => setPrData(response?.data || []));
+  }
+
+  function renderPrColumn({title, updatedAt, amount}) {
+
+    return (
+      <div className="col-md-4" key={title}>
+        <div className="git-issue d-flex justify-content-between flex-column">
+          <h4 className="h4 color-blue">{title}</h4>
+          <div className="d-flex justify-content-between">
+            <span className="smallCaption color-green">Merged - {updatedAt ? dateFormatter.format(new Date(updatedAt)) : `unknown`}</span>
+            <span className="smallCaption color-gray"> {amount} $bepro</span>
+          </div>
+        </div>
+      </div>
+    )
   }
 
   useEffect(initialize, [])
@@ -27,17 +104,6 @@ export default function Home() {
 
   defaults.font.family = 'fontRegular';
 
-
-  const chartData = {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-    datasets: [{
-      label: 'Volume',
-      data: [65, 59, 80, 81, 26, 55, 40],
-      backgroundColor: '#4250e4',
-      borderColor: '#4250e4',
-      tension: 0.2
-    }]
-  };
   const chartOptions = {
     maintainAspectRatio: false,
     scales: {
@@ -242,41 +308,14 @@ let availableTokens = await staking.availableTokens();
             </div>
 
             <div className="row">
-              <div className="col-md-4">
-                <div className="git-issue d-flex justify-content-between flex-column">
-                  <h4 className="h4 color-blue">Smart Contracts for Bet Settlement</h4>
-                  <div className="d-flex justify-content-between">
-                    <span className="smallCaption color-green">Merged - 3 Jul</span>
-                    <span className="smallCaption color-gray"> 500k $bepro</span>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-4">
-                <div className="git-issue d-flex justify-content-between flex-column">
-                  <h4 className="h4 color-blue">Blockchain for Advanced Bio Fuels - Supply Traceability [@Kigreen]</h4>
-                  <div className="d-flex justify-content-between">
-                    <span className="smallCaption color-green">Merged - 3 Jul</span>
-                    <span className="smallCaption color-gray"> 500k $bepro</span>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-4">
-                <div className="git-issue d-flex justify-content-between flex-column">
-                  <h4 className="h4 color-blue">Create Vue app for bepro-js documentation</h4>
-                  <div className="d-flex justify-content-between">
-                    <span className="smallCaption color-green">Merged - 3 Jul</span>
-                    <span className="smallCaption color-gray"> 500k $bepro</span>
-                  </div>
-                </div>
-              </div>
-
+              {prData.map(renderPrColumn)}
             </div>
 
             <div className="row">
               <div className="col">
                 <p className="smallCaption">Development activity</p>
                 <div className="git-stats-chart">
-                  <Line data={chartData} options={chartOptions} />
+                  {chartData && <Line data={chartData} options={chartOptions} />  || ``}
                 </div>
               </div>
             </div>
