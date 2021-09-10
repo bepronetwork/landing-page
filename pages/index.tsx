@@ -71,10 +71,10 @@ export default function Home() {
 
   function initialize() {
     GithubMicroService.getNetworkStats()
-                      .then(r => setStats(r.data));
+                      .then(r => setStats(r?.data || {openIssues: 0, beprosStaked: 0, tokensStaked: 0}));
 
     GithubMicroService.getTotalDevelopers()
-                      .then(r => setTotalDevelopers(r.data));
+                      .then(r => setTotalDevelopers(r?.data || 0));
 
     GithubMicroService.getRepoStats()
                       .then(parseChartData)
@@ -135,15 +135,14 @@ export default function Home() {
         </div>
 
         <div className="landing-hero bg-blue">
-          <h1 className="h2 color-white ml-2 mr-2">Decentralized Development at Scale</h1>
+          <h1 className="h2 color-white ml-2 mr-2">A Protocol for Decentralized Development</h1>
 
           <div className="rotator-wrapper">
             <p className="p-big color-white">Use bepro.network to&nbsp;
               <span className="rotator">
-                <span>resolve disputes</span>
-                <span>do merges</span>
-                <span>do settlements</span>
-                <span>propose bounties</span>
+                <span>decentralize development</span>
+                <span>develop & earn rewards</span>
+                <span>curate the protocol</span>
               </span>
             </p>
           </div>
@@ -241,15 +240,17 @@ export default function Home() {
           <div className="logos-container w-100">
             <div className="logo-wrap w-50">
               <span className="backed-logos logo-certik"></span>
-              <p className="smallCaption color-gray security-labels">Security audit</p>
+              <p className="smallCaption color-gray security-labels">Security audit - In progress</p>
             </div>
             <div className="logo-wrap w-50">
               <span className="backed-logos logo-red4sec"></span>
-              <p className="smallCaption color-gray security-labels">Security audit</p>
+              <p className="smallCaption color-gray security-labels">Security audit - In progress</p>
             </div>
             <div className="logo-wrap w-100 text-center flex-column bg-security">
-              <h1 className="h1 color-white">$150,000</h1>
-              <p className="smallCaption color-gray">Bug bounty</p>
+              <a href="https://docs.bepro.network/getting-started/bug-bounty" target="_blank">
+                <h1 className="h1 color-white">$150,000</h1>
+                <p className="smallCaption color-gray">Bug bounty</p>
+              </a>
             </div>
           </div>
         </div>

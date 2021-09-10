@@ -7,8 +7,8 @@ export default function App({ Component, pageProps }: AppProps) {
     <Head>
       <title>Bepro.network - Web 3.0 codebase protocol</title>
       <meta content="Bepro.network - Web 3.0 codebase protocol" property="og:title" />
-      <meta content="Decentralized Development at Scale." name="description" />
-      <meta content="Decentralized Development at Scale." property="og:description" />
+      <meta content="A Protocol for Decentralized Development" name="description" />
+      <meta content="A Protocol for Decentralized Development" property="og:description" />
       <meta content="Bepro.network - Web 3.0 codebase protocol" property="twitter:title" />
       <link href="../public/favicon.png" rel="shortcut icon" type="image/x-icon" />
       <link href="../public/favicon.png" rel="apple-touch-icon" />
