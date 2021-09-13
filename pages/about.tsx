@@ -7,7 +7,7 @@ import CompanyMember from '../components/company-member';
 import moshmageAvatar from '../assets/moshmage-avatar.jpg';
 import luisClarkAvatar from '../assets/luisclark-avatar.jpg';
 import rodrigoAvatar from '../assets/rodrigo-avatar.png';
-import nunoCorreiaAvatar from '../assets/nono-avatar.jpeg';
+import nunoCorreiaAvatar from '../assets/nuno-avatar.jpeg';
 import Header from '../components/header';
 
 
