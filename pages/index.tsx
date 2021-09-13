@@ -6,6 +6,7 @@ import { useState } from 'react';
 import GithubMicroService from '../services/github-microservice';
 import { Line } from 'react-chartjs-2';
 import { defaults } from 'react-chartjs-2';
+import Header from '../components/header';
 
 interface DataSet {
   data: (string|number)[],
@@ -119,20 +120,7 @@ export default function Home() {
 
   return (
       <>
-        <div className="main-nav d-flex align-items-center justify-content-between">
-          <div className="d-flex">
-            <a href="/" className="logo">
-              <span className="bepro-logo-white"></span>
-            </a>
-            <ul className="nav-links">
-              <li><a href="https://docs.bepro.network/">Docs</a></li>
-              <li><a href="/">Grant</a></li>
-            </ul>
-          </div>
-          <div className="d-flex flex-row align-items-center">
-            <a className="btn btn-md btn-white" href={appLink}>App</a>
-          </div>
-        </div>
+        <Header />
 
         <div className="landing-hero bg-blue">
           <h1 className="h2 color-white ml-2 mr-2">A Protocol for Decentralized Development</h1>

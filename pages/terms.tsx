@@ -1,30 +1,14 @@
 import { GetStaticProps } from 'next'
 import React from 'react'
 import Footer from '../components/footer'
+import Header from '../components/header';
 
 
 export default function Terms() {
   const appLink = process.env.NEXT_PUBLIC_APP_URL;
   return (
       <>
-        <div className="main-nav d-flex align-items-center justify-content-between">
-          <div className="d-flex">
-            <a href="/">
-              <img
-                className="logo"
-                src="https://64.media.tumblr.com/3cf2d2b58643cb6f46b42a652771b73b/e8afc16b16e16514-bc/s250x400/191e77982d8901585030f596d3e90935d42099ed.png"
-                alt=""
-              />
-            </a>
-            <ul className="nav-links">
-              <li><a href="https://docs.bepro.network/">Docs</a></li>
-              <li><a href="/">Grant</a></li>
-            </ul>
-          </div>
-          <div className="d-flex flex-row align-items-center">
-            <a className="btn btn-md btn-white" href={appLink}>App</a>
-          </div>
-        </div>
+        <Header />
 
         <div className="hero bg-blue text-center">
           <h1 className="h1 text-white">Terms & Conditions</h1>

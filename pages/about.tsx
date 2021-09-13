@@ -7,6 +7,8 @@ import CompanyMember from '../components/company-member';
 import moshmageAvatar from '../assets/moshmage-avatar.jpg';
 import luisClarkAvatar from '../assets/luisclark-avatar.jpg';
 import rodrigoAvatar from '../assets/rodrigo-avatar.png';
+import nunoCorreiaAvatar from '../assets/nono-avatar.jpeg';
+import Header from '../components/header';
 
 
 const companyMember = (name = ``, position = ``, avatar: string|StaticImageData = ``, href = ``) => ({name, position, avatar, href});
@@ -29,6 +31,7 @@ export default function About() {
     companyMember(`Joao David`, `Javascript Developer`, ``, ``),
     companyMember(`Luis Clark`, `Javascript Developer`, luisClarkAvatar, `https://www.linkedin.com/in/joaoluisclark/`),
     companyMember(`Alvaro Nogueiras`, `Advisor`, `https://uploads-ssl.webflow.com/5fc917a738ff8f24bc5df94c/60ba47018b85e45e46b1d9c1_Screenshot%202021-06-04%20at%2016.29.39.png`, `https://www.linkedin.com/in/alvarogomeznog/`),
+    companyMember(`Nuno Correia`, `Advisor`, nunoCorreiaAvatar, `https://www.linkedin.com/in/nuno-m-correia`),
   ]
 
   function initialize() {
@@ -40,24 +43,7 @@ export default function About() {
 
   return (
     <>
-      <div className="main-nav d-flex align-items-center justify-content-between">
-        <div className="d-flex">
-          <a href="/">
-            <img
-              className="logo"
-              src="https://64.media.tumblr.com/3cf2d2b58643cb6f46b42a652771b73b/e8afc16b16e16514-bc/s250x400/191e77982d8901585030f596d3e90935d42099ed.png"
-              alt=""
-            />
-          </a>
-          <ul className="nav-links">
-            <li><a href="https://docs.bepro.network/">Docs</a></li>
-            <li><a href="/">Grant</a></li>
-          </ul>
-        </div>
-        <div className="d-flex flex-row align-items-center">
-          <a className="btn btn-md btn-white" href={appLink}>App</a>
-        </div>
-      </div>
+      <Header />
 
       <div className="hero bg-blue text-center mb-4">
         <h1 className="h1 text-white">A team building code for the future of web3 decentralized development</h1>
