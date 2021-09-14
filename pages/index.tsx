@@ -125,7 +125,7 @@ export default function Home() {
         <div className="landing-hero bg-blue">
           <h1 className="h2 color-white ml-2 mr-2">A Protocol for Decentralized Development</h1>
 
-          <div className="rotator-wrapper">
+          <div className="rotator-wrapper d-none d-sm-block">
             <p className="p-big color-white">Use bepro.network to&nbsp;
               <span className="rotator">
                 <span>decentralize development</span>
