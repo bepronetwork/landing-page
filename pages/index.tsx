@@ -125,7 +125,7 @@ export default function Home() {
         <div className="landing-hero bg-blue">
           <h1 className="h2 color-white ml-2 mr-2">A Protocol for Decentralized Development</h1>
 
-          <div className="rotator-wrapper">
+          <div className="rotator-wrapper d-none d-sm-block">
             <p className="p-big color-white">Use bepro.network to&nbsp;
               <span className="rotator">
                 <span>decentralize development</span>
@@ -142,7 +142,7 @@ export default function Home() {
 
         <div className="d-flex bg-blue align-items-center justify-content-between cols">
           <div className="col-content">
-            <h1 className="h1 color-white">Welcome to <br />bepro-js network</h1>
+            <h1 className="h1 color-white">Welcome to <br />Bepro Network</h1>
           </div>
           <div className="col-content bg-shade">
             <p className="smallCaption">Build the future of Web3</p>
@@ -154,7 +154,7 @@ export default function Home() {
           <div className="col-content bg-shade">
             <p className="smallCaption">DEVELOPERS</p>
             <h4 className="h3 color-white">Find issues to work</h4>
-          <p className="p">Connect with builders and other developers and trade your commits, review and work for rewards in USDC.</p>
+          <p className="p">Connect with builders and other developers and trade your commits, review and work for rewards in BEPRO, USDC or other tokens.</p>
           </div>
           <div className="col-content">
             <div className="net-stats d-flex align-items-center justify-content-center">
@@ -224,7 +224,7 @@ export default function Home() {
 
         <div className="d-flex align-items-center justify-content-between flex-column text-center pt-5 bg-dark-gray">
           <p className="smallCaption color-gray">Audited and approved</p>
-          <h1 className="h1 color-white pb-5">A secure protocol for money</h1>
+          <h1 className="h1 color-white pb-5">A Protocol for Decentralized Development</h1>
           <div className="logos-container w-100">
             <div className="logo-wrap w-50">
               <span className="backed-logos logo-certik"></span>
@@ -236,7 +236,7 @@ export default function Home() {
             </div>
             <div className="logo-wrap w-100 text-center flex-column bg-security">
               <a href="https://docs.bepro.network/getting-started/bug-bounty" target="_blank">
-                <h1 className="h1 color-white">$150,000</h1>
+                <h1 className="h1 color-white">50.000€</h1>
                 <p className="smallCaption color-gray">Bug bounty</p>
               </a>
             </div>
@@ -247,8 +247,8 @@ export default function Home() {
           <div className="col-content">
             <p className="smallCaption color-blue">Documentation</p>
             <h4 className="h3 color-blue">Build the future on BEPRO</h4>
-            <p className="p color-blue">Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-            <a href="https://docs.bepro.network/" className="btn btn-md btn-primary w-25">View docs</a>
+            <p className="p color-blue">We created bepro-js to work as a showcase of our protocol, a way that BetBlock Technology LDA finances and works with other companies to provide code for platforms as Lepricon, Polkamarkets, RealFevr, Exeedme and others.</p>
+            <a href="https://docs.bepro.network/" target="_blank" className="btn btn-md btn-primary w-25">View docs</a>
           </div>
           <div className="col-content bg-gray">
             <div className="d-flex align-items-center justify-content-center">
@@ -283,7 +283,7 @@ let availableTokens = await staking.availableTokens();
           <div className="col-content bg-gray my-runkit">
             <p className="smallCaption color-white">Documentation</p>
             <h4 className="h3 color-white">Build the future on BEPRO</h4>
-            <p className="p color-white">Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            <p className="p color-white">We created bepro-js to work as a showcase of our protocol, a way that BetBlock Technology LDA finances and works with other companies to provide code for platforms as Lepricon, Polkamarkets, RealFevr, Exeedme and others.</p>
           </div>
         </div>
 
@@ -314,7 +314,7 @@ let availableTokens = await staking.availableTokens();
 
         <div className="community d-flex align-items-center justify-content-center text-center flex-column bg-blue">
           <p className="caption color-white trans">Community</p>
-          <h1 className="h1 color-white mb-5">Join our the development on <a href="https://github.com/bepronetwork">Github</a></h1>
+          <h1 className="h1 color-white mb-5">Join our the development on <a target="_blank" href="https://github.com/bepronetwork">Github</a></h1>
           <div className="net-stats d-flex align-items-center justify-content-center">
               <div className="item text-center mr-3">
                 <h3 className="h1 color-white">+{stats.openIssues}</h3>
