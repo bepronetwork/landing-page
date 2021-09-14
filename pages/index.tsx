@@ -142,6 +142,10 @@ export default function Home() {
 
         <div className="d-flex bg-blue align-items-center justify-content-between cols">
           <div className="col-content">
+          <div className="d-flex flex-row mb-3 align-items-center">
+              <p className="smallCaption color-white mb-0">Co-financed by</p>
+              <span className="backed-logos mx-2 compete-2020"></span>
+            </div>
             <h1 className="h1 color-white">Welcome to <br />Bepro Network</h1>
           </div>
           <div className="col-content bg-shade">
