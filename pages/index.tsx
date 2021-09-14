@@ -236,7 +236,7 @@ export default function Home() {
             </div>
             <div className="logo-wrap w-100 text-center flex-column bg-security">
               <a href="https://docs.bepro.network/getting-started/bug-bounty" target="_blank">
-                <h1 className="h1 color-white">$150,000</h1>
+                <h1 className="h1 color-white">50.000€</h1>
                 <p className="smallCaption color-gray">Bug bounty</p>
               </a>
             </div>
