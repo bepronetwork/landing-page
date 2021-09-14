@@ -33,6 +33,7 @@ export default function Footer() {
                 <li><a className="p-small" href="https://docs.bepro.network/getting-started/how-to-use-alpha">Start your project</a></li>
                 <li><a className="p-small" href="https://docs.bepro.network/sdk-documentation/technical-support">I am a developer</a></li>
                 <li><a className="p-small" href="https://docs.bepro.network/getting-started/the-network">I am a curator</a></li>
+                <li><a className="p-small" href="https://github.com/bepronetwork/grants-program">Open grants</a></li>
               </ul>
             </div>
           </div>
