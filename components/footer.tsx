@@ -27,7 +27,7 @@ export default function Footer() {
                 <li><a className="p-small" target="_blank" href="https://discord.gg/twqhwnStGz">Discord</a></li>
                 <li><a className="p-small" target="_blank" href="https://bepronetwork.medium.com/">Blog</a></li>
                 <li><Link href="/terms"><a className="p-small" >Terms of use</a></Link></li>
-                <li><Link href="/privacy"><a className="p-small">Privacy policy</a></Link></li>
+                <li><Link href="/privacy" scroll={true}><a className="p-small">Privacy policy</a></Link></li>
               </ul>
             </div>
             <div className="footer-wrap">
