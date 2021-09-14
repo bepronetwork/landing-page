@@ -1,5 +1,6 @@
 import { GetStaticProps } from 'next'
 import React from 'react';
+import Link from 'next/link';
 
 
 export default function Footer() {
@@ -21,11 +22,12 @@ export default function Footer() {
             <div className="footer-wrap">
               <h3 className="smallCaption mb-3">GET AROUND</h3>
               <ul>
-                <li><a className="p-small" href="/about" target="_blank">About us</a></li>
+                <li><Link href="/about"><a className="p-small" >About us</a></Link></li>
                 <li><a className="p-small" target="_blank" href="https://t.me/betprotocol">Telegram</a></li>
                 <li><a className="p-small" target="_blank" href="https://discord.gg/twqhwnStGz">Discord</a></li>
                 <li><a className="p-small" target="_blank" href="https://bepronetwork.medium.com/">Blog</a></li>
-                <li><a className="p-small" target="_blank" href="/terms">Terms of use</a></li>
+                <li><Link href="/terms"><a className="p-small" >Terms of use</a></Link></li>
+                <li><Link href="/privacy"><a className="p-small">Privacy policy</a></Link></li>
               </ul>
             </div>
             <div className="footer-wrap">

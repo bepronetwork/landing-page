@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 export default function Header() {
   const appLink = process.env.NEXT_PUBLIC_APP_URL;
@@ -6,9 +7,7 @@ export default function Header() {
   return <>
     <div className="main-nav d-flex align-items-center justify-content-between">
       <div className="d-flex">
-        <a href="/" className="logo">
-          <span className="bepro-logo-white"></span>
-        </a>
+        <Link href="/"><a className="logo"><span className="bepro-logo-white" /></a></Link>
         <ul className="nav-links">
           <li><a href="https://docs.bepro.network/" target="_blank">Docs</a></li>
           <li><a href="https://github.com/bepronetwork/grants-program" target="_blank">Open Grants</a></li>
