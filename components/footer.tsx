@@ -11,10 +11,12 @@ export default function Footer() {
           <div className="footer-container">
             <div className="footer-wrap">
               <span className="bepro-logo"></span>
+              <p className="p-small">@Built in 🇵🇹</p>
               <p className="p-small text-white">BEPRO © 2021 All rights reserved.</p>
               <p className="p-small">Code As A Service for Next Generation Gaming Apps</p>
               <p className="p-small">Reach out: general@bepro.network</p>
-            <p className="p-small">BEPRO Services, BEPRO Protocol and BEPRO Token (BEPRO) are not available in the United States and other Excluded Jurisdictions</p>
+              <p className="p-small">BEPRO Services, BEPRO Protocol and BEPRO Token (BEPRO) are not available in the United States and other Excluded Jurisdictions</p>
+              <p className="p-small">BEPRO Services, BEPRO Protocol and BEPRO Token (BEPRO) are not available in the United States and other Excluded Jurisdictions</p>
             </div>
             <div className="footer-wrap">
               <h3 className="smallCaption mb-3">GET AROUND</h3>
