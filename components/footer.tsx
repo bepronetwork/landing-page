@@ -1,4 +1,5 @@
 import { GetStaticProps } from 'next'
+import React from 'react';
 
 
 export default function Footer() {
@@ -18,22 +19,22 @@ export default function Footer() {
             <div className="footer-wrap">
               <h3 className="smallCaption mb-3">GET AROUND</h3>
               <ul>
-                <li><a className="p-small" href="/about">About us</a></li>
-                <li><a className="p-small" href="https://t.me/betprotocol">Telegram</a></li>
-                <li><a className="p-small" href="https://discord.gg/twqhwnStGz">Discord</a></li>
-                <li><a className="p-small" href="https://bepronetwork.medium.com/">Blog</a></li>
-                <li><a className="p-small" href="/terms">Terms of use</a></li>
+                <li><a className="p-small" href="/about" target="_blank">About us</a></li>
+                <li><a className="p-small" target="_blank" href="https://t.me/betprotocol">Telegram</a></li>
+                <li><a className="p-small" target="_blank" href="https://discord.gg/twqhwnStGz">Discord</a></li>
+                <li><a className="p-small" target="_blank" href="https://bepronetwork.medium.com/">Blog</a></li>
+                <li><a className="p-small" target="_blank" href="/terms">Terms of use</a></li>
               </ul>
             </div>
             <div className="footer-wrap">
               <h3 className="smallCaption mb-3">Our Tech</h3>
               <ul>
-                <li><a className="p-small" href="https://github.com/bepronetwork">Github</a></li>
-                <li><a className="p-small" href="https://docs.bepro.network/">Docs</a></li>
-                <li><a className="p-small" href="https://docs.bepro.network/getting-started/how-to-use-alpha">Start your project</a></li>
-                <li><a className="p-small" href="https://docs.bepro.network/sdk-documentation/technical-support">I am a developer</a></li>
-                <li><a className="p-small" href="https://docs.bepro.network/getting-started/the-network">I am a curator</a></li>
-                <li><a className="p-small" href="https://github.com/bepronetwork/grants-program">Open grants</a></li>
+                <li><a className="p-small" target="_blank" href="https://github.com/bepronetwork">Github</a></li>
+                <li><a className="p-small" target="_blank" href="https://docs.bepro.network/">Docs</a></li>
+                <li><a className="p-small" target="_blank" href="https://docs.bepro.network/getting-started/how-to-use-alpha">Start your project</a></li>
+                <li><a className="p-small" target="_blank" href="https://docs.bepro.network/sdk-documentation/technical-support">I am a developer</a></li>
+                <li><a className="p-small" target="_blank" href="https://docs.bepro.network/getting-started/the-network">I am a curator</a></li>
+                <li><a className="p-small" target="_blank" href="https://github.com/bepronetwork/grants-program">Open grants</a></li>
               </ul>
             </div>
           </div>
