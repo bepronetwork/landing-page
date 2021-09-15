@@ -62,7 +62,7 @@ export default function Home() {
           backgroundColor: '#4250e4',
           borderColor: '#4250e4',
           tension: 0.2,
-          label: `Volume`,
+          label: `Commits`,
         }]
       })
     }
@@ -199,28 +199,44 @@ export default function Home() {
           <div className="logos-container">
 
             <div className="logo-wrap">
-              <span className="backed-logos logo1"></span>
+              <a target="_blank" href="https://blockgroundcapital.com/">
+                <span className="backed-logos logo1"></span>
+              </a>
             </div>
             <div className="logo-wrap">
-              <span className="backed-logos logo2"></span>
+              <a target="_blank" href="https://cleveradvertising.com/">
+                <span className="backed-logos logo2"></span>
+              </a>
             </div>
             <div className="logo-wrap">
-              <span className="backed-logos logo3"></span>
+              <a target="_blank" href="https://www.moonrockcapital.io/">
+                <span className="backed-logos logo3"></span>
+              </a>
             </div>
             <div className="logo-wrap">
-              <span className="backed-logos logo4"></span>
+              <a target="_blank" href="https://ganexacapital.com/">
+                <span className="backed-logos logo4"></span>
+              </a>
             </div>
             <div className="logo-wrap">
-              <span className="backed-logos logo5"></span>
+              <a target="_blank" href="http://utrust.com">
+                <span className="backed-logos logo5"></span>
+              </a>
             </div>
             <div className="logo-wrap">
-              <span className="backed-logos logo6"></span>
+              <a target="_blank" href="https://www.shilling.vc/portfolio/betprotocol">
+                <span className="backed-logos logo6"></span>
+              </a>
             </div>
             <div className="logo-wrap w-50">
-              <span className="backed-logos logo7"></span>
+              <a target="_blank" href="https://www.bynd.vc/en/portfolio">
+                <span className="backed-logos logo7"></span>
+              </a>
             </div>
             <div className="logo-wrap w-50">
-              <span className="backed-logos logo8"></span>
+              <a target="_blank" href="http://ngc.fund/">
+                <span className="backed-logos logo8"></span>
+              </a>
             </div>
 
           </div>
@@ -250,7 +266,7 @@ export default function Home() {
         <div className="d-flex align-items-center justify-content-between cols bg-white">
           <div className="col-content">
             <p className="smallCaption color-blue">Documentation</p>
-            <h4 className="h3 color-blue">Build the future on BEPRO</h4>
+            <h4 className="h3 color-blue">A Javascript SDK showcasing the Protocol</h4>
             <p className="p color-blue">We created bepro-js to work as a showcase of our protocol, a way that BetBlock Technology LDA finances and works with other companies to provide code for platforms as Lepricon, Polkamarkets, RealFevr, Exeedme and others.</p>
             <a href="https://docs.bepro.network/" target="_blank" className="btn btn-md btn-primary w-25">View docs</a>
           </div>
@@ -286,8 +302,8 @@ let availableTokens = await staking.availableTokens();
           </div>
           <div className="col-content bg-gray my-runkit">
             <p className="smallCaption color-white">Documentation</p>
-            <h4 className="h3 color-white">Build the future on BEPRO</h4>
-            <p className="p color-white">We created bepro-js to work as a showcase of our protocol, a way that BetBlock Technology LDA finances and works with other companies to provide code for platforms as Lepricon, Polkamarkets, RealFevr, Exeedme and others.</p>
+            <h4 className="h3 color-white">Join the bepro-js ecosystem</h4>
+            <p className="p color-white">An SDK that gives you the chance to clone or build on top of our direct operators, a tool to get your app started</p>
           </div>
         </div>
 
@@ -296,7 +312,9 @@ let availableTokens = await staking.availableTokens();
 
             <div className="row pb-3">
               <div className="col-md-12">
-                <h4 className="h3 color-blue">Latest activity</h4>
+                <a target="_blank" href="https://github.com/bepronetwork">
+                  <h4 className="h3 color-blue">Latest activity</h4>
+                </a>
               </div>
             </div>
 
