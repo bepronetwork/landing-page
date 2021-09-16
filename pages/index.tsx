@@ -37,7 +37,6 @@ export default function Home() {
   const [totalDevelopers, setTotalDevelopers] = useState(0);
   const [stats, setStats] = useState({openIssues: 0, beprosStaked: 0, tokensStaked: 0});
   const [chartData, setChartData] = useState<ChartData>();
-  const [prData, setPrData] = useState<PRData[]>([]);
   const appLink = process.env.NEXT_PUBLIC_APP_URL;
   const dateFormatter = new Intl.DateTimeFormat('en-GB', {month: 'short', day: 'numeric'});
 
@@ -80,9 +79,6 @@ export default function Home() {
     GithubMicroService.getRepoStats()
                       .then(parseChartData)
                       .then(setChartData)
-
-    GithubMicroService.getLastPullRequests()
-                      .then(response => setPrData(response?.data || []));
   }
 
   function renderPrColumn({title, updatedAt, amount}) {
