@@ -318,8 +318,22 @@ let availableTokens = await staking.availableTokens();
               </div>
             </div>
 
-            <div className="row">
-              {prData.map(renderPrColumn)}
+            <div className="row mb-3">
+              <div className="col-sm">
+                <a target="_blank" href="https://github.com/bepronetwork/bepro-js">
+                  <span className="color-blue">bepro-js</span>
+                </a>
+              </div>
+              <div className="col-sm">
+                <a target="_blank" href="https://github.com/bepronetwork/web-network">
+                  <span className="color-blue">web-network</span>
+                </a>
+              </div>
+              <div className="col-sm">
+                <a target="_blank" href="https://github.com/bepronetwork/landing-page">
+                  <span className="color-blue">landing-page</span>
+                </a>
+              </div>
             </div>
 
             <div className="row">
