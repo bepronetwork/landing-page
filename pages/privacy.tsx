@@ -17,7 +17,7 @@ export default function Terms() {
 
       <div className="container-fluid bg">
         <div className="row justify-content-center">
-          <div className="col-md-10">
+          <div className="col-md-10 mt-5 mb-5">
 
             <strong> This Privacy
               Policy describes Our policies and procedures on the collection, use and disclosure of Your information
