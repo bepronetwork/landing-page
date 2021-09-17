@@ -19,4 +19,8 @@ export default class GithubMicroService {
   static async getRepoStats() {
     return await client.get(`/repostats`).catch(_ => null);
   }
+  
+  static async getRepoForks() {
+    return await client.get(`/forkstats`).catch(_ => null);
+  }
 }
