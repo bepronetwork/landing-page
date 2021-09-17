@@ -16,6 +16,12 @@ interface DataSet {
   label: string,
 }
 
+interface RepoStats{
+  forks: string,
+  repo: string,
+  stars: string,
+}
+
 interface ChartData {
   labels: string[],
   datasets: DataSet[]
@@ -36,9 +42,13 @@ export default function Home() {
 
   const [totalDevelopers, setTotalDevelopers] = useState(0);
   const [stats, setStats] = useState({openIssues: 0, beprosStaked: 0, tokensStaked: 0});
+  const [reposStats, setReposStats] = useState<RepoStats[]>([] as RepoStats[]);
+  const [forksStats, setForksStats] = useState({});
+  const [starStats, setStarStats] = useState({});
   const [chartData, setChartData] = useState<ChartData>();
   const appLink = process.env.NEXT_PUBLIC_APP_URL;
   const dateFormatter = new Intl.DateTimeFormat('en-GB', {month: 'short', day: 'numeric'});
+  const repos = [`bepro-js`, `web-network`, `landing-page`];
 
   function parseChartData(response) {
     const origin = response?.data || {};
@@ -79,25 +89,40 @@ export default function Home() {
     GithubMicroService.getRepoStats()
                       .then(parseChartData)
                       .then(setChartData)
+
+    GithubMicroService.getRepoForks()
+                      .then(r => {
+                        setReposStats(r.data)
+                        let forks = {}
+                        let stars = {}
+                        r?.data.map(item => {
+                            forks[item?.repo] = item.forks;
+                            stars[item?.repo] = item.stars;
+                          })
+                        setForksStats(forks)
+                        setStarStats(stars)
+                        console.log(forks,stars)
+                      });
   }
 
-  function renderPrColumn({title, updatedAt, amount}) {
-
+  function renderPrColumn(repo, index) {
+  const findRepo = reposStats?.find(item=> item.repo === repo)
     return (
-      <div className="col-md-4" key={title}>
+      <div className="col-md-4" key={index}>
+        <a target="_blank" href={`https://github.com/bepronetwork/${repo}`}>
         <div className="git-issue d-flex justify-content-between flex-column">
-          <h4 className="h4 color-blue">{title}</h4>
-          <div className="d-flex justify-content-between">
-            <span className="smallCaption color-green">Merged - {updatedAt ? dateFormatter.format(new Date(updatedAt)) : `unknown`}</span>
-            <span className="smallCaption color-gray"> {amount} $bepro</span>
-          </div>
+            <h4 className="h4 color-blue">{repo}</h4>
+            <div className="d-flex justify-content-between">
+              <span className="smallCaption color-green">{findRepo?.stars || 0} Stars</span>
+              <span className="smallCaption color-blue">{findRepo?.forks || 0} Forks</span>
+            </div>
         </div>
+        </a>
       </div>
     )
   }
 
   useEffect(initialize, [])
-
 
   defaults.font.family = 'fontRegular';
 
@@ -194,44 +219,49 @@ export default function Home() {
           <h1 className="h1 color-white pb-5">Backed by</h1>
           <div className="logos-container">
 
-            <div className="logo-wrap">
+            <div className="logo-wrap wrap-small">
               <a target="_blank" href="https://blockgroundcapital.com/">
                 <span className="backed-logos logo1"></span>
               </a>
             </div>
-            <div className="logo-wrap">
+            <div className="logo-wrap wrap-small">
               <a target="_blank" href="https://cleveradvertising.com/">
                 <span className="backed-logos logo2"></span>
               </a>
             </div>
-            <div className="logo-wrap">
+            <div className="logo-wrap wrap-small">
               <a target="_blank" href="https://www.moonrockcapital.io/">
                 <span className="backed-logos logo3"></span>
               </a>
             </div>
-            <div className="logo-wrap">
+            <div className="logo-wrap wrap-small">
               <a target="_blank" href="https://ganexacapital.com/">
                 <span className="backed-logos logo4"></span>
               </a>
             </div>
-            <div className="logo-wrap">
+            <div className="logo-wrap wrap-small">
               <a target="_blank" href="http://utrust.com">
                 <span className="backed-logos logo5"></span>
               </a>
             </div>
-            <div className="logo-wrap">
+            <div className="logo-wrap wrap-small">
               <a target="_blank" href="https://www.shilling.vc/portfolio/betprotocol">
                 <span className="backed-logos logo6"></span>
               </a>
             </div>
-            <div className="logo-wrap w-50">
+            <div className="logo-wrap wrap-small">
               <a target="_blank" href="https://www.bynd.vc/en/portfolio">
                 <span className="backed-logos logo7"></span>
               </a>
             </div>
-            <div className="logo-wrap w-50">
-              <a target="_blank" href="http://ngc.fund/">
+            <div className="logo-wrap wrap-small">
+              <a target="_blank" href="https://www.compete2020.gov.pt/">
                 <span className="backed-logos logo8"></span>
+              </a>
+            </div>
+            <div className="logo-wrap wrap-small">
+              <a target="_blank" href="http://ngc.fund/">
+                <span className="backed-logos logo9"></span>
               </a>
             </div>
 
@@ -313,23 +343,9 @@ let availableTokens = await staking.availableTokens();
                 </a>
               </div>
             </div>
-
+            
             <div className="row mb-3">
-              <div className="col-sm">
-                <a target="_blank" href="https://github.com/bepronetwork/bepro-js">
-                  <span className="color-blue">bepro-js</span>
-                </a>
-              </div>
-              <div className="col-sm">
-                <a target="_blank" href="https://github.com/bepronetwork/web-network">
-                  <span className="color-blue">web-network</span>
-                </a>
-              </div>
-              <div className="col-sm">
-                <a target="_blank" href="https://github.com/bepronetwork/landing-page">
-                  <span className="color-blue">landing-page</span>
-                </a>
-              </div>
+              {repos.map((repo, index)=> renderPrColumn(repo,index))}
             </div>
 
             <div className="row">
