@@ -43,8 +43,6 @@ export default function Home() {
   const [totalDevelopers, setTotalDevelopers] = useState(0);
   const [stats, setStats] = useState({openIssues: 0, beprosStaked: 0, tokensStaked: 0});
   const [reposStats, setReposStats] = useState<RepoStats[]>([] as RepoStats[]);
-  const [forksStats, setForksStats] = useState({});
-  const [starStats, setStarStats] = useState({});
   const [chartData, setChartData] = useState<ChartData>();
   const appLink = process.env.NEXT_PUBLIC_APP_URL;
   const dateFormatter = new Intl.DateTimeFormat('en-GB', {month: 'short', day: 'numeric'});
@@ -91,30 +89,18 @@ export default function Home() {
                       .then(setChartData)
 
     GithubMicroService.getRepoForks()
-                      .then(r => {
-                        setReposStats(r.data)
-                        let forks = {}
-                        let stars = {}
-                        r?.data.map(item => {
-                            forks[item?.repo] = item.forks;
-                            stars[item?.repo] = item.stars;
-                          })
-                        setForksStats(forks)
-                        setStarStats(stars)
-                        console.log(forks,stars)
-                      });
+                      .then(r => { setReposStats(r.data) });
   }
 
-  function renderPrColumn(repo, index) {
-  const findRepo = reposStats?.find(item=> item.repo === repo)
+  function renderPrColumn({repo, forks, stars}, index) {
     return (
       <div className="col-md-4" key={index}>
         <a target="_blank" href={`https://github.com/bepronetwork/${repo}`}>
         <div className="git-issue d-flex justify-content-between flex-column">
             <h4 className="h4 color-blue">{repo}</h4>
             <div className="d-flex justify-content-between">
-              <span className="smallCaption color-green">{findRepo?.stars || 0} Stars</span>
-              <span className="smallCaption color-blue">{findRepo?.forks || 0} Forks</span>
+              <span className="smallCaption color-green">{stars || 0} Stars</span>
+              <span className="smallCaption color-blue">{forks || 0} Forks</span>
             </div>
         </div>
         </a>
@@ -343,9 +329,9 @@ let availableTokens = await staking.availableTokens();
                 </a>
               </div>
             </div>
-            
+
             <div className="row mb-3">
-              {repos.map((repo, index)=> renderPrColumn(repo,index))}
+              {reposStats.map(renderPrColumn)}
             </div>
 
             <div className="row">
