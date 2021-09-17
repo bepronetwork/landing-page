@@ -14,7 +14,7 @@ export default function Footer() {
               <span className="bepro-logo"></span>
               <p className="p-small">@Built in 🇵🇹</p>
               <p className="p-small text-white">BEPRO © 2021 All rights reserved.</p>
-              <p className="p-small">"Code-as-a-Service Protocol</p>
+              <p className="p-small">Code-as-a-Service Protocol</p>
               <p className="p-small">Reach out: general@bepro.network</p>
               <p className="p-small">BEPRO Services, BEPRO Protocol and BEPRO Token (BEPRO) are not available in the United States and other Excluded Jurisdictions</p>
             </div>
