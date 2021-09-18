@@ -157,7 +157,7 @@ export default function Home() {
           </div>
           <div className="col-content bg-shade">
             <p className="smallCaption">Build the future of Web3</p>
-            <p className="p">Built around the BEPRO token, a utility token that enables token holders to manage disputes in the network, participate in it, and earn token rewards by curating the system & providing development resources.</p>
+            <p className="p">Bepro Network Protocol is a decentralized marketplace and system that connects developers with operators - anyone looking to build open-source development repositories. Here you can request features for your open-source tool and take advantage of all the BEPRO Network Protocol tools. Manage disputes in the network, participate in it, and earn token rewards by curating the system & providing development resources.</p>
           </div>
         </div>
 
@@ -175,7 +175,7 @@ export default function Home() {
               </div>
               <div className="item text-center">
                 <h3 className="h1 color-white">{stats.tokensStaked}</h3>
-                <p className="p-small">$USD</p>
+                <p className="p-small">$BEPRO</p>
               </div>
             </div>
           </div>
@@ -278,7 +278,7 @@ export default function Home() {
         <div className="d-flex align-items-center justify-content-between cols bg-white">
           <div className="col-content">
             <p className="smallCaption color-blue">Documentation</p>
-            <h4 className="h3 color-blue">Build the future on BEPRO</h4>
+            <h4 className="h3 color-blue">BEPRO-JS & The Protocol</h4>
             <p className="p color-blue">We created bepro-js to work as a showcase of our protocol, a way that BetBlock Technology LDA finances and works with other companies to provide code for platforms as Lepricon, Polkamarkets, RealFevr, Exeedme and others.</p>
             <a href="https://docs.bepro.network/" target="_blank" className="btn btn-md btn-primary w-25">View docs</a>
           </div>
@@ -313,9 +313,9 @@ let availableTokens = await staking.availableTokens();
             </div>
           </div>
           <div className="col-content bg-gray my-runkit">
-            <p className="smallCaption color-white">Documentation</p>
-            <h4 className="h3 color-white">Join the bepro-js ecosystem</h4>
-            <p className="p color-white">An SDK that gives you the chance to clone or build on top of our direct operators, a tool to get your app started</p>
+            <p className="smallCaption color-blue">Web3 API Ecosystem</p>
+            <h4 className="h3 color-blue">Gaming, DeFi, NFTs and more!</h4>
+            <p className="p color-blue">An SDK that gives you the chance to clone or build on top of our direct operators, a tool to get your app started</p>
           </div>
         </div>
 
