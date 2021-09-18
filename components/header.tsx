@@ -15,6 +15,7 @@ export default function Header() {
           target="_blank">Roadmap</a></li>
         <li><a
           href="https://docs.bepro.network/sdk-documentation/why-bepro-js"
+          className="d-none d-sm-inline"
           target="_blank">BEPRO.js SDK</a></li>
       </ul>
     </div>
