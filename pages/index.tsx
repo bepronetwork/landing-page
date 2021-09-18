@@ -175,7 +175,7 @@ export default function Home() {
               </div>
               <div className="item text-center">
                 <h3 className="h1 color-white">{stats.tokensStaked}</h3>
-                <p className="p-small">$BEPRO</p>
+                <p className="p-small">$BEPRO (Payments)</p>
               </div>
             </div>
           </div>
@@ -195,7 +195,7 @@ export default function Home() {
               </div>
               <div className="item text-center">
                 <h3 className="h1 color-white">+{stats.beprosStaked}</h3>
-                <p className="p-small">$BEPRO</p>
+                <p className="p-small">$BEPRO (Oracles)</p>
               </div>
             </div>
           </div>
