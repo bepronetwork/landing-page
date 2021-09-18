@@ -13,6 +13,9 @@ export default function Header() {
         <li><a
           href="https://betprotocol.notion.site/06173fb999ae45ffa9abdad80a34f336?v=5c9a061da63849afa836476e4a1d25d9"
           target="_blank">Roadmap</a></li>
+        <li><a
+          href="https://docs.bepro.network/sdk-documentation/why-bepro-js"
+          target="_blank">BEPRO.js SDK</a></li>
       </ul>
     </div>
     <div className="d-flex flex-row align-items-center">
