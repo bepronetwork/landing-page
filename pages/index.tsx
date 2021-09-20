@@ -231,7 +231,7 @@ export default function Home() {
               </a>
             </div>
             <div className="logo-wrap wrap-small">
-              <a target="_blank" href="https://www.shilling.vc/portfolio/betprotocol">
+              <a target="_blank" href="https://www.shilling.vc">
                 <span className="backed-logos logo6"></span>
               </a>
             </div>
