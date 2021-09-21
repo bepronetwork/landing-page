@@ -45,20 +45,20 @@ export default function Home() {
   const [reposStats, setReposStats] = useState<RepoStats[]>([] as RepoStats[]);
   const [chartData, setChartData] = useState<ChartData>();
   const appLink = process.env.NEXT_PUBLIC_APP_URL;
-  const dateFormatter = new Intl.DateTimeFormat('en-GB', {month: 'short', day: 'numeric'});
-  const repos = [`bepro-js`, `web-network`, `landing-page`];
+  const dateFormatter = new Intl.DateTimeFormat('en-GB', {month: 'short', day: 'numeric',});
 
   function parseChartData(response) {
     const origin = response?.data || {};
     const monthFormatter = new Intl.DateTimeFormat('en-GB', {month: 'long'});
-    const pair = (date) => [monthFormatter.format(date), origin[date]];
+    const formatDate = ([date, value]) => [dateFormatter.format(date), value];
 
     const makeChartData = (pairs) => {
       const labels: string[] = [];
       const data: number[] = [];
 
-      pairs.forEach(([month, total]) => {
-        labels.push(month);
+      const interval = 4 * 3;
+      pairs.forEach(([week, total], i) => {
+        labels.push(!((i / interval) % 1) ? week : ``);
         data.push(total);
       })
 
@@ -74,7 +74,7 @@ export default function Home() {
       })
     }
 
-    return makeChartData(Object.keys(origin).map(pair))
+    return makeChartData(Object.entries(origin).map(formatDate))
   }
 
   function initialize() {
