@@ -26,7 +26,7 @@ export default function Footer() {
                 <li><a className="p-small" target="_blank" href="https://t.me/betprotocol">Telegram</a></li>
                 <li><a className="p-small" target="_blank" href="https://bepronetwork.medium.com/">Blog</a></li>
                 <li><a className="p-small" target="_blank" href="http://support.bepro.network">Knowledge Base</a></li>
-                <li><a className="p-small" target="_blank" href="https://bepronetwork.medium.com/tokenomics-afdb24ea3303">Tokenomics</a></li>
+                <li><a className="p-small" target="_blank" href="https://support.bepro.network/en/articles/5585549-tokenomics-distribution-schedule">Tokenomics</a></li>
                 <li><Link href="/terms-and-conditions"><a className="p-small" >Terms of use</a></Link></li>
                 <li><Link href="/privacy" scroll={true}><a className="p-small">Privacy policy</a></Link></li>
               </ul>
