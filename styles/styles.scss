@@ -203,6 +203,11 @@ p {
   height: 70px;
   background-color: $blue;
   padding: 0px $m;
+  .bepro-logo-white {
+    @media (max-width: 370px) {
+      width: 32px;
+    }
+  }
   .nav-links {
     display: flex;
     align-items: center;
@@ -211,10 +216,10 @@ p {
     list-style: none;
     margin-left: $m*2;
     @media (max-width: 900px) {
-      margin-left: 0px;
+      margin-left: $m;
     }
     li {
-      margin-left: $m;
+      // margin-left: $m;
     }
     a {
       font-family: 'fontMedium', sans-serif;
@@ -637,6 +642,7 @@ p {
 
 
 /* Logo Slider Setup
+ * Change this params if you add new logos to the landingpage
 */
 $slider-logos-width: 200px;
 $slider-logos-height: 85px;
@@ -645,14 +651,14 @@ $slider-logos-heightMobile: 50px;
 
 /* Logo Slider 1
 */
-$slider-1-logos: 7;
+$slider-1-logos: 8;
 $slider-1-gutter: 16px;
 $slider-1-width: $slider-1-logos * ($slider-logos-width + (2 * $slider-1-gutter));
 $slider-1-widthMobile: $slider-1-logos * ($slider-logos-widthMobile + (2 * $slider-1-gutter));
 
 /* Logo Slider 2
 */
-$slider-2-logos: 8;
+$slider-2-logos: 9;
 $slider-2-gutter: 16px;
 $slider-2-width: $slider-2-logos * ($slider-logos-width + (2 * $slider-1-gutter));
 $slider-2-widthMobile: $slider-2-logos * ($slider-logos-widthMobile + (2 * $slider-1-gutter));
@@ -759,6 +765,12 @@ $slider-2-widthMobile: $slider-2-logos * ($slider-logos-widthMobile + (2 * $slid
   }
   &.log-16 {
     background-image: url('../assets/log-16.png');
+  }
+  &.log-17 {
+    background-image: url('../assets/log-17.png');
+  }
+  &.log-18 {
+    background-image: url('../assets/log-18.png');
   }
 
 }
@@ -901,6 +913,10 @@ $slider-2-widthMobile: $slider-2-logos * ($slider-logos-widthMobile + (2 * $slid
   width: 207px;
   height: 25px;
   background-image: url('../assets/compete_2020.png');
+  @media (max-width: 900px) {
+    width: 174px;
+    height: 22px;
+  }
 }
 
 .docsImg {
