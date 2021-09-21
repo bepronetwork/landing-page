@@ -676,31 +676,37 @@ $slider-2-widthMobile: $slider-2-logos * ($slider-logos-widthMobile + (2 * $slid
 .slide-3 {
   display: flex;
   width: $slider-1-width;
-  height: $slider-1-logos-height;
+  height: $slider-logos-height;
   animation: scroll3 60s linear infinite;
   margin-bottom: $m;
   @media (max-width: 900px) {
-    animation: scrollMobile1 40s linear infinite;
+    width: $slider-2-widthMobile;
+    height: $slider-logos-heightMobile;
+    animation: scrollMobile1 60s linear infinite;
   }
 }
 .slide-4 {
   display: flex;
-  width: $slider-1-width;
-  height: $slider-1-logos-height;
+  width: $slider-2-width;
+  height: $slider-logos-height;
   animation: scroll3 80s linear infinite;
   margin-bottom: $m;
   @media (max-width: 900px) {
     width: $slider-2-widthMobile;
-    height: $slider-1-logos-height/2;
-    animation: scrollMobile2 30s linear infinite;
+    height: $slider-logos-heightMobile;
+    animation: scrollMobile2 80s linear infinite;
   }
 }
 .slide-item {
-  width: $slider-1-logos-width;
-  height: $slider-1-logos-height;
+  width: $slider-logos-width;
+  height: $slider-logos-height;
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0px 16px;
+  @media (max-width: 900px) {
+    width: $slider-logos-widthMobile;
+    height: $slider-logos-heightMobile;
+  }
   &:hover {
     transform: scale(0.95);
     opacity: 0.8;
