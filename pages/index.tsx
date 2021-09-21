@@ -225,7 +225,6 @@ export default function Home() {
           <div className="col-content bg-shade">
             <p className="smallCaption">Build the future of Web3</p>
             <p className="p">Bepro Network Protocol is a decentralized marketplace and system that connects developers with operators or anyone looking to build open-source development repositories.</p>
-            <p className="p">Here you can request features for your open-source tool and take advantage of all the BEPRO Network Protocol tools.</p>
             <p className="p">Manage disputes in the network, participate in it and earn token rewards by curating the system & providing development resources.</p>
           </div>
         </div>
