@@ -127,11 +127,13 @@ export default function Home() {
           minRotation: 90
         }
       }],
-      yAxes: [
-        {
+      yAxes: [{
           ticks: {
             beginAtZero: true,
           },
+          gridLines: {
+            display: false
+          }
         },
       ],
     },
