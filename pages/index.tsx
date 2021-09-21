@@ -157,55 +157,61 @@ export default function Home() {
           </div>
           <div className="slides">
             <div className="slide-3">
-              <a href="#">
+              <a target="_blank" href="https://www.nftsee.io/">
                 <div className="slide-item log-1"></div>
               </a>
-              <a href="#">
+              <a target="_blank" href="https://www.un1ke.io/">
                 <div className="slide-item log-2"></div>
               </a>
-              <a href="#">
+              <a target="_blank" href="https://www.punkskinsociety.com/">
                 <div className="slide-item log-3"></div>
               </a>
-              <a href="#">
+                <a target="_blank" href="https://www.realfevr.com/">
                 <div className="slide-item log-4"></div>
               </a>
-              <a href="#">
+                <a target="_blank" href="https://www.exeedme.com/">
                 <div className="slide-item log-5"></div>
               </a>
-              <a href="#">
+                <a target="_blank" href="https://trustfi.org/">
                 <div className="slide-item log-6"></div>
               </a>
-              <a href="#">
+                <a target="_blank" href="https://www.polkamarkets.com/">
                 <div className="slide-item log-7"></div>
+              </a>
+              <a target="_blank" href="https://www.clashcardschampions.net/">
+                <div className="slide-item log-17"></div>
               </a>
             </div>
             <div className="slide-4">
-              <a href="#">
+                <a target="_blank" href="https://lepricon.io/">
                 <div className="slide-item log-8"></div>
               </a>
-              <a href="#">
+                <a target="_blank" href="https://dotmoovs.com/">
                 <div className="slide-item log-9"></div>
               </a>
-              <a href="#">
+                <a target="_blank" href="https://liveduel.com/future/">
                 <div className="slide-item log-10"></div>
               </a>
-              <a href="#">
+                <a target="_blank" href="#">
                 <div className="slide-item log-11"></div>
               </a>
-              <a href="#">
+                <a target="_blank" href="https://crypto.com/">
                 <div className="slide-item log-12"></div>
               </a>
-              <a href="#">
+                <a target="_blank" href="https://project.rally-tascos.com/">
                 <div className="slide-item log-13"></div>
               </a>
-              <a href="#">
+                <a target="_blank" href="https://cleveradvertising.com/">
                 <div className="slide-item log-14"></div>
               </a>
-              <a href="#">
+                <a target="_blank" href="https://www.uzyth.com/">
                 <div className="slide-item log-15"></div>
               </a>
-              <a href="#">
+              <a target="_blank" href="https://bistox.com/">
                 <div className="slide-item log-16"></div>
+              </a>
+              <a target="_blank" href="https://worldbox.tv/">
+                <div className="slide-item log-18"></div>
               </a>
             </div>
           </div>
