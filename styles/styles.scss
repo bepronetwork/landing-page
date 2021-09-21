@@ -618,6 +618,7 @@ p {
 
 .hero {
   padding: $m*4 0px;
+  margin-top: $m*4;
 }
 
 .landing-hero {
@@ -626,6 +627,7 @@ p {
   height: 100%;
   text-align: center;
   padding-top: $m*6;
+  margin-top: $m*4;
   .slides {
     position: absolute;
     width: 100%;
