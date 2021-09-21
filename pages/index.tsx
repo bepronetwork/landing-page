@@ -113,13 +113,27 @@ export default function Home() {
   defaults.font.family = 'fontRegular';
 
   const chartOptions = {
+    elements: {
+      point: {
+        radius: 0
+      }
+    },
     maintainAspectRatio: false,
     scales: {
-      yAxes: [
-        {
+      xAxes: [{
+        ticks: {
+          autoSkip: false,
+          maxRotation: 90,
+          minRotation: 90
+        }
+      }],
+      yAxes: [{
           ticks: {
             beginAtZero: true,
           },
+          gridLines: {
+            display: false
+          }
         },
       ],
     },
@@ -142,8 +156,58 @@ export default function Home() {
             </p>
           </div>
           <div className="slides">
-            <div className="slide-1"></div>
-            <div className="slide-2"></div>
+            <div className="slide-3">
+              <a href="#">
+                <div className="slide-item log-1"></div>
+              </a>
+              <a href="#">
+                <div className="slide-item log-2"></div>
+              </a>
+              <a href="#">
+                <div className="slide-item log-3"></div>
+              </a>
+              <a href="#">
+                <div className="slide-item log-4"></div>
+              </a>
+              <a href="#">
+                <div className="slide-item log-5"></div>
+              </a>
+              <a href="#">
+                <div className="slide-item log-6"></div>
+              </a>
+              <a href="#">
+                <div className="slide-item log-7"></div>
+              </a>
+            </div>
+            <div className="slide-4">
+              <a href="#">
+                <div className="slide-item log-8"></div>
+              </a>
+              <a href="#">
+                <div className="slide-item log-9"></div>
+              </a>
+              <a href="#">
+                <div className="slide-item log-10"></div>
+              </a>
+              <a href="#">
+                <div className="slide-item log-11"></div>
+              </a>
+              <a href="#">
+                <div className="slide-item log-12"></div>
+              </a>
+              <a href="#">
+                <div className="slide-item log-13"></div>
+              </a>
+              <a href="#">
+                <div className="slide-item log-14"></div>
+              </a>
+              <a href="#">
+                <div className="slide-item log-15"></div>
+              </a>
+              <a href="#">
+                <div className="slide-item log-16"></div>
+              </a>
+            </div>
           </div>
         </div>
 
