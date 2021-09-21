@@ -120,22 +120,19 @@ export default function Home() {
     },
     maintainAspectRatio: false,
     scales: {
-      xAxes: [{
+      x: {
         ticks: {
           autoSkip: false,
-          maxRotation: 90,
-          minRotation: 90
-        }
-      }],
-      yAxes: [{
-          ticks: {
-            beginAtZero: true,
-          },
-          gridLines: {
-            display: false
-          }
+          maxRotation: 0,
+          minRotation: 0
         },
-      ],
+        grid: {
+          display: false
+        }
+      },
+      y: {
+          beginAtZero: true,
+        },
     },
   };
 
