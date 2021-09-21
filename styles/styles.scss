@@ -634,55 +634,128 @@ p {
   }
 }
 
-@keyframes scroll1 {
+
+/* Logo Slider Setup
+*/
+$slider-logos-width: 200px;
+$slider-logos-height: 85px;
+$slider-logos-widthMobile: 118px;
+$slider-logos-heightMobile: 50px;
+
+/* Logo Slider 1
+*/
+$slider-1-logos: 7;
+$slider-1-gutter: 16px;
+$slider-1-width: $slider-1-logos * ($slider-logos-width + (2 * $slider-1-gutter));
+$slider-1-widthMobile: $slider-1-logos * ($slider-logos-widthMobile + (2 * $slider-1-gutter));
+
+/* Logo Slider 2
+*/
+$slider-2-logos: 8;
+$slider-2-gutter: 16px;
+$slider-2-width: $slider-2-logos * ($slider-logos-width + (2 * $slider-1-gutter));
+$slider-2-widthMobile: $slider-2-logos * ($slider-logos-widthMobile + (2 * $slider-1-gutter));
+
+@keyframes scroll3 {
 	0% { transform: translateX(0); }
-	50% { transform: translateX(calc(-1977px + 100vw))}
-  100% { transform: translateX(0)}
-}
-@keyframes scroll2 {
-	0% { transform: translateX(0); }
-	50% { transform: translateX(calc(-2297px + 100vw))}
+	50% { transform: translateX(calc(-#{$slider-1-width} + 100vw))}
   100% { transform: translateX(calc(0))}
 }
-@keyframes scroll1-mobile {
-	0% { transform: translateX(0); }
-	50% { transform: translateX(calc(-1153.25px + 100vw))}
-  100% { transform: translateX(0)}
+@keyframes scrollMobile1 {
+	0% { transform: translateX(0) }
+	50% { transform: translateX(calc(-#{$slider-1-widthMobile} + 100vw))}
+  100% { transform: translateX(calc(0))}
 }
-@keyframes scroll2-mobile {
-	0% { transform: translateX(0); }
-	50% { transform: translateX(calc(-1339.92px + 100vw))}
+@keyframes scrollMobile2 {
+	0% { transform: translateX(0) }
+	50% { transform: translateX(calc(-#{$slider-2-widthMobile} + 100vw))}
   100% { transform: translateX(calc(0))}
 }
 
-.slide-1 {
-  display: block;
-  width: 1977px;
-  height: 120px;
-  background-image: url('../assets/projs-1.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  animation: scroll1 80s linear infinite;
+.slide-3 {
+  display: flex;
+  width: $slider-1-width;
+  height: $slider-1-logos-height;
+  animation: scroll3 60s linear infinite;
+  margin-bottom: $m;
   @media (max-width: 900px) {
-    animation: scroll1-mobile 40s linear infinite;
-    width: 1153.25px;
-    height: 70px;
+    animation: scrollMobile1 40s linear infinite;
   }
 }
-.slide-2 {
-  display: block;
-  width: 2297px;
-  height: 120px;
-  background-image: url('../assets/projs-2.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  animation: scroll2 80s linear infinite;
+.slide-4 {
+  display: flex;
+  width: $slider-1-width;
+  height: $slider-1-logos-height;
+  animation: scroll3 80s linear infinite;
+  margin-bottom: $m;
   @media (max-width: 900px) {
-    animation: scroll2-mobile 40s linear infinite;
-    width: 1339.92px;
-    height: 70px;
+    width: $slider-2-widthMobile;
+    height: $slider-1-logos-height/2;
+    animation: scrollMobile2 30s linear infinite;
   }
 }
+.slide-item {
+  width: $slider-1-logos-width;
+  height: $slider-1-logos-height;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0px 16px;
+  &:hover {
+    transform: scale(0.95);
+    opacity: 0.8;
+    transition: 0.1s;
+  }
+  &.log-1 {
+    background-image: url('../assets/log-1.png');
+  }
+  &.log-2 {
+    background-image: url('../assets/log-2.png');
+  }
+  &.log-3 {
+    background-image: url('../assets/log-3.png');
+  }
+  &.log-4 {
+    background-image: url('../assets/log-4.png');
+  }
+  &.log-5 {
+    background-image: url('../assets/log-5.png');
+  }
+  &.log-6 {
+    background-image: url('../assets/log-6.png');
+  }
+  &.log-7 {
+    background-image: url('../assets/log-7.png');
+  }
+  &.log-8 {
+    background-image: url('../assets/log-8.png');
+  }
+  &.log-9 {
+    background-image: url('../assets/log-9.png');
+  }
+  &.log-10 {
+    background-image: url('../assets/log-10.png');
+  }
+  &.log-11 {
+    background-image: url('../assets/log-11.png');
+  }
+  &.log-12 {
+    background-image: url('../assets/log-12.png');
+  }
+  &.log-13 {
+    background-image: url('../assets/log-13.png');
+  }
+  &.log-14 {
+    background-image: url('../assets/log-14.png');
+  }
+  &.log-15 {
+    background-image: url('../assets/log-15.png');
+  }
+  &.log-16 {
+    background-image: url('../assets/log-16.png');
+  }
+
+}
+
 
 .logos-container {
   display: flex;
