@@ -12,7 +12,6 @@ export default function Terms() {
 
         <div className="hero bg-blue text-center">
           <h1 className="h1 text-white">Terms & Conditions</h1>
-          <p className="caption">Last updated on 12.07.2021</p>
         </div>
 
 

@@ -618,6 +618,7 @@ p {
 .landing-hero {
   position: relative;
   min-height: 600px;
+  height: 100%;
   text-align: center;
   padding-top: $m*6;
   .slides {
@@ -770,14 +771,21 @@ $slider-2-widthMobile: $slider-2-logos * ($slider-logos-widthMobile + (2 * $slid
     border-right: 1px solid rgba($black, 0.5);
     border-bottom: 1px solid rgba($black, 0.5);
   }
+  .wrap-small{
+    height: 130px;
+  }
   @media (max-width: 900px) {
     width: 100%;
+    overflow: hidden;
     .logo-wrap {
       width: 50%;
       height: 200px;
       .backed-logos {
         transform: scale(0.6);
       }
+    }
+    .wrap-small{
+      height: 95px;
     }
   }
 }
@@ -861,7 +869,13 @@ $slider-2-widthMobile: $slider-2-logos * ($slider-logos-widthMobile + (2 * $slid
   height: 64px;
   background-image: url('../assets/logo7.png');
 }
-.logo8 {
+.logo8{
+  width: 354px;
+  height: 42px;
+  background-image: url('../assets/compete_2020.png');
+}
+
+.logo9 {
   width: 157.83px;
   height: 48px;
   background-image: url('../assets/logo8.png');
@@ -902,7 +916,7 @@ $slider-2-widthMobile: $slider-2-logos * ($slider-logos-widthMobile + (2 * $slid
 .git-stats {
   padding: $m*4 0px;
   .git-issue {
-    min-height: 160px;
+    min-height: 134px;
     border-bottom: 4px solid $blue;
     padding: $m 0px;
     margin-bottom: $m*2;

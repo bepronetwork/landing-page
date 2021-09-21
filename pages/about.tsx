@@ -6,6 +6,7 @@ import CompanyMember from '../components/company-member';
 
 import moshmageAvatar from '../assets/moshmage-avatar.jpg';
 import luisClarkAvatar from '../assets/luisclark-avatar.jpg';
+import joaoDavidAvatar from '../assets/joaodavid-avatar.png';
 import rodrigoAvatar from '../assets/rodrigo-avatar.png';
 import nunoCorreiaAvatar from '../assets/nuno-avatar.jpeg';
 import Header from '../components/header';
@@ -23,12 +24,12 @@ export default function About() {
     companyMember(`Justin Wu`, `Co-founder`, `https://uploads-ssl.webflow.com/5fc917a738ff8f24bc5df94c/5ffc895e40fb69e7645a805e_Profile%20Justin.jpg`, `https://twitter.com/theWUJustin`),
     companyMember(`André Moniz`, `Co-founder`, `https://uploads-ssl.webflow.com/5fc917a738ff8f24bc5df94c/60ba47bab2c2d865dd8d23c1_Screenshot%202021-06-04%20at%2016.33.01.png`, `https://www.linkedin.com/in/andremoniz/`),
     companyMember(`João (MoshMage) Gonçalves`, `Chief Technology Officer`, moshmageAvatar, `https://www.linkedin.com/in/moshmage/`),
-    companyMember(`Filipe Pereira`, `Chief of Inbound`, `https://uploads-ssl.webflow.com/5fc917a738ff8f24bc5df94c/60ba445dd4bb805b68ad716f_Screenshot%202021-06-04%20at%2016.18.44.png`, `https://www.linkedin.com/in/filipeappereira/`),
+    companyMember(`Filipe Pereira`, ` Chief of Ecosystem Development`, `https://uploads-ssl.webflow.com/5fc917a738ff8f24bc5df94c/60ba445dd4bb805b68ad716f_Screenshot%202021-06-04%20at%2016.18.44.png`, `https://www.linkedin.com/in/filipeappereira/`),
     companyMember(`André Santos`, `UX/UI Designer`, `https://uploads-ssl.webflow.com/5fc917a738ff8f24bc5df94c/60bc972545cbc32c33aeb84f_Screenshot%202021-06-06%20at%2010.35.08-p-500.png`, `https://www.linkedin.com/in/andredbsantos`),
     companyMember(`Rodrigo Sousa`, `UX/UI Designer`, rodrigoAvatar, `https://www.linkedin.com/in/rodrigosous-a/`),
     companyMember(`Marcus Vinicius`, `Front-End Developer`, `https://uploads-ssl.webflow.com/5fc917a738ff8f24bc5df94c/60d4d7e58c9770649d8bc8c2_Screenshot%202021-06-24%20at%2020.07.09-p-500.png`),
     companyMember(`André Gonçalves`, `Javascript Developer`, `https://uploads-ssl.webflow.com/5fc917a738ff8f24bc5df94c/60bc97fba05e6732771bcaa6_Screenshot%202021-06-06%20at%2010.39.23.png`, `https://www.linkedin.com/in/andrefcgoncalves/`),
-    companyMember(`Joao David`, `Javascript Developer`, ``, ``),
+    companyMember(`Joao David`, `Chief of Community`, joaoDavidAvatar, `https://linkedin.com/in/dindgeri`),
     companyMember(`Luis Clark`, `Javascript Developer`, luisClarkAvatar, `https://www.linkedin.com/in/joaoluisclark/`),
     companyMember(`Alvaro Nogueiras`, `Advisor`, `https://uploads-ssl.webflow.com/5fc917a738ff8f24bc5df94c/60ba47018b85e45e46b1d9c1_Screenshot%202021-06-04%20at%2016.29.39.png`, `https://www.linkedin.com/in/alvarogomeznog/`),
     companyMember(`Nuno Correia`, `Advisor`, nunoCorreiaAvatar, `https://www.linkedin.com/in/nuno-m-correia`),
