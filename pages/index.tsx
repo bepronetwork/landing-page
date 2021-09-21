@@ -113,8 +113,20 @@ export default function Home() {
   defaults.font.family = 'fontRegular';
 
   const chartOptions = {
+    elements: {
+      point: {
+        radius: 0
+      }
+    },
     maintainAspectRatio: false,
     scales: {
+      xAxes: [{
+        ticks: {
+          autoSkip: false,
+          maxRotation: 90,
+          minRotation: 90
+        }
+      }],
       yAxes: [
         {
           ticks: {
