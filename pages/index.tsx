@@ -140,10 +140,12 @@ export default function Home() {
       <>
         <Header />
 
-        <div className="landing-hero bg-blue">
-          <h1 className="h2 color-white ml-2 mr-2">A Protocol for Decentralized Development</h1>
+        <div className="landing-hero bg-blue d-flex justify-content-center text-center">
+          <div>
+            <h1 className="h2 color-white ml-2 mr-2">A Protocol for Decentralized Development</h1>
 
-          <div className="rotator-wrapper d-none d-sm-block">
+            <div className="rotator-wrapper d-none d-sm-block">
+          </div>
             <p className="p-big color-white">Use bepro.network to&nbsp;
               <span className="rotator">
                 <span>decentralize development</span>
@@ -381,7 +383,7 @@ let availableTokens = await staking.availableTokens();
 
             </div>
           </div>
-          <div className="col-content bg-gray">
+          <div className="col-content bg-gray my-runkit">
             <p className="smallCaption color-blue">Web3 API Ecosystem</p>
             <h4 className="h3 color-blue">Gaming, DeFi, NFTs and more!</h4>
             <p className="p color-blue">An SDK that gives you the chance to clone or build on top of our direct operators, a tool to get your app started</p>

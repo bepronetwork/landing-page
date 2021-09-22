@@ -219,11 +219,7 @@ p {
       margin-left: $m;
     }
     li {
-      margin-right: $m*2;
-
-      @media (max-width: 600px) {
-        margin-right: $m;
-      }
+      margin-right: $m;
     }
     a {
       font-family: 'fontMedium', sans-serif;
@@ -602,6 +598,9 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    &.my-runkit {
+      min-height: 640px;
+    }
   }
 
   @media (max-width: 900px) {
@@ -613,6 +612,9 @@ p {
       width: 100%;
       min-height: auto;
       padding: $m*4 $m*2;
+      &.my-runkit{
+        min-height: auto;
+      }
     }
   }
   @media (min-width: 1441px) {
@@ -632,7 +634,7 @@ p {
   min-height: 600px;
   height: 100%;
   text-align: center;
-  padding-top: $m*6;
+  padding-top: $m*8;
   margin-top: $m*4+($m/3);
   @media (max-width: 600px) {
     padding-top: $m*3;
