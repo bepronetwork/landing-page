@@ -329,11 +329,11 @@ export default function Home() {
           <div className="logos-container w-100">
             <div className="logo-wrap w-50">
               <span className="backed-logos logo-certik"></span>
-              <p className="smallCaption color-gray security-labels">Security audit - In progress</p>
+              <p className="smallCaption color-gray security-labels">Security audit - <br/>In progress</p>
             </div>
             <div className="logo-wrap w-50">
               <span className="backed-logos logo-red4sec"></span>
-              <p className="smallCaption color-gray security-labels">Security audit - In progress</p>
+              <p className="smallCaption color-gray security-labels">Security audit - <br/>In progress</p>
             </div>
             <div className="logo-wrap w-100 text-center flex-column bg-security">
               <a href="https://docs.bepro.network/getting-started/bug-bounty" target="_blank">
@@ -381,7 +381,7 @@ let availableTokens = await staking.availableTokens();
 
             </div>
           </div>
-          <div className="col-content bg-gray my-runkit">
+          <div className="col-content bg-gray">
             <p className="smallCaption color-blue">Web3 API Ecosystem</p>
             <h4 className="h3 color-blue">Gaming, DeFi, NFTs and more!</h4>
             <p className="p color-blue">An SDK that gives you the chance to clone or build on top of our direct operators, a tool to get your app started</p>

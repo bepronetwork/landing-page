@@ -487,6 +487,11 @@ p {
 .security-labels {
   position: absolute;
   bottom: $m;
+  @media only screen and (min-width: 600px){
+    br {
+      display: none;
+    }
+  }
 }
 
 .color-blue {
@@ -597,9 +602,6 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    &.my-runkit {
-      min-height: 640px;
-    }
   }
 
   @media (max-width: 900px) {
@@ -622,7 +624,7 @@ p {
 
 .hero {
   padding: $m*4 0px;
-  margin-top: $m*4;
+  margin-top: $m*4+($m/3);
 }
 
 .landing-hero {
@@ -631,7 +633,7 @@ p {
   height: 100%;
   text-align: center;
   padding-top: $m*6;
-  margin-top: $m*4;
+  margin-top: $m*4+($m/3);
   @media (max-width: 600px) {
     padding-top: $m*3;
   }
@@ -815,6 +817,13 @@ $slider-2-widthMobile: $slider-2-logos * ($slider-logos-widthMobile + (2 * $slid
       height: 95px;
     }
   }
+  @media (max-width: 600px) {
+    .logo-wrap {
+      .backed-logos {
+        background-size: contain;
+      }
+    }
+  }
 }
 
 .hide-xs {
@@ -969,7 +978,15 @@ $slider-2-widthMobile: $slider-2-logos * ($slider-logos-widthMobile + (2 * $slid
 
 
 .community {
-  min-height: 600px;
+  padding: $m*3;
+  @media (max-width: 900px) {
+      width: 100%;
+      min-height: auto;
+      padding: $m*4 $m*2;
+  }
+  @media (min-width: 1441px) {
+      padding: $m*3 10%;
+  }
 }
 
 .bepro-logo {
