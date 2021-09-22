@@ -225,7 +225,8 @@ export default function Home() {
           </div>
           <div className="col-content bg-shade">
             <p className="smallCaption">Build the future of Web3</p>
-            <p className="p">Bepro Network Protocol is a decentralized marketplace and system that connects developers with operators - anyone looking to build open-source development repositories. Manage disputes, participate in it, and earn token rewards by curating the system & providing development resources.</p>
+            <p className="p">Bepro Network Protocol is a decentralized marketplace and system that connects developers with operators or anyone looking to build open-source development repositories.</p>
+            <p className="p">Manage disputes in the network, participate in it and earn token rewards by curating the system & providing development resources.</p>
           </div>
         </div>
 
@@ -253,7 +254,7 @@ export default function Home() {
           <div className="col-content bg-shade">
             <p className="smallCaption">CURATION</p>
             <h4 className="h3 color-white">Curate the system</h4>
-          <p className="p">Create proposals of bounty distributions & curate the Bepro Network by creating disputes whenever you don´t agree with a bounty distribution of how much each contributor should receive.</p>
+          <p className="p">Create proposals of bounty distributions & curate the Bepro Network by creating disputes whenever you don't agree with a bounty distribution of how much each contributor should receive.</p>
           </div>
           <div className="col-content">
             <div className="net-stats d-flex align-items-center justify-content-center">
@@ -262,7 +263,7 @@ export default function Home() {
                 <p className="p-small">Open issues</p>
               </div>
               <div className="item text-center">
-                <h3 className="h1 color-white">+{stats.beprosStaked}</h3>
+                <h3 className="h1 color-white text-break">+{(+stats.beprosStaked).toFixed()}</h3>
                 <p className="p-small">$BEPRO (Oracles)</p>
               </div>
             </div>
@@ -416,7 +417,7 @@ let availableTokens = await staking.availableTokens();
 
         <div className="community d-flex align-items-center justify-content-center text-center flex-column bg-blue">
           <p className="caption color-white trans">Community</p>
-          <h1 className="h1 color-white mb-5">Join our the development on <a target="_blank" href="https://github.com/bepronetwork">Github</a></h1>
+          <h1 className="h1 color-white mb-5">Join our development on <u><a target="_blank" href="https://github.com/bepronetwork">Github</a></u></h1>
           <div className="net-stats d-flex align-items-center justify-content-center">
               <div className="item text-center mr-3">
                 <h3 className="h1 color-white">+{stats.openIssues}</h3>
@@ -427,7 +428,7 @@ let availableTokens = await staking.availableTokens();
                 <p className="p-small color-white">Developers</p>
               </div>
           <div className="item text-center">
-            <h3 className="h1 color-white">+{stats.beprosStaked}</h3>
+            <h3 className="h1 color-white text-break">+{(+stats.beprosStaked).toFixed()}</h3>
             <p className="p-small color-white">$BEPRO</p>
           </div>
             </div>
