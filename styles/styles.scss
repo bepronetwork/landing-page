@@ -914,7 +914,7 @@ $slider-2-widthMobile: $slider-2-logos * ($slider-logos-widthMobile + (2 * $slid
 .logo8{
   width: 354px;
   height: 42px;
-  background-image: url('../assets/compete_2020.png');
+  background-image: url('../assets/compete-2020.png');
 }
 
 .logo9 {
@@ -936,11 +936,41 @@ $slider-2-widthMobile: $slider-2-logos * ($slider-logos-widthMobile + (2 * $slid
 .compete-2020 {
   width: 207px;
   height: 25px;
-  background-image: url('../assets/compete_2020.png');
+  background-image: url('../assets/compete-2020.png');
   @media (max-width: 900px) {
     width: 174px;
     height: 22px;
   }
+}
+
+.moonbeam{
+  width: 258px;
+  height: 50px;
+  background-image: url('../assets/moonbeam.png');
+}
+
+.utrust{
+  width: 198px;
+  height: 45px;
+  background-image: url('../assets/utrust.png');
+}
+
+.block-venture{
+  width: 278px;
+  height: 57px;
+  background-image: url('../assets/block-venture.png');
+}
+
+.kgsa{
+  width: 162px;
+  height: 50px;
+  background-image: url('../assets/kgsa.png');
+}
+
+.cca-lawfirm{
+  width: 162px;
+  height: 50px;
+  background-image: url('../assets/cca-lawfirm.png');
 }
 
 .docsImg {
