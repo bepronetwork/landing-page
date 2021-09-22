@@ -683,7 +683,7 @@ $slider-2-widthMobile: $slider-2-logos * ($slider-logos-widthMobile + (2 * $slid
   display: flex;
   width: $slider-1-width;
   height: $slider-logos-height;
-  animation: scroll3 60s linear infinite;
+  animation: scroll3 40s linear infinite;
   margin-bottom: $m;
   @media (max-width: 900px) {
     width: $slider-2-widthMobile;
@@ -695,7 +695,7 @@ $slider-2-widthMobile: $slider-2-logos * ($slider-logos-widthMobile + (2 * $slid
   display: flex;
   width: $slider-2-width;
   height: $slider-logos-height;
-  animation: scroll3 80s linear infinite;
+  animation: scroll3 50s linear infinite;
   margin-bottom: $m;
   @media (max-width: 900px) {
     width: $slider-2-widthMobile;
@@ -805,6 +805,12 @@ $slider-2-widthMobile: $slider-2-logos * ($slider-logos-widthMobile + (2 * $slid
     .wrap-small{
       height: 95px;
     }
+  }
+}
+
+.hide-xs {
+  @media (max-width: 375px) {
+    display: none !important;
   }
 }
 

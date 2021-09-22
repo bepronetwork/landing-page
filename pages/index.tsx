@@ -153,6 +153,7 @@ export default function Home() {
             </p>
           </div>
           <div className="slides">
+            {/* To add new logos on slide-3 and slide-4 you need to update the logo counter on styles.scss */}
             <div className="slide-3">
               <a target="_blank" href="https://www.nftsee.io/">
                 <div className="slide-item log-1"></div>
@@ -307,7 +308,7 @@ export default function Home() {
                 <span className="backed-logos logo7"></span>
               </a>
             </div>
-            <div className="logo-wrap wrap-small">
+            <div className="logo-wrap wrap-small hide-xs">
               <a target="_blank" href="https://www.compete2020.gov.pt/">
                 <span className="backed-logos logo8"></span>
               </a>
