@@ -145,15 +145,16 @@ export default function Home() {
             <h1 className="h2 color-white ml-2 mr-2">A Protocol for Decentralized Development</h1>
 
             <div className="rotator-wrapper d-none d-sm-block">
+              <p className="p-big color-white">Use bepro.network to&nbsp;
+                <span className="rotator">
+                  <span>decentralize development</span>
+                  <span>develop & earn rewards</span>
+                  <span>curate the protocol</span>
+                </span>
+              </p>
+            </div>
           </div>
-            <p className="p-big color-white">Use bepro.network to&nbsp;
-              <span className="rotator">
-                <span>decentralize development</span>
-                <span>develop & earn rewards</span>
-                <span>curate the protocol</span>
-              </span>
-            </p>
-          </div>
+
           <div className="slides">
             {/* To add new logos on slide-3 and slide-4 you need to update the logo counter on styles.scss */}
             <div className="slide-3">
@@ -219,7 +220,7 @@ export default function Home() {
 
         <div className="d-flex bg-blue align-items-center justify-content-between cols">
           <div className="col-content">
-          <div className="d-flex flex-row mb-3 align-items-center">
+          <div className="d-flex flex-row mb-3 align-items-center d-none d-sm-block">
               <p className="smallCaption color-white mb-0">Co-financed by</p>
               <span className="backed-logos mx-2 compete-2020"></span>
             </div>
@@ -311,7 +312,7 @@ export default function Home() {
                 <span className="backed-logos logo7"></span>
               </a>
             </div>
-            <div className="logo-wrap wrap-small hide-xs">
+            <div className="logo-wrap wrap-small d-none d-sm-block">
               <a target="_blank" href="https://www.compete2020.gov.pt/">
                 <span className="backed-logos logo8"></span>
               </a>
@@ -327,7 +328,7 @@ export default function Home() {
 
         <div className="d-flex align-items-center justify-content-between flex-column text-center pt-5 bg-dark-gray">
           <p className="smallCaption color-gray">Audited and approved</p>
-          <h1 className="h1 color-white pb-5">A Protocol for Decentralized Development</h1>
+          <h1 className="h1 color-white pb-5 px-2">A Protocol for Decentralized Development</h1>
           <div className="logos-container w-100">
             <div className="logo-wrap w-50">
               <span className="backed-logos logo-certik"></span>
