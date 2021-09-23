@@ -147,7 +147,7 @@ export default function Home() {
             <div className="rotator-wrapper d-none d-sm-block">
               <p className="p-big color-white">Use bepro.network to&nbsp;
                 <span className="rotator">
-                  <span>build your app</span>
+                  <span>build your dApp</span>
                   <span>decentralize development</span>
                   <span>develop & get paid fairly</span>
                   <span>curate & earn rewards</span>
