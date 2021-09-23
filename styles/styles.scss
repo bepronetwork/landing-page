@@ -832,7 +832,7 @@ $slider-2-widthMobile: $slider-2-logos * ($slider-logos-widthMobile + (2 * $slid
 }
 
 .hide-xs {
-  @media (max-width: 375px) {
+  @media (max-width: 450px) {
     display: none !important;
   }
 }
