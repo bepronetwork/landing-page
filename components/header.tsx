@@ -16,7 +16,7 @@ export default function Header() {
         <li><a
           href="https://docs.bepro.network/sdk-documentation/why-bepro-js"
           className="d-none d-sm-inline"
-          target="_blank">BEPRO.js SDK</a></li>
+          target="_blank">BEPRO.js SDK (Web3 API)</a></li>
       </ul>
     </div>
     <div className="d-flex flex-row align-items-center">
