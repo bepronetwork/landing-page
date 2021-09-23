@@ -220,6 +220,9 @@ p {
     }
     li {
       margin-right: $m;
+      @media (max-width: 600px) {
+        margin-right: 0;
+      }
     }
     a {
       font-family: 'fontMedium', sans-serif;
@@ -637,7 +640,7 @@ p {
   padding-top: $m*8;
   margin-top: $m*4+($m/3);
   @media (max-width: 600px) {
-    padding-top: $m*3;
+    padding-top: $m*6;
   }
   .slides {
     position: absolute;
