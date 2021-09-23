@@ -312,8 +312,8 @@ export default function Home() {
                 <span className="backed-logos logo7"></span>
               </a>
             </div>
-            <div className="logo-wrap wrap-small d-none d-sm-block">
-              <a target="_blank" href="https://www.compete2020.gov.pt/">
+            <div className="logo-wrap wrap-small hide-xs">
+              <a className="d-none d-sm-block" target="_blank" href="https://www.compete2020.gov.pt/">
                 <span className="backed-logos logo8"></span>
               </a>
             </div>
