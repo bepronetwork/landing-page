@@ -142,7 +142,7 @@ export default function Home() {
 
         <div className="landing-hero bg-blue d-flex justify-content-center text-center">
           <div>
-            <h1 className="h2 color-white ml-2 mr-2">A Protocol for Decentralized Development</h1>
+            <h1 className="h2 color-white ml-2 mr-2">Autonomous Protocol for Decentralized Development</h1>
 
             <div className="rotator-wrapper d-none d-sm-block">
               <p className="p-big color-white">Use bepro.network to&nbsp;
@@ -328,8 +328,8 @@ export default function Home() {
         </div>
 
         <div className="d-flex align-items-center justify-content-between flex-column text-center pt-5 bg-dark-gray">
-          <p className="smallCaption color-gray">Audited and approved</p>
-          <h1 className="h1 color-white pb-5 px-2">Autonomous Protocol for Decentralized Development</h1>
+          <p className="smallCaption color-gray">Audited and approved - In Progress</p>
+          <h1 className="h1 color-white pb-5 px-2">A Protocol for Decentralized Development</h1>
           <div className="logos-container w-100">
             <div className="logo-wrap w-50">
               <span className="backed-logos logo-certik"></span>
