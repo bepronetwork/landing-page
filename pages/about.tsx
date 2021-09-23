@@ -68,39 +68,6 @@ export default function About() {
           </div>
         </div>
       </div>
-
-      <div className="d-flex align-items-center justify-content-between flex-column pt-5 bg-shadow">
-          <h1 className="h1 color-white pb-5">Partners</h1>
-          <div className="logos-container">
-
-            <div className="logo-wrap border-0 wrap-small">
-              <a target="_blank" href="https://moonbeam.network/">
-                <span className="backed-logos moonbeam"></span>
-              </a>
-            </div>
-            <div className="logo-wrap border-0 wrap-small">
-              <a target="_blank" href="https://utrust.com/">
-                <span className="backed-logos utrust"></span>
-              </a>
-            </div>
-            <div className="logo-wrap border-0 wrap-small">
-              <a target="_blank" href="https://block.ventures/">
-                <span className="backed-logos block-venture"></span>
-              </a>
-            </div>
-            <div className="logo-wrap border-0 w-50 wrap-small">
-              <a target="_blank" href="https://www.kgsa.pt/">
-                <span className="backed-logos kgsa"></span>
-              </a>
-            </div>
-            <div className="logo-wrap border-0 w-50 wrap-small">
-              <a target="_blank" href="https://www.cca.law/">
-                <span className="backed-logos cca-lawfirm"></span>
-              </a>
-            </div>
-          </div>
-        </div>
-
       <Footer />
 
     </>
