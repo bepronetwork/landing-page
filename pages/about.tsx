@@ -27,7 +27,7 @@ export default function About() {
     companyMember(`Filipe Pereira`, ` Chief of Ecosystem Development`, `https://uploads-ssl.webflow.com/5fc917a738ff8f24bc5df94c/60ba445dd4bb805b68ad716f_Screenshot%202021-06-04%20at%2016.18.44.png`, `https://www.linkedin.com/in/filipeappereira/`),
     companyMember(`André Santos`, `UX/UI Designer`, `https://uploads-ssl.webflow.com/5fc917a738ff8f24bc5df94c/60bc972545cbc32c33aeb84f_Screenshot%202021-06-06%20at%2010.35.08-p-500.png`, `https://www.linkedin.com/in/andredbsantos`),
     companyMember(`Rodrigo Sousa`, `UX/UI Designer`, rodrigoAvatar, `https://www.linkedin.com/in/rodrigosous-a/`),
-    companyMember(`Marcus Vinicius`, `Front-End Developer`, `https://uploads-ssl.webflow.com/5fc917a738ff8f24bc5df94c/60d4d7e58c9770649d8bc8c2_Screenshot%202021-06-24%20at%2020.07.09-p-500.png`),
+    companyMember(`Marcus Vinicius`, `Front-End Developer`, `https://uploads-ssl.webflow.com/5fc917a738ff8f24bc5df94c/60d4d7e58c9770649d8bc8c2_Screenshot%202021-06-24%20at%2020.07.09-p-500.png`, `https://www.linkedin.com/in/marcus-vin%C3%ADcius-lima-santos/`),
     companyMember(`André Gonçalves`, `Javascript Developer`, `https://uploads-ssl.webflow.com/5fc917a738ff8f24bc5df94c/60bc97fba05e6732771bcaa6_Screenshot%202021-06-06%20at%2010.39.23.png`, `https://www.linkedin.com/in/andrefcgoncalves/`),
     companyMember(`Joao David`, `Chief of Community`, joaoDavidAvatar, `https://linkedin.com/in/dindgeri`),
     companyMember(`Luis Clark`, `Javascript Developer`, luisClarkAvatar, `https://www.linkedin.com/in/joaoluisclark/`),
