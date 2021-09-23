@@ -220,7 +220,7 @@ export default function Home() {
 
         <div className="d-flex bg-blue align-items-center justify-content-between cols">
           <div className="col-content">
-          <div className="d-flex flex-row mb-3 align-items-center d-none d-sm-block">
+          <div className="d-flex flex-row mb-3 align-items-center">
               <p className="smallCaption color-white mb-0">Co-financed by</p>
               <span className="backed-logos mx-2 compete-2020"></span>
             </div>
