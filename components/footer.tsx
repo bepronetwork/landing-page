@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="d-flex align-items-center justify-content-between flex-column">
           <div className="footer-container">
             <div className="footer-wrap">
-              <span className="bepro-logo"></span>
+              <span className="bepro-logo" />
               <p className="p-small">@Built in 🇵🇹</p>
               <p className="p-small text-white">BEPRO © 2021 All rights reserved.</p>
               <p className="p-small">Code-as-a-Service Protocol</p>
