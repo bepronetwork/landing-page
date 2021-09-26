@@ -41,6 +41,7 @@ export default function Footer() {
                 <li><a className="p-small" target="_blank" href="https://support.bepro.network/en/collections/3143249-developers">I am a developer</a></li>
                 <li><a className="p-small" target="_blank" href="https://support.bepro.network/en/collections/3143296-bepro-holder">I am a holder</a></li>
                 <li><a className="p-small" target="_blank" href="https://github.com/bepronetwork/grants-program">Open grants</a></li>
+                <li><a className="p-small" target="_blank" href="https://twitter.com/bepronet">Twitter</a></li>
               </ul>
             </div>
           </div>
