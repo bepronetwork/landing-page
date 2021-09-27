@@ -16,7 +16,7 @@ export default function Footer() {
               <p className="p-small text-white">BEPRO © 2021 All rights reserved.</p>
               <p className="p-small">Code-as-a-Service Protocol</p>
               <p className="p-small">Reach out: general@bepro.network</p>
-              <p className="p-small">BEPRO Services, BEPRO Protocol and BEPRO Token (BEPRO) are not available in the United States and other Excluded Jurisdictions</p>
+              <p className="p-small">BEPRO Services, BEPRO Protocol and BEPRO Token (BEPRO) are not available in the United States and other <a className="text-decoration-none color-blue" target="_blank" href="https://www.bepro.network/terms-and-conditions">Excluded Jurisdictions</a></p>
             </div>
             <div className="footer-wrap">
               <h3 className="smallCaption mb-3">GET AROUND</h3>
