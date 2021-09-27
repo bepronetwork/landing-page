@@ -157,6 +157,9 @@ export default function Home() {
           </div>
 
           <div className="slides">
+            <div className="d-flex justify-content-end my-3 mx-4 px-sm-5">
+              <span className="smallCaption text-white">BUILDING WITH US</span>
+            </div>
             {/* To add new logos on slide-3 and slide-4 you need to update the logo counter on styles.scss */}
             <div className="slide-3">
               <a target="_blank" href="https://www.nftsee.io/">

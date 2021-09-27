@@ -640,7 +640,7 @@ p {
   padding-top: $m*8;
   margin-top: $m*4+($m/3);
   @media (max-width: 600px) {
-    padding-top: $m*6;
+    padding-top: $m*4;
   }
   .slides {
     position: absolute;
