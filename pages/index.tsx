@@ -7,6 +7,7 @@ import GithubMicroService from '../services/github-microservice';
 import { Line } from 'react-chartjs-2';
 import { defaults } from 'react-chartjs-2';
 import Header from '../components/header';
+import {numberToUX} from '../helpers/NumberToUX';
 
 interface DataSet {
   data: (string|number)[],
@@ -246,11 +247,11 @@ export default function Home() {
           <div className="col-content">
             <div className="net-stats d-flex align-items-center justify-content-center">
               <div className="item text-center mr-3">
-                <h3 className="h1 color-white">+{stats.openIssues}</h3>
+                <h3 className="h1 color-white">+{numberToUX(+stats.openIssues)}</h3>
                 <p className="p-small">Open issues</p>
               </div>
               <div className="item text-center">
-                <h3 className="h1 color-white">{stats.tokensStaked}</h3>
+                <h3 className="h1 color-white">{numberToUX(+stats.tokensStaked)}</h3>
                 <p className="p-small">$BEPRO (Payments)</p>
               </div>
             </div>
@@ -334,13 +335,13 @@ export default function Home() {
           <p className="smallCaption color-gray">Audited and approved - In Progress</p>
           <h1 className="h1 color-white pb-5 px-2">A Protocol for Decentralized Development</h1>
           <div className="logos-container w-100">
-            <div className="logo-wrap w-50">
-              <span className="backed-logos logo-certik"></span>
-              <p className="smallCaption color-gray security-labels">Security audit - <br/>In progress</p>
+            <div className="align-self-center logo-wrap-security text-center w-50">
+              <span className="backed-logos logo-certik" />
+              <span className="smallCaption color-gray d-block pt-1">Security audit <br/>In progress</span>
             </div>
-            <div className="logo-wrap w-50">
-              <span className="backed-logos logo-red4sec"></span>
-              <p className="smallCaption color-gray security-labels">Security audit - <br/>In progress</p>
+            <div className="align-self-center logo-wrap-security w-50 text-center">
+              <span className="backed-logos logo-red4sec" />
+              <span className="smallCaption color-gray d-block pt-1">Security audit <br/>In progress</span>
             </div>
             <div className="logo-wrap w-100 text-center flex-column bg-security">
               <a href="https://docs.bepro.network/getting-started/bug-bounty" target="_blank">
@@ -435,7 +436,7 @@ let availableTokens = await staking.availableTokens();
                 <p className="p-small color-white">Developers</p>
               </div>
           <div className="item text-center">
-            <h3 className="h1 color-white text-break">+{(+stats.beprosStaked).toFixed()}</h3>
+            <h3 className="h1 color-white text-break">+{numberToUX(+stats.beprosStaked+stats.tokensStaked)}</h3>
             <p className="p-small color-white">$BEPRO</p>
           </div>
             </div>
