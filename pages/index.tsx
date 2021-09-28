@@ -57,8 +57,8 @@ export default function Home() {
       const data: number[] = [];
 
       const interval = 4 * 3;
+      pairs.splice(-1)
       pairs.forEach(([week, total], i) => {
-        if(i !== pairs.length - 1)
           labels.push(!((i / interval) % 1) ? week : ``);
         data.push(total);
       })
