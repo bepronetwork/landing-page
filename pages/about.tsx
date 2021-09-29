@@ -60,8 +60,8 @@ export default function About() {
             <a href="https://github.com/bepronetwork/bepro-js/network/members" target="_blank">
               <div className="about-people text-center">
                 <div className="item">
-                  <h1 className="h1 text-white">+{totalDevelopers} Devs</h1>
-                  <p className="p-small">Community Developers</p>
+                  <h1 className="h1 text-white">+{totalDevelopers} Members</h1>
+                  <p className="p-small">Protocol Members</p>
                 </div>
               </div>
             </a>
