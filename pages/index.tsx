@@ -335,11 +335,11 @@ export default function Home() {
           <p className="smallCaption color-gray">Audited and approved - In Progress</p>
           <h1 className="h1 color-white pb-5 px-2">A Protocol for Decentralized Development</h1>
           <div className="logos-container w-100">
-            <div className="align-self-center logo-wrap-security text-center w-50">
+            <div className="align-self-center text-center w-50 d-flex justify-content-center align-items-center flex-column d-sm-inline-block">
               <span className="backed-logos logo-certik" />
               <span className="smallCaption color-gray d-block pt-1">Security audit <br/>In progress</span>
             </div>
-            <div className="align-self-center logo-wrap-security w-50 text-center">
+            <div className="align-self-center text-center w-50 d-flex justify-content-center align-items-center flex-column d-sm-inline-block">
               <span className="backed-logos logo-red4sec" />
               <span className="smallCaption color-gray d-block pt-1">Security audit <br/>In progress</span>
             </div>
@@ -426,12 +426,12 @@ let availableTokens = await staking.availableTokens();
         <div className="community d-flex align-items-center justify-content-center text-center flex-column bg-blue">
           <p className="caption color-white trans">Community</p>
           <h1 className="h1 color-white mb-5">Join our development on <u><a target="_blank" href="https://github.com/bepronetwork">Github</a></u></h1>
-          <div className="net-stats d-flex align-items-center justify-content-center">
-              <div className="item text-center mr-3">
+          <div className="net-stats d-flex align-items-center justify-content-center flex-column flex-sm-row">
+              <div className="item text-center me-sm-3">
                 <h3 className="h1 color-white">+{stats.openIssues}</h3>
                 <p className="p-small color-white">Open issues</p>
               </div>
-              <div className="item text-center mr-3">
+              <div className="item text-center me-sm-3">
               <h3 className="h1 color-white">+{totalDevelopers}</h3>
                 <p className="p-small color-white">Members</p>
               </div>
