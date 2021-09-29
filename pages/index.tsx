@@ -271,7 +271,7 @@ export default function Home() {
                 <p className="p-small">Open issues</p>
               </div>
               <div className="item text-center">
-                <h3 className="h1 color-white text-break">+{(+stats.beprosStaked).toFixed()}</h3>
+                <h3 className="h1 color-white text-break">{numberToUX(+stats.beprosStaked)}</h3>
                 <p className="p-small">$BEPRO (Oracles)</p>
               </div>
             </div>
@@ -433,10 +433,10 @@ let availableTokens = await staking.availableTokens();
               </div>
               <div className="item text-center mr-3">
               <h3 className="h1 color-white">+{totalDevelopers}</h3>
-                <p className="p-small color-white">Developers</p>
+                <p className="p-small color-white">Members</p>
               </div>
           <div className="item text-center">
-            <h3 className="h1 color-white text-break">+{numberToUX(+stats.beprosStaked+stats.tokensStaked)}</h3>
+            <h3 className="h1 color-white text-break">+{numberToUX(+stats.beprosStaked)}</h3>
             <p className="p-small color-white">$BEPRO</p>
           </div>
             </div>
