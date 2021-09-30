@@ -936,6 +936,9 @@ $slider-2-widthMobile: $slider-2-logos * ($slider-logos-widthMobile + (2 * $slid
   width: 218px;
   height: 53px;
   background-image: url('../assets/certik.png');
+  @media (max-width: 600px) {
+    transform: scale(0.65);
+  }
 }
 
 .compete-2020 {
