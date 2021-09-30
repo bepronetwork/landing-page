@@ -267,7 +267,7 @@ export default function Home() {
           <div className="col-content">
             <div className="net-stats d-flex align-items-center justify-content-center">
               <div className="item text-center mr-3">
-                <h3 className="h1 color-white">+{numberToUX(stats.openIssues)}</h3>
+                <h3 className="h1 color-white">+{numberToUX(totalDevelopers)}</h3>
                 <p className="p-small">Protocol Members</p>
               </div>
               <div className="item text-center">
