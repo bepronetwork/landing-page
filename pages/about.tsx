@@ -57,7 +57,7 @@ export default function About() {
           {companyMembers.map(member => <div className="col-md-3"><CompanyMember member={member} /></div>)}
 
           <div className="col-md-6">
-            <a href="https://github.com/bepronetwork/bepro-js/network/members" target="_blank">
+            <a href="https://testnet.bepro.network/" target="_blank">
               <div className="about-people text-center">
                 <div className="item">
                   <h1 className="h1 text-white">+{totalDevelopers} Members</h1>
