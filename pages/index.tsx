@@ -436,7 +436,7 @@ let availableTokens = await staking.availableTokens();
                 <p className="p-small color-white">Members</p>
               </div>
           <div className="item text-center">
-            <h3 className="h1 color-white text-break">+{numberToUX(+stats.beprosStaked)}</h3>
+            <h3 className="h1 color-white text-break">+{numberToUX(Number(stats.beprosStaked)+Number(stats.tokensStaked))}</h3>
             <p className="p-small color-white">$BEPRO</p>
           </div>
             </div>
