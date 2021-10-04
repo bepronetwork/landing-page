@@ -3,6 +3,7 @@ import React, {useEffect, useState} from 'react'
 import Footer from '../components/footer'
 import GithubMicroService from '../services/github-microservice';
 import CompanyMember from '../components/company-member';
+import {numberToUX} from '../helpers/NumberToUX';
 
 import moshmageAvatar from '../assets/moshmage-avatar.jpg';
 import luisClarkAvatar from '../assets/luisclark-avatar.jpg';
@@ -60,7 +61,7 @@ export default function About() {
             <a href="https://testnet.bepro.network/" target="_blank">
               <div className="about-people text-center">
                 <div className="item">
-                  <h1 className="h1 text-white">+{totalDevelopers} Members</h1>
+                  <h1 className="h1 text-white">+{numberToUX(totalDevelopers)} Members</h1>
                   <p className="p-small">Protocol Members</p>
                 </div>
               </div>

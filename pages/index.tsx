@@ -427,17 +427,17 @@ let availableTokens = await staking.availableTokens();
           <p className="caption color-white trans">Community</p>
           <h1 className="h1 color-white mb-5">Join our development on <u><a target="_blank" href="https://github.com/bepronetwork">Github</a></u></h1>
           <div className="net-stats d-flex align-items-center justify-content-center flex-column flex-sm-row">
-              <div className="item text-center me-sm-3">
-                <h3 className="h1 color-white">+{stats.openIssues}</h3>
-                <p className="p-small color-white">Open issues</p>
+              <div className="item text-center me-sm-4">
+                <h3 className="h1 color-white">+{numberToUX(stats.openIssues)}</h3>
+                <p className="p-small color-white ms-sm-4">Open issues</p>
               </div>
-              <div className="item text-center me-sm-3">
-              <h3 className="h1 color-white">+{totalDevelopers}</h3>
-                <p className="p-small color-white">Members</p>
+              <div className="item text-center me-sm-4">
+              <h3 className="h1 color-white">+{numberToUX(totalDevelopers)}</h3>
+                <p className="p-small color-white ms-sm-4">Members</p>
               </div>
           <div className="item text-center">
             <h3 className="h1 color-white text-break">+{numberToUX(Number(stats.beprosStaked)+Number(stats.tokensStaked))}</h3>
-            <p className="p-small color-white">$BEPRO</p>
+            <p className="p-small color-white ms-sm-4">$BEPRO</p>
           </div>
             </div>
         </div>
