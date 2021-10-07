@@ -667,7 +667,7 @@ $slider-logos-heightMobile: 50px;
 
 /* Logo Slider 1
 */
-$slider-1-logos: 8;
+$slider-1-logos: 9;
 $slider-1-gutter: 16px;
 $slider-1-width: $slider-1-logos * ($slider-logos-width + (2 * $slider-1-gutter));
 $slider-1-widthMobile: $slider-1-logos * ($slider-logos-widthMobile + (2 * $slider-1-gutter));
@@ -781,6 +781,8 @@ $slider-2-widthMobile: $slider-2-logos * ($slider-logos-widthMobile + (2 * $slid
   }
   &.log-16 {
     background-image: url('../assets/log-16.png');
+    background-size: contain;
+    width: 158px;
   }
   &.log-17 {
     background-image: url('../assets/log-17.png');
@@ -788,7 +790,6 @@ $slider-2-widthMobile: $slider-2-logos * ($slider-logos-widthMobile + (2 * $slid
   &.log-18 {
     background-image: url('../assets/log-18.png');
   }
-
 }
 
 
