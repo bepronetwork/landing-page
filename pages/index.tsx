@@ -292,6 +292,11 @@ export default function Home() {
                 <span className="backed-logos logo2"></span>
               </a>
             </div>
+               <div className="logo-wrap wrap-small">
+              <a target="_blank" href="https://twitter.com/cmsholdings">
+                <span className="backed-logos logo0"></span>
+              </a>
+            </div>
             <div className="logo-wrap wrap-small">
               <a target="_blank" href="https://ganexacapital.com/">
                 <span className="backed-logos logo4"></span>
