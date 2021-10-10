@@ -293,11 +293,6 @@ export default function Home() {
               </a>
             </div>
             <div className="logo-wrap wrap-small">
-              <a target="_blank" href="https://www.moonrockcapital.io/">
-                <span className="backed-logos logo3"></span>
-              </a>
-            </div>
-            <div className="logo-wrap wrap-small">
               <a target="_blank" href="https://ganexacapital.com/">
                 <span className="backed-logos logo4"></span>
               </a>
