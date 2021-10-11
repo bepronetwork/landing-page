@@ -294,7 +294,7 @@ export default function Home() {
             </div>
              <div className="logo-wrap wrap-small">
               <a target="_blank" href="https://twitter.com/cmsholdings">
-                <span className="backed-logos logo0"></span>
+                <span className="backed-logos logo3"></span>
               </a>
             </div>
             <div className="logo-wrap wrap-small">
