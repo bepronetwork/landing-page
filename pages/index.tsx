@@ -345,7 +345,7 @@ export default function Home() {
             </div>
             <div className="logo-wrap w-100 text-center flex-column bg-security">
               <a href="https://docs.bepro.network/getting-started/bug-bounty" target="_blank">
-                <h1 className="h1 color-white">50.000€</h1>
+                <h1 className="h1 color-white">50,000€</h1>
                 <p className="smallCaption color-gray">Bug bounty</p>
               </a>
             </div>
@@ -432,7 +432,7 @@ let availableTokens = await staking.availableTokens();
                 <p className="p-small color-white ms-sm-4">Open issues</p>
               </div>
               <div className="item text-center me-sm-4">
-              <h3 className="h1 color-white">+{numberToUX(totalDevelopers)}</h3>
+              <h3 className="h1 color-white">+{totalDevelopers}</h3>
                 <p className="p-small color-white ms-sm-4">Members</p>
               </div>
           <div className="item text-center">
