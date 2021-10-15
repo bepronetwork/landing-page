@@ -15,7 +15,8 @@ li {
 body {
   background-color: $bg;
   font-family: 'fontRegular', sans-serif;
-  color: $gray;
+  color: $white;
+  font-feature-settings: 'tnum' on, 'lnum' on, 'ss02' on, 'ss03' on, 'ss04' on;
 }
 
 // TYPOGRAPHY
