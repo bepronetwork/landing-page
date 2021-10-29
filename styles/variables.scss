@@ -7,6 +7,7 @@ $gray: #c4c7d3;
 $blue: #4250e4;
 $blue-dark: #3b49e0;
 $secondary: #fd8b2a;
+$ligth-gray: #434758;
 
 $bg: #0d0f19;
 $bg-shadow: #151720;
@@ -42,8 +43,22 @@ $btn-border-radius: 1.25rem;
 $btn-border-radius-sm: $btn-border-radius;
 $btn-border-radius-lg: $btn-border-radius;
 
+$more-bg: (
+        'white-50': $gray,
+        'dark-gray': $dark-gray,
+        'ligth-gray': $ligth-gray,
+);
+$more-colors: ('white-50': $gray, 'dark-gray': $dark-gray, 'ligth-gray': $ligth-gray);
+$theme-colors: map-merge($theme-colors, map-merge($more-bg, $more-colors));
 $utilities: map-merge(
   $utilities, (
+    'shadow': map-merge(map-get($utilities, 'shadow'), (state: hover)),
+    'border': map-merge(map-get($utilities, 'border'), (state: hover)),
+    'border-bottom': map-merge(map-get($utilities, 'border-bottom'), (state: hover)),
+    'border-top': map-merge(map-get($utilities, 'border-top'), (state: hover)),
+    'border-color': map-merge(map-get($utilities, 'border-color'), (state: hover, values: map-merge(map-get(map-get($utilities, 'background-color'), 'values'), $more-colors))),
+    'color': map-merge(map-get($utilities, 'color'), (state: hover , values: map-merge(map-get(map-get($utilities, 'background-color'), 'values'), $more-colors))),
+    'background-color': map-merge(map-get($utilities, 'background-color'), (state: hover, values: map-merge(map-get(map-get($utilities, 'background-color'), 'values'), $more-bg))),
     "opacity": map-merge(map-get($utilities, 'opacity'),(state: hover, values: map-get(map-get($utilities, 'opacity'), 'values')),
     )
   )

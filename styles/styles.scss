@@ -1,3 +1,4 @@
+@use "sass:math";
 @import 'variables';
 @import 'vendor';
 
@@ -61,6 +62,30 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
+
+// familys
+.family-Regular{
+  font-family: 'fontRegular', sans-serif;
+}
+
+.family-medium{
+  font-family: 'fontMedium', sans-serif;
+}
+
+.family-bold{
+  font-family: 'fontBold', sans-serif;
+}
+
+.family-inter{
+  font-family: "Inter-Regular", sans-serif;
+}
+.family-inter-medium{
+  font-family: "Inter-Medium", sans-serif;;
+}
+.family-inter-bold{
+  font-family: "Inter-bold", sans-serif;;
+}
+
 
 .p,
 p {
@@ -1167,4 +1192,27 @@ a {
       color: $white;
     }
   }
+}
+
+.fs {
+  &-smallest { font-size: 12px; }
+  &-small { font-size: 14px; }
+}
+.modal {
+  &-header {
+    padding-bottom: 0;
+  }
+  &-content {
+    background-color: $bg-shadow;
+    border-radius: math.div($m,2);
+  }
+  &-header,
+  &-footer {
+    justify-content: center;
+    border: 0;
+  }
+}
+.btn-modal-close{
+  top: 14px;
+  right: 14px;
 }
