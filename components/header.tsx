@@ -9,10 +9,10 @@ export default function Header() {
   const [showModal, setShowModal] = useState(false)
   const navLink = (href, label, className = ``) => ({href, label, className});
   const navLinks = [
-    navLink(`https://docs.bepro.network/`, `Docs`, `text-reset text-decoration-none opacity-75 opacity-100-hover`),
-    navLink(`https://github.com/bepronetwork/grants-program`, `Open Grants`, `d-none d-sm-inline text-reset text-decoration-none opacity-75 opacity-100-hover`),
-    navLink(`https://betprotocol.notion.site/06173fb999ae45ffa9abdad80a34f336?v=5c9a061da63849afa836476e4a1d25d9`, `Roadmap`, `text-reset text-decoration-none opacity-75 opacity-100-hover`),
-    navLink(`https://docs.bepro.network/sdk-documentation/why-bepro-js`, `BEPRO.js SDK (Web3 API)`, `d-none d-sm-inline text-reset text-decoration-none opacity-75 opacity-100-hover`),
+    navLink(`https://docs.bepro.network/`, `Docs`, `text-decoration-none opacity-75 opacity-100-hover border-0`),
+    navLink(`https://github.com/bepronetwork/grants-program`, `Open Grants`, `d-none d-sm-inline text-decoration-none opacity-75 opacity-100-hover border-0`),
+    navLink(`https://betprotocol.notion.site/06173fb999ae45ffa9abdad80a34f336?v=5c9a061da63849afa836476e4a1d25d9`, `Roadmap`, `text-decoration-none opacity-75 opacity-100-hover border-0`),
+    navLink(`https://docs.bepro.network/sdk-documentation/why-bepro-js`, `BEPRO.js SDK (Web3 API)`, `d-none d-sm-inline text-decoration-none opacity-75 opacity-100-hover border-0`),
   ]
 
   function renderNavLink({href, label, className}, i) {
