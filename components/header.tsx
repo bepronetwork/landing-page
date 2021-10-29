@@ -1,16 +1,18 @@
 import React from 'react';
 import Link from 'next/link';
 import BeproLogo from '../assets/bepro-logo';
+import Button from './button';
+import ExternalLinkIcon from '../assets/icons/externallink-icon';
 
 export default function Header() {
   const appLink = process.env.NEXT_PUBLIC_APP_URL;
 
   const navLink = (href, label, className = ``) => ({href, label, className});
   const navLinks = [
-    navLink(`https://docs.bepro.network/`, `Docs`),
-    navLink(`https://github.com/bepronetwork/grants-program`, `Open Grants`, `d-none d-sm-inline`),
-    navLink(`https://betprotocol.notion.site/06173fb999ae45ffa9abdad80a34f336?v=5c9a061da63849afa836476e4a1d25d9`, `Roadmap`),
-    navLink(`https://docs.bepro.network/sdk-documentation/why-bepro-js`, `BEPRO.js SDK (Web3 API)`, `d-none d-sm-inline`),
+    navLink(`https://docs.bepro.network/`, `Docs`, `text-reset text-decoration-none opacity-75 opacity-100-hover`),
+    navLink(`https://github.com/bepronetwork/grants-program`, `Open Grants`, `d-none d-sm-inline text-reset text-decoration-none opacity-75 opacity-100-hover`),
+    navLink(`https://betprotocol.notion.site/06173fb999ae45ffa9abdad80a34f336?v=5c9a061da63849afa836476e4a1d25d9`, `Roadmap`, `text-reset text-decoration-none opacity-75 opacity-100-hover`),
+    navLink(`https://docs.bepro.network/sdk-documentation/why-bepro-js`, `BEPRO.js SDK (Web3 API)`, `d-none d-sm-inline text-reset text-decoration-none opacity-75 opacity-100-hover`),
   ]
 
   function renderNavLink({href, label, className}, i) {
@@ -27,7 +29,9 @@ export default function Header() {
       </ul>
     </div>
     <div className="d-flex flex-row align-items-center">
-      <a className="btn btn-md btn-white" href={appLink} target="_blank">App</a>
+      <a className="text-decoration-none" href={appLink} target="_blank">
+        <Button className='btn-nav' color='white'>Development dao <ExternalLinkIcon className='ms-2' width={12} height={12}/></Button>
+      </a>
     </div>
   </div>
 }

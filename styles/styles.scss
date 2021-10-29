@@ -1155,3 +1155,16 @@ a {
   flex-basis: 100%;
   height: 0;
 }
+
+
+.btn-nav{
+  border: 2px solid transparent;
+  &:hover{
+    border: 2px solid $white;
+    background-color: $primary;
+    color: $white;
+    svg{
+      color: $white;
+    }
+  }
+}
