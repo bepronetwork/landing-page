@@ -216,7 +216,7 @@ export default function Home() {
                 <a target="_blank" href="https://dotmoovs.com/">
                 <div className="slide-item log-9"></div>
               </a>
-                <a target="_blank" href="#">
+                <a target="_blank" href="https://uco.network/">
                 <div className="slide-item log-11"></div>
               </a>
             </div>
