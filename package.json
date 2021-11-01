@@ -13,7 +13,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "bepro-js": "github:bepronetwork/bepro-js#master",
-    "bootstrap": "^5.0.1",
+    "bootstrap": "^5.1.3",
     "chart.js": "^3.5.1",
     "date-fns": "^2.11.1",
     "gray-matter": "^4.0.2",
