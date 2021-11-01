@@ -30,7 +30,7 @@ export default function Header() {
             {navLinks.map(renderNavLink)}
           </ul>
         </div>
-        <div className="d-flex flex-row align-items-center">
+        <div className="flex-row align-items-center d-none d-md-flex">
           <Button className='btn-nav' color='white' onClick={() => setShowModal(true)}>Development dao <ExternalLinkIcon className='ms-2' width={12} height={12} /></Button>
         </div>
       </div>
