@@ -216,7 +216,7 @@ export default function Home() {
                 <a target="_blank" href="https://dotmoovs.com/">
                 <div className="slide-item log-9"></div>
               </a>
-                <a target="_blank" href="#">
+                <a target="_blank" href="https://uco.network/">
                 <div className="slide-item log-11"></div>
               </a>
             </div>
@@ -336,8 +336,10 @@ export default function Home() {
           <h1 className="h1 color-white pb-5 px-2">A Protocol for Decentralized Development</h1>
           <div className="logos-container w-100">
             <div className="align-self-center text-center w-50 d-flex justify-content-center align-items-center flex-column d-sm-inline-block">
-              <span className="backed-logos logo-certik" />
-              <span className="smallCaption color-gray d-block pt-1">Security audit <br/>In progress</span>
+              <a href='https://www.certik.org/projects/bepro' target='_blank' className='color-gray'>
+                <span className="backed-logos logo-certik" />
+                <span className="smallCaption d-block pt-1">Security audit <br />Completed</span>
+              </a>
             </div>
             <div className="align-self-center text-center w-50 d-flex justify-content-center align-items-center flex-column d-sm-inline-block">
               <span className="backed-logos logo-red4sec" />
