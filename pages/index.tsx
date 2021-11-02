@@ -8,6 +8,14 @@ import { Line } from 'react-chartjs-2';
 import { defaults } from 'react-chartjs-2';
 import Header from '../components/header';
 import {numberToUX} from '../helpers/NumberToUX';
+import BlockgroundIcon from '../assets/icons/blockground-icon';
+import CmsIcon from '../assets/icons/cms-icon';
+import GanexaIcon from '../assets/icons/ganexa-icon';
+import UtrustIcon from '../assets/icons/utrust-icon';
+import ShillingIcon from '../assets/icons/shilling-icon';
+import ByndIcon from '../assets/icons/bynd-icon';
+import CompeteIcon from '../assets/icons/compete-icon';
+import NgcIcon from '../assets/icons/ngc-icon';
 
 interface DataSet {
   data: (string|number)[],
@@ -284,7 +292,7 @@ export default function Home() {
 
             <div className="logo-wrap wrap-small">
               <a target="_blank" href="https://blockgroundcapital.com/">
-                <span className="backed-logos logo1"></span>
+                <BlockgroundIcon/>
               </a>
             </div>
             <div className="logo-wrap wrap-small">
@@ -294,37 +302,37 @@ export default function Home() {
             </div>
              <div className="logo-wrap wrap-small">
               <a target="_blank" href="https://twitter.com/cmsholdings">
-                <span className="backed-logos logo3"></span>
+                <CmsIcon/>
               </a>
             </div>
             <div className="logo-wrap wrap-small">
               <a target="_blank" href="https://ganexacapital.com/">
-                <span className="backed-logos logo4"></span>
+                <GanexaIcon/>
               </a>
             </div>
             <div className="logo-wrap wrap-small">
               <a target="_blank" href="http://utrust.com">
-                <span className="backed-logos logo5"></span>
+                <UtrustIcon/>
               </a>
             </div>
             <div className="logo-wrap wrap-small">
               <a target="_blank" href="https://www.shilling.vc">
-                <span className="backed-logos logo6"></span>
+                <ShillingIcon/>
               </a>
             </div>
             <div className="logo-wrap wrap-small">
               <a target="_blank" href="https://www.bynd.vc/en/portfolio">
-                <span className="backed-logos logo7"></span>
+                <ByndIcon/>
               </a>
             </div>
             <div className="logo-wrap wrap-small hide-xs">
               <a target="_blank" href="https://www.compete2020.gov.pt/">
-                <span className="backed-logos logo8"></span>
+                <CompeteIcon className='compete-icon'/>
               </a>
             </div>
             <div className="logo-wrap wrap-small">
               <a target="_blank" href="http://ngc.fund/">
-                <span className="backed-logos logo9"></span>
+                <NgcIcon/>
               </a>
             </div>
 
@@ -338,6 +346,7 @@ export default function Home() {
             <div className="align-self-center text-center w-50 d-flex justify-content-center align-items-center flex-column d-sm-inline-block">
               <a href='https://www.certik.org/projects/bepro' target='_blank' className='color-gray'>
                 <span className="backed-logos logo-certik" />
+                
                 <span className="smallCaption d-block pt-1">Security audit <br />Completed</span>
               </a>
             </div>

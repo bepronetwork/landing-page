@@ -831,9 +831,13 @@ $slider-2-widthMobile: $slider-2-logos * ($slider-logos-widthMobile + (2 * $slid
     justify-content: center;
     width: 33.3%;
     height: 300px;
+    overflow: hidden;
     align-items: center;
     border-right: 1px solid rgba($white, 5%);
     border-bottom: 1px solid rgba($white, 5%);
+    &:nth-child(3n){
+      border-right: none;
+    }
   }
   .wrap-small{
     height: 130px;
@@ -844,7 +848,7 @@ $slider-2-widthMobile: $slider-2-logos * ($slider-logos-widthMobile + (2 * $slid
     .logo-wrap {
       width: 50%;
       height: 200px;
-      .backed-logos {
+      .backed-logos, svg {
         transform: scale(0.6);
       }
     }
@@ -860,7 +864,11 @@ $slider-2-widthMobile: $slider-2-logos * ($slider-logos-widthMobile + (2 * $slid
     }
   }
 }
-
+.compete-icon{
+  @media (max-width: 1200px) {
+    transform: scale(0.7);
+  }
+}
 .hide-xs {
   @media (max-width: 450px) {
     display: none !important;
@@ -911,51 +919,10 @@ $slider-2-widthMobile: $slider-2-logos * ($slider-logos-widthMobile + (2 * $slid
   background-size: cover;
 }
 
-.logo1 {
-  width: 209.45px;
-  height: 48px;
-  background-image: url('../assets/logo1.png');
-}
 .logo2 {
   width: 160.78px;
   height: 64px;
   background-image: url('../assets/logo2.png');
-}
-.logo3 {
-  width: 231.27px;
-  height: 64px;
-  background-image: url('../assets/logo3.png');
-}
-.logo4 {
-  width: 261px;
-  height: 54px;
-  background-image: url('../assets/logo4.png');
-}
-.logo5 {
-  width: 184.06px;
-  height: 42px;
-  background-image: url('../assets/logo5.png');
-}
-.logo6 {
-  width: 184.74px;
-  height: 52px;
-  background-image: url('../assets/logo6.png');
-}
-.logo7 {
-  width: 139.49px;
-  height: 64px;
-  background-image: url('../assets/logo7.png');
-}
-.logo8{
-  width: 354px;
-  height: 42px;
-  background-image: url('../assets/compete-2020.png');
-}
-
-.logo9 {
-  width: 157.83px;
-  height: 48px;
-  background-image: url('../assets/logo8.png');
 }
 .logo-red4sec {
   width: 134px;
