@@ -10,6 +10,7 @@ import luisClarkAvatar from '../assets/luisclark-avatar.jpg';
 import joaoDavidAvatar from '../assets/joaodavid-avatar.png';
 import rodrigoAvatar from '../assets/rodrigo-avatar.png';
 import nunoCorreiaAvatar from '../assets/nuno-avatar.jpeg';
+import vitorAvatar from '../assets/vitor-avatar.jpeg';
 import Header from '../components/header';
 
 
@@ -32,8 +33,9 @@ export default function About() {
     companyMember(`André Gonçalves`, `Javascript Developer`, `https://uploads-ssl.webflow.com/5fc917a738ff8f24bc5df94c/60bc97fba05e6732771bcaa6_Screenshot%202021-06-06%20at%2010.39.23.png`, `https://www.linkedin.com/in/andrefcgoncalves/`),
     companyMember(`Joao David`, `Chief of Community`, joaoDavidAvatar, `https://linkedin.com/in/dindgeri`),
     companyMember(`Luis Clark`, `Javascript Developer`, luisClarkAvatar, `https://www.linkedin.com/in/joaoluisclark/`),
+    companyMember(`Vitor Hugo`, `Front-End Developer`, vitorAvatar, `https://www.linkedin.com/in/vhcsilva/`),
     companyMember(`Alvaro Nogueiras`, `Advisor`, `https://uploads-ssl.webflow.com/5fc917a738ff8f24bc5df94c/60ba47018b85e45e46b1d9c1_Screenshot%202021-06-04%20at%2016.29.39.png`, `https://www.linkedin.com/in/alvarogomeznog/`),
-    companyMember(`Nuno Correia`, `Advisor`, nunoCorreiaAvatar, `https://www.linkedin.com/in/nuno-m-correia`),
+    companyMember(`Nuno Correia`, `Advisor`, nunoCorreiaAvatar, `https://www.linkedin.com/in/nuno-m-correia`)
   ]
 
   function initialize() {
@@ -57,11 +59,11 @@ export default function About() {
 
           {companyMembers.map(member => <div className="col-md-3"><CompanyMember member={member} /></div>)}
 
-          <div className="col-md-6">
+          <div className="col-md-3">
             <a href="https://development.bepro.network" target="_blank">
               <div className="about-people text-center">
                 <div className="item">
-                  <h1 className="h1 text-white">+{numberToUX(totalDevelopers)} Members</h1>
+                  <h1 className="h1 text-white">+{numberToUX(totalDevelopers)}</h1>
                   <p className="p-small">Protocol Members</p>
                 </div>
               </div>
