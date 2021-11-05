@@ -35,7 +35,7 @@ export default function MainNav() {
 
   return (
     <>
-      <Navbar expand="md" fixed="top" collapseOnSelect>
+      <Navbar expand="md" collapseOnSelect>
         <Navbar.Brand>
           <Link href="/">
             <a>
@@ -53,13 +53,13 @@ export default function MainNav() {
 
           <Nav>
             <Button
-                className="btn-nav"
-                color="white"
-                onClick={() => setShowModal(true)}
-              >
-                Development dao{' '}
-                <ExternallinkIcon className="ms-2" width={12} height={12} />
-              </Button>
+              className="btn-nav"
+              color="white"
+              onClick={() => setShowModal(true)}
+            >
+              Development dao{' '}
+              <ExternallinkIcon className="ms-2" width={12} height={12} />
+            </Button>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
