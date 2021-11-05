@@ -224,17 +224,15 @@ p {
   width: auto;
 }
 
+
 .navbar {
-  width: 100%;
-  min-height: 70px;
   background-color: $blue;
-  padding: 0px $m;
+  padding: 15px $m 0 $m;
   font-size: 14px;
 
   .navbar-brand {
     padding: 0;
     margin: 0;
-    font-size: 14px;
 
     .bepro-logo-white {
       @media (max-width: 370px) {
@@ -245,10 +243,10 @@ p {
 
   .navbar-toggler {
     border: 0;
-    padding: 20px 0;
+    padding: 0;
 
     &.collapsed {      
-      padding: 4px 0;
+      padding: 0;
 
       .navbar-toggler-icon {
         background-image: url(../assets/icons/navhamburguer-icon.svg);
@@ -271,12 +269,8 @@ p {
 
   .navbar-nav {
     .nav-link {
-      display: flex;
-      align-items: center;
-      list-style: none;
       font-family: 'fontMedium', sans-serif;
       text-transform: uppercase;
-      text-decoration: none;
       color: rgba($white, 0.75);
       letter-spacing: 0.02em;
       padding: $m/4 0px;
@@ -340,28 +334,17 @@ p {
     padding-right: 0 !important;
   }
 
-  .btn-nav {
-    background-color: $blue;
-    border-color: $blue;
-    color: $white;
-    margin-top: 20px;
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: darken($blue, 5);
-      border-color: darken($blue, 5);
-    }
-  }
-
   .navbar {
-    padding: 0 !important;
+    padding: 19px 0 0 0;
 
     .navbar-brand {
       padding-left: $m;
+      margin-bottom: 15px;
     }
 
     .navbar-toggler {
       margin-right: $m;
+      margin-bottom: 15px;
     }
 
     .navbar-collapse {
@@ -374,7 +357,17 @@ p {
       gap: 20px;
 
       button {
-        width: 184px;
+        width: max-content;
+        background-color: $blue;
+        border-color: $blue;
+        color: $white;
+        margin-top: 20px;
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: darken($blue, 5);
+          border-color: darken($blue, 5);
+        }
       }
 
       .nav-link {
@@ -740,8 +733,8 @@ p {
 }
 
 .hero {
-  padding: $m*4 0px;
-  margin-top: $m*4+($m/3);
+  padding: $m*8+($m/3) 0px;
+  //margin-top: $m*4+($m/3);
 }
 
 .landing-hero {
@@ -750,7 +743,7 @@ p {
   height: 100%;
   text-align: center;
   padding-top: $m*8;
-  margin-top: $m*4+($m/3);
+  //margin-top: $m*4+($m/3);
   @media (max-width: 600px) {
     padding-top: $m*4;
   }
