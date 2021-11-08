@@ -16,6 +16,7 @@ import ShillingIcon from '../assets/icons/shilling-icon';
 import ByndIcon from '../assets/icons/bynd-icon';
 import CompeteIcon from '../assets/icons/compete-icon';
 import NgcIcon from '../assets/icons/ngc-icon';
+import {BeproService} from '../services/bepro';
 
 interface DataSet {
   data: (string|number)[],
@@ -50,7 +51,9 @@ interface PRData {
 export default function Home() {
 
   const [totalDevelopers, setTotalDevelopers] = useState(0);
-  const [stats, setStats] = useState({openIssues: 0, beprosStaked: 0, tokensStaked: 0});
+  const [inProgress, setInProgress] = useState(0)
+  const [beproStaked, setBeproStaked] = useState(0)
+  const [onNetwork, setOnNetwork] = useState(0)
   const [reposStats, setReposStats] = useState<RepoStats[]>([] as RepoStats[]);
   const [chartData, setChartData] = useState<ChartData>();
   const appLink = process.env.NEXT_PUBLIC_APP_URL;
@@ -87,8 +90,14 @@ export default function Home() {
   }
 
   function initialize() {
-    GithubMicroService.getNetworkStats()
-                      .then(r => setStats(r?.data || {openIssues: 0, beprosStaked: 0, tokensStaked: 0}));
+
+    BeproService._network.test = true;
+    BeproService._network.start().then(e => {
+      BeproService.getOpenIssues().then(setInProgress);
+      BeproService.getTokensStaked().then(setOnNetwork);
+      BeproService.getBEPROStaked().then(setBeproStaked);
+      BeproService._network.test = false;
+    })
 
     GithubMicroService.getTotalDevelopers()
                       .then(r => setTotalDevelopers(r?.data || 0));
@@ -191,7 +200,7 @@ export default function Home() {
               </a>
               <a target="_blank" href="https://www.un1ke.io/">
                 <div className="slide-item log-2"></div>
-              </a>              
+              </a>
               <a target="_blank" href="https://www.nftsee.io/">
                 <div className="slide-item log-1"></div>
               </a>
@@ -255,11 +264,11 @@ export default function Home() {
           <div className="col-content">
             <div className="net-stats d-flex align-items-center justify-content-center">
               <div className="item text-center mr-3">
-                <h3 className="h1 color-white">+{numberToUX(+stats.openIssues)}</h3>
+                <h3 className="h1 color-white">+{numberToUX(+inProgress)}</h3>
                 <p className="p-small">Open issues</p>
               </div>
               <div className="item text-center">
-                <h3 className="h1 color-white">{numberToUX(+stats.tokensStaked)}</h3>
+                <h3 className="h1 color-white">{numberToUX(+onNetwork)}</h3>
                 <p className="p-small">$BEPRO (Payments)</p>
               </div>
             </div>
@@ -279,7 +288,7 @@ export default function Home() {
                 <p className="p-small">Protocol Members</p>
               </div>
               <div className="item text-center">
-                <h3 className="h1 color-white text-break">{numberToUX(+stats.beprosStaked)}</h3>
+                <h3 className="h1 color-white text-break">{numberToUX(+beproStaked)}</h3>
                 <p className="p-small">$BEPRO (Oracles)</p>
               </div>
             </div>
@@ -346,7 +355,7 @@ export default function Home() {
             <div className="align-self-center text-center w-50 d-flex justify-content-center align-items-center flex-column d-sm-inline-block">
               <a href='https://www.certik.org/projects/bepro' target='_blank' className='color-gray'>
                 <span className="backed-logos logo-certik" />
-                
+
                 <span className="smallCaption d-block pt-1">Security audit <br />Completed</span>
               </a>
             </div>
@@ -439,7 +448,7 @@ let availableTokens = await staking.availableTokens();
           <h1 className="h1 color-white mb-5">Join our development on <u><a target="_blank" href="https://github.com/bepronetwork">Github</a></u></h1>
           <div className="net-stats d-flex align-items-center justify-content-center flex-column flex-sm-row">
               <div className="item text-center me-sm-4">
-                <h3 className="h1 color-white">+{numberToUX(stats.openIssues)}</h3>
+                <h3 className="h1 color-white">+{numberToUX(+inProgress)}</h3>
                 <p className="p-small color-white ms-sm-4">Open issues</p>
               </div>
               <div className="item text-center me-sm-4">
@@ -447,7 +456,7 @@ let availableTokens = await staking.availableTokens();
                 <p className="p-small color-white ms-sm-4">Members</p>
               </div>
           <div className="item text-center">
-            <h3 className="h1 color-white text-break">+{numberToUX(Number(stats.beprosStaked)+Number(stats.tokensStaked))}</h3>
+            <h3 className="h1 color-white text-break">+{numberToUX(Number(beproStaked)+Number(onNetwork))}</h3>
             <p className="p-small color-white ms-sm-4">$BEPRO</p>
           </div>
             </div>
