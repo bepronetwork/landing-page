@@ -741,7 +741,7 @@ p {
 }
 
 .hero {
-  padding: $m*8+($m/3) 0px;
+  padding: $m*8+($m/3)+70 0 $m*8+($m/3) 0;
   //margin-top: $m*4+($m/3);
 }
 
@@ -750,7 +750,7 @@ p {
   min-height: 600px;
   height: 100%;
   text-align: center;
-  padding-top: $m*8;
+  padding-top: $m*8 + 70;
   //margin-top: $m*4+($m/3);
   @media (max-width: 600px) {
     padding-top: $m*4;
