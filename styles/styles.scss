@@ -332,6 +332,8 @@ p {
 @media (min-width: 768px) {
   .navbar {
     position: fixed;
+    top: 0;
+    padding-bottom: 15px;
     width: 100%;
     z-index: 5;
   }
