@@ -33,6 +33,7 @@
   "devDependencies": {
     "@types/node": "^13.11.0",
     "@types/react": "^17.0.6",
+    "@types/chartjs": "^0.0.31",
     "typescript": "^4.3.5"
   }
 }
