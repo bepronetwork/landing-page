@@ -55,7 +55,7 @@ export default function Home() {
   const [beproStaked, setBeproStaked] = useState(0)
   const [onNetwork, setOnNetwork] = useState(0)
   const [reposStats, setReposStats] = useState<RepoStats[]>([] as RepoStats[]);
-  const [chartData, setChartData] = useState<ChartData>();
+  const [chartData, setChartData] = useState<any>();
   const appLink = process.env.NEXT_PUBLIC_APP_URL;
   const dateFormatter = new Intl.DateTimeFormat('en-GB', {month: 'short', day: 'numeric',});
 
