@@ -376,7 +376,7 @@ export default function Home() {
           <div className="col-content">
             <p className="smallCaption color-blue">Documentation</p>
             <h4 className="h3 color-blue">BEPRO-JS & The Protocol</h4>
-            <p className="p color-blue">We created bepro-js to work as a showcase of our protocol, a way that BetBlock Technology LDA finances and works with other companies to provide code for platforms as Lepricon, Polkamarkets, RealFevr, Exeedme and others.</p>
+            <p className="p color-blue">We created bepro-js to work as a showcase of our protocol, a way that Bepro Network Labs finances and works with other companies to provide code for platforms as Lepricon, Polkamarkets, RealFevr, Exeedme and others.</p>
             <a href="https://docs.bepro.network/" target="_blank" className="btn btn-md btn-primary w-25">View docs</a>
           </div>
           <div className="col-content bg-gray">
