@@ -21,10 +21,10 @@ export default function About() {
   const [totalDevelopers, setTotalDevelopers] = useState(0);
 
   const companyMembers = [
-    companyMember(`Rui Teixeira`, `Co-founder`, `https://uploads-ssl.webflow.com/5fc917a738ff8f24bc5df94c/5ffc88d95f0f7f9cddc857e1_photo_2021-01-11_17-01-53.jpg`, `https://twitter.com/ruipeeet`),
-    companyMember(`Miguel Leite`, `Co-founder`, `https://uploads-ssl.webflow.com/5fc917a738ff8f24bc5df94c/5ffc89d582e1be72130745d6_Miguel%20Leite.jpeg`, `https://www.linkedin.com/in/miguelleite`),
-    companyMember(`Justin Wu`, `Co-founder`, `https://uploads-ssl.webflow.com/5fc917a738ff8f24bc5df94c/5ffc895e40fb69e7645a805e_Profile%20Justin.jpg`, `https://twitter.com/theWUJustin`),
     companyMember(`André Moniz`, `Co-founder`, `https://uploads-ssl.webflow.com/5fc917a738ff8f24bc5df94c/60ba47bab2c2d865dd8d23c1_Screenshot%202021-06-04%20at%2016.33.01.png`, `https://www.linkedin.com/in/andremoniz/`),
+    companyMember(`Justin Wu`, `Co-founder`, `https://uploads-ssl.webflow.com/5fc917a738ff8f24bc5df94c/5ffc895e40fb69e7645a805e_Profile%20Justin.jpg`, `https://twitter.com/theWUJustin`),
+    companyMember(`Miguel Leite`, `Co-founder`, `https://uploads-ssl.webflow.com/5fc917a738ff8f24bc5df94c/5ffc89d582e1be72130745d6_Miguel%20Leite.jpeg`, `https://www.linkedin.com/in/miguelleite`),
+    companyMember(`Rui Teixeira`, `Co-founder`, `https://uploads-ssl.webflow.com/5fc917a738ff8f24bc5df94c/5ffc88d95f0f7f9cddc857e1_photo_2021-01-11_17-01-53.jpg`, `https://twitter.com/ruipeeet`),
     companyMember(`João (MoshMage) Gonçalves`, `Chief Technology Officer`, moshmageAvatar, `https://www.linkedin.com/in/moshmage/`),
     companyMember(`Filipe Pereira`, ` Chief of Ecosystem Development`, `https://uploads-ssl.webflow.com/5fc917a738ff8f24bc5df94c/60ba445dd4bb805b68ad716f_Screenshot%202021-06-04%20at%2016.18.44.png`, `https://www.linkedin.com/in/filipeappereira/`),
     companyMember(`André Santos`, `UX/UI Designer`, `https://uploads-ssl.webflow.com/5fc917a738ff8f24bc5df94c/60bc972545cbc32c33aeb84f_Screenshot%202021-06-06%20at%2010.35.08-p-500.png`, `https://www.linkedin.com/in/andredbsantos`),
@@ -50,7 +50,7 @@ export default function About() {
       <Header />
 
       <div className="hero bg-blue text-center mb-4">
-        <h1 className="h1 text-white">A team building code for the future of web3 decentralized development</h1>
+        <h1 className="h1 text-white">Protocol/SDK Founded Bepro Network Labs - building code for the future of web3 decentralized development</h1>
       </div>
 
       <div className="container">
