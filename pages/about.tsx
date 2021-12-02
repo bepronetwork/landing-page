@@ -50,7 +50,7 @@ export default function About() {
       <Header />
 
       <div className="hero bg-blue text-center mb-4">
-        <h1 className="h1 text-white">Protocol/SDK Founded Bepro Network Labs - building code for the future of web3 decentralized development</h1>
+        <h1 className="h1 text-white">Protocol/SDK Founded by Bepro Network Labs __ - __ building code for the future of web3 decentralized development</h1>
       </div>
 
       <div className="container">
