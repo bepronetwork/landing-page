@@ -29,7 +29,7 @@ export default function CTAModal({
         <Modal.Body>
           <div className="d-flex flex-column align-items-center px-3">
             <p className="text-white mb-0 mt-4 text-right family-inter fs-small">
-              The Bepro Network Protocol is a decentralized protocol deployed in Moonriver created by BetBlock Technology LDA, this protocol is a tool to attach in Git Protocol Centralized SDKs to create incentives for developers to decentralize development in a liquid manner and with scale.
+              The Bepro Network Protocol is a decentralized protocol deployed in Moonriver created by Bepro Network Labs, this protocol is a tool to attach in Git Protocol Centralized SDKs to create incentives for developers to decentralize development in a liquid manner and with scale.
             </p>
             <p className="text-white-50 mb-0 mt-4 text-right family-inter fs-small">
               By joining the website you agree to the <a href="https://www.bepro.network/terms-and-conditions" className="text-primary bg-opacity-100" target="_blank">Terms & Conditions</a>, including not being in an excluded jurisdiction and you accept the Risks of using experimental technology in the Moonriver EVM
