@@ -376,7 +376,7 @@ export default function Home() {
           <div className="col-content">
             <p className="smallCaption color-blue">Documentation</p>
             <h4 className="h3 color-blue">BEPRO-JS & The Protocol</h4>
-            <p className="p color-blue">We created bepro-js to work as a showcase of our protocol, a way that Bepro Network Labs finances and works with other companies to provide code for platforms as Lepricon, Polkamarkets, RealFevr, Exeedme and others.</p>
+            <p className="p color-blue">Bepro Network Labs created bepro-js to work as a showcase of the protocol, a codebase in Javascript already being used/contributed by platforms as Lepricon, Polkamarkets, RealFevr, Exeedme and others.</p>
             <a href="https://docs.bepro.network/" target="_blank" className="btn btn-md btn-primary w-25">View docs</a>
           </div>
           <div className="col-content bg-gray">
@@ -412,7 +412,7 @@ let availableTokens = await staking.availableTokens();
           <div className="col-content bg-gray my-runkit">
             <p className="smallCaption color-blue">Web3 API Ecosystem</p>
             <h4 className="h3 color-blue">Gaming, DeFi, NFTs and more!</h4>
-            <p className="p color-blue">An SDK that gives you the chance to clone or build on top of our direct operators, a tool to get your app started</p>
+            <p className="p color-blue">The SDK built via the Protocol that gives you the chance to clone or build on top of its previous contributors, a tool to get your dApp started</p>
           </div>
         </div>
 
@@ -445,7 +445,7 @@ let availableTokens = await staking.availableTokens();
 
         <div className="community d-flex align-items-center justify-content-center text-center flex-column bg-blue">
           <p className="caption color-white trans">Community</p>
-          <h1 className="h1 color-white mb-5">Join our development on <u><a target="_blank" href="https://github.com/bepronetwork">Github</a></u></h1>
+          <h1 className="h1 color-white mb-5">Join the development on <u><a target="_blank" href="https://github.com/bepronetwork">Github</a></u></h1>
           <div className="net-stats d-flex align-items-center justify-content-center flex-column flex-sm-row">
               <div className="item text-center me-sm-4">
                 <h3 className="h1 color-white">+{numberToUX(+inProgress)}</h3>
