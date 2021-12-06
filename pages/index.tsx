@@ -173,11 +173,6 @@ export default function Home() {
                 </span>
               </p>
             </div>
-
-            <a href="https://betprotocol.notion.site/betprotocol/06173fb999ae45ffa9abdad80a34f336?v=5c9a061da63849afa836476e4a1d25d9&p=6f3459a47b7642558f8c5dcd82b90f17" target="_blank" className="h4 color-white">
-            Use the Protocol and receive up to 2M $BEPRO in rewards per phase
-            <sup className="ml-1"><ExternalArrowIcon /></sup>
-            </a>
           </div>
 
           <div className="slides">
