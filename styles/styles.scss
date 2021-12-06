@@ -1176,7 +1176,7 @@ $slider-2-widthMobile: $slider-2-logos * ($slider-logos-widthMobile + (2 * $slid
   animation: rotateWord 12s ease-in-out infinite 0s;
   color: $white;
   width: auto;
-  padding-bottom: 2px;
+  border-bottom: 2px solid white;
   // @media (max-width: 900px) {
   //   top: 24px;
   //   width: 180px;
@@ -1201,20 +1201,15 @@ $slider-2-widthMobile: $slider-2-logos * ($slider-logos-widthMobile + (2 * $slid
   }
   2% {
     opacity: 0;
-    transform: translateY(-30px);
   }
   5% {
     opacity: 1;
-    transform: translateY(0px);
   }
   15% {
     opacity: 1;
-    transform: translateY(0px);
   }
   20% {
     opacity: 0;
-    transform: translateY(30px);
-    border-bottom: 2px solid white;
   }
   80% {
     opacity: 0;
