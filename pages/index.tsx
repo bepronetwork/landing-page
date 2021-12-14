@@ -63,7 +63,7 @@ export default function Home() {
   const dateFormatter = new Intl.DateTimeFormat('en-GB', {month: 'short', day: 'numeric',});
 
   function parseChartData(response) {
-    const origin = response?.data || {};
+    const origin = response || {};
     const monthFormatter = new Intl.DateTimeFormat('en-GB', {month: 'long'});
     const formatDate = ([date, value]) => [dateFormatter.format(date), value];
 
