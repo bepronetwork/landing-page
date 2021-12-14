@@ -16,7 +16,7 @@ const githubForkStats = {
 }
 
 export default function useOctokit() {
-  const [octokit, setOctokit] = useState<Octokit>(new Octokit({auth: process.env.NEXT_PUBLIC_GITHUB_TOKEN}));
+  const [octokit, setOctokit] = useState<Octokit>(new Octokit());
 
   function getOwnerRepoFrom(path: string) {
     const [owner, repo] = path.split(`/`);
