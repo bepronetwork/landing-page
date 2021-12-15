@@ -1,7 +1,7 @@
 import {GetStaticProps} from 'next'
 import React, {useEffect, useState} from 'react'
 import Footer from '../components/footer'
-import GithubMicroService from '../services/github-microservice';
+import WebNetworkApi from '../services/web-network-api';
 import CompanyMember from '../components/company-member';
 import {numberToUX} from '../helpers/NumberToUX';
 
@@ -39,7 +39,7 @@ export default function About() {
   ]
 
   function initialize() {
-    GithubMicroService.getTotalDevelopers()
+    WebNetworkApi.getTotalDevelopers()
                       .then(r => setTotalDevelopers(r.data));
   }
 

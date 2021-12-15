@@ -3,7 +3,6 @@ import React, { useEffect } from 'react'
 import Footer from '../components/footer'
 import Embed from 'react-runkit'
 import { useState } from 'react';
-import GithubMicroService from '../services/github-microservice';
 import { Line } from 'react-chartjs-2';
 import { defaults } from 'react-chartjs-2';
 import Header from '../components/header';
@@ -18,6 +17,8 @@ import CompeteIcon from '../assets/icons/compete-icon';
 import NgcIcon from '../assets/icons/ngc-icon';
 import ExternalArrowIcon from '../assets/icons/external-arrow-icon';
 import {BeproService} from '../services/bepro';
+import useOctokit from '../x-hooks/use-octokit';
+import WebNetworkApi from '../services/web-network-api';
 
 interface DataSet {
   data: (string|number)[],
@@ -31,6 +32,7 @@ interface RepoStats{
   forks: string,
   repo: string,
   stars: string,
+  owner: string
 }
 
 interface ChartData {
@@ -50,7 +52,7 @@ interface PRData {
 }
 
 export default function Home() {
-
+  const {getRepoStats, getRepoForks} = useOctokit();
   const [totalDevelopers, setTotalDevelopers] = useState(0);
   const [inProgress, setInProgress] = useState(0)
   const [beproStaked, setBeproStaked] = useState(0)
@@ -61,7 +63,7 @@ export default function Home() {
   const dateFormatter = new Intl.DateTimeFormat('en-GB', {month: 'short', day: 'numeric',});
 
   function parseChartData(response) {
-    const origin = response?.data || {};
+    const origin = response || {};
     const monthFormatter = new Intl.DateTimeFormat('en-GB', {month: 'long'});
     const formatDate = ([date, value]) => [dateFormatter.format(date), value];
 
@@ -89,26 +91,29 @@ export default function Home() {
 
     return makeChartData(Object.entries(origin).map(formatDate))
   }
-
+ 
   function initialize() {
-
     BeproService._network.test = true;
-    BeproService._network.start().then(e => {
+    BeproService._network.start().then((e) => {
       BeproService.getOpenIssues().then(setInProgress);
       BeproService.getTokensStaked().then(setOnNetwork);
       BeproService.getBEPROStaked().then(setBeproStaked);
       BeproService._network.test = false;
-    })
+    });
 
-    GithubMicroService.getTotalDevelopers()
-                      .then(r => setTotalDevelopers(r?.data || 0));
+    WebNetworkApi.getTotalDevelopers()
+      .then((r) => {
+        setTotalDevelopers(r.data || 0);
+      })
+      .catch((err) => console.log("err get", err));
 
-    GithubMicroService.getRepoStats()
-                      .then(parseChartData)
-                      .then(setChartData)
+    getRepoStats().then(parseChartData).then(setChartData);
 
-    GithubMicroService.getRepoForks()
-                      .then(r => { setReposStats(r.data) });
+    getRepoForks([
+      "bepronetwork/bepro-js",
+      "bepronetwork/web-network",
+      "bepronetwork/landing-page",
+    ]).then((r: RepoStats[]) => setReposStats(r));
   }
 
   function renderPrColumn({repo, forks, stars}, index) {
