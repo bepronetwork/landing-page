@@ -782,14 +782,14 @@ $slider-logos-heightMobile: 50px;
 
 /* Logo Slider 1
 */
-$slider-1-logos: 9;
+$slider-1-logos: 11;
 $slider-1-gutter: 16px;
 $slider-1-width: $slider-1-logos * ($slider-logos-width + (2 * $slider-1-gutter));
 $slider-1-widthMobile: $slider-1-logos * ($slider-logos-widthMobile + (2 * $slider-1-gutter));
 
 /* Logo Slider 2
 */
-$slider-2-logos: 9;
+$slider-2-logos: 10;
 $slider-2-gutter: 16px;
 $slider-2-width: $slider-2-logos * ($slider-logos-width + (2 * $slider-1-gutter));
 $slider-2-widthMobile: $slider-2-logos * ($slider-logos-widthMobile + (2 * $slider-1-gutter));
@@ -904,6 +904,19 @@ $slider-2-widthMobile: $slider-2-logos * ($slider-logos-widthMobile + (2 * $slid
   }
   &.log-18 {
     background-image: url('../assets/log-18.png');
+  }
+  &.log-19 {
+    background-image: url('../assets/log-19.png');
+  }
+  &.log-20 {
+    background-image: url('../assets/log-20.png');
+    background-size: contain;
+    width: 254px;
+  }
+  &.log-21 {
+    background-image: url('../assets/log-21.png');
+    background-size: contain;
+    width: 170px;
   }
 }
 
