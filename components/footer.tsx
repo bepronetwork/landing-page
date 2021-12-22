@@ -22,6 +22,7 @@ export default function Footer() {
               <h3 className="smallCaption mb-3">GET AROUND</h3>
               <ul>
                 <li><Link href="/about"><a className="p-small" >Bepro Network Labs</a></Link></li>
+                <li><a className="p-small" target="_blank" href="https://careers.bepro.network/">Careers</a></li>
                 <li><a className="p-small" target="_blank" href="https://discord.gg/9aUufhzhfm">Discord</a></li>
                 <li><a className="p-small" target="_blank" href="http://support.bepro.network">Knowledge Base</a></li>
                 <li><a className="p-small" target="_blank" href="https://support.bepro.network/en/collections/3143271-community">Community FAQ</a></li>
