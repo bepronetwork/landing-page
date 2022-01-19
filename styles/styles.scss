@@ -63,6 +63,15 @@ body {
   text-transform: uppercase;
 }
 
+.smallCaptionGrotesk {
+  font-family: 'fontRegular', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 120%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase; 
+}
+
 // familys
 .family-Regular{
   font-family: 'fontRegular', sans-serif;
@@ -747,6 +756,10 @@ p {
   //margin-top: $m*4+($m/3);
 }
 
+.hero-about {
+  padding: $m*6+($m/3) 0 $m 0;
+}
+
 .landing-hero {
   position: relative;
   min-height: 600px;
@@ -920,6 +933,37 @@ $slider-2-widthMobile: $slider-2-logos * ($slider-logos-widthMobile + (2 * $slid
   }
 }
 
+.logos-investors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .logo-wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+    &:nth-child(3n){
+      border-right: none;
+    }
+  }
+  .wrap-small{
+    height: 130px;
+  }
+  @media (max-width: 900px) {
+    width: 100%;
+    overflow: hidden;
+    .logo-wrap {
+      width: 50%;
+      height: 200px;
+    }
+    .wrap-small{
+      height: 95px;
+    }
+  }
+}
+
+
 
 .logos-container {
   display: flex;
@@ -963,6 +1007,7 @@ $slider-2-widthMobile: $slider-2-logos * ($slider-logos-widthMobile + (2 * $slid
     }
   }
 }
+
 .compete-icon{
   @media (max-width: 1200px) {
     transform: scale(0.7);
@@ -1154,12 +1199,13 @@ $slider-2-widthMobile: $slider-2-logos * ($slider-logos-widthMobile + (2 * $slid
   &:hover {
     background-color: lighten($bg-shadow, 5);
   }
-  .avatar {
-    width: 90px;
-    height: 90px;
-    border-radius: 45px;
-    margin-bottom: $m;
-  }
+}
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 45px;
+  margin-bottom: $m;
 }
 
 
