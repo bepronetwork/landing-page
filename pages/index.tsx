@@ -207,12 +207,6 @@ export default function Home() {
               <a target="_blank" href="https://www.un1ke.io/">
                 <div className="slide-item log-2"></div>
               </a>
-              <a target="_blank" href="https://www.ondastudio.co/">
-                <div className="slide-item log-21"></div>
-              </a>
-              <a target="_blank" href="https://thecodingmachine.com/">
-                <div className="slide-item log-19"></div>
-              </a>
               <a target="_blank" href="https://www.nftsee.io/">
                 <div className="slide-item log-1"></div>
               </a>
@@ -238,9 +232,6 @@ export default function Home() {
               </a>
               <a target="_blank" href="https://liveduel.com/future/">
                 <div className="slide-item log-10"></div>
-              </a>
-              <a target="_blank" href="https://subvisual.com/">
-                <div className="slide-item log-20"></div>
               </a>
               <a target="_blank" href="https://project.rally-tascos.com/">
                 <div className="slide-item log-13"></div>
