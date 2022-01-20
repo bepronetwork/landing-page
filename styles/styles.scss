@@ -337,6 +337,9 @@ p {
     width: 100%;
     z-index: 5;
   }
+  .top-navbar {
+    top: 43px
+  }
 }
 
 @media (max-width: 767px) {
@@ -391,6 +394,31 @@ p {
         }
       }
     }
+  }
+  .nav-taikai {
+    padding-bottom: 15px;
+  }
+}
+
+@media (max-width: 1011px) {
+  .taikai-icon {
+    display: none;
+  }
+}
+
+.nav-taikai {
+  height: 43px;
+}
+
+@media (max-width: 478px) {
+  .nav-taikai {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 310px) {
+  .nav-taikai {
+    padding: 50px;
   }
 }
 
@@ -584,6 +612,9 @@ p {
 }
 .bg-gray {
   background-color: $gray;
+}
+.bg-taikai {
+  background-color: $taikai;
 }
 
 .bg-security {
