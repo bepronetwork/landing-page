@@ -35,7 +35,7 @@ export default function MainNav() {
 
   return (
     <>
-      <Navbar expand="md" collapseOnSelect>
+      <Navbar expand="md" collapseOnSelect className='top-navbar'>
         <Navbar.Brand>
           <Link href="/">
             <a>
