@@ -252,6 +252,9 @@ export default function Home() {
                 <a target="_blank" href="https://uco.network/">
                 <div className="slide-item log-11"></div>
               </a>
+              <a target="_blank" href="https://www.theopendao.com/">
+                <div className="slide-item log-22"></div>
+              </a>
             </div>
           </div>
         </div>

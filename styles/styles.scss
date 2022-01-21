@@ -803,7 +803,7 @@ $slider-1-widthMobile: $slider-1-logos * ($slider-logos-widthMobile + (2 * $slid
 
 /* Logo Slider 2
 */
-$slider-2-logos: 10;
+$slider-2-logos: 12;
 $slider-2-gutter: 16px;
 $slider-2-width: $slider-2-logos * ($slider-logos-width + (2 * $slider-1-gutter));
 $slider-2-widthMobile: $slider-2-logos * ($slider-logos-widthMobile + (2 * $slider-1-gutter));
@@ -813,6 +813,13 @@ $slider-2-widthMobile: $slider-2-logos * ($slider-logos-widthMobile + (2 * $slid
 	50% { transform: translateX(calc(-#{$slider-1-width} + 100vw))}
   100% { transform: translateX(calc(0))}
 }
+
+@keyframes scroll4 {
+	0% { transform: translateX(0); }
+	50% { transform: translateX(calc(-#{$slider-2-width} + 100vw))}
+  100% { transform: translateX(calc(0))}
+}
+
 @keyframes scrollMobile1 {
 	0% { transform: translateX(0) }
 	50% { transform: translateX(calc(-#{$slider-1-widthMobile} + 100vw))}
@@ -840,7 +847,7 @@ $slider-2-widthMobile: $slider-2-logos * ($slider-logos-widthMobile + (2 * $slid
   display: flex;
   width: $slider-2-width;
   height: $slider-logos-height;
-  animation: scroll3 50s linear infinite;
+  animation: scroll4 50s linear infinite;
   margin-bottom: $m;
   @media (max-width: 900px) {
     width: $slider-2-widthMobile;
@@ -931,6 +938,11 @@ $slider-2-widthMobile: $slider-2-logos * ($slider-logos-widthMobile + (2 * $slid
     background-image: url('../assets/log-21.png');
     background-size: contain;
     width: 170px;
+  }
+  &.log-22 {
+    background-image: url('../assets/log-22.png');
+    background-size: contain;
+    width: 300px;
   }
 }
 
