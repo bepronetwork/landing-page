@@ -1,70 +1,297 @@
-import {GetStaticProps} from 'next'
-import React, {useEffect, useState} from 'react'
-import Footer from '../components/footer'
-import CompanyMember from '../components/company-member';
-import {numberToUX} from '../helpers/NumberToUX';
+import { GetStaticProps } from "next";
+import React, { useEffect, useState } from "react";
+import Footer from "../components/footer";
+import CompanyMember from "../components/company-member";
+import { numberToUX } from "../helpers/NumberToUX";
+import alvaroAvatar from "../assets/advisors/alvaro-avatar.png";
+import andreAvatar from "../assets/advisors/andre-avatar.png";
+import justinAvatar from "../assets/advisors/justin-avatar.png";
+import miguelAvatar from "../assets/advisors/miguel-avatar.png";
+import nunoAvatar from "../assets/advisors/nuno-avatar.png";
+import ruiAvatar from "../assets/advisors/rui-avatar.png";
+import team from "../assets/team/team.png";
+import moshmageAvatar from "../assets/team/moshmage-avatar.jpg";
+import andersonAvatar from "../assets/team/anderson-avatar.png";
+import andreSantosAvatar from "../assets/team/andreSantos-avatar.png";
+import andreGoncalvesAvatar from "../assets/team/andreGoncalves-avatar.png";
+import carlosAvatar from "../assets/team/carlos-avatar.png";
+import diogoAvatar from "../assets/team/diogo-avatar.png";
+import filipeAvatar from "../assets/team/filipe-avatar.png";
+import helderAvatar from "../assets/team/helder-avatar.png";
+import henriqueAvatar from "../assets/team/henrique-avatar.png";
+import inesAvatar from "../assets/team/ines-avatar.png";
+import joaoAvatar from "../assets/team/joao-avatar.png";
+import luisAvatar from "../assets/team/luis-avatar.png";
+import marcusAvatar from "../assets/team/marcus-avatar.png";
+import mariaAvatar from "../assets/team/maria-avatar.png";
+import marioAvatar from "../assets/team/mario-avatar.png";
+import rodrigoNogueiraAvatar from "../assets/team/rodrigoNogueira-avatar.png";
+import rodrigoSousaAvatar from "../assets/team/rodrigoSousa-avatar.png";
+import rubhanAvatar from "../assets/team/rubhan-avatar.png";
+import vitorAvatar from "../assets/team/vitor-avatar.png";
+import Header from "../components/header";
+import AdvisorMember from "../components/advisor-member";
+import Button from "../components/button";
+import ExternallinkIcon from "../assets/icons/externallink-icon";
+import UtrustIcon from "../assets/icons/utrust-icon";
+import ShillingIcon from "../assets/icons/shilling-icon";
+import ByndIcon from "../assets/icons/bynd-icon";
+import PtVenturesIcon from "../assets/icons/pt-ventures-icon";
+import BrpxIcon from "../assets/icons/brpx-icon";
+import C3Icon from "../assets/icons/c3-icon";
+import CleverIcon from "../assets/icons/clever-icon";
 
-import moshmageAvatar from '../assets/moshmage-avatar.jpg';
-import luisClarkAvatar from '../assets/luisclark-avatar.jpg';
-import joaoDavidAvatar from '../assets/joaodavid-avatar.png';
-import rodrigoAvatar from '../assets/rodrigo-avatar.png';
-import nunoCorreiaAvatar from '../assets/nuno-avatar.jpeg';
-import vitorAvatar from '../assets/vitor-avatar.jpeg';
-import Header from '../components/header';
 import useApi from '../x-hooks/use-api';
-
-
-const companyMember = (name = ``, position = ``, avatar: string|StaticImageData = ``, href = ``) => ({name, position, avatar, href});
+const member = (
+  name = ``,
+  position = ``,
+  avatar: string | StaticImageData = ``,
+  href = ``
+) => ({ name, position, avatar, href });
 
 export default function About() {
-  const appLink = process.env.NEXT_PUBLIC_APP_URL;
   const [totalDevelopers, setTotalDevelopers] = useState(0);
   const { getTotalDevelopers } = useApi()
 
   const companyMembers = [
-    companyMember(`André Moniz`, `Co-founder`, `https://uploads-ssl.webflow.com/5fc917a738ff8f24bc5df94c/60ba47bab2c2d865dd8d23c1_Screenshot%202021-06-04%20at%2016.33.01.png`, `https://www.linkedin.com/in/andremoniz/`),
-    companyMember(`Justin Wu`, `Co-founder`, `https://uploads-ssl.webflow.com/5fc917a738ff8f24bc5df94c/5ffc895e40fb69e7645a805e_Profile%20Justin.jpg`, `https://twitter.com/theWUJustin`),
-    companyMember(`Miguel Leite`, `Co-founder`, `https://uploads-ssl.webflow.com/5fc917a738ff8f24bc5df94c/5ffc89d582e1be72130745d6_Miguel%20Leite.jpeg`, `https://www.linkedin.com/in/miguelleite`),
-    companyMember(`Rui Teixeira`, `Co-founder`, `https://uploads-ssl.webflow.com/5fc917a738ff8f24bc5df94c/5ffc88d95f0f7f9cddc857e1_photo_2021-01-11_17-01-53.jpg`, `https://twitter.com/ruipeeet`),
-    companyMember(`João (MoshMage) Gonçalves`, `Chief Technology Officer`, moshmageAvatar, `https://www.linkedin.com/in/moshmage/`),
-    companyMember(`Filipe Pereira`, ` Chief of Ecosystem Development`, `https://uploads-ssl.webflow.com/5fc917a738ff8f24bc5df94c/60ba445dd4bb805b68ad716f_Screenshot%202021-06-04%20at%2016.18.44.png`, `https://www.linkedin.com/in/filipeappereira/`),
-    companyMember(`André Santos`, `UX/UI Designer`, `https://uploads-ssl.webflow.com/5fc917a738ff8f24bc5df94c/60bc972545cbc32c33aeb84f_Screenshot%202021-06-06%20at%2010.35.08-p-500.png`, `https://www.linkedin.com/in/andredbsantos`),
-    companyMember(`Rodrigo Sousa`, `UX/UI Designer`, rodrigoAvatar, `https://www.linkedin.com/in/rodrigosous-a/`),
-    companyMember(`Marcus Vinicius`, `Front-End Developer`, `https://uploads-ssl.webflow.com/5fc917a738ff8f24bc5df94c/60d4d7e58c9770649d8bc8c2_Screenshot%202021-06-24%20at%2020.07.09-p-500.png`, `https://www.linkedin.com/in/marcus-vin%C3%ADcius-lima-santos/`),
-    companyMember(`André Gonçalves`, `Javascript Developer`, `https://uploads-ssl.webflow.com/5fc917a738ff8f24bc5df94c/60bc97fba05e6732771bcaa6_Screenshot%202021-06-06%20at%2010.39.23.png`, `https://www.linkedin.com/in/andrefcgoncalves/`),
-    companyMember(`Joao David`, `Chief of Community`, joaoDavidAvatar, `https://linkedin.com/in/dindgeri`),
-    companyMember(`Luis Clark`, `Javascript Developer`, luisClarkAvatar, `https://www.linkedin.com/in/joaoluisclark/`),
-    companyMember(`Vitor Hugo`, `Front-End Developer`, vitorAvatar, `https://www.linkedin.com/in/vhcsilva/`),
-    companyMember(`Alvaro Nogueiras`, `Advisor`, `https://uploads-ssl.webflow.com/5fc917a738ff8f24bc5df94c/60ba47018b85e45e46b1d9c1_Screenshot%202021-06-04%20at%2016.29.39.png`, `https://www.linkedin.com/in/alvarogomeznog/`),
-    companyMember(`Nuno Correia`, `Advisor`, nunoCorreiaAvatar, `https://www.linkedin.com/in/nuno-m-correia`)
-  ]
+    member(
+      `Mário Alves`,
+      `Co-Founder & CEO`,
+      marioAvatar,
+      `https://www.linkedin.com/in/marioribeiroalves/`
+    ),
+    member(
+      `Hélder Vasconcelos`,
+      `Co-Founder & CTO`,
+      helderAvatar,
+      `https://www.linkedin.com/in/heldervasc/`
+    ),
+    member(
+      `Henrique Macedo`,
+      `Head of Product`,
+      henriqueAvatar,
+      `https://www.linkedin.com/in/henrikemacedo/`
+    ),
+    member(
+      `João Gonçalves`,
+      `Head of Protocol Development`,
+      moshmageAvatar,
+      `https://www.linkedin.com/in/moshmage/`
+    ),
+    member(
+      `Filipe Pereira`,
+      `Head of Ecosystem`,
+      filipeAvatar,
+      `https://www.linkedin.com/in/filipeappereira/`
+    ),
+    member(
+      `Maria Rincón`,
+      `Head of Business Development`,
+      mariaAvatar,
+      `https://www.linkedin.com/in/maria-lucia-rincón-silva-b74b02129/`
+    ),
+    member(
+      `Diogo Ferreira Pinto`,
+      `Head of Customer Experience`,
+      diogoAvatar,
+      `https://www.linkedin.com/in/diogoferreirapinto/`
+    ),
+    member(
+      `Rodrigo Nogueira`,
+      `Head of Marketing and Growth`,
+      rodrigoNogueiraAvatar,
+      `https://www.linkedin.com/in/rodrigornc/`
+    ),
+    member(
+      `Joao David`,
+      `Head of Community`,
+      joaoAvatar,
+      `https://linkedin.com/in/dindgeri`
+    ),
+    member(
+      `Rubhan Sukin`,
+      `International Business Development`,
+      rubhanAvatar,
+      `https://www.linkedin.com/in/rubhansukin/`
+    ),
+    member(
+      `Carlos Mendes`,
+      `Content Marketing Specialist`,
+      carlosAvatar,
+      `https://www.linkedin.com/in/carlos-mendes93/`
+    ),
+    member(
+      `Anderson Kabuya Lando`,
+      `Frontend Developer`,
+      andersonAvatar,
+      `https://www.linkedin.com/in/anderson-kabuya-lando/`
+    ),
+    member(
+      `Luis Clark`,
+      `Frontend Developer`,
+      luisAvatar,
+      `https://www.linkedin.com/in/joaoluisclark/`
+    ),
+    member(
+      `Marcus Vinicius`,
+      `Front-End Developer`,
+      marcusAvatar,
+      `https://www.linkedin.com/in/marcus-vin%C3%ADcius-lima-santos/`
+    ),
+    member(
+      `Vitor Hugo`,
+      `FrontEnd Developer`,
+      vitorAvatar,
+      `https://www.linkedin.com/in/vhcsilva/`
+    ),
+    member(
+      `André Gonçalves`,
+      `Infrastructure`,
+      andreGoncalvesAvatar,
+      `https://www.linkedin.com/in/andrefcgoncalves/`
+    ),
+    member(
+      `André Santos`,
+      `Product Designer`,
+      andreSantosAvatar,
+      `https://www.linkedin.com/in/andredbsantos`
+    ),
+    member(
+      `Rodrigo Sousa`,
+      `Product Designer`,
+      rodrigoSousaAvatar,
+      `https://www.linkedin.com/in/rodrigosous-a/`
+    ),
+    member(
+      `Inês Durão`,
+      `Graphic Designer`,
+      inesAvatar,
+      `https://www.linkedin.com/in/ines-durao/`
+    ),
+  ];
+
+  const advisorsMembers = [
+    member(
+      `Alvaro Nogueiras`,
+      `Co-founder`,
+      alvaroAvatar,
+      `https://www.linkedin.com/in/alvarogomeznog/`
+    ),
+    member(
+      `André Moniz`,
+      `Co-founder`,
+      andreAvatar,
+      `https://www.linkedin.com/in/andremoniz/`
+    ),
+    member(
+      `Justin Wu`,
+      `Co-founder`,
+      justinAvatar,
+      `https://twitter.com/theWUJustin`
+    ),
+    member(
+      `Miguel Leite`,
+      `Chief Technology Officer`,
+      miguelAvatar,
+      `https://www.linkedin.com/in/miguelleite`
+    ),
+    member(
+      `Nuno Correria`,
+      ` Chief of Ecosystem Development`,
+      nunoAvatar,
+      `https://www.linkedin.com/in/nuno-m-correia`
+    ),
+    member(
+      `Rui Teixeira`,
+      `Co-founder`,
+      ruiAvatar,
+      `https://twitter.com/ruipeeet`
+    ),
+  ];
+
+  const investors: {
+    icon: JSX.Element;
+    href: string;
+    style: string;
+  }[] = [
+    {
+      icon: <C3Icon />,
+      href: "https://www.c3-management.com/",
+      style: "me-3",
+    },
+    {
+      icon: <BrpxIcon />,
+      href: "https://brpx.com/",
+      style: "mx-3",
+    },
+    {
+      icon: <PtVenturesIcon />,
+      href: "https://www.portugalventures.pt/en/portfolio/",
+      style: "mx-3",
+    },
+    {
+      icon: <ByndIcon width={"86px"} height={"40px"} />,
+      href: "https://www.bynd.vc/en/portfolio",
+      style: "mx-3",
+    },
+    {
+      icon: <ShillingIcon width={"164px"} height={"30px"} />,
+      href: "https://www.shilling.vc",
+      style: "mx-3",
+    },
+    {
+      icon: <UtrustIcon width={"129px"} height={"60px"} />,
+      href: "http://utrust.com",
+      style: "mx-3",
+    },
+    {
+      icon: <CleverIcon />,
+      href: "https://cleveradvertising.com/",
+      style: "ms-3",
+    },
+  ];
 
   function initialize() {
     getTotalDevelopers()
                       .then(r => setTotalDevelopers(r.data));
   }
 
-  useEffect(initialize, [])
+  useEffect(initialize, []);
 
   return (
     <>
       <Header />
-
-      <div className="hero bg-blue text-center mb-4">
-        <h1 className="h1 text-white">Protocol/SDK Founded by Bepro Network Labs __ - __ building code for the future of web3 decentralized development</h1>
+      <div className="hero-about bg-blue mb-4">
+        <div className="text-center mb-4">
+          <h2 className="h2 text-white">We are building the future of work</h2>
+        </div>
+        <div className="row justify-content-center">
+          <div className="col-md-8">
+            <p>
+              We want to change the way companies build products by
+              decentralizing its development. In our platform, builders are able
+              to work on a challenge-based opportunity, contributing for their
+              favorite projects, for multiple organizations at the same time and
+              getting rewarded for their individual contribution.
+            </p>
+          </div>
+        </div>
       </div>
-
       <div className="container">
         <div className="row justify-content-center text-center">
-          <h3 className="h3 mb-4">Team</h3>
-
-          {companyMembers.map(member => <div className="col-md-3"><CompanyMember member={member} /></div>)}
-
+          <h3 className="h3 mb-4">Meet our team</h3>
+          {companyMembers.map((member, key) => (
+            <div key={key} className="col-md-3">
+              <CompanyMember member={member} />
+            </div>
+          ))}
           <div className="col-md-3">
             <a href="https://development.bepro.network" target="_blank">
               <div className="about-people text-center">
                 <div className="item">
-                  <h1 className="h1 text-white">+{numberToUX(totalDevelopers)}</h1>
+                  <h1 className="h1 text-white">
+                    +{numberToUX(totalDevelopers)}
+                  </h1>
                   <p className="p-small">Protocol Members</p>
                 </div>
               </div>
@@ -72,14 +299,59 @@ export default function About() {
           </div>
         </div>
       </div>
-      <Footer />
+      <div className="row justify-content-center text-center bg-shadow pb-2">
+        <h3 className="h3 my-4">Advisors</h3>
+        {advisorsMembers.map((member, key) => (
+          <div key={key} className="col-md-1 mx-4 my-3">
+            <AdvisorMember member={member} />
+          </div>
+        ))}
+      </div>
+      <div className="row align-items-center justify-content-center text-center pb-2">
+        <h3 className="h3 my-4">Our amazing team</h3>
+        <div>
+          <img className="w-50" src={team.src} />
+        </div>
 
+        <h2 className="h2 mt-3">We are hiring!</h2>
+        <p className="smallCaptionGrotesk color-gray">
+          Build the #future of web3 with us.
+        </p>
+        <div className="d-flex justify-content-center flex-wrap mb-4">
+          <a
+            className="text-decoration-none"
+            href="https://careers.bepro.network/"
+            target="_blank"
+          >
+            <Button color="primary">
+              Careers{" "}
+              <ExternallinkIcon className="ms-2" width={12} height={12} />
+            </Button>
+          </a>
+        </div>
+        <div className="d-flex align-items-center justify-content-between flex-column bg-shadow pb-2">
+          <h3 className="h3 mt-4">Investors</h3>
+          <div className="logos-investors">
+            {investors.map((investor, key) => (
+              <div
+                key={key}
+                className={`logo-wrap wrap-small ${investor.style}`}
+              >
+                <a target="_blank" href={investor.href}>
+                  {investor.icon}
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <Footer />
     </>
-  )
+  );
 }
 
 export const getStaticProps: GetStaticProps = async () => {
   return {
-    props: {}
-  }
-}
+    props: {},
+  };
+};
