@@ -19,27 +19,27 @@ export default function MainNavTaikai() {
       <Navbar className="nav-taikai bg-taikai">
         <Container className="d-flex justify-content-center text-center">
           <Part1Taikai
-            className="taikai-icon position-absolute"
+            className="position-absolute"
             style={{ top: `0`, right: `96.42%` }}
           />
           <Part2Taikai
-            className="taikai-icon position-absolute"
+            className="taikai-icon-4 position-absolute"
             style={{ top: `0`, right: `91.41%` }}
           />
           <Part3Taikai
-            className="taikai-icon position-absolute"
+            className="taikai-icon-3 position-absolute"
             style={{ bottom: `0`, right: `86.76%` }}
           />
           <Part4Taikai
-            className="taikai-icon position-absolute"
+            className="taikai-icon-3 position-absolute"
             style={{ right: `82.63%` }}
           />
           <Part5Taikai
-            className="taikai-icon position-absolute"
+            className="taikai-icon-2 position-absolute"
             style={{ top: `20%`, right: `76.6%` }}
           />
           <Part6Taikai
-            className="taikai-icon position-absolute"
+            className="taikai-icon-1 position-absolute"
             style={{ bottom: `0`, right: `71.22%` }}
           />
           <Link href="/">
@@ -57,23 +57,23 @@ export default function MainNavTaikai() {
             </a>
           </Link>
           <Part7Taikai
-            className="taikai-icon position-absolute"
+            className="taikai-icon-1 position-absolute"
             style={{ bottom: `0`, right: `27.59%` }}
           />
           <Part8Taikai
-            className="taikai-icon position-absolute"
+            className="taikai-icon-2 position-absolute"
             style={{ top: `9.3%`, right: `20.31%` }}
           />
           <Part9Taikai
-            className="taikai-icon position-absolute"
+            className="taikai-icon-3 position-absolute"
             style={{ top: `44.19%`, right: `14.48%` }}
           />
           <Part10Taikai
-            className="taikai-icon position-absolute"
+            className="taikai-icon-4 position-absolute"
             style={{ bottom: `0`, right: `8.23%` }}
           />
           <Part11Taikai
-            className="taikai-icon position-absolute"
+            className="position-absolute"
             style={{ bottom: `0`, right: `1.83%` }}
           />
         </Container>

@@ -400,8 +400,26 @@ p {
   }
 }
 
-@media (max-width: 1011px) {
-  .taikai-icon {
+@media (max-width: 965px) {
+  .taikai-icon-1 {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .taikai-icon-2 {
+    display: none;
+  }
+}
+
+@media (max-width: 655px) {
+  .taikai-icon-3 {
+    display: none;
+  }
+}
+
+@media (max-width: 531px) {
+  .taikai-icon-4 {
     display: none;
   }
 }
