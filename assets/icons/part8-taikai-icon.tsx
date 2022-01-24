@@ -1,6 +1,6 @@
 import { SVGProps } from "react";
 
-export default function Part1Taikei(props: SVGProps<SVGSVGElement>) {
+export default function Part1Taikai(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width="28"
