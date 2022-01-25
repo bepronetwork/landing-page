@@ -3,6 +3,11 @@ import React, { useEffect, useState } from "react";
 import Footer from "../components/footer";
 import CompanyMember from "../components/company-member";
 import { numberToUX } from "../helpers/NumberToUX";
+import Header from "../components/header";
+import AdvisorMember from "../components/advisor-member";
+import Button from "../components/button";
+import useApi from "../x-hooks/use-api";
+//images
 import alvaroAvatar from "../assets/advisors/alvaro-avatar.png";
 import andreAvatar from "../assets/advisors/andre-avatar.png";
 import justinAvatar from "../assets/advisors/justin-avatar.png";
@@ -10,6 +15,7 @@ import miguelAvatar from "../assets/advisors/miguel-avatar.png";
 import nunoAvatar from "../assets/advisors/nuno-avatar.png";
 import ruiAvatar from "../assets/advisors/rui-avatar.png";
 import team from "../assets/team/team.png";
+import taikaiLogo from "../assets/taikai-logo.png";
 import moshmageAvatar from "../assets/team/moshmage-avatar.jpg";
 import andersonAvatar from "../assets/team/anderson-avatar.png";
 import andreSantosAvatar from "../assets/team/andreSantos-avatar.png";
@@ -29,9 +35,7 @@ import rodrigoNogueiraAvatar from "../assets/team/rodrigoNogueira-avatar.png";
 import rodrigoSousaAvatar from "../assets/team/rodrigoSousa-avatar.png";
 import rubhanAvatar from "../assets/team/rubhan-avatar.png";
 import vitorAvatar from "../assets/team/vitor-avatar.png";
-import Header from "../components/header";
-import AdvisorMember from "../components/advisor-member";
-import Button from "../components/button";
+//icons
 import ExternallinkIcon from "../assets/icons/externallink-icon";
 import UtrustIcon from "../assets/icons/utrust-icon";
 import ShillingIcon from "../assets/icons/shilling-icon";
@@ -41,7 +45,6 @@ import BrpxIcon from "../assets/icons/brpx-icon";
 import C3Icon from "../assets/icons/c3-icon";
 import CleverIcon from "../assets/icons/clever-icon";
 
-import useApi from '../x-hooks/use-api';
 const member = (
   name = ``,
   position = ``,
@@ -51,7 +54,7 @@ const member = (
 
 export default function About() {
   const [totalDevelopers, setTotalDevelopers] = useState(0);
-  const { getTotalDevelopers } = useApi()
+  const { getTotalDevelopers } = useApi();
 
   const companyMembers = [
     member(
@@ -134,13 +137,13 @@ export default function About() {
     ),
     member(
       `Marcus Vinicius`,
-      `Front-End Developer`,
+      `Frontend Developer`,
       marcusAvatar,
       `https://www.linkedin.com/in/marcus-vin%C3%ADcius-lima-santos/`
     ),
     member(
       `Vitor Hugo`,
-      `FrontEnd Developer`,
+      `Frontend Developer`,
       vitorAvatar,
       `https://www.linkedin.com/in/vhcsilva/`
     ),
@@ -252,8 +255,7 @@ export default function About() {
   ];
 
   function initialize() {
-    getTotalDevelopers()
-                      .then(r => setTotalDevelopers(r.data));
+    getTotalDevelopers().then((r) => setTotalDevelopers(r.data));
   }
 
   useEffect(initialize, []);
@@ -262,11 +264,11 @@ export default function About() {
     <>
       <Header />
       <div className="hero-about bg-blue mb-4">
-        <div className="text-center mb-4">
+        <div className="title mb-4">
           <h2 className="h2 text-white">We are building the future of work</h2>
         </div>
         <div className="row justify-content-center">
-          <div className="col-md-8">
+          <div className="text-about col-md-6">
             <p>
               We want to change the way companies build products by
               decentralizing its development. In our platform, builders are able
@@ -274,6 +276,11 @@ export default function About() {
               favorite projects, for multiple organizations at the same time and
               getting rewarded for their individual contribution.
             </p>
+          </div>
+          <div className="col-md-2 logo-taikei mt-4">
+            <a target="_blank" href="https://taikai.network/en">
+              <img src={taikaiLogo.src} />
+            </a>
           </div>
         </div>
       </div>

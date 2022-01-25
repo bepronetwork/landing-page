@@ -807,7 +807,26 @@ p {
 }
 
 .hero-about {
-  padding: $m*6+($m/3) 0 $m 0;
+  padding: $m*8+($m/3) 0 $m 0;
+
+  .title {
+    margin-left: $m*20;
+    @media (max-width: 1360px) {
+      text-align: center;
+      margin-left: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .text-about  {
+      text-align: center;
+    }
+
+    .logo-taikei {
+      text-align: center;
+    }
+  }
+    
 }
 
 .landing-hero {
