@@ -9,7 +9,8 @@
     "dev": "next dev",
     "prebuild": "next telemetry disable",
     "build": "next build",
-    "start": "next start --hostname 0.0.0.0"
+    "start": "next start --hostname 0.0.0.0",
+    "clean": "npm cache clean --force && rm -rf .next"
   },
   "dependencies": {
     "axios": "^0.21.1",
