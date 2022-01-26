@@ -1,19 +1,19 @@
 import { GetStaticProps } from 'next'
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 
 export default function Footer() {
-
+  const [currentYear] = useState<number>(new Date().getFullYear());
+  
   return (
       <>
-
         <div className="d-flex align-items-center justify-content-between flex-column">
           <div className="footer-container">
             <div className="footer-wrap">
               <span className="bepro-logo" />
               <p className="p-small">@Built in 🇵🇹</p>
-              <p className="p-small text-white">BEPRO © 2021 All rights reserved.</p>
+              <p className="p-small text-white">BEPRO © {currentYear} All rights reserved.</p>
               <p className="p-small">Code-as-a-Service Protocol</p>
               <p className="p-small">Reach out: general@bepro.network</p>
               <p className="p-small">BEPRO Services, BEPRO Protocol and BEPRO Token (BEPRO) are not available in the United States and other <a className="text-decoration-none color-blue" target="_blank" href="https://www.bepro.network/terms-and-conditions">Excluded Jurisdictions</a></p>
@@ -22,6 +22,7 @@ export default function Footer() {
               <h3 className="smallCaption mb-3">GET AROUND</h3>
               <ul>
                 <li><Link href="/about"><a className="p-small" >Bepro Network Labs</a></Link></li>
+                <li><a className="p-small" target="_blank" href="https://careers.bepro.network/">Careers</a></li>
                 <li><a className="p-small" target="_blank" href="https://discord.gg/9aUufhzhfm">Discord</a></li>
                 <li><a className="p-small" target="_blank" href="http://support.bepro.network">Knowledge Base</a></li>
                 <li><a className="p-small" target="_blank" href="https://support.bepro.network/en/collections/3143271-community">Community FAQ</a></li>
@@ -45,7 +46,6 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
       </>
   )
 }
