@@ -54,7 +54,7 @@ export default function useOctokit() {
     octokit.rest.repos.getCommitActivityStats({...getOwnerRepoFrom(repo)}).then(mapData)
 
   return Promise.all(repos.map(getCommitActivity))
-    .then(reposWeekly => reposWeekly.map(week => (week || []).reduce(toDateObject, {})))
+    .then(reposWeekly => reposWeekly.map(week => ([week] || []).reduce(toDateObject, {})))
     .then(reposMonthly => {
 
       const reduced = {};
