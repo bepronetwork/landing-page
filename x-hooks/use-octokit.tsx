@@ -30,11 +30,9 @@ export default function useOctokit() {
   const repos = [
     `bepronetwork/bepro-js`,
     `bepronetwork/web-network`,
-    `bepronetwork/microservice-github`,
     `bepronetwork/landing-page`,
     `bepronetwork/webapp-community`,
     `bepronetwork/grants-program`,
-    `bepronetwork/bepro-telegram-bot`,
     `bepronetwork/B.E.P.R.O`,
     `bepronetwork/b2c-layout`,
     `bepronetwork/ms-withdraw`,
