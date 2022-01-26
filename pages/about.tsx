@@ -1,7 +1,6 @@
 import {GetStaticProps} from 'next'
 import React, {useEffect, useState} from 'react'
 import Footer from '../components/footer'
-import WebNetworkApi from '../services/web-network-api';
 import CompanyMember from '../components/company-member';
 import {numberToUX} from '../helpers/NumberToUX';
 
@@ -12,6 +11,7 @@ import rodrigoAvatar from '../assets/rodrigo-avatar.png';
 import nunoCorreiaAvatar from '../assets/nuno-avatar.jpeg';
 import vitorAvatar from '../assets/vitor-avatar.jpeg';
 import Header from '../components/header';
+import useApi from '../x-hooks/use-api';
 
 
 const companyMember = (name = ``, position = ``, avatar: string|StaticImageData = ``, href = ``) => ({name, position, avatar, href});
@@ -19,6 +19,7 @@ const companyMember = (name = ``, position = ``, avatar: string|StaticImageData 
 export default function About() {
   const appLink = process.env.NEXT_PUBLIC_APP_URL;
   const [totalDevelopers, setTotalDevelopers] = useState(0);
+  const { getTotalDevelopers } = useApi()
 
   const companyMembers = [
     companyMember(`André Moniz`, `Co-founder`, `https://uploads-ssl.webflow.com/5fc917a738ff8f24bc5df94c/60ba47bab2c2d865dd8d23c1_Screenshot%202021-06-04%20at%2016.33.01.png`, `https://www.linkedin.com/in/andremoniz/`),
@@ -39,7 +40,7 @@ export default function About() {
   ]
 
   function initialize() {
-    WebNetworkApi.getTotalDevelopers()
+    getTotalDevelopers()
                       .then(r => setTotalDevelopers(r.data));
   }
 

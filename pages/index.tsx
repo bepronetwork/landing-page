@@ -18,7 +18,7 @@ import NgcIcon from '../assets/icons/ngc-icon';
 import ExternalArrowIcon from '../assets/icons/external-arrow-icon';
 import {BeproService} from '../services/bepro';
 import useOctokit from '../x-hooks/use-octokit';
-import WebNetworkApi from '../services/web-network-api';
+import useApi from '../x-hooks/use-api';
 
 interface DataSet {
   data: (string|number)[],
@@ -59,6 +59,7 @@ export default function Home() {
   const [onNetwork, setOnNetwork] = useState(0)
   const [reposStats, setReposStats] = useState<RepoStats[]>([] as RepoStats[]);
   const [chartData, setChartData] = useState<any>();
+  const { getTotalDevelopers } = useApi()
   const appLink = process.env.NEXT_PUBLIC_APP_URL;
   const dateFormatter = new Intl.DateTimeFormat('en-GB', {month: 'short', day: 'numeric',});
 
@@ -101,7 +102,7 @@ export default function Home() {
       BeproService._network.test = false;
     });
 
-    WebNetworkApi.getTotalDevelopers()
+    getTotalDevelopers()
       .then((r) => {
         setTotalDevelopers(r.data || 0);
       })
