@@ -9,11 +9,12 @@
     "dev": "next dev --port 3005",
     "prebuild": "next telemetry disable",
     "build": "next build",
-    "start": "next start --hostname 0.0.0.0"
+    "start": "next start --hostname 0.0.0.0",
+    "clean": "npm cache clean --force && rm -rf .next"
   },
   "dependencies": {
     "axios": "^0.21.1",
-    "bepro-js": "github:bepronetwork/bepro-js#master",
+    "bepro-js": "github:bepronetwork/bepro-js#ef1c57df220f123d20813d5a41a30189ccc1ec31",
     "bootstrap": "^5.1.3",
     "chart.js": "~3.5.1",
     "date-fns": "^2.11.1",
