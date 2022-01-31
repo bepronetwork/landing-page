@@ -409,7 +409,9 @@ export default function Home() {
           <div className="col-content">
             <div className="d-flex align-items-center justify-content-center">
               <div className="bepro-runkit">
-                <Embed source={`
+                <Embed source={
+//TODO parse logic to remove lifecycle warnings
+                  `
 const {StakingContract} = require("bepro-js");
 
 /* Create Instance */
