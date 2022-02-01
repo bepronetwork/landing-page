@@ -815,18 +815,22 @@ p {
   padding: $m*8+(math.div($m,3)) 0 $m 0;
 
   .title {
-    margin-left: $m*20;
-    @media (max-width: 1360px) {
+    margin-left: 16%;
+    @media (max-width: 768px) {
       text-align: center;
       margin-left: 0;
     }
   }
 
-  @media (max-width: 768px) {
-    .text-about  {
+  .text-about {
+    margin-right: 20px;
+    @media (max-width: 768px) {
       text-align: center;
+      margin-right: 0;
     }
+  }
 
+  @media (max-width: 768px) {
     .logo-taikei {
       text-align: center;
     }
