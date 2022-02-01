@@ -15,7 +15,6 @@ import miguelAvatar from "../assets/advisors/miguel-avatar.png";
 import nunoAvatar from "../assets/advisors/nuno-avatar.png";
 import ruiAvatar from "../assets/advisors/rui-avatar.png";
 import team from "../assets/team/team.png";
-import taikaiLogo from "../assets/taikai-logo.png";
 import moshmageAvatar from "../assets/team/moshmage-avatar.jpg";
 import andersonAvatar from "../assets/team/anderson-avatar.png";
 import andreSantosAvatar from "../assets/team/andreSantos-avatar.png";
@@ -36,6 +35,7 @@ import rodrigoSousaAvatar from "../assets/team/rodrigoSousa-avatar.png";
 import rubhanAvatar from "../assets/team/rubhan-avatar.png";
 import vitorAvatar from "../assets/team/vitor-avatar.png";
 //icons
+import TaikaiIcon from "../assets/icons/taikai-icon";
 import ExternallinkIcon from "../assets/icons/externallink-icon";
 import UtrustIcon from "../assets/icons/utrust-icon";
 import ShillingIcon from "../assets/icons/shilling-icon";
@@ -208,7 +208,7 @@ export default function About() {
       `Rui Teixeira`,
       `Co-founder`,
       ruiAvatar,
-      `https://twitter.com/ruipeeet`
+      `https://www.linkedin.com/in/rui-dos-santos-teixeira`
     ),
   ];
 
@@ -267,7 +267,7 @@ export default function About() {
         <div className="title mb-4">
           <h2 className="h2 text-white">We are building the future of work</h2>
         </div>
-        <div className="row justify-content-center">
+        <div className="row g-0 justify-content-center">
           <div className="text-about col-md-6">
             <p>
               We want to change the way companies build products by
@@ -279,7 +279,7 @@ export default function About() {
           </div>
           <div className="col-md-2 logo-taikei mt-4">
             <a target="_blank" href="https://taikai.network/en">
-              <img src={taikaiLogo.src} />
+              <TaikaiIcon />
             </a>
           </div>
         </div>
@@ -306,8 +306,8 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="row justify-content-center text-center bg-shadow pb-2">
-        <h3 className="h3 my-4">Advisors</h3>
+      <div className="row g-0 justify-content-center text-center bg-shadow pb-2">
+        <h3 className="h3 my-4">Co-Founders & Advisors</h3>
           <div className="text-advisors" >
             <p className="p">Bepro Network started in 2018 as a SaaS Startup invested by traditional European VC and evolved into a Web3 code as a service protocol for decentralised systems tied to a toolkit for developers by developers, below you find the founders of Bepro Network Labs which are now TAIKAI's Advisors continuing to help the mission to grow the Bepro Network Ecosystem.</p>
           </div>
@@ -317,7 +317,7 @@ export default function About() {
           </div>
         ))}
       </div>
-      <div className="row align-items-center justify-content-center text-center pb-2">
+      <div className="row g-0 align-items-center justify-content-center text-center pb-2">
         <h3 className="h3 my-4">Our amazing team</h3>
         <div>
           <img className="w-50" src={team.src} />

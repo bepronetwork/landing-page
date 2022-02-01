@@ -380,7 +380,7 @@ export default function Home() {
             </div>
             <div className="align-self-center text-center w-50 d-flex justify-content-center align-items-center flex-column d-sm-inline-block">
               <span className="backed-logos logo-red4sec" />
-              <span className="smallCaption color-gray d-block pt-1">Security audit <br/>In progress</span>
+              <span className="smallCaption color-gray d-block pt-1">Security audit <br/>Completed</span>
             </div>
             <div className="logo-wrap w-100 text-center flex-column bg-security">
               <a href="https://docs.bepro.network/getting-started/bug-bounty" target="_blank">
