@@ -208,7 +208,7 @@ export default function About() {
       `Rui Teixeira`,
       `Co-founder`,
       ruiAvatar,
-      `https://twitter.com/ruipeeet`
+      `https://www.linkedin.com/in/rui-dos-santos-teixeira`
     ),
   ];
 
@@ -307,7 +307,7 @@ export default function About() {
         </div>
       </div>
       <div className="row justify-content-center text-center bg-shadow pb-2">
-        <h3 className="h3 my-4">Advisors</h3>
+        <h3 className="h3 my-4">Co-Founders & Advisors</h3>
           <div className="text-advisors" >
             <p className="p">Bepro Network started in 2018 as a SaaS Startup invested by traditional European VC and evolved into a Web3 code as a service protocol for decentralised systems tied to a toolkit for developers by developers, below you find the founders of Bepro Network Labs which are now TAIKAI's Advisors continuing to help the mission to grow the Bepro Network Ecosystem.</p>
           </div>
