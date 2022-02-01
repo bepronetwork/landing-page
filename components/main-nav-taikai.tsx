@@ -45,7 +45,7 @@ export default function MainNavTaikai() {
           <Link href="/">
             <a target="_blank">
               <div className="d-flex justify-content-center text-center">
-                <span className="caption text-uppercase text-white">
+                <span className="smallCaption text-uppercase text-white">
                 Bepro Network Labs is now part of TAIKAI! learn more <u>here</u>
                   <ExternalSimpleArrowIcon
                     className="ms-1 mb-3"
