@@ -15,7 +15,6 @@ import miguelAvatar from "../assets/advisors/miguel-avatar.png";
 import nunoAvatar from "../assets/advisors/nuno-avatar.png";
 import ruiAvatar from "../assets/advisors/rui-avatar.png";
 import team from "../assets/team/team.png";
-import taikaiLogo from "../assets/taikai-logo.png";
 import moshmageAvatar from "../assets/team/moshmage-avatar.jpg";
 import andersonAvatar from "../assets/team/anderson-avatar.png";
 import andreSantosAvatar from "../assets/team/andreSantos-avatar.png";
@@ -36,6 +35,7 @@ import rodrigoSousaAvatar from "../assets/team/rodrigoSousa-avatar.png";
 import rubhanAvatar from "../assets/team/rubhan-avatar.png";
 import vitorAvatar from "../assets/team/vitor-avatar.png";
 //icons
+import TaikaiIcon from "../assets/icons/taikai-icon";
 import ExternallinkIcon from "../assets/icons/externallink-icon";
 import UtrustIcon from "../assets/icons/utrust-icon";
 import ShillingIcon from "../assets/icons/shilling-icon";
@@ -279,7 +279,7 @@ export default function About() {
           </div>
           <div className="col-md-2 logo-taikei mt-4">
             <a target="_blank" href="https://taikai.network/en">
-              <img src={taikaiLogo.src} />
+              <TaikaiIcon />
             </a>
           </div>
         </div>
