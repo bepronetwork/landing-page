@@ -59,13 +59,13 @@ export default function About() {
   const companyMembers = [
     member(
       `Mário Alves`,
-      `Co-Founder & CEO`,
+      `CEO`,
       marioAvatar,
       `https://www.linkedin.com/in/marioribeiroalves/`
     ),
     member(
       `Hélder Vasconcelos`,
-      `Co-Founder & CTO`,
+      `CTO`,
       helderAvatar,
       `https://www.linkedin.com/in/heldervasc/`
     ),
@@ -77,7 +77,7 @@ export default function About() {
     ),
     member(
       `João Gonçalves`,
-      `Head of Protocol Development`,
+      `Head of Development`,
       moshmageAvatar,
       `https://www.linkedin.com/in/moshmage/`
     ),
@@ -286,7 +286,6 @@ export default function About() {
       </div>
       <div className="container">
         <div className="row justify-content-center text-center">
-          <h3 className="h3 mb-4">Meet our team</h3>
           {companyMembers.map((member, key) => (
             <div key={key} className="col-md-3">
               <CompanyMember member={member} />
