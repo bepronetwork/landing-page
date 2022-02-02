@@ -330,7 +330,7 @@ export default function About() {
         <div className="d-flex justify-content-center flex-wrap mb-4">
           <a
             className="text-decoration-none"
-            href="https://careers.bepro.network/"
+            href="https://taikai.network/en/careers"
             target="_blank"
           >
             <Button color="primary">
