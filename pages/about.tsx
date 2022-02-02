@@ -10,16 +10,17 @@ import useApi from "../x-hooks/use-api";
 //images
 import alvaroAvatar from "../assets/advisors/alvaro-avatar.png";
 import andreAvatar from "../assets/advisors/andre-avatar.png";
-import justinAvatar from "../assets/advisors/justin-avatar.png";
+import justinAvatar from "../assets/team/justin-avatar.png";
 import miguelAvatar from "../assets/advisors/miguel-avatar.png";
 import nunoAvatar from "../assets/advisors/nuno-avatar.png";
-import ruiAvatar from "../assets/advisors/rui-avatar.png";
+import ruiAvatar from "../assets/team/rui-avatar.png";
 import team from "../assets/team/team.png";
 import moshmageAvatar from "../assets/team/moshmage-avatar.jpg";
 import andersonAvatar from "../assets/team/anderson-avatar.png";
 import andreSantosAvatar from "../assets/team/andreSantos-avatar.png";
 import andreGoncalvesAvatar from "../assets/team/andreGoncalves-avatar.png";
 import carlosAvatar from "../assets/team/carlos-avatar.png";
+import josemarAvatar from "../assets/team/Josemar-avatar.png";
 import diogoAvatar from "../assets/team/diogo-avatar.png";
 import filipeAvatar from "../assets/team/filipe-avatar.png";
 import helderAvatar from "../assets/team/helder-avatar.png";
@@ -59,13 +60,13 @@ export default function About() {
   const companyMembers = [
     member(
       `Mário Alves`,
-      `Co-Founder & CEO`,
+      `CEO`,
       marioAvatar,
       `https://www.linkedin.com/in/marioribeiroalves/`
     ),
     member(
       `Hélder Vasconcelos`,
-      `Co-Founder & CTO`,
+      `CTO`,
       helderAvatar,
       `https://www.linkedin.com/in/heldervasc/`
     ),
@@ -77,7 +78,7 @@ export default function About() {
     ),
     member(
       `João Gonçalves`,
-      `Head of Protocol Development`,
+      `Head of Development`,
       moshmageAvatar,
       `https://www.linkedin.com/in/moshmage/`
     ),
@@ -86,6 +87,12 @@ export default function About() {
       `Head of Ecosystem`,
       filipeAvatar,
       `https://www.linkedin.com/in/filipeappereira/`
+    ),
+    member(
+      `Rui Teixeira`,
+      `Head of Technology Architecture`,
+      ruiAvatar,
+      `https://www.linkedin.com/in/rui-dos-santos-teixeira`
     ),
     member(
       `Maria Rincón`,
@@ -98,6 +105,12 @@ export default function About() {
       `Head of Customer Experience`,
       diogoAvatar,
       `https://www.linkedin.com/in/diogoferreirapinto/`
+    ),
+    member(
+      `Justin Wu`,
+      `Head of Partnerships`,
+      justinAvatar,
+      `https://twitter.com/theWUJustin`
     ),
     member(
       `Rodrigo Nogueira`,
@@ -122,6 +135,12 @@ export default function About() {
       `Content Marketing Specialist`,
       carlosAvatar,
       `https://www.linkedin.com/in/carlos-mendes93/`
+    ),
+    member(
+      `Josemar C. Hebo`,
+      `Backend Developer`,
+      josemarAvatar,
+      `https://www.linkedin.com/in/josemar-c-hebo-2125b8147/`
     ),
     member(
       `Anderson Kabuya Lando`,
@@ -187,12 +206,6 @@ export default function About() {
       `https://www.linkedin.com/in/andremoniz/`
     ),
     member(
-      `Justin Wu`,
-      `Co-founder`,
-      justinAvatar,
-      `https://twitter.com/theWUJustin`
-    ),
-    member(
       `Miguel Leite`,
       `Chief Technology Officer`,
       miguelAvatar,
@@ -203,12 +216,6 @@ export default function About() {
       ` Chief of Ecosystem Development`,
       nunoAvatar,
       `https://www.linkedin.com/in/nuno-m-correia`
-    ),
-    member(
-      `Rui Teixeira`,
-      `Co-founder`,
-      ruiAvatar,
-      `https://www.linkedin.com/in/rui-dos-santos-teixeira`
     ),
   ];
 
@@ -286,13 +293,12 @@ export default function About() {
       </div>
       <div className="container">
         <div className="row justify-content-center text-center">
-          <h3 className="h3 mb-4">Meet our team</h3>
           {companyMembers.map((member, key) => (
             <div key={key} className="col-md-3">
               <CompanyMember member={member} />
             </div>
           ))}
-          <div className="col-md-3">
+          <div className="col-md-6">
             <a href="https://development.bepro.network" target="_blank">
               <div className="about-people text-center">
                 <div className="item">
@@ -308,11 +314,18 @@ export default function About() {
       </div>
       <div className="row g-0 justify-content-center text-center bg-shadow pb-2">
         <h3 className="h3 my-4">Co-Founders & Advisors</h3>
-          <div className="text-advisors" >
-            <p className="p">Bepro Network started in 2018 as a SaaS Startup invested by traditional European VC and evolved into a Web3 code as a service protocol for decentralised systems tied to a toolkit for developers by developers, below you find the founders of Bepro Network Labs which are now TAIKAI's Advisors continuing to help the mission to grow the Bepro Network Ecosystem.</p>
-          </div>
+        <div className="text-advisors">
+          <p className="p">
+            Bepro Network started in 2018 as a SaaS Startup invested by
+            traditional European VC and evolved into a Web3 code as a service
+            protocol for decentralised systems tied to a toolkit for developers
+            by developers, below you find the founders of Bepro Network Labs
+            which are now TAIKAI's Advisors continuing to help the mission to
+            grow the Bepro Network Ecosystem.
+          </p>
+        </div>
         {advisorsMembers.map((member, key) => (
-          <div key={key} className="col-md-1 mx-4 my-3">
+          <div key={key} className="col-md-2 my-3">
             <AdvisorMember member={member} />
           </div>
         ))}
