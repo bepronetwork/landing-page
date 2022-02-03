@@ -19,7 +19,7 @@ import PtVenturesIcon from "../assets/icons/pt-ventures-icon";
 import BrpxIcon from "../assets/icons/brpx-icon";
 import C3Icon from "../assets/icons/c3-icon";
 import CleverIcon from "../assets/icons/clever-icon";
-import { companyMembers } from "../helpers/companyMembers";
+import { companyMembers } from "../helpers/CompanyMembers";
 import { advisorsMembers } from "../helpers/AdvisorsMembers";
 
 export default function About() {

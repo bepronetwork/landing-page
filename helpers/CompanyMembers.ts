@@ -1,4 +1,4 @@
-import { member } from "./member";
+import { member } from "./Member";
 import justinAvatar from "../assets/team/justin-avatar.png";
 import ruiAvatar from "../assets/team/rui-avatar.png";
 import moshmageAvatar from "../assets/team/moshmage-avatar.jpg";

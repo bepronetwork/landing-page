@@ -1,4 +1,4 @@
-import { member } from "./member";
+import { member } from "./Member";
 import alvaroAvatar from "../assets/advisors/alvaro-avatar.png";
 import andreAvatar from "../assets/advisors/andre-avatar.png";
 import justinAvatarAd from "../assets/advisors/justin-avatar.png";
