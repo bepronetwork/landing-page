@@ -126,9 +126,9 @@ export default function About() {
             Bepro Network started in 2018 as a SaaS Startup invested by
             traditional European VC and evolved into a Web3 code as a service
             protocol for decentralised systems tied to a toolkit for developers
-            by developers, below you find the founders of Bepro Network Labs
-            which are now TAIKAI's Advisors continuing to help the mission to
-            grow the Bepro Network Ecosystem.
+            by developers, below you find the Co-Founders of Bepro Network Labs
+            & TAIKAI continuing to help the mission to grow the Bepro Network
+            Ecosystem.
           </p>
         </div>
         <div className="row w-65">
