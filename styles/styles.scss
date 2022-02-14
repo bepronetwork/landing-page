@@ -824,6 +824,10 @@ p {
       text-align: center;
       margin-left: 0;
     }
+    @media (min-width: 1950px) {
+      margin-left: 21.2%;
+      margin-right: 10%;
+    }
   }
 
   .text-about {
@@ -831,6 +835,15 @@ p {
     @media (max-width: 768px) {
       text-align: center;
       margin-right: 0;
+    }
+    @media (min-width: 1950px) {
+      margin-left: 20%;
+    }
+  }
+
+  @media (min-width: 1950px) {
+    .logo-taikei{
+      margin-right: 10%;
     }
   }
 
