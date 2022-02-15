@@ -14,6 +14,8 @@ import ExternalSimpleArrowIcon from "../assets/icons/external-simpleArrow-icon";
 import Link from "next/link";
 
 export default function MainNavTaikai() {
+  const bannerLink = process.env.NEXT_PUBLIC_BANNER_LINK;
+  
   return (
     <>
       <Navbar className="nav-taikai bg-taikai">
@@ -42,7 +44,7 @@ export default function MainNavTaikai() {
             className="taikai-icon-1 position-absolute"
             style={{ bottom: `0`, right: `71.22%` }}
           />
-          <Link href="/">
+          <Link href={bannerLink}>
             <a target="_blank">
               <div className="d-flex justify-content-center text-center">
                 <span className="smallCaption text-uppercase text-white">
