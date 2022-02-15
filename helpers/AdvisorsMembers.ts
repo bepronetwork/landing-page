@@ -46,7 +46,7 @@ export const advisorsMembers = [
     `https://www.linkedin.com/in/miguelleite`
   ),
   member(
-    `Nuno Correria`,
+    `Nuno Correia`,
     `Co-founder`,
     nunoAvatar,
     `https://www.linkedin.com/in/nuno-m-correia`

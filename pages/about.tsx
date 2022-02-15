@@ -79,7 +79,9 @@ export default function About() {
       <Header />
       <div className="hero-about bg-blue mb-4">
         <div className="title mb-4">
-          <h2 className="h2 text-white">We are building the future of work</h2>
+          <h2 className="h2 text-white">
+            We are building the future of work in web3
+          </h2>
         </div>
         <div className="row g-0 justify-content-center">
           <div className="text-about col-md-6">
@@ -88,7 +90,8 @@ export default function About() {
               decentralizing its development. In our platform, builders are able
               to work on a challenge-based opportunity, contributing for their
               favorite projects, for multiple organizations at the same time and
-              getting rewarded for their individual contribution.
+              getting rewarded for their individual contribution. And #bepro-js
+              for a web3 SDK
             </p>
           </div>
           <div className="col-md-2 logo-taikei mt-4">
