@@ -1,7 +1,7 @@
 import { member } from "./Member";
 import justinAvatar from "../assets/team/justin-avatar.png";
 import ruiAvatar from "../assets/team/rui-avatar.png";
-import moshmageAvatar from "../assets/team/moshmage-avatar.jpg";
+import moshmageAvatar from "../assets/team/moshmage-avatar.png";
 import andersonAvatar from "../assets/team/anderson-avatar.png";
 import andreSantosAvatar from "../assets/team/andreSantos-avatar.png";
 import andreGoncalvesAvatar from "../assets/team/andreGoncalves-avatar.png";
