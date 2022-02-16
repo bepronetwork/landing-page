@@ -380,7 +380,7 @@ export default function Home() {
             </div>
             <div className="align-self-center text-center w-50 d-flex justify-content-center align-items-center flex-column d-sm-inline-block">
               <span className="backed-logos logo-red4sec" />
-              <span className="smallCaption color-gray d-block pt-1">Security audit <br/>In progress</span>
+              <span className="smallCaption color-gray d-block pt-1">Security audit <br/>Completed</span>
             </div>
             <div className="logo-wrap w-100 text-center flex-column bg-security">
               <a href="https://docs.bepro.network/getting-started/bug-bounty" target="_blank">
@@ -395,7 +395,7 @@ export default function Home() {
           <div className="col-content">
             <p className="smallCaption color-blue">Documentation</p>
             <h4 className="h3 color-blue">BEPRO-JS & The Protocol</h4>
-            <p className="p color-blue">Bepro Network Labs created bepro-js to work as a showcase of the protocol, a codebase in Javascript already being used/contributed by platforms as Lepricon, Polkamarkets, RealFevr, Exeedme and others.</p>
+            <p className="p color-blue">TAIKAI created bepro-js to work as a showcase of the protocol, a codebase in Javascript already being used/contributed by platforms as Lepricon, Polkamarkets, RealFevr, Exeedme and others.</p>
             <a href="https://docs.bepro.network/" target="_blank" className="btn btn-md btn-primary w-25">View docs</a>
           </div>
           <div className="col-content bg-gray">
@@ -409,7 +409,9 @@ export default function Home() {
           <div className="col-content">
             <div className="d-flex align-items-center justify-content-center">
               <div className="bepro-runkit">
-                <Embed source={`
+                <Embed source={
+//TODO parse logic to remove lifecycle warnings
+                  `
 const {StakingContract} = require("bepro-js");
 
 /* Create Instance */

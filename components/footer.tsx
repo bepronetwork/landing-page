@@ -12,7 +12,7 @@ export default function Footer() {
           <div className="footer-container">
             <div className="footer-wrap">
               <span className="bepro-logo" />
-              <p className="p-small">@Built in 🇵🇹</p>
+              <p className="p-small"><a className="p-small" target="_blank" href="https://taikai.network">Developed by TAIKAI</a></p>
               <p className="p-small text-white">BEPRO © {currentYear} All rights reserved.</p>
               <p className="p-small">Code-as-a-Service Protocol</p>
               <p className="p-small">Reach out: general@bepro.network</p>
@@ -21,13 +21,13 @@ export default function Footer() {
             <div className="footer-wrap">
               <h3 className="smallCaption mb-3">GET AROUND</h3>
               <ul>
-                <li><Link href="/about"><a className="p-small" >Bepro Network Labs</a></Link></li>
-                <li><a className="p-small" target="_blank" href="https://careers.bepro.network/">Careers</a></li>
+                <li><Link href="/about"><a className="p-small" >About us</a></Link></li>
+                <li><a className="p-small" target="_blank" href="https://taikai.network/en/careers">Careers</a></li>
                 <li><a className="p-small" target="_blank" href="https://discord.gg/9aUufhzhfm">Discord</a></li>
                 <li><a className="p-small" target="_blank" href="http://support.bepro.network">Knowledge Base</a></li>
                 <li><a className="p-small" target="_blank" href="https://support.bepro.network/en/collections/3143271-community">Community FAQ</a></li>
                 <li><a className="p-small" target="_blank" href="https://support.bepro.network/en/articles/5585549-tokenomics-distribution-schedule">Tokenomics</a></li>
-                <li><Link href="/terms-and-conditions"><a className="p-small" >Terms of use</a></Link></li>
+                <li><Link href="/terms-and-conditions"><a className="p-small" >Terms & Conditions</a></Link></li>
                 <li><Link href="/privacy" scroll={true}><a className="p-small">Privacy policy</a></Link></li>
               </ul>
             </div>

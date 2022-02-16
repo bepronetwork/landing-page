@@ -10,16 +10,13 @@ interface Options {
   }
 }
 
-export default function CompanyMember({member}: Options) {
+export default function AdvisorMember({member}: Options) {
   return <>
     <a href={member.href} target="_blank">
-      <div className="about-people text-center">
         <div className="item">
           <Avatar src={member.avatar} />
           <h4 className="h4 text-white">{member.name}</h4>
-          <p className="smallCaptionGrotesk color-gray">{member.position}</p>
         </div>
-      </div>
     </a>
   </>
 }
