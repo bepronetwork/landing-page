@@ -956,7 +956,7 @@ $slider-2-widthMobile: $slider-2-logos * ($slider-logos-widthMobile + (2 * $slid
   background-size: cover;
   margin: 0px 16px;
   @media (max-width: 900px) {
-    width: $slider-logos-widthMobile;
+    width: $slider-logos-widthMobile !important;
     height: $slider-logos-heightMobile;
   }
   &:hover {
@@ -996,12 +996,16 @@ $slider-2-widthMobile: $slider-2-logos * ($slider-logos-widthMobile + (2 * $slid
   }
   &.log-11 {
     background-image: url('../assets/log-11.png');
+    background-size: contain;
+    width: 222px;
   }
   &.log-12 {
     background-image: url('../assets/log-12.png');
   }
   &.log-13 {
     background-image: url('../assets/log-13.png');
+    width: 134px;
+    background-size: contain;
   }
   &.log-14 {
     background-image: url('../assets/log-14.png');
