@@ -16,7 +16,7 @@ export default function MainNav() {
     navLink(`https://docs.bepro.network/`, `Docs`),
     navLink(`https://github.com/bepronetwork/grants-program`, `Open Grants`),
     navLink(
-      `https://betprotocol.notion.site/06173fb999ae45ffa9abdad80a34f336?v=5c9a061da63849afa836476e4a1d25d9`,
+      `https://taikai.notion.site/8c8fef2ea0a14e50bb254ee16a8c15e4`,
       `Roadmap`
     ),
     navLink(
