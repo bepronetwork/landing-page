@@ -108,7 +108,7 @@ export default function About() {
               <CompanyMember member={member} />
             </div>
           ))}
-          <div className="col-md-6">
+          <div className="col-md-3">
             <a href="https://development.bepro.network" target="_blank">
               <div className="about-people text-center">
                 <div className="item">
@@ -136,7 +136,7 @@ export default function About() {
         </div>
         <div className="row w-65">
           {advisorsMembers.map((member, key) => (
-            <div key={key} className={`col-md-3 my-3`}>
+            <div key={key} className={`col-md-4 my-3`}>
               <AdvisorMember member={member} />
             </div>
           ))}
