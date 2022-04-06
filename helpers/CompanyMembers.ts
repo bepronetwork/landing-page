@@ -1,14 +1,11 @@
 import { member } from "./Member";
-import justinAvatar from "../assets/team/justin-avatar.png";
-import ruiAvatar from "../assets/team/rui-avatar.png";
 import moshmageAvatar from "../assets/team/moshmage-avatar.png";
 import andersonAvatar from "../assets/team/anderson-avatar.png";
-import andreSantosAvatar from "../assets/team/andreSantos-avatar.png";
-import andreGoncalvesAvatar from "../assets/team/andreGoncalves-avatar.png";
 import carlosAvatar from "../assets/team/carlos-avatar.png";
 import josemarAvatar from "../assets/team/Josemar-avatar.png";
 import diogoAvatar from "../assets/team/diogo-avatar.png";
-import filipeAvatar from "../assets/team/filipe-avatar.png";
+import allanAvatar from "../assets/team/allan-avatar.png";
+import afonsoAvatar from "../assets/team/afonso-avatar.png";
 import helderAvatar from "../assets/team/helder-avatar.png";
 import henriqueAvatar from "../assets/team/henrique-avatar.png";
 import inesAvatar from "../assets/team/ines-avatar.png";
@@ -48,18 +45,6 @@ export const companyMembers = [
     `https://www.linkedin.com/in/moshmage/`
   ),
   member(
-    `Filipe Pereira`,
-    `Head of Ecosystem`,
-    filipeAvatar,
-    `https://www.linkedin.com/in/filipeappereira/`
-  ),
-  member(
-    `Rui Teixeira`,
-    `Head of Technology Architecture`,
-    ruiAvatar,
-    `https://www.linkedin.com/in/rui-dos-santos-teixeira`
-  ),
-  member(
     `Maria Rincón`,
     `Head of Business Development`,
     mariaAvatar,
@@ -70,12 +55,6 @@ export const companyMembers = [
     `Head of Customer Experience`,
     diogoAvatar,
     `https://www.linkedin.com/in/diogoferreirapinto/`
-  ),
-  member(
-    `Justin Wu`,
-    `Head of Partnerships`,
-    justinAvatar,
-    `https://twitter.com/theWUJustin`
   ),
   member(
     `Rodrigo Nogueira`,
@@ -100,6 +79,12 @@ export const companyMembers = [
     `Content Marketing Specialist`,
     carlosAvatar,
     `https://www.linkedin.com/in/carlos-mendes93/`
+  ),
+  member(
+    `Afonso Matumona`,
+    `Backend Developer`,
+    afonsoAvatar,
+    `https://www.linkedin.com/in/afonsomatelias/`
   ),
   member(
     `Josemar C. Hebo`,
@@ -132,16 +117,10 @@ export const companyMembers = [
     `https://www.linkedin.com/in/vhcsilva/`
   ),
   member(
-    `André Gonçalves`,
-    `Infrastructure`,
-    andreGoncalvesAvatar,
-    `https://www.linkedin.com/in/andrefcgoncalves/`
-  ),
-  member(
-    `André Santos`,
-    `Product Designer`,
-    andreSantosAvatar,
-    `https://www.linkedin.com/in/andredbsantos`
+    `Allan Almeida`,
+    `Devops`,
+    allanAvatar,
+    `https://www.linkedin.com/in/allan-teixeira-almeida/`
   ),
   member(
     `Rodrigo Sousa`,
