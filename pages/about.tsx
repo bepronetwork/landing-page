@@ -108,7 +108,7 @@ export default function About() {
               <CompanyMember member={member} />
             </div>
           ))}
-          <div className="col-md-3">
+          <div className="col-md-12">
             <a href="https://development.bepro.network" target="_blank">
               <div className="about-people text-center">
                 <div className="item">

@@ -18,6 +18,7 @@ import rodrigoNogueiraAvatar from "../assets/team/rodrigoNogueira-avatar.png";
 import rodrigoSousaAvatar from "../assets/team/rodrigoSousa-avatar.png";
 import rubhanAvatar from "../assets/team/rubhan-avatar.png";
 import vitorAvatar from "../assets/team/vitor-avatar.png";
+import elisabeteAvatar from "../assets/team/elisabete-avatar.png";
 
 export const companyMembers = [
   member(
@@ -133,5 +134,11 @@ export const companyMembers = [
     `Graphic Designer`,
     inesAvatar,
     `https://www.linkedin.com/in/ines-durao/`
+  ),
+  member(
+    `Elisabete Moura`,
+    `People & Culture Manager`,
+    elisabeteAvatar,
+    `https://www.linkedin.com/in/elisabetemoura/`
   ),
 ];
