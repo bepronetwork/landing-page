@@ -46,6 +46,12 @@ export const companyMembers = [
     `https://www.linkedin.com/in/moshmage/`
   ),
   member(
+    `Rodrigo Nogueira`,
+    `Head of Marketing and Growth`,
+    rodrigoNogueiraAvatar,
+    `https://www.linkedin.com/in/rodrigornc/`
+  ),
+  member(
     `Maria Rincón`,
     `Head of Business Development`,
     mariaAvatar,
@@ -58,16 +64,16 @@ export const companyMembers = [
     `https://www.linkedin.com/in/diogoferreirapinto/`
   ),
   member(
-    `Rodrigo Nogueira`,
-    `Head of Marketing and Growth`,
-    rodrigoNogueiraAvatar,
-    `https://www.linkedin.com/in/rodrigornc/`
-  ),
-  member(
     `Joao David`,
     `Head of Community`,
     joaoAvatar,
     `https://linkedin.com/in/dindgeri`
+  ),
+  member(
+    `Rodrigo Sousa`,
+    `Product Designer`,
+    rodrigoSousaAvatar,
+    `https://www.linkedin.com/in/rodrigosous-a/`
   ),
   member(
     `Rubhan Sukin`,
@@ -122,12 +128,6 @@ export const companyMembers = [
     `Devops`,
     allanAvatar,
     `https://www.linkedin.com/in/allan-teixeira-almeida/`
-  ),
-  member(
-    `Rodrigo Sousa`,
-    `Product Designer`,
-    rodrigoSousaAvatar,
-    `https://www.linkedin.com/in/rodrigosous-a/`
   ),
   member(
     `Inês Durão`,
