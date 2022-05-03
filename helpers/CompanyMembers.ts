@@ -71,7 +71,7 @@ export const companyMembers = [
   ),
   member(
     `Rodrigo Sousa`,
-    `Product Designer`,
+    `Head of Design`,
     rodrigoSousaAvatar,
     `https://www.linkedin.com/in/rodrigosous-a/`
   ),
