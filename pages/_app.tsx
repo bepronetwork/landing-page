@@ -14,9 +14,11 @@ export default function App({ Component, pageProps }: AppProps) {
       <meta content="Bepro.network | Web 3.0 codebase protocol" property="twitter:title" />
       <meta content={BeproMeta.src} property="twitter:image" />
       <link href="/favicon.ico" rel="shortcut icon"  />
-      <script src='https://embed.runkit.com'></script>
-
     </Head>
+    
+    {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+    <script src='https://embed.runkit.com'></script>
+
     <Component {...pageProps} />
   </>
 }

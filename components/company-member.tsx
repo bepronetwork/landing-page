@@ -1,3 +1,4 @@
+import { StaticImageData } from 'next/image';
 import React from 'react';
 import Avatar from './avatar';
 
@@ -12,7 +13,7 @@ interface Options {
 
 export default function CompanyMember({member}: Options) {
   return <>
-    <a href={member.href} target="_blank">
+    <a href={member.href} target="_blank" rel="noreferrer">
       <div className="about-people text-center">
         <div className="item">
           <Avatar src={member.avatar} />

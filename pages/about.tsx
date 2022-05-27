@@ -69,10 +69,10 @@ export default function About() {
   ];
 
   function initialize() {
-    getTotalDevelopers().then((r) => setTotalDevelopers(r.data));
+    getTotalDevelopers().then((r) => setTotalDevelopers(r?.data));
   }
 
-  useEffect(initialize, []);
+  useEffect(initialize);
 
   return (
     <>
@@ -95,7 +95,7 @@ export default function About() {
             </p>
           </div>
           <div className="col-md-2 logo-taikei mt-4">
-            <a target="_blank" href="https://taikai.network/en">
+            <a target="_blank" href="https://taikai.network/en" rel="noreferrer">
               <TaikaiIcon />
             </a>
           </div>
@@ -109,7 +109,7 @@ export default function About() {
             </div>
           ))}
           <div className="col-md-12">
-            <a href="https://development.bepro.network" target="_blank">
+            <a href="https://development.bepro.network" target="_blank" rel="noreferrer">
               <div className="about-people text-center">
                 <div className="item">
                   <h1 className="h1 text-white">
@@ -145,7 +145,8 @@ export default function About() {
       <div className="row g-0 align-items-center justify-content-center text-center pb-2">
         <h3 className="h3 my-4">Our amazing team</h3>
         <div>
-          <img className="w-50" src={team.src} />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className="w-50" src={team.src} alt="Team icon" />
         </div>
 
         <h2 className="h2 mt-3">We are hiring!</h2>
@@ -157,6 +158,7 @@ export default function About() {
             className="text-decoration-none"
             href="https://taikai.network/en/careers"
             target="_blank"
+            rel="noreferrer"
           >
             <Button color="primary">
               Careers{" "}
@@ -172,7 +174,7 @@ export default function About() {
                 key={key}
                 className={`logo-wrap wrap-small ${investor.style}`}
               >
-                <a target="_blank" href={investor.href}>
+                <a target="_blank" href={investor.href} rel="noreferrer">
                   {investor.icon}
                 </a>
               </div>

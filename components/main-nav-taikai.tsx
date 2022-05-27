@@ -14,7 +14,7 @@ import ExternalSimpleArrowIcon from "../assets/icons/external-simpleArrow-icon";
 import Link from "next/link";
 
 export default function MainNavTaikai() {
-  const bannerLink = process.env.NEXT_PUBLIC_BANNER_LINK;
+  const bannerLink = process.env.NEXT_PUBLIC_BANNER_LINK || "#";
   
   return (
     <>

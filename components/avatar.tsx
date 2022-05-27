@@ -1,3 +1,4 @@
+import Image, { StaticImageData } from 'next/image';
 import React, {useEffect, useState} from 'react';
 
 interface Options {
@@ -10,6 +11,6 @@ export default function Avatar({src}: Options) {
   useEffect(() => { setSource(typeof src === 'string' ? src : src.src); }, [src]);
 
   return <>
-    <img className="avatar" src={source} alt="Member avatar"/>
+    { source && <Image className="avatar" src={source} alt="Member avatar"/>}
   </>
 }
