@@ -367,7 +367,7 @@ export default function Home() {
         </div>
 
         <div className="d-flex align-items-center justify-content-between flex-column text-center pt-5 bg-dark-gray">
-          <p className="smallCaption color-gray">Audited and approved - In Progress</p>
+          <p className="smallCaption color-gray">Audited and approved</p>
           <h1 className="h1 color-white pb-5 px-2">A Protocol for Decentralized Development</h1>
           <div className="logos-container w-100">
             <div className="align-self-center text-center w-50 d-flex justify-content-center align-items-center flex-column d-sm-inline-block">
