@@ -1,10 +1,9 @@
 import { GetStaticProps } from 'next'
 import React, { useEffect } from 'react'
 import Footer from '../components/footer'
-import Embed from 'react-runkit'
 import { useState } from 'react';
 import { Line } from 'react-chartjs-2';
-import { defaults } from 'react-chartjs-2';
+import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement } from 'chart.js';
 import Header from '../components/header';
 import {numberToUX} from '../helpers/NumberToUX';
 import BlockgroundIcon from '../assets/icons/blockground-icon';
@@ -15,10 +14,11 @@ import ShillingIcon from '../assets/icons/shilling-icon';
 import ByndIcon from '../assets/icons/bynd-icon';
 import CompeteIcon from '../assets/icons/compete-icon';
 import NgcIcon from '../assets/icons/ngc-icon';
-import ExternalArrowIcon from '../assets/icons/external-arrow-icon';
 import {BeproService} from '../services/bepro';
 import useOctokit from '../x-hooks/use-octokit';
 import useApi from '../x-hooks/use-api';
+import Embed from '../components/embed';
+import { StakingContractCode } from '../helpers/runkit';
 
 interface DataSet {
   data: (string|number)[],
@@ -50,6 +50,8 @@ interface PRData {
   updatedAt: string;
   createdAt: string;
 }
+
+ChartJS.register([CategoryScale, LinearScale, PointElement, LineElement]);
 
 export default function Home() {
   const {getRepoStats, getRepoForks} = useOctokit();
@@ -94,33 +96,31 @@ export default function Home() {
   }
  
   function initialize() {
-    BeproService._network.test = true;
     BeproService._network.start().then((e) => {
       BeproService.getOpenIssues().then(setInProgress);
       BeproService.getTokensStaked().then(setOnNetwork);
       BeproService.getBEPROStaked().then(setBeproStaked);
-      BeproService._network.test = false;
     });
 
     getTotalDevelopers()
       .then((r) => {
-        setTotalDevelopers(r.data || 0);
+        setTotalDevelopers(r?.data || 0);
       })
       .catch((err) => console.log("err get", err));
 
-    getRepoStats().then(parseChartData).then(setChartData);
+    //getRepoStats().then(parseChartData).then(setChartData);
 
-    getRepoForks([
-      "bepronetwork/bepro-js",
-      "bepronetwork/web-network",
-      "bepronetwork/landing-page",
-    ]).then((r: RepoStats[]) => setReposStats(r));
+    // getRepoForks([
+    //   "bepronetwork/bepro-js",
+    //   "bepronetwork/web-network",
+    //   "bepronetwork/landing-page",
+    // ]).then(r => setReposStats(r as RepoStats[]));
   }
 
   function renderPrColumn({repo, forks, stars}, index) {
     return (
       <div className="col-md-4" key={index}>
-        <a target="_blank" href={`https://github.com/bepronetwork/${repo}`}>
+        <a target="_blank" href={`https://github.com/bepronetwork/${repo}`} rel="noreferrer">
         <div className="git-issue d-flex justify-content-between flex-column">
             <h4 className="h4 color-blue">{repo}</h4>
             <div className="d-flex justify-content-between">
@@ -133,9 +133,9 @@ export default function Home() {
     )
   }
 
-  useEffect(initialize, [])
+  useEffect(initialize)
 
-  defaults.font.family = 'fontRegular';
+  
 
   const chartOptions = {
     elements: {
@@ -187,72 +187,72 @@ export default function Home() {
             </div>
             {/* To add new logos on slide-3 and slide-4 you need to update the logo counter on styles.scss */}
             <div className="slide-3">
-              <a target="_blank" href="https://trustfi.org/">
+              <a target="_blank" href="https://trustfi.org/" rel="noreferrer">
                 <div className="slide-item log-6"></div>
               </a>
-              <a target="_blank" href="https://www.polkamarkets.com/">
+              <a target="_blank" href="https://www.polkamarkets.com/" rel="noreferrer">
                 <div className="slide-item log-7"></div>
               </a>
-              <a target="_blank" href="https://www.realfevr.com/">
+              <a target="_blank" href="https://www.realfevr.com/" rel="noreferrer">
                 <div className="slide-item log-4"></div>
               </a>
-              <a target="_blank" href="https://royale.finance/">
+              <a target="_blank" href="https://royale.finance/" rel="noreferrer">
                 <div className="slide-item log-16"></div>
               </a>
-              <a target="_blank" href="https://www.exeedme.com/">
+              <a target="_blank" href="https://www.exeedme.com/" rel="noreferrer">
                 <div className="slide-item log-5"></div>
               </a>
-              <a target="_blank" href="https://www.punkskinsociety.com/">
+              <a target="_blank" href="https://www.punkskinsociety.com/" rel="noreferrer">
                 <div className="slide-item log-3"></div>
               </a>
-              <a target="_blank" href="https://www.un1ke.io/">
+              <a target="_blank" href="https://www.un1ke.io/" rel="noreferrer">
                 <div className="slide-item log-2"></div>
               </a>
-              <a target="_blank" href="https://www.ondastudio.co/">
+              <a target="_blank" href="https://www.ondastudio.co/" rel="noreferrer">
                 <div className="slide-item log-21"></div>
               </a>
-              <a target="_blank" href="https://thecodingmachine.com/">
+              <a target="_blank" href="https://thecodingmachine.com/" rel="noreferrer">
                 <div className="slide-item log-19"></div>
               </a>
-              <a target="_blank" href="https://www.nftsee.io/">
+              <a target="_blank" href="https://www.nftsee.io/" rel="noreferrer">
                 <div className="slide-item log-1"></div>
               </a>
-              <a target="_blank" href="https://worldbox.tv/">
+              <a target="_blank" href="https://worldbox.tv/" rel="noreferrer">
                 <div className="slide-item log-18"></div>
               </a>
             </div>
             <div className="slide-4">
-              <a target="_blank" href="https://www.clashcardschampions.net/">
+              <a target="_blank" href="https://www.clashcardschampions.net/" rel="noreferrer">
                 <div className="slide-item log-17"></div>
               </a>
-              <a target="_blank" href="https://lepricon.io/">
+              <a target="_blank" href="https://lepricon.io/" rel="noreferrer">
                 <div className="slide-item log-8"></div>
               </a>
-              <a target="_blank" href="https://www.uzyth.com/">
+              <a target="_blank" href="https://www.uzyth.com/" rel="noreferrer">
                 <div className="slide-item log-15"></div>
               </a>
-              <a target="_blank" href="https://crypto.com/">
+              <a target="_blank" href="https://crypto.com/" rel="noreferrer">
                 <div className="slide-item log-12"></div>
               </a>
-              <a target="_blank" href="https://cleveradvertising.com/">
+              <a target="_blank" href="https://cleveradvertising.com/" rel="noreferrer">
                 <div className="slide-item log-14"></div>
               </a>
-              <a target="_blank" href="https://liveduel.com/future/">
+              <a target="_blank" href="https://liveduel.com/future/" rel="noreferrer">
                 <div className="slide-item log-10"></div>
               </a>
-              <a target="_blank" href="https://subvisual.com/">
+              <a target="_blank" href="https://subvisual.com/" rel="noreferrer">
                 <div className="slide-item log-20"></div>
               </a>
-              <a target="_blank" href="https://project.rally-tascos.com/">
+              <a target="_blank" href="https://project.rally-tascos.com/" rel="noreferrer">
                 <div className="slide-item log-13"></div>
               </a>
-                <a target="_blank" href="https://dotmoovs.com/">
+                <a target="_blank" href="https://dotmoovs.com/" rel="noreferrer">
                 <div className="slide-item log-9"></div>
               </a>
-                <a target="_blank" href="https://uco.network/">
+                <a target="_blank" href="https://uco.network/" rel="noreferrer">
                 <div className="slide-item log-11"></div>
               </a>
-              <a target="_blank" href="https://www.theopendao.com/">
+              <a target="_blank" href="https://www.theopendao.com/" rel="noreferrer">
                 <div className="slide-item log-22"></div>
               </a>
             </div>
@@ -298,7 +298,7 @@ export default function Home() {
           <div className="col-content bg-shade">
             <p className="smallCaption">CURATION</p>
             <h4 className="h3 color-white">Curate the system</h4>
-          <p className="p">Create proposals of bounty distributions & curate the Bepro Network by creating disputes whenever you don't agree with a bounty distribution of how much each contributor should receive.</p>
+          <p className="p">Create proposals of bounty distributions & curate the Bepro Network by creating disputes whenever you don&apos;t agree with a bounty distribution of how much each contributor should receive.</p>
           </div>
           <div className="col-content">
             <div className="net-stats d-flex align-items-center justify-content-center">
@@ -319,47 +319,47 @@ export default function Home() {
           <div className="logos-container">
 
             <div className="logo-wrap wrap-small">
-              <a target="_blank" href="https://blockgroundcapital.com/">
+              <a target="_blank" href="https://blockgroundcapital.com/" rel="noreferrer">
                 <BlockgroundIcon/>
               </a>
             </div>
             <div className="logo-wrap wrap-small">
-              <a target="_blank" href="https://cleveradvertising.com/">
+              <a target="_blank" href="https://cleveradvertising.com/" rel="noreferrer">
                 <span className="backed-logos logo2"></span>
               </a>
             </div>
              <div className="logo-wrap wrap-small">
-              <a target="_blank" href="https://twitter.com/cmsholdings">
+              <a target="_blank" href="https://twitter.com/cmsholdings" rel="noreferrer">
                 <CmsIcon/>
               </a>
             </div>
             <div className="logo-wrap wrap-small">
-              <a target="_blank" href="https://ganexacapital.com/">
+              <a target="_blank" href="https://ganexacapital.com/" rel="noreferrer">
                 <GanexaIcon/>
               </a>
             </div>
             <div className="logo-wrap wrap-small">
-              <a target="_blank" href="http://utrust.com">
+              <a target="_blank" href="http://utrust.com" rel="noreferrer">
                 <UtrustIcon/>
               </a>
             </div>
             <div className="logo-wrap wrap-small">
-              <a target="_blank" href="https://www.shilling.vc">
+              <a target="_blank" href="https://www.shilling.vc" rel="noreferrer">
                 <ShillingIcon/>
               </a>
             </div>
             <div className="logo-wrap wrap-small">
-              <a target="_blank" href="https://www.bynd.vc/en/portfolio">
+              <a target="_blank" href="https://www.bynd.vc/en/portfolio" rel="noreferrer">
                 <ByndIcon/>
               </a>
             </div>
             <div className="logo-wrap wrap-small hide-xs">
-              <a target="_blank" href="https://www.compete2020.gov.pt/">
+              <a target="_blank" href="https://www.compete2020.gov.pt/" rel="noreferrer">
                 <CompeteIcon className='compete-icon'/>
               </a>
             </div>
             <div className="logo-wrap wrap-small">
-              <a target="_blank" href="http://ngc.fund/">
+              <a target="_blank" href="http://ngc.fund/" rel="noreferrer">
                 <NgcIcon/>
               </a>
             </div>
@@ -368,11 +368,11 @@ export default function Home() {
         </div>
 
         <div className="d-flex align-items-center justify-content-between flex-column text-center pt-5 bg-dark-gray">
-          <p className="smallCaption color-gray">Audited and approved - In Progress</p>
+          <p className="smallCaption color-gray">Audited and approved</p>
           <h1 className="h1 color-white pb-5 px-2">A Protocol for Decentralized Development</h1>
           <div className="logos-container w-100">
             <div className="align-self-center text-center w-50 d-flex justify-content-center align-items-center flex-column d-sm-inline-block">
-              <a href='https://www.certik.org/projects/bepro' target='_blank' className='color-gray'>
+              <a href='https://www.certik.org/projects/bepro' target='_blank' className='color-gray' rel="noreferrer">
                 <span className="backed-logos logo-certik" />
 
                 <span className="smallCaption d-block pt-1">Security audit <br />Completed</span>
@@ -383,7 +383,7 @@ export default function Home() {
               <span className="smallCaption color-gray d-block pt-1">Security audit <br/>Completed</span>
             </div>
             <div className="logo-wrap w-100 text-center flex-column bg-security">
-              <a href="https://docs.bepro.network/getting-started/bug-bounty" target="_blank">
+              <a href="https://docs.bepro.network/getting-started/bug-bounty" target="_blank" rel="noreferrer">
                 <h1 className="h1 color-white">50,000€</h1>
                 <p className="smallCaption color-gray">Bug bounty</p>
               </a>
@@ -396,7 +396,7 @@ export default function Home() {
             <p className="smallCaption color-blue">Documentation</p>
             <h4 className="h3 color-blue">BEPRO-JS & The Protocol</h4>
             <p className="p color-blue">TAIKAI created bepro-js to work as a showcase of the protocol, a codebase in Javascript already being used/contributed by platforms as Lepricon, Polkamarkets, RealFevr, Exeedme and others.</p>
-            <a href="https://docs.bepro.network/" target="_blank" className="btn btn-md btn-primary w-25">View docs</a>
+            <a href="https://docs.bepro.network/" target="_blank" className="btn btn-md btn-primary w-25" rel="noreferrer">View docs</a>
           </div>
           <div className="col-content bg-gray">
             <div className="d-flex align-items-center justify-content-center">
@@ -409,23 +409,7 @@ export default function Home() {
           <div className="col-content">
             <div className="d-flex align-items-center justify-content-center">
               <div className="bepro-runkit">
-                <Embed source={
-//TODO parse logic to remove lifecycle warnings
-                  `
-const {StakingContract} = require("bepro-js");
-
-/* Create Instance */
-let staking = new StakingContract({tokenAddress : "0x7a7748bd6f9bac76c2f3fcb29723227e3376cbb2", opt : {web3Connection : 'https://kovan.infura.io/v3' } });
-
-/* Login with Metamask/Web3 Wallet */
-await staking.login();
-
-/* Deploy Staking Contract */
-let res = await staking.deploy();
-
-/* Access methods easily */
-let availableTokens = await staking.availableTokens();
-                `} />
+                <Embed source={StakingContractCode} />
               </div>
 
             </div>
@@ -437,12 +421,12 @@ let availableTokens = await staking.availableTokens();
           </div>
         </div>
 
-        <div className="git-stats bg-white">
+        {/* <div className="git-stats bg-white">
           <div className="container">
 
             <div className="row pb-3">
               <div className="col-md-12">
-                <a target="_blank" href="https://github.com/bepronetwork">
+                <a target="_blank" href="https://github.com/bepronetwork" rel="noreferrer">
                   <h4 className="h3 color-blue">Latest activity</h4>
                 </a>
               </div>
@@ -462,11 +446,11 @@ let availableTokens = await staking.availableTokens();
             </div>
 
           </div>
-        </div>
+        </div> */}
 
         <div className="community d-flex align-items-center justify-content-center text-center flex-column bg-blue">
           <p className="caption color-white trans">Community</p>
-          <h1 className="h1 color-white mb-5">Join the development on <u><a target="_blank" href="https://github.com/bepronetwork">Github</a></u></h1>
+          <h1 className="h1 color-white mb-5">Join the development on <u><a target="_blank" href="https://github.com/bepronetwork" rel="noreferrer">Github</a></u></h1>
           <div className="net-stats d-flex align-items-center justify-content-center flex-column flex-sm-row">
               <div className="item text-center me-sm-4">
                 <h3 className="h1 color-white">+{numberToUX(+inProgress)}</h3>

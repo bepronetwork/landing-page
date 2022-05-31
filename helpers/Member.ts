@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export const member = (
   name = ``,
   position = ``,
