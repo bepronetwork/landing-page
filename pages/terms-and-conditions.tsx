@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { GetStaticProps } from 'next'
 import React from 'react'
 import Footer from '../components/footer'

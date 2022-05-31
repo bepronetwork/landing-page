@@ -11,7 +11,7 @@ export default async function getAll(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  switch (req.method.toLowerCase()) {
+  switch (req?.method?.toLowerCase()) {
     case "get":
       await getTotal(req, res);
       break;

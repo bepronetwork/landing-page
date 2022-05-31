@@ -18,6 +18,7 @@ import rodrigoNogueiraAvatar from "../assets/team/rodrigoNogueira-avatar.png";
 import rodrigoSousaAvatar from "../assets/team/rodrigoSousa-avatar.png";
 import rubhanAvatar from "../assets/team/rubhan-avatar.png";
 import vitorAvatar from "../assets/team/vitor-avatar.png";
+import elisabeteAvatar from "../assets/team/elisabete-avatar.png";
 
 export const companyMembers = [
   member(
@@ -45,6 +46,12 @@ export const companyMembers = [
     `https://www.linkedin.com/in/moshmage/`
   ),
   member(
+    `Rodrigo Nogueira`,
+    `Head of Marketing and Growth`,
+    rodrigoNogueiraAvatar,
+    `https://www.linkedin.com/in/rodrigornc/`
+  ),
+  member(
     `Maria Rincón`,
     `Head of Business Development`,
     mariaAvatar,
@@ -57,16 +64,16 @@ export const companyMembers = [
     `https://www.linkedin.com/in/diogoferreirapinto/`
   ),
   member(
-    `Rodrigo Nogueira`,
-    `Head of Marketing and Growth`,
-    rodrigoNogueiraAvatar,
-    `https://www.linkedin.com/in/rodrigornc/`
-  ),
-  member(
     `Joao David`,
     `Head of Community`,
     joaoAvatar,
     `https://linkedin.com/in/dindgeri`
+  ),
+  member(
+    `Rodrigo Sousa`,
+    `Head of Design`,
+    rodrigoSousaAvatar,
+    `https://www.linkedin.com/in/rodrigosous-a/`
   ),
   member(
     `Rubhan Sukin`,
@@ -123,15 +130,15 @@ export const companyMembers = [
     `https://www.linkedin.com/in/allan-teixeira-almeida/`
   ),
   member(
-    `Rodrigo Sousa`,
-    `Product Designer`,
-    rodrigoSousaAvatar,
-    `https://www.linkedin.com/in/rodrigosous-a/`
-  ),
-  member(
     `Inês Durão`,
     `Graphic Designer`,
     inesAvatar,
     `https://www.linkedin.com/in/ines-durao/`
+  ),
+  member(
+    `Elisabete Moura`,
+    `People & Culture Manager`,
+    elisabeteAvatar,
+    `https://www.linkedin.com/in/elisabetemoura/`
   ),
 ];

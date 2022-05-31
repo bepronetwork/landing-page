@@ -79,7 +79,7 @@ export default function useOctokit() {
     return { ...getOwnerRepoFrom(path), forks: toLen(forks), stars: toLen(stars) };
   }
 
-  async function getRepoForks(repos = []) {
+  async function getRepoForks(repos: string[] = []) {
     if (githubForkStats.lastUpdated && +new Date() - githubForkStats.lastUpdated <= GITHUB_STATS_TTL)
       return githubForkStats.data;
 
