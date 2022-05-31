@@ -18,6 +18,7 @@ import {BeproService} from '../services/bepro';
 import useOctokit from '../x-hooks/use-octokit';
 import useApi from '../x-hooks/use-api';
 import Embed from '../components/embed';
+import { StakingContractCode } from '../helpers/runkit';
 
 interface DataSet {
   data: (string|number)[],
@@ -107,13 +108,13 @@ export default function Home() {
       })
       .catch((err) => console.log("err get", err));
 
-    getRepoStats().then(parseChartData).then(setChartData);
+    //getRepoStats().then(parseChartData).then(setChartData);
 
-    getRepoForks([
-      "bepronetwork/bepro-js",
-      "bepronetwork/web-network",
-      "bepronetwork/landing-page",
-    ]).then(r => setReposStats(r as RepoStats[]));
+    // getRepoForks([
+    //   "bepronetwork/bepro-js",
+    //   "bepronetwork/web-network",
+    //   "bepronetwork/landing-page",
+    // ]).then(r => setReposStats(r as RepoStats[]));
   }
 
   function renderPrColumn({repo, forks, stars}, index) {
@@ -408,21 +409,7 @@ export default function Home() {
           <div className="col-content">
             <div className="d-flex align-items-center justify-content-center">
               <div className="bepro-runkit">
-                <Embed source={
-//TODO parse logic to remove lifecycle warnings
-                  `const {StakingContract} = require("bepro-js");
-
-/* Create Instance */
-let staking = new StakingContract({tokenAddress : "0x7a7748bd6f9bac76c2f3fcb29723227e3376cbb2", opt : {web3Connection : 'https://kovan.infura.io/v3' } });
-
-/* Login with Metamask/Web3 Wallet */
-await staking.login();
-
-/* Deploy Staking Contract */
-let res = await staking.deploy();
-
-/* Access methods easily */
-let availableTokens = await staking.availableTokens();`} />
+                <Embed source={StakingContractCode} />
               </div>
 
             </div>
@@ -434,7 +421,7 @@ let availableTokens = await staking.availableTokens();`} />
           </div>
         </div>
 
-        <div className="git-stats bg-white">
+        {/* <div className="git-stats bg-white">
           <div className="container">
 
             <div className="row pb-3">
@@ -459,7 +446,7 @@ let availableTokens = await staking.availableTokens();`} />
             </div>
 
           </div>
-        </div>
+        </div> */}
 
         <div className="community d-flex align-items-center justify-content-center text-center flex-column bg-blue">
           <p className="caption color-white trans">Community</p>
