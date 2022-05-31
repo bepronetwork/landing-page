@@ -11,6 +11,14 @@ export default function Avatar({src}: Options) {
   useEffect(() => { setSource(typeof src === 'string' ? src : src.src); }, [src]);
 
   return <>
-    { source && <Image className="avatar" src={source} alt="Member avatar"/>}
+    {source && (
+      <Image
+        className="avatar"
+        width={90}
+        height={90}
+        src={source}
+        alt="Member avatar"
+      />
+    )}
   </>
 }
