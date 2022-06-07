@@ -90,7 +90,7 @@ export default function About() {
               decentralizing its development. In our platform, builders are able
               to work on a challenge-based opportunity, contributing for their
               favorite projects, for multiple organizations at the same time and
-              getting rewarded for their individual contribution. And #bepro-js
+              getting rewarded for their individual contribution. And #dappKit
               for a web3 SDK
             </p>
           </div>

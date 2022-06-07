@@ -394,8 +394,8 @@ export default function Home() {
         <div className="d-flex align-items-center justify-content-between cols bg-white">
           <div className="col-content">
             <p className="smallCaption color-blue">Documentation</p>
-            <h4 className="h3 color-blue">BEPRO-JS & The Protocol</h4>
-            <p className="p color-blue">TAIKAI created bepro-js to work as a showcase of the protocol, a codebase in Javascript already being used/contributed by platforms as Lepricon, Polkamarkets, RealFevr, Exeedme and others.</p>
+            <h4 className="h3 color-blue">dappKit & The Protocol</h4>
+            <p className="p color-blue">TAIKAI created dappKit to work as a showcase of the protocol, a codebase in Javascript already being used/contributed by platforms as Lepricon, Polkamarkets, RealFevr, Exeedme and others.</p>
             <a href="https://docs.bepro.network/" target="_blank" className="btn btn-md btn-primary w-25" rel="noreferrer">View docs</a>
           </div>
           <div className="col-content bg-gray">
