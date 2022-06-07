@@ -10,14 +10,6 @@ class BeproFacet {
     this._network = new Network(web3Connection, contractAddress);
   }
 
-  async getClosedIssues() {
-    return this._network.getAmountOfIssuesClosed()
-               .catch(e => {
-                 console.log(`Error while getClosedIssued`, e)
-                 return 0;
-               });
-  }
-
   async getOpenIssues() {
     return this._network.getAmountOfIssuesOpened()
                .catch(e => {

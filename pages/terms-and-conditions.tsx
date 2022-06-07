@@ -6,7 +6,6 @@ import Header from '../components/header';
 
 
 export default function Terms() {
-  const appLink = process.env.NEXT_PUBLIC_APP_URL;
   return (
       <>
         <Header />

@@ -20,8 +20,8 @@ export default function MainNav() {
       `Roadmap`
     ),
     navLink(
-      `https://docs.bepro.network/sdk-documentation/why-bepro-js`,
-      `BEPRO.js SDK (Web3 API)`
+      `https://docs.dappkit.dev/`,
+      `dappKit SDK (Web3 API)`
     )
   ]
 

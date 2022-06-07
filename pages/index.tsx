@@ -2,7 +2,6 @@ import { GetStaticProps } from 'next'
 import React, { useEffect } from 'react'
 import Footer from '../components/footer'
 import { useState } from 'react';
-import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement } from 'chart.js';
 import Header from '../components/header';
 import {numberToUX} from '../helpers/NumberToUX';
@@ -15,88 +14,21 @@ import ByndIcon from '../assets/icons/bynd-icon';
 import CompeteIcon from '../assets/icons/compete-icon';
 import NgcIcon from '../assets/icons/ngc-icon';
 import {BeproService} from '../services/bepro';
-import useOctokit from '../x-hooks/use-octokit';
 import useApi from '../x-hooks/use-api';
 import Embed from '../components/embed';
 import { StakingContractCode } from '../helpers/runkit';
 
-interface DataSet {
-  data: (string|number)[],
-  backgroundColor: string,
-  borderColor: string,
-  tension: number,
-  label: string,
-}
-
-interface RepoStats{
-  forks: string,
-  repo: string,
-  stars: string,
-  owner: string
-}
-
-interface ChartData {
-  labels: string[],
-  datasets: DataSet[]
-}
-
-interface PRData {
-  title: string;
-  body: string;
-  amount: number;
-  id: number;
-  issueId: string;
-  githubId: string;
-  updatedAt: string;
-  createdAt: string;
-}
-
 ChartJS.register([CategoryScale, LinearScale, PointElement, LineElement]);
 
 export default function Home() {
-  const {getRepoStats, getRepoForks} = useOctokit();
   const [totalDevelopers, setTotalDevelopers] = useState(0);
   const [inProgress, setInProgress] = useState(0)
   const [beproStaked, setBeproStaked] = useState(0)
   const [onNetwork, setOnNetwork] = useState(0)
-  const [reposStats, setReposStats] = useState<RepoStats[]>([] as RepoStats[]);
-  const [chartData, setChartData] = useState<any>();
   const { getTotalDevelopers } = useApi()
-  const appLink = process.env.NEXT_PUBLIC_APP_URL;
-  const dateFormatter = new Intl.DateTimeFormat('en-GB', {month: 'short', day: 'numeric',});
-
-  function parseChartData(response) {
-    const origin = response || {};
-    const monthFormatter = new Intl.DateTimeFormat('en-GB', {month: 'long'});
-    const formatDate = ([date, value]) => [dateFormatter.format(date), value];
-
-    const makeChartData = (pairs) => {
-      const labels: string[] = [];
-      const data: number[] = [];
-
-      const interval = 4 * 3;
-      pairs.splice(0, pairs.length - 1).forEach(([week, total], i) => {
-          labels.push(!((i / interval) % 1) ? week : ``);
-        data.push(total);
-      })
-
-      return ({
-        labels,
-        datasets: [{
-          data,
-          backgroundColor: '#4250e4',
-          borderColor: '#4250e4',
-          tension: 0.2,
-          label: `Commits`,
-        }]
-      })
-    }
-
-    return makeChartData(Object.entries(origin).map(formatDate))
-  }
  
   function initialize() {
-    BeproService._network.start().then((e) => {
+    BeproService._network.start().then(() => {
       BeproService.getOpenIssues().then(setInProgress);
       BeproService.getTokensStaked().then(setOnNetwork);
       BeproService.getBEPROStaked().then(setBeproStaked);
@@ -107,59 +39,9 @@ export default function Home() {
         setTotalDevelopers(r?.data || 0);
       })
       .catch((err) => console.log("err get", err));
-
-    //getRepoStats().then(parseChartData).then(setChartData);
-
-    // getRepoForks([
-    //   "bepronetwork/bepro-js",
-    //   "bepronetwork/web-network",
-    //   "bepronetwork/landing-page",
-    // ]).then(r => setReposStats(r as RepoStats[]));
-  }
-
-  function renderPrColumn({repo, forks, stars}, index) {
-    return (
-      <div className="col-md-4" key={index}>
-        <a target="_blank" href={`https://github.com/bepronetwork/${repo}`} rel="noreferrer">
-        <div className="git-issue d-flex justify-content-between flex-column">
-            <h4 className="h4 color-blue">{repo}</h4>
-            <div className="d-flex justify-content-between">
-              <span className="smallCaption color-green">{stars || 0} Stars</span>
-              <span className="smallCaption color-blue">{forks || 0} Forks</span>
-            </div>
-        </div>
-        </a>
-      </div>
-    )
   }
 
   useEffect(initialize)
-
-  
-
-  const chartOptions = {
-    elements: {
-      point: {
-        radius: 0
-      }
-    },
-    maintainAspectRatio: false,
-    scales: {
-      x: {
-        ticks: {
-          autoSkip: false,
-          maxRotation: 0,
-          minRotation: 0
-        },
-        grid: {
-          display: false
-        }
-      },
-      y: {
-          beginAtZero: true,
-        },
-    },
-  };
 
   return (
       <>
@@ -394,8 +276,8 @@ export default function Home() {
         <div className="d-flex align-items-center justify-content-between cols bg-white">
           <div className="col-content">
             <p className="smallCaption color-blue">Documentation</p>
-            <h4 className="h3 color-blue">BEPRO-JS & The Protocol</h4>
-            <p className="p color-blue">TAIKAI created bepro-js to work as a showcase of the protocol, a codebase in Javascript already being used/contributed by platforms as Lepricon, Polkamarkets, RealFevr, Exeedme and others.</p>
+            <h4 className="h3 color-blue">dappKit & The Protocol</h4>
+            <p className="p color-blue">TAIKAI created dappKit to work as a showcase of the protocol, a codebase in Javascript already being used/contributed by platforms as Lepricon, Polkamarkets, RealFevr, Exeedme and others.</p>
             <a href="https://docs.bepro.network/" target="_blank" className="btn btn-md btn-primary w-25" rel="noreferrer">View docs</a>
           </div>
           <div className="col-content bg-gray">
@@ -420,33 +302,6 @@ export default function Home() {
             <p className="p color-blue">The SDK built via the Protocol that gives you the chance to clone or build on top of its previous contributors, a tool to get your dApp started</p>
           </div>
         </div>
-
-        {/* <div className="git-stats bg-white">
-          <div className="container">
-
-            <div className="row pb-3">
-              <div className="col-md-12">
-                <a target="_blank" href="https://github.com/bepronetwork" rel="noreferrer">
-                  <h4 className="h3 color-blue">Latest activity</h4>
-                </a>
-              </div>
-            </div>
-
-            <div className="row mb-3">
-              {reposStats.map(renderPrColumn)}
-            </div>
-
-            <div className="row">
-              <div className="col">
-                <p className="smallCaption">Development activity</p>
-                <div className="git-stats-chart">
-                  {chartData && <Line data={chartData} options={chartOptions} />  || ``}
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div> */}
 
         <div className="community d-flex align-items-center justify-content-center text-center flex-column bg-blue">
           <p className="caption color-white trans">Community</p>
