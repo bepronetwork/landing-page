@@ -20,18 +20,51 @@ import { StakingContractCode } from '../helpers/runkit';
 
 ChartJS.register([CategoryScale, LinearScale, PointElement, LineElement]);
 
+interface StorageProps {
+  newValue: string | number | undefined,
+  key: string,
+  floatValue: number,
+  currentValue: number | string
+}
+
 export default function Home() {
   const [totalDevelopers, setTotalDevelopers] = useState(0);
   const [inProgress, setInProgress] = useState(0)
-  const [beproStaked, setBeproStaked] = useState(0)
-  const [onNetwork, setOnNetwork] = useState(0)
+  const [beproStaked, setBeproStaked] = useState<number | string>(0)
+  const [onNetwork, setOnNetwork] = useState<number | string>(0)
+  const [totalAmount, setTotalAmount] = useState<number | string>(0);
   const { getTotalDevelopers } = useApi()
+
+
+  function handleLocalStorage({floatValue, newValue, key, currentValue}: StorageProps) {
+    if(localStorage.getItem(key) !== String(currentValue) && floatValue > 0){
+      localStorage.setItem(key, String(newValue))
+    }
+  }
  
   function initialize() {
-    BeproService._network.start().then(() => {
+    BeproService._network.start().then(async () => {
       BeproService.getOpenIssues().then(setInProgress);
-      BeproService.getTokensStaked().then(setOnNetwork);
-      BeproService.getBEPROStaked().then(setBeproStaked);
+      const tokens = await BeproService.getTokensStaked().then(value => {
+        const valueUX = numberToUX(+value)
+        handleLocalStorage({ floatValue: +value, newValue: valueUX, key: "onNetwork", currentValue: onNetwork })
+        valueUX && setOnNetwork(valueUX)
+        return value
+      });
+      const oracles = await BeproService.getBEPROStaked().then(value => {
+        const valueUX = numberToUX(+value)
+        handleLocalStorage({ floatValue: +value, newValue: valueUX, key: "beproStaked", currentValue: beproStaked })
+        valueUX && setBeproStaked(valueUX)
+        return value
+      })
+      
+      const total = (+tokens) + (+oracles)
+      const totalUX = numberToUX(total)
+      if(total > 0) {
+        handleLocalStorage({ floatValue: total, newValue: totalUX, key: "totalAmount", currentValue: totalAmount })
+        totalUX && setTotalAmount(totalUX)
+      }
+
     });
 
     getTotalDevelopers()
@@ -41,7 +74,12 @@ export default function Home() {
       .catch((err) => console.log("err get", err));
   }
 
-  useEffect(initialize)
+  useEffect(initialize, [])
+  useEffect(() => {
+    localStorage.getItem("onNetwork") && setOnNetwork(localStorage.getItem("onNetwork") || 0)
+    localStorage.getItem("beproStaked") && setBeproStaked(localStorage.getItem("beproStaked") || 0)
+    localStorage.getItem("totalAmount") && setTotalAmount(localStorage.getItem("totalAmount") || 0)
+  }, [])
 
   return (
       <>
@@ -169,7 +207,7 @@ export default function Home() {
                 <p className="p-small">Open issues</p>
               </div>
               <div className="item text-center">
-                <h3 className="h1 color-white">{numberToUX(+onNetwork)}</h3>
+                <h3 className="h1 color-white">{onNetwork}</h3>
                 <p className="p-small">$BEPRO (Payments)</p>
               </div>
             </div>
@@ -189,7 +227,7 @@ export default function Home() {
                 <p className="p-small">Protocol Members</p>
               </div>
               <div className="item text-center">
-                <h3 className="h1 color-white text-break">{numberToUX(+beproStaked)}</h3>
+                <h3 className="h1 color-white text-break">{beproStaked}</h3>
                 <p className="p-small">$BEPRO (Oracles)</p>
               </div>
             </div>
@@ -316,7 +354,7 @@ export default function Home() {
                 <p className="p-small color-white ms-sm-4">Members</p>
               </div>
           <div className="item text-center">
-            <h3 className="h1 color-white text-break">+{numberToUX(Number(beproStaked)+Number(onNetwork))}</h3>
+            <h3 className="h1 color-white text-break">+{totalAmount}</h3>
             <p className="p-small color-white ms-sm-4">$BEPRO</p>
           </div>
             </div>
