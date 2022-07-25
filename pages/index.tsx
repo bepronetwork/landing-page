@@ -20,51 +20,28 @@ import { StakingContractCode } from '../helpers/runkit';
 
 ChartJS.register([CategoryScale, LinearScale, PointElement, LineElement]);
 
-interface StorageProps {
-  newValue: string | number | undefined,
-  key: string,
-  floatValue: number,
-  currentValue: number | string
-}
-
 export default function Home() {
   const [totalDevelopers, setTotalDevelopers] = useState(0);
   const [inProgress, setInProgress] = useState(0)
   const [beproStaked, setBeproStaked] = useState<number | string>(0)
   const [onNetwork, setOnNetwork] = useState<number | string>(0)
-  const [totalAmount, setTotalAmount] = useState<number | string>(0);
+  const [totalAmount, setTotalAmount] = useState<string | number>(0);
   const { getTotalDevelopers } = useApi()
-
-
-  function handleLocalStorage({floatValue, newValue, key, currentValue}: StorageProps) {
-    if(localStorage.getItem(key) !== String(currentValue) && floatValue > 0){
-      localStorage.setItem(key, String(newValue))
-    }
-  }
  
   function initialize() {
     BeproService._network.start().then(async () => {
-      BeproService.getOpenIssues().then(setInProgress);
-      const tokens = await BeproService.getTokensStaked().then(value => {
-        const valueUX = numberToUX(+value)
-        handleLocalStorage({ floatValue: +value, newValue: valueUX, key: "onNetwork", currentValue: onNetwork })
-        valueUX && setOnNetwork(valueUX)
-        return value
-      });
-      const oracles = await BeproService.getBEPROStaked().then(value => {
-        const valueUX = numberToUX(+value)
-        handleLocalStorage({ floatValue: +value, newValue: valueUX, key: "beproStaked", currentValue: beproStaked })
-        valueUX && setBeproStaked(valueUX)
-        return value
-      })
-      
-      const total = (+tokens) + (+oracles)
-      const totalUX = numberToUX(total)
-      if(total > 0) {
-        handleLocalStorage({ floatValue: total, newValue: totalUX, key: "totalAmount", currentValue: totalAmount })
-        totalUX && setTotalAmount(totalUX)
-      }
+      await BeproService.getOpenIssues().then(setInProgress);
+      const tokens = await BeproService.getTokensStaked()
+      const oracles = await BeproService.getBEPROStaked()
+      const total = numberToUX(+tokens + +oracles);
 
+      localStorage.setItem('onNetwork', String(numberToUX(tokens)));
+      localStorage.setItem('oracles', String(numberToUX(oracles)));
+      localStorage.setItem('total', String(total));
+
+      setOnNetwork(numberToUX(tokens));
+      setBeproStaked(numberToUX(oracles));
+      setTotalAmount(total); 
     });
 
     getTotalDevelopers()
@@ -74,11 +51,11 @@ export default function Home() {
       .catch((err) => console.log("err get", err));
   }
 
-  useEffect(initialize, [])
+  useEffect(initialize, []) 
   useEffect(() => {
-    localStorage.getItem("onNetwork") && setOnNetwork(localStorage.getItem("onNetwork") || 0)
-    localStorage.getItem("beproStaked") && setBeproStaked(localStorage.getItem("beproStaked") || 0)
-    localStorage.getItem("totalAmount") && setTotalAmount(localStorage.getItem("totalAmount") || 0)
+    setOnNetwork(localStorage.getItem("onNetwork") || 0);
+    setBeproStaked(localStorage.getItem('oracles') || 0);
+    setTotalAmount(localStorage.getItem("total") || 0);
   }, [])
 
   return (
