@@ -23,15 +23,25 @@ ChartJS.register([CategoryScale, LinearScale, PointElement, LineElement]);
 export default function Home() {
   const [totalDevelopers, setTotalDevelopers] = useState(0);
   const [inProgress, setInProgress] = useState(0)
-  const [beproStaked, setBeproStaked] = useState(0)
-  const [onNetwork, setOnNetwork] = useState(0)
+  const [beproStaked, setBeproStaked] = useState<number | string>(0)
+  const [onNetwork, setOnNetwork] = useState<number | string>(0)
+  const [totalAmount, setTotalAmount] = useState<string | number>(0);
   const { getTotalDevelopers } = useApi()
  
   function initialize() {
-    BeproService._network.start().then(() => {
-      BeproService.getOpenIssues().then(setInProgress);
-      BeproService.getTokensStaked().then(setOnNetwork);
-      BeproService.getBEPROStaked().then(setBeproStaked);
+    BeproService._network.start().then(async () => {
+      await BeproService.getOpenIssues().then(setInProgress);
+      const tokens = await BeproService.getTokensStaked()
+      const oracles = await BeproService.getBEPROStaked()
+      const total = numberToUX(+tokens + +oracles);
+
+      localStorage.setItem('onNetwork', String(numberToUX(tokens)));
+      localStorage.setItem('oracles', String(numberToUX(oracles)));
+      localStorage.setItem('total', String(total));
+
+      setOnNetwork(numberToUX(tokens));
+      setBeproStaked(numberToUX(oracles));
+      setTotalAmount(total); 
     });
 
     getTotalDevelopers()
@@ -41,7 +51,12 @@ export default function Home() {
       .catch((err) => console.log("err get", err));
   }
 
-  useEffect(initialize)
+  useEffect(initialize, []) 
+  useEffect(() => {
+    setOnNetwork(localStorage.getItem("onNetwork") || 0);
+    setBeproStaked(localStorage.getItem('oracles') || 0);
+    setTotalAmount(localStorage.getItem("total") || 0);
+  }, [])
 
   return (
       <>
@@ -169,7 +184,7 @@ export default function Home() {
                 <p className="p-small">Open issues</p>
               </div>
               <div className="item text-center">
-                <h3 className="h1 color-white">{numberToUX(+onNetwork)}</h3>
+                <h3 className="h1 color-white">{onNetwork}</h3>
                 <p className="p-small">$BEPRO (Payments)</p>
               </div>
             </div>
@@ -189,7 +204,7 @@ export default function Home() {
                 <p className="p-small">Protocol Members</p>
               </div>
               <div className="item text-center">
-                <h3 className="h1 color-white text-break">{numberToUX(+beproStaked)}</h3>
+                <h3 className="h1 color-white text-break">{beproStaked}</h3>
                 <p className="p-small">$BEPRO (Oracles)</p>
               </div>
             </div>
@@ -316,7 +331,7 @@ export default function Home() {
                 <p className="p-small color-white ms-sm-4">Members</p>
               </div>
           <div className="item text-center">
-            <h3 className="h1 color-white text-break">+{numberToUX(Number(beproStaked)+Number(onNetwork))}</h3>
+            <h3 className="h1 color-white text-break">+{totalAmount}</h3>
             <p className="p-small color-white ms-sm-4">$BEPRO</p>
           </div>
             </div>

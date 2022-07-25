@@ -13,7 +13,7 @@
     "clean": "npm cache clean --force && rm -rf .next"
   },
   "dependencies": {
-    "@taikai/dappkit": "^2.0.0-alpha.5",
+    "@taikai/dappkit": "^2.0.6",
     "axios": "^0.27.2",
     "bootstrap": "^5.1.3",
     "chart.js": "^3.8.0",
