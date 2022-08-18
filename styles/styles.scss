@@ -1236,12 +1236,13 @@ $slider-2-widthMobile: $slider-2-logos * ($slider-logos-widthMobile + (2 * $slid
 .docsImg {
   width: 500px;
   height: 320px;
-  background-image: url('../assets/bepro-docs.jpg');
+  background-image: url('../assets/dappKit-docs.jpg');
   background-size: cover;
   border-radius: 8px;
   box-shadow: 1px 3px 8px rgba($black, 0.2);
   margin: $m*4 0px;
 }
+
 .bepro-runkit {
   background-color: $gray-200;
   width: 100%;
