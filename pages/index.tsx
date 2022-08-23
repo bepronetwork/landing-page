@@ -293,7 +293,7 @@ export default function Home() {
             <p className="smallCaption color-blue">Documentation</p>
             <h4 className="h3 color-blue">dappKit & The Protocol</h4>
             <p className="p color-blue">TAIKAI created dappKit to work as a showcase of the protocol, a codebase in Javascript already being used/contributed by platforms as Lepricon, Polkamarkets, RealFevr, Exeedme and others.</p>
-            <a href="https://docs.bepro.network/" target="_blank" className="btn btn-md btn-primary w-25" rel="noreferrer">View docs</a>
+            <a href="https://docs.dappkit.dev" target="_blank" className="btn btn-md btn-primary w-25" rel="noreferrer">View docs</a>
           </div>
           <div className="col-content bg-gray">
             <div className="d-flex align-items-center justify-content-center">
@@ -313,7 +313,7 @@ export default function Home() {
           </div>
           <div className="col-content bg-gray my-runkit">
             <p className="smallCaption color-blue">Web3 API Ecosystem</p>
-            <h4 className="h3 color-blue">Gaming, DeFi, NFTs and more!</h4>
+            <h4 className="h3 color-blue">Dev DAO, DeFi, NFTs and more!</h4>
             <p className="p color-blue">The SDK built via the Protocol that gives you the chance to clone or build on top of its previous contributors, a tool to get your dApp started</p>
           </div>
         </div>
