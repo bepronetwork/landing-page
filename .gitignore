@@ -17,13 +17,20 @@
 
 # misc
 .DS_Store
-.env*
-!.env.example
+*.pem
 
 # debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.pnpm-debug.log*
 
-# vscode
-.vscode
+# local env files
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
