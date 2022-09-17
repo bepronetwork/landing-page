@@ -6,9 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "codegen": "npx apollo codegen:generate --localSchemaFile=graphql/graphql-schema.json --target=typescript --includes='graphql/**/*.{ts,tsx,js,jsx,graphql}' --tagName=gql --addTypename --globalTypesFile=types/graphql/generated.ts"
   },
   "dependencies": {
+    "@apollo/client": "^3.6.9",
+    "deepmerge": "^4.2.2",
+    "graphql": "^16.6.0",
+    "lodash": "^4.17.21",
     "next": "12.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
