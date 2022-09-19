@@ -1,4 +1,4 @@
-import Section from "./design/Section";
+import Section from "@/ui/Section";
 
 const How = () => (
   <Section subheading="Subheading" title="How it works">
