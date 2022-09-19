@@ -14,7 +14,8 @@ const GlobalStyle = createGlobalStyle`
     --sidePadding: ${layout.sidePadding};
 
     @media ${device.s} {
-      --sidePadding: calc(${layout.sidePadding} * 2);
+      --fontSize: ${rem("20px")};
+      --sidePadding: calc(${layout.sidePadding} * 3);
     }
   }
 
@@ -25,7 +26,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
-    background-color: ${colors.grey900};
+    background-color: ${colors.grey950};
     font-family: ${typography.fontFamily};
     font-size: var(--fontSize);
     font-weight: ${typography.fontWeigthRegular};
@@ -69,6 +70,15 @@ const GlobalStyle = createGlobalStyle`
     } */
   }
 
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+    }
+  }
+
   button {
     font-family: ${typography.fontFamily};
     font-feature-settings: 'ss04' on;
@@ -87,10 +97,6 @@ const GlobalStyle = createGlobalStyle`
   }
 
   @media ${device.m} {
-    :root {
-      --fontSize: ${rem("20px")};
-    }
-
     h1 {
       font-size: ${rem('72px')};
     }
