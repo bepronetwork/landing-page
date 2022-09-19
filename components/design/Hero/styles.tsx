@@ -3,7 +3,7 @@ import { rem } from "polished";
 import { nav, global, colors } from "@/styles/variables";
 
 export const Wrapper = styled.div`
-  border-bottom: 1px solid ${global.sectionBorderBottom};
+  border-bottom: ${rem("1px")} solid ${global.sectionBorderBottom};
   padding: calc(${nav.height} + ${rem("80px")}) var(--sidePadding) 0
     var(--sidePadding);
   text-align: center;

@@ -15,6 +15,7 @@ const Intro = () => (
         url="#0"
         value="Launch your first bounty"
         icon="arrow-external"
+        iconPosition="right"
       />
       <ButtonLink
         variant="outline"
@@ -22,6 +23,7 @@ const Intro = () => (
         url="#0"
         value="Discover bounties"
         icon="arrow-external"
+        iconPosition="right"
       />
     </div>
   </Hero>
