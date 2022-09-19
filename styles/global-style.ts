@@ -38,11 +38,12 @@ const GlobalStyle = createGlobalStyle`
   h1, h2, h3, h4 {
     margin: 0;
     font-weight: ${typography.fontWeigthSemiBold};
+    color: ${colors.white};
   }
 
   h1 {
     font-size: ${rem('44px')};
-    /* line-height: 1.1; */
+    line-height: 1.1;
   }
 
   h2 {

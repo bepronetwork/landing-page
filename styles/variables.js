@@ -22,6 +22,7 @@ export const device = {
 
 export const global = {
   hoverTransitionDuration: "0.3s",
+  sectionBorderBottom: colors.grey900,
 };
 
 export const layout = {
@@ -41,7 +42,7 @@ export const typography = {
 };
 
 export const nav = {
-  borderBottomColor: colors.grey900,
+  height: rem("72px"),
   backgroundColor: colors.grey950,
   fontSize: rem("14px"),
   color: colors.white,

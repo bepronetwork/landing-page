@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Nav from "components/Nav";
+import Intro from "components/Intro";
 // import Stories from "../components/Stories";
 import {
   initializeApollo,
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head> */}
       <Nav />
+      <Intro />
       {/* <Stories data={data} loading={loading} error={error} /> */}
     </>
   );

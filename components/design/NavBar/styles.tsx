@@ -1,11 +1,13 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { colors, typography, global, nav } from "@/styles/variables";
+import { global, nav } from "@/styles/variables";
 
 export const Wrapper = styled.div`
-  border-bottom: ${rem("1px")} solid ${nav.borderBottomColor};
+  position: fixed;
+  width: 100%;
+  border-bottom: ${rem("1px")} solid ${global.sectionBorderBottom};
   background-color: ${nav.backgroundColor};
-  height: ${rem("72px")};
+  height: ${nav.height};
   padding: 0 ${rem("24px")};
   display: flex;
   justify-content: space-between;
