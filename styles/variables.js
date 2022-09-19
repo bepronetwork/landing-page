@@ -5,8 +5,11 @@ export const colors = {
   white: "#ffffff",
   grey100: "#E3E3E8",
   grey400: "#8F91A3",
+  grey700: "#454654",
+  grey800: "#2E2F38",
   grey900: "#17171C",
   grey950: "#0C0C0E",
+  blue400: "#6873E9",
   blue500: "#4250E4",
 };
 
