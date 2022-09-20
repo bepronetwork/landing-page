@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 export interface PanelProps {
   color?: string;
-  icon: string;
-  title: string;
+  icon: ReactNode;
+  title: string | ReactNode;
   children: ReactNode;
 }

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { layout, global, colors } from "@/styles/variables";
+import { layout, global, colors, typography } from "@/styles/variables";
 
 interface WrapperProps {
   hasHeading: boolean;
@@ -18,6 +18,14 @@ export const Container = styled.div`
   margin: 0 auto;
   max-width: ${layout.contentMaxWidth};
   text-align: center;
+
+  h4 {
+    margin-top: ${rem("30px")};
+    font-size: ${rem("16px")};
+    font-weight: ${typography.fontWeigthRegular};
+    color: ${colors.grey600};
+    text-transform: uppercase;
+  }
 `;
 
 export const Header = styled.div`

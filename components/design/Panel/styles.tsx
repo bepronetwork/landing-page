@@ -10,7 +10,8 @@ export const Wrapper = styled.div`
   text-align: left;
 
   h3,
-  p {
+  p,
+  span {
     font-size: ${rem("18px")};
   }
 
@@ -18,6 +19,14 @@ export const Wrapper = styled.div`
     margin: ${rem("64px")} 0 ${rem("12px")} 0;
     text-transform: uppercase;
     letter-spacing: ${rem("1px")};
+
+    span {
+      color: ${colors.grey500};
+    }
+  }
+
+  p {
+    color: ${colors.grey500};
   }
 
   > div {
@@ -26,6 +35,7 @@ export const Wrapper = styled.div`
     background-color: ${colors.grey800};
     width: ${rem("52px")};
     height: ${rem("52px")};
+    overflow: hidden;
 
     ${(props) =>
       props.color === "blue" &&
@@ -33,10 +43,5 @@ export const Wrapper = styled.div`
         border: ${rem("1px")} solid ${colors.blue400};
         background-color: ${colors.blue500};
       `}
-
-    svg {
-      width: 100%;
-      height: 100%;
-    }
   }
 `;
