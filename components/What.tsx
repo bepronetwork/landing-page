@@ -6,7 +6,7 @@ const What = () => (
     <ProductShot
       subheading="What is a Bounty Network?"
       title="What is a Bounty Network?"
-      imgSrc="/bepro-bounties.png"
+      imgSrc="/product-shot--what.svg"
       imgAlt="sdsda"
     >
       <p>
