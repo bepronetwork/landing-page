@@ -20,7 +20,7 @@ export const Container = styled.div`
   text-align: center;
 
   h4 {
-    margin-top: ${rem("30px")};
+    margin: ${rem("40px")} 0 ${rem("50px")} 0;
     font-size: ${rem("16px")};
     font-weight: ${typography.fontWeigthRegular};
     color: ${colors.grey600};
