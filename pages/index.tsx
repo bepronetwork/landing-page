@@ -3,6 +3,7 @@ import Nav from "components/Nav";
 import Intro from "components/Intro";
 import What from "components/What";
 import How from "components/How";
+import Workflows from "components/Workflows";
 // import Stories from "../components/Stories";
 import {
   initializeApollo,
@@ -25,7 +26,19 @@ const Home: NextPage = () => {
       <Intro />
       <What />
       <How />
+      <Workflows />
+      {/* <CreateBounty /> */}
+      {/* <CustomNetwork /> */}
+      {/* <Participate /> */}
+      {/* <Find /> */}
+      {/* <ForWhom /> */}
+      {/* <Audited /> */}
+      {/* <LaunchNetwork /> */}
+      {/* <Partners /> */}
+      {/* <Community /> */}
       {/* <Stories data={data} loading={loading} error={error} /> */}
+      {/* <Newsletter /> */}
+      {/* <Footer /> */}
     </>
   );
 };

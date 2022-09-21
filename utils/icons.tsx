@@ -139,3 +139,74 @@ export function Reward(props: React.SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+
+export function Find(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 52 52"
+      {...props}
+    >
+      <path
+        d="M22.77 21.152h6.46M39.677 29.538l-5.883-13.367a3.244 3.244 0 00-4.563 0v15.211M22.77 31.382V16.171a3.245 3.245 0 00-4.564 0l-5.883 13.367"
+        stroke={colors.white}
+        strokeWidth={1.4}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M17.385 36.767a5.385 5.385 0 100-10.77 5.385 5.385 0 000 10.77zM34.615 36.767a5.385 5.385 0 100-10.77 5.385 5.385 0 000 10.77z"
+        stroke={colors.white}
+        strokeWidth={1.4}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function Build(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 52 52"
+      {...props}
+    >
+      <path
+        d="M39.581 17.693A9.314 9.314 0 0126.492 29.5v0l-8.177 9.475a3.504 3.504 0 11-4.955-4.956l9.474-8.177A9.314 9.314 0 0134.64 12.752l-6.122 6.107.831 4.125 4.125.831 6.107-6.122z"
+        stroke={colors.white}
+        strokeWidth={1.4}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function GetPaid(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 52 52"
+      {...props}
+    >
+      <path
+        d="M26.666 17.833v2.334M26.666 31.833v2.334M26.666 40c7.732 0 14-6.268 14-14s-6.267-14-14-14c-7.732 0-14 6.268-14 14s6.268 14 14 14z"
+        stroke={colors.white}
+        strokeWidth={1.4}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M23.167 31.833h5.25a2.917 2.917 0 000-5.833h-3.5a2.917 2.917 0 110-5.833h5.25"
+        stroke={colors.white}
+        strokeWidth={1.4}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}

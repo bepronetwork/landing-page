@@ -7,7 +7,7 @@ const PillTabs = (props: TabsProps) => {
   return (
     <Styles.Wrapper>
       {buttons.map((button: ButtonProps, index: number) => (
-        <button
+        <Styles.Button
           key={index}
           className={index === selectedTab ? "active" : undefined}
           onClick={() => {
@@ -15,7 +15,7 @@ const PillTabs = (props: TabsProps) => {
           }}
         >
           {button.label}
-        </button>
+        </Styles.Button>
       ))}
     </Styles.Wrapper>
   );
