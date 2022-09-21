@@ -7,7 +7,7 @@ const What = () => (
       subheading="What is a Bounty Network?"
       title="What is a Bounty Network?"
       imgSrc="/product-shot--what.svg"
-      imgAlt="sdsda"
+      imgAlt="Bepro Network - Bounty product shot"
     >
       <p>
         Bepro is a Bounty Network platform created to help organizations manage

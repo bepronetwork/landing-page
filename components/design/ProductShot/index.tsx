@@ -7,7 +7,7 @@ const ProductShot = (props: ProductShotProps) => {
   return (
     <Styles.Wrapper invert={invert}>
       <Styles.Content>
-        <span>{subheading}</span>
+        {subheading && <span>{subheading}</span>}
         <h2>{title}</h2>
         {children}
       </Styles.Content>

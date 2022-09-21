@@ -4,7 +4,7 @@ import Panel from "@/ui/Panel";
 import { GitHub, WebApp, Protocol } from "@/utils/icons";
 
 const How = () => (
-  <Section subheading="Subheading" title="How it works">
+  <Section subheading="Subheading" title="How it works" headerMargin="s">
     <p>
       Bepro Network operates as a payment and curation layer for GitHub
       repositories.

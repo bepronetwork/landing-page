@@ -14,6 +14,7 @@ export const colors = {
   grey950: "#0C0C0E",
   blue400: "#6873E9",
   blue500: "#4250E4",
+  blue600: "#3540B6",
 };
 
 export const device = {

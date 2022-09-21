@@ -1,10 +1,7 @@
 import styled from "styled-components";
 import { rem } from "polished";
 import { layout, global, colors, typography } from "@/styles/variables";
-
-interface WrapperProps {
-  hasHeading: boolean;
-}
+import { WrapperProps, HeaderProps } from "./types";
 
 export const Wrapper = styled.div<WrapperProps>`
   border-bottom: ${rem("1px")} solid ${global.sectionBorderBottom};
@@ -28,8 +25,9 @@ export const Container = styled.div`
   }
 `;
 
-export const Header = styled.div`
-  margin-bottom: ${rem("40px")};
+export const Header = styled.div<HeaderProps>`
+  margin-bottom: ${(props) =>
+    props.headerMargin === "s" ? rem("40px") : rem("80px")};
 
   span {
     margin-bottom: ${rem("12px")};
