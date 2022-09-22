@@ -3,6 +3,7 @@ import { rem } from "polished";
 import { panel } from "@/styles/variables";
 
 export const Wrapper = styled.div`
+  height: 100%;
   border: ${rem("1px")} solid ${panel.defaultBorderColor};
   border-radius: ${panel.borderRadius};
   background-color: ${panel.backgroundColor};

@@ -1,21 +1,28 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { layout, colors, typography, customNetwork } from "@/styles/variables";
+import {
+  layout,
+  colors,
+  typography,
+  customNetwork,
+  device,
+} from "@/styles/variables";
 
 export const Wrapper = styled.div`
   border: ${rem("1px")} solid ${colors.blue700};
   border-radius: ${customNetwork.borderRadius};
   background-color: ${customNetwork.backgroundColor};
-  background-image: url("product-shot--launch-network.svg");
-  background-repeat: no-repeat;
-  background-position: bottom right;
+
+  @media ${device.l} {
+    background-image: url("product-shot--launch-network.svg");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+  }
 `;
 
 export const Content = styled.div`
-  max-width: calc(50% - calc(${layout.sectionTopBottomPadding} / 2));
   padding: ${layout.sectionTopBottomPadding}
     calc(${layout.sectionTopBottomPadding} / 2);
-  text-align: left;
 
   > span {
     font-size: ${rem("16px")};
@@ -35,6 +42,7 @@ export const Content = styled.div`
   > div {
     margin: ${rem("28px")} 0 0 ${rem("-12px")};
     display: flex;
+    justify-content: center;
 
     a {
       margin: ${rem("12px")};
@@ -44,6 +52,15 @@ export const Content = styled.div`
           color: ${colors.white};
         }
       }
+    }
+  }
+
+  @media ${device.l} {
+    max-width: calc(50% - calc(${layout.sectionTopBottomPadding} / 2));
+    text-align: left;
+
+    > div {
+      justify-content: flex-start;
     }
   }
 `;

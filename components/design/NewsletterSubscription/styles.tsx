@@ -1,15 +1,24 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { layout, colors, newsletter } from "@/styles/variables";
+import { layout, colors, newsletter, device } from "@/styles/variables";
 
 export const Container = styled.div`
-  display: flex;
+  @media ${device.m} {
+    display: flex;
+  }
 `;
 
 export const Description = styled.div`
-  width: 60%;
   text-align: left;
   margin-right: calc(${layout.sectionTopBottomPadding} / 2);
+
+  @media ${device.m} {
+    width: 50%;
+  }
+
+  @media ${device.l} {
+    width: 60%;
+  }
 
   span {
     margin-bottom: ${layout.sectionSubHeadingMarginBottom};
@@ -24,9 +33,18 @@ export const Description = styled.div`
 `;
 
 export const Field = styled.div`
-  width: 40%;
+  margin-top: calc(${layout.sidePadding} * 2);
   display: flex;
   align-items: center;
+
+  @media ${device.m} {
+    margin-top: 0;
+    width: 50%;
+  }
+
+  @media ${device.l} {
+    width: 40%;
+  }
 `;
 
 export const Input = styled.div`

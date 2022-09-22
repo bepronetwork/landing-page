@@ -1,14 +1,28 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { colors, typography, global } from "@/styles/variables";
+import { colors, typography, global, device, nav } from "@/styles/variables";
 
 export const Menu = styled.div`
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: 1fr;
+  grid-gap: calc(${nav.sidePadding} * 2);
   text-align: left;
   font-size: ${rem("14px")};
   text-transform: uppercase;
   letter-spacing: ${rem("1px")};
+
+  @media ${device.s} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media ${device.m} {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media ${device.l} {
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 0;
+  }
 
   > div {
     h2 {

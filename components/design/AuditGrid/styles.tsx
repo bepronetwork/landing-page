@@ -1,11 +1,26 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { global, layout, audit, typography, colors } from "@/styles/variables";
+import {
+  global,
+  layout,
+  audit,
+  typography,
+  colors,
+  device,
+} from "@/styles/variables";
 
 export const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: calc(${layout.sectionTopBottomPadding} / 2);
+  grid-template-columns: 1fr;
+  grid-gap: ${layout.sidePadding};
+
+  @media ${device.s} {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media ${device.l} {
+    grid-gap: calc(${layout.sectionTopBottomPadding} / 2);
+  }
 
   > a {
     border: ${rem("1px")} solid ${audit.cardBorderColor};

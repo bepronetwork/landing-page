@@ -14,11 +14,14 @@ export const Bounties = styled.div`
   margin-bottom: calc(${layout.sectionTopBottomPadding} / 2);
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  grid-gap: ${rem("16px")};
+  grid-gap: ${layout.sidePadding};
 
   @media ${device.m} {
     margin-bottom: ${layout.sectionTopBottomPadding};
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media ${device.l} {
     grid-gap: calc(${layout.sectionTopBottomPadding} / 2);
   }
 

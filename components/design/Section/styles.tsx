@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { rem } from "polished";
-import { layout, global, colors, typography } from "@/styles/variables";
+import { layout, global, colors, typography, device } from "@/styles/variables";
 import { WrapperProps, HeaderProps } from "./types";
 
 export const Wrapper = styled.div<WrapperProps>`
@@ -10,17 +10,19 @@ export const Wrapper = styled.div<WrapperProps>`
       ? `${layout.sectionTopBottomPadding} 0`
       : `${layout.sectionTopBottomPadding} var(--sidePadding)`};
 
-  ${(props) =>
-    props.padding === "s" &&
-    css`
-      padding: calc(${layout.sectionTopBottomPadding} / 2) var(--sidePadding);
-    `}
+  @media ${device.m} {
+    ${(props) =>
+      props.padding === "s" &&
+      css`
+        padding: calc(${layout.sectionTopBottomPadding} / 2) var(--sidePadding);
+      `}
 
-  ${(props) =>
-    props.padding === "xl" &&
-    css`
-      padding: calc(${layout.sectionTopBottomPadding} * 2) var(--sidePadding);
-    `}
+    ${(props) =>
+      props.padding === "xl" &&
+      css`
+        padding: calc(${layout.sectionTopBottomPadding} * 2) var(--sidePadding);
+      `}
+  }
 `;
 
 export const Container = styled.div<WrapperProps>`

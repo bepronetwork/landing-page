@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { nav, hero, global, colors } from "@/styles/variables";
+import { nav, hero, global, colors, device } from "@/styles/variables";
 
 export const Wrapper = styled.div`
   border-bottom: ${rem("1px")} solid ${global.sectionBorderBottom};
@@ -24,12 +24,11 @@ export const Container = styled.div`
 
   div {
     margin-top: ${rem("36px")};
-    display: flex;
-    justify-content: center;
 
     a {
-      margin: ${rem("12px")};
+      margin-bottom: ${rem("12px")};
       border-radius: 999px;
+      width: 100%;
 
       &:last-child {
         span {
@@ -44,8 +43,24 @@ export const Container = styled.div`
   }
 
   + img {
-    margin: ${rem("143px")} auto ${rem("-5px")} auto;
+    margin: ${rem("5px")} auto ${rem("-5px")} auto;
     max-width: ${hero.maxWidth};
     width: 100%;
+  }
+
+  @media ${device.s} {
+    div {
+      display: flex;
+      justify-content: center;
+
+      a {
+        margin: ${rem("12px")};
+        width: inherit;
+      }
+    }
+
+    + img {
+      margin-top: ${rem("143px")};
+    }
   }
 `;
