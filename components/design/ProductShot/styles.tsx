@@ -45,7 +45,7 @@ export const Content = styled.div`
     margin-bottom: ${rem("16px")};
   }
 
-  a {
+  a.minimal {
     display: flex;
     align-items: center;
     letter-spacing: ${rem("1px")};

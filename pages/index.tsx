@@ -12,6 +12,7 @@ import ForWhom from "components/ForWhom";
 import Audited from "components/Audited";
 import LaunchNetwork from "components/LaunchNetwork";
 import Partners from "components/Partners";
+import Community from "components/Community";
 // import Stories from "../components/Stories";
 import {
   initializeApollo,
@@ -43,7 +44,7 @@ const Home: NextPage = () => {
       <Audited />
       <LaunchNetwork />
       <Partners />
-      {/* <Community /> */}
+      <Community />
       {/* <Stories data={data} loading={loading} error={error} /> */}
       {/* <Newsletter /> */}
       {/* <Footer /> */}
