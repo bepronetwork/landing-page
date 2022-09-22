@@ -1,12 +1,12 @@
 import styled, { css } from "styled-components";
 import { rem } from "polished";
-import { colors } from "@/styles/variables";
+import { panel } from "@/styles/variables";
 
 export const Wrapper = styled.div`
-  border: ${rem("1px")} solid ${colors.grey700};
-  border-radius: ${rem("8px")};
-  background-color: ${colors.grey900};
-  padding: ${rem("24px")};
+  border: ${rem("1px")} solid ${panel.defaultBorderColor};
+  border-radius: ${panel.borderRadius};
+  background-color: ${panel.backgroundColor};
+  padding: ${panel.padding};
   text-align: left;
 
   h3,
@@ -21,27 +21,27 @@ export const Wrapper = styled.div`
     letter-spacing: ${rem("1px")};
 
     span {
-      color: ${colors.grey500};
+      color: ${panel.color};
     }
   }
 
   p {
-    color: ${colors.grey500};
+    color: ${panel.color};
   }
 
   > div {
-    border: ${rem("1px")} solid ${colors.grey700};
+    border: ${rem("1px")} solid ${panel.defaultBorderColor};
     border-radius: 999px;
-    background-color: ${colors.grey800};
-    width: ${rem("52px")};
-    height: ${rem("52px")};
+    background-color: ${panel.iconDefaultBackgroundColor};
+    width: ${panel.iconSize};
+    height: ${panel.iconSize};
     overflow: hidden;
 
     ${(props) =>
       props.color === "blue" &&
       css`
-        border: ${rem("1px")} solid ${colors.blue400};
-        background-color: ${colors.blue500};
+        border: ${rem("1px")} solid ${panel.iconAlternativeBorderColor};
+        background-color: ${panel.iconAlternativeBackgroundColor};
       `}
   }
 `;

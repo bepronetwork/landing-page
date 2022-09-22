@@ -1,27 +1,27 @@
-import { global, typography, colors } from "@/styles/variables";
 import styled from "styled-components";
 import { rem } from "polished";
+import { global, typography, colors, pills } from "@/styles/variables";
 
 export const Wrapper = styled.div`
   display: inline-block;
   border-radius: 999px;
-  background-color: ${colors.grey900};
+  background-color: ${pills.backgroundColor};
 `;
 
 export const Button = styled.button`
-  margin: ${rem("4px")};
+  margin: ${pills.padding};
   border: 0;
-  height: ${rem("32px")};
+  height: ${pills.buttonHeight};
   border-radius: 999px;
   background-color: transparent;
-  padding: 0 ${rem("24px")};
-  color: ${colors.grey50};
+  padding: 0 ${pills.buttonSidePadding};
+  color: ${pills.buttonColor};
   font-weight: ${typography.fontWeigthSemiBold};
   text-transform: uppercase;
   transition-duration: ${global.hoverTransitionDuration};
 
   &:last-child {
-    margin-left: ${rem("-2px")};
+    margin-left: calc(${pills.padding} / 2 * -1);
   }
 
   &:hover {
@@ -31,7 +31,7 @@ export const Button = styled.button`
 
   &.active {
     pointer-events: none;
-    background-color: ${colors.grey950};
-    color: ${colors.blue500};
+    background-color: ${pills.activeButtonBackgroundColor};
+    color: ${pills.activeButtonColor};
   }
 `;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { nav, global, colors } from "@/styles/variables";
+import { nav, hero, global, colors } from "@/styles/variables";
 
 export const Wrapper = styled.div`
   border-bottom: ${rem("1px")} solid ${global.sectionBorderBottom};
@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
 
 export const Container = styled.div`
   margin: 0 auto;
-  max-width: ${rem("900px")};
+  max-width: ${hero.maxWidth};
 
   h1 {
     margin-bottom: ${rem("24px")};
@@ -19,7 +19,7 @@ export const Container = styled.div`
 
   p {
     margin: 0 auto;
-    max-width: 75%;
+    max-width: ${hero.subHeadingMaxWidth};
   }
 
   div {
@@ -45,7 +45,7 @@ export const Container = styled.div`
 
   + img {
     margin: ${rem("143px")} auto ${rem("-5px")} auto;
-    max-width: ${rem("900px")};
+    max-width: ${hero.maxWidth};
     width: 100%;
   }
 `;

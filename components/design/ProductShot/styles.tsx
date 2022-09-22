@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { global, colors, typography } from "@/styles/variables";
+import { global, colors, typography, layout } from "@/styles/variables";
 import { WrapperProps } from "./types";
 
 export const Wrapper = styled.div<WrapperProps>`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: ${rem("84px")};
+  grid-gap: ${layout.productShotGridGap};
 
   &:not(:last-child) {
     margin-bottom: ${rem("112px")};
@@ -31,14 +31,14 @@ export const Content = styled.div`
   text-align: left;
 
   > span {
-    margin-bottom: ${rem("12px")};
-    font-size: ${rem("16px")};
-    color: ${colors.blue500};
+    margin-bottom: ${layout.productShotSubHeadingMarginButton};
+    font-size: ${layout.productShotSubHeadingFontSize};
+    color: ${layout.productShotSubHeadingColor};
     text-transform: uppercase;
   }
 
   h2 {
-    margin-bottom: ${rem("40px")};
+    margin-bottom: ${layout.productShotHeadingMarginButton};
   }
 
   p:not(:last-child) {
@@ -83,7 +83,7 @@ export const Content = styled.div`
 export const Image = styled.div`
   img {
     width: 100%;
-    max-width: ${rem("550px")};
-    max-height: ${rem("250px")};
+    max-width: ${layout.productShotImageMaxWidth};
+    max-height: ${layout.productShotImageMaxHeight};
   }
 `;

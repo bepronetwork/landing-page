@@ -2,7 +2,7 @@ import Section from "@/ui/Section";
 import ProductShot from "@/ui/ProductShot";
 
 const What = () => (
-  <Section>
+  <Section headerMargin="xl">
     <ProductShot
       subheading="What is a Bounty Network?"
       title="What is a Bounty Network?"

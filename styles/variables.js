@@ -12,6 +12,8 @@ export const colors = {
   grey800: "#2E2F38",
   grey900: "#17171C",
   grey950: "#0C0C0E",
+  blue150: "#C6CAF7",
+  blue200: "#B3B9F4",
   blue400: "#6873E9",
   blue500: "#4250E4",
   blue600: "#3540B6",
@@ -46,6 +48,16 @@ export const layout = {
   contentMaxWidth: rem("1344px"),
   sidePadding: rem("16px"),
   sectionTopBottomPadding: rem("80px"),
+  sectionSubHeadingMarginBottom: rem("12px"),
+  sectionSubHeadingFontSize: rem("16px"),
+  sectionSubHeadingColor: colors.blue500,
+  productShotGridGap: rem("84px"),
+  productShotSubHeadingMarginButton: rem("12px"),
+  productShotSubHeadingFontSize: rem("16px"),
+  productShotSubHeadingColor: colors.blue500,
+  productShotHeadingMarginButton: rem("40px"),
+  productShotImageMaxWidth: rem("550px"),
+  productShotImageMaxHeight: rem("250px"),
 };
 
 export const typography = {
@@ -67,6 +79,11 @@ export const nav = {
   fontWeight: typography.fontWeigthMedium,
 };
 
+export const hero = {
+  maxWidth: rem("900px"),
+  subHeadingMaxWidth: "75%",
+};
+
 export const bounties = {
   cardBorderColor: colors.purple700,
   cardBorderColorHover: colors.purple500,
@@ -83,4 +100,26 @@ export const bounties = {
   statusFundingColor: colors.yellow500,
   statusProposalBackgroundColor: colors.oracle850,
   statusProposalColor: colors.oracle500,
+};
+
+export const panel = {
+  defaultBorderColor: colors.grey700,
+  borderRadius: rem("8px"),
+  backgroundColor: colors.grey900,
+  padding: rem("24px"),
+  color: colors.grey500,
+  iconSize: rem("52px"),
+  iconDefaultBackgroundColor: colors.grey800,
+  iconAlternativeBorderColor: colors.blue400,
+  iconAlternativeBackgroundColor: colors.blue500,
+};
+
+export const pills = {
+  backgroundColor: colors.grey900,
+  padding: rem("4px"),
+  buttonHeight: rem("32px"),
+  buttonSidePadding: rem("24px"),
+  buttonColor: colors.grey50,
+  activeButtonBackgroundColor: colors.grey950,
+  activeButtonColor: colors.blue500,
 };

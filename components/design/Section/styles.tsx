@@ -1,14 +1,17 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { rem } from "polished";
 import { layout, global, colors, typography } from "@/styles/variables";
 import { WrapperProps, HeaderProps } from "./types";
 
 export const Wrapper = styled.div<WrapperProps>`
   border-bottom: ${rem("1px")} solid ${global.sectionBorderBottom};
-  padding: ${(props) =>
-    props.hasHeading
-      ? `${layout.sectionTopBottomPadding} var(--sidePadding)`
-      : `calc(${layout.sectionTopBottomPadding} * 2) var(--sidePadding)`};
+  padding: ${layout.sectionTopBottomPadding} var(--sidePadding);
+
+  ${(props) =>
+    props.headerMargin === "xl" &&
+    css`
+      padding: calc(${layout.sectionTopBottomPadding} * 2) var(--sidePadding);
+    `}
 `;
 
 export const Container = styled.div`
@@ -26,13 +29,18 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.div<HeaderProps>`
-  margin-bottom: ${(props) =>
-    props.headerMargin === "s" ? rem("40px") : rem("80px")};
+  margin-bottom: ${rem("80px")};
+
+  ${(props) =>
+    props.headerMargin === "s" &&
+    css`
+      margin-bottom: ${rem("40px")};
+    `}
 
   span {
-    margin-bottom: ${rem("12px")};
-    font-size: ${rem("16px")};
-    color: ${colors.blue500};
+    margin-bottom: ${layout.sectionSubHeadingMarginBottom};
+    font-size: ${layout.sectionSubHeadingFontSize};
+    color: ${layout.sectionSubHeadingColor};
     text-transform: uppercase;
   }
 `;

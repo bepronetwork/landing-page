@@ -5,7 +5,7 @@ const Section = (props: SectionProps) => {
   const { headerMargin = "l", subheading, title, children } = props;
 
   return (
-    <Styles.Wrapper hasHeading={!!title} headerMargin={headerMargin}>
+    <Styles.Wrapper headerMargin={headerMargin}>
       <Styles.Container>
         {title && (
           <Styles.Header headerMargin={headerMargin}>
