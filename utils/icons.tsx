@@ -210,3 +210,41 @@ export function GetPaid(props: React.SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+
+export function Brackets(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 40 40"
+      {...props}
+    >
+      <path
+        d="M12.5 6.25c-10 0 0 13.75-10 13.75 10 0 0 13.75 10 13.75M27.5 6.25c10 0 0 13.75 10 13.75-10 0 0 13.75-10 13.75"
+        stroke={colors.blue200}
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function Crown(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 40 40"
+      {...props}
+    >
+      <path
+        d="M7.047 30.625a1.265 1.265 0 001.562.922 42.656 42.656 0 0122.766 0 1.267 1.267 0 001.562-.922l3.985-16.922a1.25 1.25 0 00-1.72-1.437l-7.905 3.516a1.266 1.266 0 01-1.61-.532l-4.594-8.28a1.25 1.25 0 00-2.187 0l-4.594 8.28a1.266 1.266 0 01-1.61.532l-7.905-3.516a1.25 1.25 0 00-1.72 1.437l3.97 16.922z"
+        stroke={colors.blue500}
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}

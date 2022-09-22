@@ -123,3 +123,12 @@ export const pills = {
   activeButtonBackgroundColor: colors.grey950,
   activeButtonColor: colors.blue500,
 };
+
+export const forWhomItem = {
+  borderRadius: rem("8px"),
+  padding: rem("40px"),
+  backgroundOpacity: 0.7,
+  iconSize: rem("40px"),
+  subHeadingFontSize: rem("16px"),
+  titleFontSize: rem("60px"),
+};
