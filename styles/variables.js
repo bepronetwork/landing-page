@@ -44,6 +44,7 @@ export const device = {
 };
 
 export const global = {
+  backgroundColor: colors.grey950,
   hoverTransitionDuration: "0.3s",
   sectionBorderBottom: colors.grey900,
 };
@@ -149,4 +150,14 @@ export const customNetwork = {
   backgroundColor: colors.blue850,
   subHeadingColor: colors.blue400,
   color: colors.blue300,
+};
+
+export const card = {
+  borderRadius: rem("8px"),
+  coverBackgroundColor: colors.grey900,
+  color: colors.white,
+  descriptionColor: colors.grey400,
+  avatarBorderColor: colors.grey800,
+  authorColor: colors.white,
+  dateColor: colors.grey500,
 };

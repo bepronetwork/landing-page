@@ -2,6 +2,7 @@
 const nextConfig = {
   publicRuntimeConfig: {
     blogSource: process.env.BLOG_SLUG || "BEPRO",
+    blogUrl: process.env.BLOG_URL || "https://blog.bepro.network",
     backendGraphql:
       process.env.BACKEND_GRAPHQL || "http://localhost:4444/api/graphql",
     imageProxyUrl: process.env.IMAGE_PROXY_URL || "",
