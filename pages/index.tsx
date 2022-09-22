@@ -15,6 +15,7 @@ import Partners from "components/Partners";
 import Community from "components/Community";
 import Stories from "components/Stories";
 import Newsletter from "components/Newsletter";
+import Footer from "components/Footer";
 import {
   initializeApollo,
   APOLLO_STATE_PROP_NAME,
@@ -48,7 +49,7 @@ const Home: NextPage = () => {
       <Community />
       <Stories data={data} loading={loading} error={error} />
       <Newsletter />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
