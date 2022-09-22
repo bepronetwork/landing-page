@@ -13,7 +13,8 @@ import Audited from "components/Audited";
 import LaunchNetwork from "components/LaunchNetwork";
 import Partners from "components/Partners";
 import Community from "components/Community";
-import Stories from "../components/Stories";
+import Stories from "components/Stories";
+import Newsletter from "components/Newsletter";
 import {
   initializeApollo,
   APOLLO_STATE_PROP_NAME,
@@ -46,7 +47,7 @@ const Home: NextPage = () => {
       <Partners />
       <Community />
       <Stories data={data} loading={loading} error={error} />
-      {/* <Newsletter /> */}
+      <Newsletter />
       {/* <Footer /> */}
     </>
   );

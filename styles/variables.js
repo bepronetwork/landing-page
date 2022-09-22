@@ -161,3 +161,16 @@ export const card = {
   authorColor: colors.white,
   dateColor: colors.grey500,
 };
+
+export const newsletter = {
+  height: rem("46px"),
+  borderColor: colors.grey800,
+  borderColorActive: colors.grey700,
+  borderRadius: rem("8px"),
+  backgroundColor: colors.grey900,
+  padding: rem("16px"),
+  fontSize: rem("14px"),
+  color: colors.white,
+  placeholderColor: colors.grey800,
+  disabledBackgroundColor: colors.grey900,
+};
