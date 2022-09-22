@@ -8,7 +8,13 @@ export const Wrapper = styled.div<WrapperProps>`
   padding: ${layout.sectionTopBottomPadding} var(--sidePadding);
 
   ${(props) =>
-    props.headerMargin === "xl" &&
+    props.padding === "s" &&
+    css`
+      padding: calc(${layout.sectionTopBottomPadding} / 2) var(--sidePadding);
+    `}
+
+  ${(props) =>
+    props.padding === "xl" &&
     css`
       padding: calc(${layout.sectionTopBottomPadding} * 2) var(--sidePadding);
     `}

@@ -3,6 +3,7 @@ import { ReactNode } from "react";
 type MarginSize = 's' | 'l' | 'xl';
 
 export interface SectionProps {
+  padding?: MarginSize;
   headerMargin?: MarginSize;
   subheading?: string;
   title?: string;
@@ -10,7 +11,8 @@ export interface SectionProps {
 }
 
 export interface WrapperProps {
-  headerMargin?: string;
+  padding?: MarginSize;
+  headerMargin?: MarginSize;
 }
 
 export interface HeaderProps {
