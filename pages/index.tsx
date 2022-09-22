@@ -7,6 +7,7 @@ import Workflows from "components/Workflows";
 import CreateBounty from "components/CreateBounty";
 import CreateNetwork from "components/CreateNetwork";
 import Participate from "components/Participate";
+import Find from "components/Find";
 // import Stories from "../components/Stories";
 import {
   initializeApollo,
@@ -32,8 +33,8 @@ const Home: NextPage = () => {
       <Workflows />
       <CreateBounty />
       <CreateNetwork />
-      {/* <Find /> */}
       <Participate />
+      <Find />
       {/* <ForWhom /> */}
       {/* <Audited /> */}
       {/* <LaunchNetwork /> */}

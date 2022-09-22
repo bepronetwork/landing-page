@@ -15,6 +15,16 @@ export const colors = {
   blue400: "#6873E9",
   blue500: "#4250E4",
   blue600: "#3540B6",
+  purple500: "#4329A6",
+  purple700: "#281964",
+  purple800: "#1B1042",
+  purple850: "#140C32",
+  oracle500: "#9669ED",
+  oracle850: "#2D2047",
+  green500: "#35E0AD",
+  green850: "#104334",
+  yellow500: "#FFD646",
+  yellow850: "#4D4015",
 };
 
 export const device = {
@@ -55,4 +65,22 @@ export const nav = {
   color: colors.white,
   colorHover: colors.grey100,
   fontWeight: typography.fontWeigthMedium,
+};
+
+export const bounties = {
+  cardBorderColor: colors.purple700,
+  cardBorderColorHover: colors.purple500,
+  cardBorderRadius: rem("8px"),
+  cardBackgroundColor: colors.purple850,
+  cardPadding: rem("15px"),
+  networkBackgroundColor: colors.purple800,
+  prizeBorderRadius: rem("8px"),
+  statusDefaultBackgroundColor: colors.oracle850,
+  statusDefaultColor: colors.oracle500,
+  statusOpenBackgroundColor: colors.green850,
+  statusOpenColor: colors.green500,
+  statusFundingBackgroundColor: colors.yellow850,
+  statusFundingColor: colors.yellow500,
+  statusProposalBackgroundColor: colors.oracle850,
+  statusProposalColor: colors.oracle500,
 };
