@@ -10,6 +10,7 @@ export const colors = {
   grey600: "#5C5E70",
   grey700: "#454654",
   grey800: "#2E2F38",
+  grey850: "#23232A",
   grey900: "#17171C",
   grey950: "#0C0C0E",
   blue150: "#C6CAF7",
@@ -85,12 +86,12 @@ export const hero = {
 };
 
 export const bounties = {
-  cardBorderColor: colors.purple700,
-  cardBorderColorHover: colors.purple500,
+  cardBorderColor: colors.grey700,
+  cardBorderColorHover: colors.grey800,
   cardBorderRadius: rem("8px"),
-  cardBackgroundColor: colors.purple850,
+  cardBackgroundColor: colors.grey900,
   cardPadding: rem("15px"),
-  networkBackgroundColor: colors.purple800,
+  networkBackgroundColor: colors.grey850,
   prizeBorderRadius: rem("8px"),
   statusDefaultBackgroundColor: colors.oracle850,
   statusDefaultColor: colors.oracle500,

@@ -74,9 +74,7 @@ export const Bounty = styled.div<BountyStatusProps>`
 
         span {
           font-size: ${rem("12px")};
-          font-weight: ${typography.fontWeigthMedium};
           line-height: 1;
-          text-transform: uppercase;
           letter-spacing: ${rem("1px")};
           white-space: nowrap;
           overflow: hidden;
@@ -87,7 +85,7 @@ export const Bounty = styled.div<BountyStatusProps>`
           flex: 1;
           max-width: min-content;
           margin-right: ${rem("30px")};
-          border-radius: ${rem("4px")};
+          border-radius: ${rem("999px")};
           background-color: ${bounties.networkBackgroundColor};
           padding: ${rem("7px")} ${rem("8px")};
           color: ${colors.white};
@@ -120,6 +118,7 @@ export const Bounty = styled.div<BountyStatusProps>`
 
           span {
             color: var(--status);
+            text-transform: uppercase;
           }
 
           ${(props) =>
@@ -169,7 +168,8 @@ export const Bounty = styled.div<BountyStatusProps>`
             }
 
             &.currency {
-              color: ${(props) => props.color ?? colors.blue500};
+              color: ${colors.grey600};
+              text-transform: uppercase;
             }
           }
         }
