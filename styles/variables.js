@@ -15,9 +15,12 @@ export const colors = {
   grey950: "#0C0C0E",
   blue150: "#C6CAF7",
   blue200: "#B3B9F4",
+  blue300: "#8E96EF",
   blue400: "#6873E9",
   blue500: "#4250E4",
   blue600: "#3540B6",
+  blue700: "#283089",
+  blue850: "#141844",
   purple500: "#4329A6",
   purple700: "#281964",
   purple800: "#1B1042",
@@ -139,4 +142,11 @@ export const audit = {
   cardBorderColorHover: colors.grey800,
   cardBorderRadius: rem("8px"),
   cardBackgroundColor: colors.grey900,
+};
+
+export const customNetwork = {
+  borderRadius: rem("8px"),
+  backgroundColor: colors.blue850,
+  subHeadingColor: colors.blue400,
+  color: colors.blue300,
 };
