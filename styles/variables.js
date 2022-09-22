@@ -78,10 +78,15 @@ export const typography = {
 export const nav = {
   height: rem("72px"),
   backgroundColor: colors.grey950,
+  sidePadding: rem("24px"),
   fontSize: rem("14px"),
   color: colors.white,
   colorHover: colors.grey100,
   fontWeight: typography.fontWeigthMedium,
+  breakpoint: "(min-width: 960px)",
+  hamburgerWidth: rem("30px"),
+  hamburgerLineHeight: rem("4px"),
+  drawerTransitionDuration: "0.5s",
 };
 
 export const hero = {
