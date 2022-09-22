@@ -84,6 +84,6 @@ export const Image = styled.div`
   img {
     width: 100%;
     max-width: ${rem("550px")};
-    max-height: ${rem("300px")};
+    max-height: ${rem("250px")};
   }
 `;

@@ -2,7 +2,6 @@ import Link from "next/link";
 import Section from "@/ui/Section";
 import ProductShot from "@/ui/ProductShot";
 import { Icon } from "@taikai/rocket-kit";
-import { colors } from "@/styles/variables";
 
 const CreateNetwork = () => (
   <Section
