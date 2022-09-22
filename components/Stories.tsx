@@ -1,7 +1,7 @@
 interface StoriesProps {
   loading: any;
   error: any;
-  data;
+  data: any;
 }
 
 const Stories = (props: StoriesProps) => {
@@ -11,7 +11,7 @@ const Stories = (props: StoriesProps) => {
 
   return (
     <ul>
-      {data?.stories.map((story, index) => (
+      {data?.stories.map((story: any, index: number) => (
         <li key={index}>{story?.title}</li>
       ))}
     </ul>
