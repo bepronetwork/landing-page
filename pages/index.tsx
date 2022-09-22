@@ -9,6 +9,7 @@ import CreateNetwork from "components/CreateNetwork";
 import Participate from "components/Participate";
 import Find from "components/Find";
 import ForWhom from "components/ForWhom";
+import Audited from "components/Audited";
 // import Stories from "../components/Stories";
 import {
   initializeApollo,
@@ -37,7 +38,7 @@ const Home: NextPage = () => {
       <Participate />
       <Find />
       <ForWhom />
-      {/* <Audited /> */}
+      <Audited />
       {/* <LaunchNetwork /> */}
       {/* <Partners /> */}
       {/* <Community /> */}

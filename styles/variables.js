@@ -133,3 +133,10 @@ export const forWhomItem = {
   subHeadingFontSize: rem("16px"),
   titleFontSize: rem("60px"),
 };
+
+export const audit = {
+  cardBorderColor: colors.grey700,
+  cardBorderColorHover: colors.grey800,
+  cardBorderRadius: rem("8px"),
+  cardBackgroundColor: colors.grey900,
+};
