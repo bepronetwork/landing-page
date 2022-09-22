@@ -1,4 +1,4 @@
-import Bepro from "@/utils/brand";
+import { Bepro } from "@/utils/brands";
 import * as Styles from "./styles";
 import { NavbarProps, MenuProps } from "./types";
 import { ButtonLink } from "@taikai/rocket-kit";
