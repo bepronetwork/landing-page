@@ -5,7 +5,10 @@ import { WrapperProps, HeaderProps } from "./types";
 
 export const Wrapper = styled.div<WrapperProps>`
   border-bottom: ${rem("1px")} solid ${global.sectionBorderBottom};
-  padding: ${layout.sectionTopBottomPadding} var(--sidePadding);
+  padding: ${(props) =>
+    props.fullWidth
+      ? `${layout.sectionTopBottomPadding} 0`
+      : `${layout.sectionTopBottomPadding} var(--sidePadding)`};
 
   ${(props) =>
     props.padding === "s" &&
@@ -20,9 +23,9 @@ export const Wrapper = styled.div<WrapperProps>`
     `}
 `;
 
-export const Container = styled.div`
+export const Container = styled.div<WrapperProps>`
   margin: 0 auto;
-  max-width: ${layout.contentMaxWidth};
+  max-width: ${(props) => (props.fullWidth ? "100%" : layout.contentMaxWidth)};
   text-align: center;
 
   h4 {

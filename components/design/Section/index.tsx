@@ -3,6 +3,7 @@ import { SectionProps } from "./types";
 
 const Section = (props: SectionProps) => {
   const {
+    fullWidth = false,
     padding = "l",
     headerMargin = "l",
     subheading,
@@ -11,8 +12,12 @@ const Section = (props: SectionProps) => {
   } = props;
 
   return (
-    <Styles.Wrapper padding={padding} headerMargin={headerMargin}>
-      <Styles.Container>
+    <Styles.Wrapper
+      padding={padding}
+      headerMargin={headerMargin}
+      fullWidth={fullWidth}
+    >
+      <Styles.Container fullWidth={fullWidth}>
         {title && (
           <Styles.Header headerMargin={headerMargin}>
             <span>{subheading}</span>
