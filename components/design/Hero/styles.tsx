@@ -111,12 +111,6 @@ export const Container = styled.div`
     }
   }
 
-  + img {
-    margin: ${rem("5px")} auto ${rem("-5px")} auto;
-    max-width: ${hero.maxWidth};
-    width: 100%;
-  }
-
   @media ${device.s} {
     div {
       display: flex;
@@ -127,9 +121,15 @@ export const Container = styled.div`
         width: inherit;
       }
     }
+  }
+`;
 
-    + img {
-      margin-top: ${rem("143px")};
-    }
+export const Image = styled.div`
+  margin: ${rem("36px")} auto ${rem("-5px")} auto;
+  max-width: ${hero.maxWidth};
+  width: 100%;
+
+  @media ${device.s} {
+    margin-top: ${rem("143px")};
   }
 `;

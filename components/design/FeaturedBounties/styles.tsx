@@ -87,16 +87,15 @@ export const Bounty = styled.div<BountyStatusProps>`
         &.network {
           flex: 1;
           max-width: min-content;
+          height: ${rem("28px")};
           margin-right: ${rem("30px")};
           border-radius: ${rem("999px")};
           background-color: ${bounties.networkBackgroundColor};
           padding: ${rem("7px")} ${rem("8px")};
           color: ${colors.white};
 
-          img {
+          .logo {
             margin-right: ${rem("6px")};
-            width: auto;
-            height: ${rem("14px")};
           }
         }
 

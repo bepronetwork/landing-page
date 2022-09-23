@@ -12,7 +12,9 @@ const ProductShot = (props: ProductShotProps) => {
         {children}
       </Styles.Content>
       <Styles.Image>
-        <img src={imgSrc} alt={imgAlt} />
+        <picture>
+          <img src={imgSrc} alt={imgAlt} />
+        </picture>
       </Styles.Image>
     </Styles.Wrapper>
   );
