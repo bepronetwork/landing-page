@@ -48,10 +48,11 @@ export const Content = styled.div`
     font-size: ${layout.productShotSubHeadingFontSize};
     color: ${layout.productShotSubHeadingColor};
     text-transform: uppercase;
+    letter-spacing: ${rem("1px")};
   }
 
   h2 {
-    margin-bottom: ${layout.productShotHeadingMarginButton};
+    margin-bottom: ${layout.productShotHeadingMarginBottom};
   }
 
   p:not(:last-child) {

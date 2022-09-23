@@ -12,6 +12,8 @@ import {
 export const Wrapper = styled.div`
   position: relative;
   border-bottom: ${rem("1px")} solid ${global.sectionBorderBottom};
+  background-image: url("pattern.svg");
+  background-position: center;
   padding: calc(${nav.height} + ${rem("80px")}) var(--sidePadding) 0
     var(--sidePadding);
   text-align: center;
@@ -30,13 +32,15 @@ export const Wrapper = styled.div`
       rgba(55, 66, 185, 0.18) 0%,
       rgba(55, 66, 185, 0) 100%
     );
-    z-index: -1;
+    z-index: 1;
   }
 `;
 
 export const Container = styled.div`
+  position: relative;
   margin: 0 auto;
   max-width: ${hero.maxWidth};
+  z-index: 2;
 
   > a {
     margin: 0 auto;

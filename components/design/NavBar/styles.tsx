@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 3;
+  z-index: 4;
 
   svg {
     width: auto;
@@ -115,7 +115,7 @@ export const Drawer = styled.div`
   height: 0;
   padding: 0 ${nav.sidePadding};
   overflow-y: hidden;
-  z-index: 1;
+  z-index: 3;
   transition: all ${nav.drawerTransitionDuration} ease-in-out;
 
   ul {

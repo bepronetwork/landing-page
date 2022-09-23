@@ -57,6 +57,7 @@ export const Container = styled.div<WrapperProps>`
     font-weight: ${typography.fontWeigthRegular};
     color: ${colors.grey600};
     text-transform: uppercase;
+    letter-spacing: ${rem("1px")};
   }
 `;
 
@@ -74,5 +75,6 @@ export const Header = styled.div<HeaderProps>`
     font-size: ${layout.sectionSubHeadingFontSize};
     color: ${layout.sectionSubHeadingColor};
     text-transform: uppercase;
+    letter-spacing: ${rem("1px")};
   }
 `;

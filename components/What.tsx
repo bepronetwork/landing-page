@@ -1,5 +1,6 @@
 import Section from "@/ui/Section";
 import ProductShot from "@/ui/ProductShot";
+import { rem } from "polished";
 
 const What = () => (
   <Section padding="xl">
@@ -9,7 +10,7 @@ const What = () => (
       imgSrc="/product-shot--what.svg"
       imgAlt="Bepro Network - Bounty product shot"
     >
-      <p>
+      <p style={{ marginTop: rem("20px") }}>
         Bepro is a Bounty Network platform created to help organizations manage
         their decentralized development.
       </p>

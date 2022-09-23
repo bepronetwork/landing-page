@@ -68,7 +68,7 @@ export const layout = {
   productShotSubHeadingMarginButton: rem("12px"),
   productShotSubHeadingFontSize: rem("16px"),
   productShotSubHeadingColor: colors.blue500,
-  productShotHeadingMarginButton: rem("40px"),
+  productShotHeadingMarginBottom: rem("20px"),
   productShotImageMaxWidth: rem("550px"),
   productShotImageMaxHeight: rem("250px"),
 };

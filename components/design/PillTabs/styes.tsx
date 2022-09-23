@@ -18,6 +18,7 @@ export const Button = styled.button`
   color: ${pills.buttonColor};
   font-weight: ${typography.fontWeigthSemiBold};
   text-transform: uppercase;
+  letter-spacing: ${rem("1px")};
   transition-duration: ${global.hoverTransitionDuration};
 
   &:last-child {

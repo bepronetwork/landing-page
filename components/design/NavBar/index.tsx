@@ -34,6 +34,7 @@ const Navbar = (props: NavbarProps) => {
             color="blue500"
             txtColor="white"
             icon="arrow-external"
+            iconPosition="right"
             value={ctaValue}
             url={ctaUrl}
             blank
