@@ -3,6 +3,7 @@ import { SectionProps } from "./types";
 
 const Section = (props: SectionProps) => {
   const {
+    lightOn = false,
     fullWidth = false,
     padding = "l",
     headerMargin = "l",
@@ -16,6 +17,7 @@ const Section = (props: SectionProps) => {
       padding={padding}
       headerMargin={headerMargin}
       fullWidth={fullWidth}
+      lightOn={lightOn}
     >
       <Styles.Container fullWidth={fullWidth}>
         {title && (

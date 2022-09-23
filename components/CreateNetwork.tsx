@@ -7,6 +7,7 @@ const CreateNetwork = () => (
   <Section
     title="How to create a custom network"
     subheading="For organizations"
+    lightOn
   >
     <ProductShot
       title="Custom Network"

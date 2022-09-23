@@ -5,6 +5,7 @@ const CreateNetwork = () => (
   <Section
     title="How to participate in a Bounty"
     subheading="For developers and curators"
+    lightOn
   >
     <ProductShot
       title="Get recognized for your work"

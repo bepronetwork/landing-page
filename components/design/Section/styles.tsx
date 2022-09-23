@@ -1,14 +1,34 @@
 import styled, { css } from "styled-components";
-import { rem } from "polished";
+import { rem, rgba } from "polished";
 import { layout, global, colors, typography, device } from "@/styles/variables";
 import { WrapperProps, HeaderProps } from "./types";
 
 export const Wrapper = styled.div<WrapperProps>`
+  position: relative;
   border-bottom: ${rem("1px")} solid ${global.sectionBorderBottom};
   padding: ${(props) =>
     props.fullWidth
       ? `${layout.sectionTopBottomPadding} 0`
       : `${layout.sectionTopBottomPadding} var(--sidePadding)`};
+  overflow: hidden;
+
+  ${(props) =>
+    props.lightOn &&
+    css`
+      &:before {
+        content: "";
+        position: absolute;
+        top: ${rem("-135px")};
+        left: 0;
+        width: 100%;
+        height: ${rem("270px")};
+        background: radial-gradient(
+          50% 50% at 50% 50%,
+          ${rgba(colors.grey900, 0.4)} 0%,
+          ${rgba(global.backgroundColor, 0)} 100%
+        );
+      }
+    `}
 
   @media ${device.m} {
     ${(props) =>
