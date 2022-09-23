@@ -1,6 +1,7 @@
 import Section from "@/ui/Section";
 import FeaturedBounties from "@/ui/FeaturedBounties";
 import { ButtonLink } from "@taikai/rocket-kit";
+import { BountiesCarrousel } from "@/utils/ldjson";
 
 const Find = () => {
   const bounties = [
@@ -39,18 +40,23 @@ const Find = () => {
     },
   ];
 
+  const title = "Find a Bounty to work on";
+
   return (
-    <Section title="Find a Bounty to work on" subheading="Featured bounties">
-      <FeaturedBounties bounties={bounties} />
-      <ButtonLink
-        variant="outline"
-        color="blue500"
-        txtColor="white"
-        url="#0"
-        value="See all bounties"
-        rounded
-      />
-    </Section>
+    <>
+      <BountiesCarrousel title={title} bounties={bounties} />
+      <Section title={title} subheading="Featured bounties">
+        <FeaturedBounties bounties={bounties} />
+        <ButtonLink
+          variant="outline"
+          color="blue500"
+          txtColor="white"
+          url="#0"
+          value="See all bounties"
+          rounded
+        />
+      </Section>
+    </>
   );
 };
 

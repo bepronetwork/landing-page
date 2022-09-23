@@ -3,13 +3,14 @@ import Section from "@/ui/Section";
 import StoriesGrid from "@/ui/StoriesGrid";
 import StoryCard from "@/ui/StoryCard";
 import LoadingStories from "@/ui/LoadingStories";
+import { StoryCarrousel } from "@/utils/ldjson";
 import {
   getCdnUrlBlogPostCover,
   getCdnUrlUserSmallAvatar,
 } from "@/utils/media";
 
 interface StoriesProps {
-  loading: any;
+  loading: boolean;
   error: any;
   data: any;
 }
@@ -18,6 +19,7 @@ const { publicRuntimeConfig } = getConfig();
 
 const Stories = (props: StoriesProps) => {
   const { loading, error, data } = props;
+  const title = "Latest blog posts";
   const moment = require("moment");
   const defaultCover = "default-cover.svg";
 
@@ -27,36 +29,40 @@ const Stories = (props: StoriesProps) => {
         <LoadingStories />
       </Section>
     );
+
   if (error || !data) return <></>;
 
   return (
-    <Section title="Latest blog posts" subheading="Blog" headerMargin="s">
-      <StoriesGrid>
-        {data?.stories.slice(0, 4).map((item: any, index: number) => {
-          const url = `${publicRuntimeConfig.blogUrl}/${item.slug}`;
-          const storyCoverUrl = item?.featuredImage?.url ?? defaultCover;
-          const storyCoverUrlCdn = getCdnUrlBlogPostCover(storyCoverUrl);
-          const author = item?.author?.fullName ?? item?.author?.username;
-          const authorAvatarUrl = getCdnUrlUserSmallAvatar(
-            item?.author?.photoImageFile?.url
-          );
+    <>
+      <StoryCarrousel title={title} stories={data?.stories ?? []} />
+      <Section title={title} subheading="Blog" headerMargin="s">
+        <StoriesGrid>
+          {data?.stories.slice(0, 4).map((item: any, index: number) => {
+            const url = `${publicRuntimeConfig.blogUrl}/${item.slug}`;
+            const storyCoverUrl = item?.featuredImage?.url ?? defaultCover;
+            const storyCoverUrlCdn = getCdnUrlBlogPostCover(storyCoverUrl);
+            const author = item?.author?.fullName ?? item?.author?.username;
+            const authorAvatarUrl = getCdnUrlUserSmallAvatar(
+              item?.author?.photoImageFile?.url
+            );
 
-          return (
-            <StoryCard
-              key={index}
-              url={url}
-              coverUrl={storyCoverUrlCdn}
-              tags={item.tags}
-              title={item.title}
-              description={item?.shortDescription}
-              authorAvatarUrl={authorAvatarUrl}
-              author={author}
-              date={moment(item.publishedAt).format("MMM DD, YYYY")}
-            />
-          );
-        })}
-      </StoriesGrid>
-    </Section>
+            return (
+              <StoryCard
+                key={index}
+                url={url}
+                coverUrl={storyCoverUrlCdn}
+                tags={item.tags}
+                title={item.title}
+                description={item?.shortDescription}
+                authorAvatarUrl={authorAvatarUrl}
+                author={author}
+                date={moment(item.publishedAt).format("MMM DD, YYYY")}
+              />
+            );
+          })}
+        </StoriesGrid>
+      </Section>
+    </>
   );
 };
 
