@@ -10,6 +10,7 @@ const nextConfig = {
     imageProxyKey: process.env.IMAGE_PROXY_KEY || "",
     imageProxySalt: process.env.IMAGE_PROXY_SALT || "",
     robots: process.env.ROBOTS || "false",
+    webnetVersion: process.env.WEBNET_VERSION || "2.0",
   },
   reactStrictMode: true,
   swcMinify: true,

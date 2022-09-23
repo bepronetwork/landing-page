@@ -1,6 +1,13 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { nav, hero, global, colors, device } from "@/styles/variables";
+import {
+  nav,
+  hero,
+  global,
+  colors,
+  device,
+  typography,
+} from "@/styles/variables";
 
 export const Wrapper = styled.div`
   position: relative;
@@ -23,6 +30,7 @@ export const Wrapper = styled.div`
       rgba(55, 66, 185, 0.18) 0%,
       rgba(55, 66, 185, 0) 100%
     );
+    z-index: -1;
   }
 `;
 
@@ -30,8 +38,52 @@ export const Container = styled.div`
   margin: 0 auto;
   max-width: ${hero.maxWidth};
 
+  > a {
+    margin: 0 auto;
+    max-width: max-content;
+    border-radius: 999px;
+    background-color: ${colors.orange850};
+    display: flex;
+    align-items: center;
+    padding: ${rem("4px")} ${rem("16px")} ${rem("4px")} ${rem("4px")};
+    color: ${colors.orange50};
+    text-decoration: none;
+    transition-duration: ${global.hoverTransitionDuration};
+
+    span {
+      font-size: ${rem("14px")};
+      transition-duration: ${global.hoverTransitionDuration};
+
+      &.status {
+        border-radius: 999px;
+        background-color: ${colors.orange500};
+        padding: ${rem("3px")} ${rem("10px")};
+        font-weight: ${typography.fontWeigthMedium};
+        color: ${colors.white};
+      }
+
+      &.version {
+        margin: 0 ${rem("12px")};
+      }
+    }
+
+    svg {
+      width: auto;
+      height: ${rem("20px")};
+      fill: ${colors.orange50};
+    }
+
+    &:hover {
+      background-color: ${colors.orange900};
+
+      span.status {
+        background-color: ${colors.orange600};
+      }
+    }
+  }
+
   h1 {
-    margin-bottom: ${rem("24px")};
+    margin: ${rem("24px")} 0;
   }
 
   p {

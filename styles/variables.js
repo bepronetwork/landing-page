@@ -29,6 +29,13 @@ export const colors = {
   oracle850: "#2D2047",
   green500: "#35E0AD",
   green850: "#104334",
+  orange50: "#FFF0EA",
+  orange100: "#FFE1D5",
+  orange500: "#FF6A2C",
+  orange600: "#CC5523",
+  orange850: "#4D200D",
+  orange900: "#331509",
+  orange950: "#1A0B04",
   yellow500: "#FFD646",
   yellow850: "#4D4015",
 };

@@ -27,6 +27,7 @@ export const Wrapper = styled.div<WrapperProps>`
           ${rgba(colors.grey900, 0.4)} 0%,
           ${rgba(global.backgroundColor, 0)} 100%
         );
+        z-index: -1;
       }
     `}
 
