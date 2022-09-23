@@ -1,13 +1,12 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { colors, typography, forWhomItem } from "@/styles/variables";
+import { global, colors, typography, forWhomItem } from "@/styles/variables";
 
 export const Wrapper = styled.div`
   position: relative;
   border-radius: ${forWhomItem.borderRadius};
   display: flex;
   flex-direction: column;
-  padding: ${forWhomItem.padding};
   text-align: left;
 
   &:before {
@@ -25,37 +24,41 @@ export const Wrapper = styled.div`
     z-index: 1;
   }
 
-  div {
-    flex: 1;
+  > div {
+    padding: ${forWhomItem.padding};
 
-    svg {
-      width: ${forWhomItem.iconSize};
-      height: ${forWhomItem.iconSize};
-    }
+    div {
+      flex: 1;
 
-    > span {
-      display: block;
-      margin: ${rem("12px")} 0;
-      font-size: ${forWhomItem.subHeadingFontSize};
-      font-weight: ${typography.fontWeigthMedium};
-      text-transform: uppercase;
-    }
-
-    h2 {
-      position: relative;
-      margin-bottom: ${rem("40px")};
-      font-size: ${forWhomItem.titleFontSize};
-      line-height: 1.1;
-      z-index: 2;
-
-      + p {
-        margin-bottom: ${rem("30px")};
+      svg {
+        width: ${forWhomItem.iconSize};
+        height: ${forWhomItem.iconSize};
       }
-    }
 
-    p {
-      position: relative;
-      z-index: 2;
+      > span {
+        display: block;
+        margin: ${rem("12px")} 0;
+        font-size: ${forWhomItem.subHeadingFontSize};
+        font-weight: ${typography.fontWeigthMedium};
+        text-transform: uppercase;
+      }
+
+      h2 {
+        position: relative;
+        margin-bottom: ${rem("40px")};
+        font-size: ${forWhomItem.titleFontSize};
+        line-height: 1.1;
+        z-index: 2;
+
+        + p {
+          margin-bottom: ${rem("30px")};
+        }
+      }
+
+      p {
+        position: relative;
+        z-index: 2;
+      }
     }
   }
 
@@ -85,8 +88,28 @@ export const Wrapper = styled.div`
   }
 
   &.for-contributors {
-    border: ${rem("1px")} solid ${colors.grey700};
     background-color: ${colors.grey900};
+
+    > div {
+      position: relative;
+      border: ${rem("1px")} solid transparent;
+      border-radius: ${forWhomItem.borderRadius};
+      background-clip: padding-box;
+      -webkit-background-clip: padding-box;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: ${rem("-2px")};
+        border-radius: inherit;
+        background: ${global.gradientBorderColor};
+        z-index: -1;
+      }
+    }
 
     &:before {
       background-image: url("for-contributors--coins.png");

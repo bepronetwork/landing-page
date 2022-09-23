@@ -23,12 +23,28 @@ export const Wrapper = styled.div`
   }
 
   > a {
-    border: ${rem("1px")} solid ${audit.cardBorderColor};
+    position: relative;
+    border: ${rem("1px")} solid transparent;
     border-radius: ${audit.cardBorderRadius};
-    background-color: ${audit.cardBackgroundColor};
     padding: ${rem("40px")};
     transition-duration: ${global.hoverTransitionDuration};
     text-decoration: none;
+    background-color: ${audit.cardBackgroundColor};
+    background-clip: padding-box;
+    -webkit-background-clip: padding-box;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: ${rem("-1px")};
+      border-radius: inherit;
+      background: ${global.gradientBorderColor};
+      z-index: -1;
+    }
 
     &:hover {
       border-color: ${audit.cardBorderColorHover};

@@ -54,6 +54,7 @@ export const global = {
   backgroundColor: colors.grey950,
   hoverTransitionDuration: "0.3s",
   sectionBorderBottom: colors.grey900,
+  gradientBorderColor: `linear-gradient(to bottom, ${colors.grey700}, #22232a)`,
 };
 
 export const layout = {
