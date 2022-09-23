@@ -56,6 +56,7 @@ export const Menu = styled.div`
 `;
 
 export const Copyright = styled.div`
+  border-top: ${rem("1px")} solid ${global.sectionBorderBottom};
   margin-top: ${rem("56px")};
   display: flex;
   justify-content: space-between;
