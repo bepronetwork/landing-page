@@ -8,15 +8,15 @@
 <rect x="449" y="97" width="16" height="4" transform="rotate(90 449 97)" fill="#2E2F38"/>
 <rect x="93.5" y="44.5" width="399" height="92" rx="7.5" stroke="url(#paint0_linear_317_6497)"/>
 <g filter="url(#filter0_d_317_6497)">
-<rect x="476" y="98.5" width="60" height="60" rx="30" fill="#9669ED" shape-rendering="crispEdges"/>
+<rect x="476" y="98.5" width="60" height="60" rx="30" fill="#9669ED" shape-rendering="geometricPrecision"/>
 <path d="M506.35 115.894L506 115.692L505.65 115.894L495.258 121.894L494.908 122.096V122.5V134.5V134.904L495.258 135.106L505.65 141.106L506 141.308L506.35 141.106L516.742 135.106L517.092 134.904V134.5V122.5V122.096L516.742 121.894L506.35 115.894Z" fill="#9669ED" stroke="white" strokeWidth="1.4"/>
-<rect x="476.5" y="99" width="59" height="59" rx="29.5" stroke="#AB87F1" shape-rendering="crispEdges"/>
+<rect x="476.5" y="99" width="59" height="59" rx="29.5" stroke="#AB87F1" shape-rendering="geometricPrecision"/>
 </g>
 <g filter="url(#filter1_d_317_6497)">
-<rect x="45" y="45.7402" width="60" height="60" rx="30" fill="#23232A" shape-rendering="crispEdges"/>
+<rect x="45" y="45.7402" width="60" height="60" rx="30" fill="#23232A" shape-rendering="geometricPrecision"/>
 <path d="M64.7296 77.1291C63.7489 75.4768 63.4052 73.5233 63.7629 71.6356C64.1207 69.7478 65.1554 68.0556 66.6726 66.8767C68.1899 65.6979 70.0853 65.1135 72.003 65.2334C73.9206 65.3533 75.7285 66.1691 77.0872 67.5278C78.4458 68.8864 79.2617 70.6943 79.3815 72.6119C79.5014 74.5296 78.9171 76.425 77.7382 77.9423C76.5594 79.4595 74.8671 80.4942 72.9794 80.852C71.0916 81.2098 69.1381 80.866 67.4859 79.8853L64.7624 80.6619C64.6502 80.6934 64.5316 80.6945 64.4188 80.665C64.3061 80.6356 64.2032 80.5766 64.1208 80.4942C64.0383 80.4117 63.9794 80.3088 63.9499 80.1961C63.9204 80.0833 63.9215 79.9647 63.953 79.8525L64.7296 77.1291Z" stroke="#ABACBA" strokeWidth="1.4" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M71.0734 80.979C71.4589 82.0781 72.0836 83.0778 72.9026 83.9059C73.7216 84.7341 74.7143 85.37 75.809 85.7677C76.9037 86.1653 78.0731 86.3149 79.2326 86.2056C80.3922 86.0962 81.5129 85.7306 82.514 85.1353V85.1353L85.2374 85.9119C85.3496 85.9434 85.4682 85.9445 85.581 85.915C85.6938 85.8855 85.7967 85.8266 85.8791 85.7441C85.9615 85.6617 86.0205 85.5588 86.05 85.4461C86.0794 85.3333 86.0783 85.2147 86.0468 85.1025L85.2702 82.379C85.9635 81.2153 86.3445 79.8922 86.3761 78.538C86.4078 77.1838 86.0891 75.8443 85.451 74.6495C84.8128 73.4546 83.8769 72.4448 82.7338 71.718C81.5907 70.9912 80.2792 70.5719 78.9265 70.5009" stroke="#ABACBA" strokeWidth="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-<rect x="45.5" y="46.2402" width="59" height="59" rx="29.5" stroke="#2E2F38" shape-rendering="crispEdges"/>
+<rect x="45.5" y="46.2402" width="59" height="59" rx="29.5" stroke="#2E2F38" shape-rendering="geometricPrecision"/>
 </g>
 <defs>
 <filter id="filter0_d_317_6497" x="431" y="53.5" width="150" height="150" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">

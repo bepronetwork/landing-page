@@ -32,21 +32,21 @@
 </g>
 <rect x="93.5" y="10.5" width="459" height="262" rx="7.5" stroke="url(#paint0_linear_317_6763)"/>
 <g filter="url(#filter0_d_317_6763)">
-<rect x="45.625" y="45.2236" width="60" height="60" rx="30" fill="#23232A" shape-rendering="crispEdges"/>
+<rect x="45.625" y="45.2236" width="60" height="60" rx="30" fill="#23232A" shape-rendering="geometricPrecision"/>
 <path d="M72.394 70.3745H78.8556" stroke="#ABACBA" strokeWidth="1.4" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M89.3021 78.7615L83.4194 65.3942C82.812 64.7932 81.9921 64.4562 81.1377 64.4562C80.2833 64.4562 79.4633 64.7932 78.856 65.3942V80.6057" stroke="#ABACBA" strokeWidth="1.4" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M72.3944 80.6057V65.3942C71.787 64.7932 70.9671 64.4562 70.1127 64.4562C69.2582 64.4562 68.4383 64.7932 67.8309 65.3942L61.9482 78.7615" stroke="#ABACBA" strokeWidth="1.4" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M67.0096 85.991C69.9835 85.991 72.3942 83.5803 72.3942 80.6064C72.3942 77.6326 69.9835 75.2218 67.0096 75.2218C64.0358 75.2218 61.625 77.6326 61.625 80.6064C61.625 83.5803 64.0358 85.991 67.0096 85.991Z" stroke="#ABACBA" strokeWidth="1.4" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M84.2406 85.991C87.2144 85.991 89.6252 83.5803 89.6252 80.6064C89.6252 77.6326 87.2144 75.2218 84.2406 75.2218C81.2667 75.2218 78.856 77.6326 78.856 80.6064C78.856 83.5803 81.2667 85.991 84.2406 85.991Z" stroke="#ABACBA" strokeWidth="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-<rect x="46.125" y="45.7236" width="59" height="59" rx="29.5" stroke="#2E2F38" shape-rendering="crispEdges"/>
+<rect x="46.125" y="45.7236" width="59" height="59" rx="29.5" stroke="#2E2F38" shape-rendering="geometricPrecision"/>
 </g>
 <g filter="url(#filter1_d_317_6763)">
-<rect x="539" y="184.302" width="60" height="60" rx="30" fill="#23232A" shape-rendering="crispEdges"/>
+<rect x="539" y="184.302" width="60" height="60" rx="30" fill="#23232A" shape-rendering="geometricPrecision"/>
 <path d="M563.996 222.724C562.279 227.828 555.473 227.828 555.473 227.828C555.473 227.828 555.473 221.022 560.577 219.305" stroke="#ABACBA" strokeWidth="1.4" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M579.325 210.798L569.1 221.023L562.279 214.201L572.503 203.977C576.373 200.107 580.243 200.152 581.899 200.393C582.155 200.427 582.392 200.545 582.575 200.727C582.757 200.909 582.874 201.146 582.908 201.402C583.149 203.058 583.194 206.928 579.325 210.798Z" stroke="#ABACBA" strokeWidth="1.4" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M577.623 212.5V222.227C577.618 222.545 577.489 222.848 577.262 223.071L572.398 227.949C572.243 228.104 572.05 228.213 571.839 228.266C571.627 228.319 571.405 228.313 571.196 228.25C570.988 228.186 570.8 228.068 570.654 227.906C570.507 227.744 570.408 227.546 570.365 227.332L569.1 221.023" stroke="#ABACBA" strokeWidth="1.4" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M570.802 205.678H561.074C560.757 205.682 560.454 205.812 560.231 206.039L555.352 210.903C555.198 211.057 555.089 211.251 555.036 211.462C554.983 211.674 554.989 211.896 555.052 212.104C555.115 212.313 555.234 212.501 555.396 212.647C555.557 212.794 555.756 212.893 555.97 212.936L562.279 214.201" stroke="#ABACBA" strokeWidth="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-<rect x="539.5" y="184.802" width="59" height="59" rx="29.5" stroke="#2E2F38" shape-rendering="crispEdges"/>
+<rect x="539.5" y="184.802" width="59" height="59" rx="29.5" stroke="#2E2F38" shape-rendering="geometricPrecision"/>
 </g>
 <defs>
 <filter id="filter0_d_317_6763" x="0.625" y="0.223633" width="150" height="150" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
