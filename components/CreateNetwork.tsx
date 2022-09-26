@@ -1,7 +1,5 @@
-import Link from "next/link";
 import Section from "@/ui/Section";
 import ProductShot from "@/ui/ProductShot";
-import { Icon } from "@taikai/rocket-kit";
 
 const CreateNetwork = () => (
   <Section
@@ -19,11 +17,6 @@ const CreateNetwork = () => (
         Any Organization, DAO, Layer 1 or Layer 2 protocols is able to launch
         their own Bounty Network using their own branding, token and community.
       </p>
-      <Link href="#0">
-        <a target="_blank" rel="noopener noreferrer" className="minimal">
-          <span>Learn more</span> <Icon icon="arrowRight" />
-        </a>
-      </Link>
     </ProductShot>
     <ProductShot
       title="Use your $tokens"

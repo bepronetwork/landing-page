@@ -51,9 +51,10 @@ const Find = () => {
           variant="outline"
           color="blue500"
           txtColor="white"
-          url="#0"
+          url="https://development.bepro.network"
           value="See all bounties"
           rounded
+          blank
         />
       </Section>
     </>
