@@ -8,12 +8,13 @@ const LaunchNetwork = () => {
       <CustomNetwork
         title="Customization"
         subheading="Launch your own Bounty Network"
+        imgSrc="product-shot--launch-network.svg"
+        imgAlt="Launch your own Bounty Network"
       >
         <p>
           Create bounties and have a Web3 developer community building the right
           solution for your projects. Our team is here for you!
         </p>
-
         <div>
           <ButtonLink
             color="blue500"

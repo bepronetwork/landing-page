@@ -16,12 +16,12 @@ const Navbar = (props: NavbarProps) => {
   return (
     <>
       <Styles.Wrapper>
+        <Bepro />
         <Styles.HamburgerButton
           className={drawerOpened ? "opened" : ""}
           onClick={drawerOnClick}
           aria-label="Menu"
         />
-        <Bepro />
         <Styles.Menu>
           <ul>
             {menu.map((item: MenuProps, index: number) => (

@@ -18,11 +18,11 @@ export const Wrapper = styled.div<WrapperProps>`
     justify-content: center;
 
     &:first-child {
-      order: 2;
+      order: 1;
     }
 
     &:last-child {
-      order: 1;
+      order: 2;
     }
   }
 

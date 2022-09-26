@@ -7,16 +7,26 @@ import {
   customNetwork,
   device,
 } from "@/styles/variables";
+import { WrapperProps } from "./types";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<WrapperProps>`
   border: ${rem("1px")} solid ${colors.blue700};
   border-radius: ${customNetwork.borderRadius};
   background-color: ${customNetwork.backgroundColor};
 
+  img {
+    margin: 0 calc(${layout.sectionTopBottomPadding} / 2 * -1) ${rem("-6px")} 0;
+    width: calc(100% - calc(${layout.sectionTopBottomPadding} / 2));
+  }
+
   @media ${device.l} {
-    background-image: url("product-shot--launch-network.svg");
+    background-image: url(${(props) => props.imgSrc});
     background-repeat: no-repeat;
     background-position: bottom right;
+
+    img {
+      display: none;
+    }
   }
 `;
 
