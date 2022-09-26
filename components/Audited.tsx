@@ -1,7 +1,7 @@
 import Section from "@/ui/Section";
 import AuditGrid from "@/ui/AuditGrid";
 import { colors } from "@/styles/variables";
-import { Bepro, Hacken, Certik } from "@/utils/brands";
+import { Hacken, Certik, Red4Sec } from "@/utils/brands";
 
 const Audited = () => {
   const audits = [
@@ -16,8 +16,8 @@ const Audited = () => {
       desc: "Security Audit",
     },
     {
-      url: "#0",
-      logo: <Bepro symbol={colors.white} lettering={colors.white} />,
+      url: "https://red4sec.com",
+      logo: <Red4Sec fill={colors.white} />,
       desc: "Security Audit",
     },
   ];
