@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "rm -rf .next && tsc --project tsconfig.server.json && node dist/index.js",
+    "build": "next build && tsc --project tsconfig.server.json",
+    "start": "NODE_ENV=production node dist/index.js",
     "lint": "next lint",
     "codegen": "npx apollo codegen:generate --localSchemaFile=graphql/graphql-schema.json --target=typescript --includes='graphql/**/*.{ts,tsx,js,jsx,graphql}' --tagName=gql --addTypename --globalTypesFile=types/graphql/generated.ts"
   },
