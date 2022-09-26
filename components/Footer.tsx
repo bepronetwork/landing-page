@@ -8,23 +8,23 @@ const Footer = () => {
       links: [
         {
           value: "About us",
-          url: "#0",
+          url: "https://taikai.network/about-us",
         },
         {
           value: "Careers",
-          url: "#0",
+          url: "https://taikai.network/careers",
         },
         {
           value: "Blog",
-          url: "#0",
+          url: "https://blog.bepro.network",
         },
         {
           value: "Roadmap",
-          url: "#0",
+          url: "https://taikai.notion.site/8c8fef2ea0a14e50bb254ee16a8c15e4",
         },
         {
           value: "Press Kit",
-          url: "#0",
+          url: "https://taikai.notion.site/Bepro-Network-Community-Press-Kit-4dd9c5f6d968444fb2ffd55d85617a71",
           external: true,
         },
       ],
@@ -34,19 +34,19 @@ const Footer = () => {
       links: [
         {
           value: "Docs",
-          url: "#0",
+          url: "https://docs.bepro.network",
         },
         {
           value: "I am a developer",
-          url: "#0",
+          url: "https://support.bepro.network/en/collections/3143249-developers",
         },
         {
           value: "I am a holder",
-          url: "#0",
+          url: "https://support.bepro.network/en/collections/3143296-bepro-holder",
         },
         {
           value: "Open Grants",
-          url: "#0",
+          url: "https://github.com/bepronetwork/grants-program",
         },
       ],
     },
@@ -55,21 +55,11 @@ const Footer = () => {
       links: [
         {
           value: "Terms and Conditions",
-          url: "#0",
+          url: "https://taikai.network/terms",
         },
         {
           value: "Privacy Policy",
-          url: "#0",
-        },
-        {
-          value: "Cookies Policy",
-          url: "#0",
-          external: true,
-        },
-        {
-          value: "Cookies Settings",
-          url: "#0",
-          external: true,
+          url: "https://taikai.network/privacy",
         },
       ],
     },
@@ -78,16 +68,16 @@ const Footer = () => {
       links: [
         {
           value: "Tokenomics",
-          url: "#0",
+          url: "https://support.bepro.network/en/articles/5585549-tokenomics-distribution-schedule",
         },
         {
           value: "Knowledge Base",
-          url: "#0",
+          url: "http://support.bepro.network",
           external: true,
         },
         {
           value: "Community FAQ",
-          url: "#0",
+          url: "https://support.bepro.network/en/collections/3143271-community",
         },
       ],
     },
@@ -96,25 +86,25 @@ const Footer = () => {
       links: [
         {
           value: "GitHub",
-          url: "#0",
+          url: "https://github.com/bepronetwork",
         },
         {
           value: "Discord",
-          url: "#0",
+          url: "https://discord.gg/9aUufhzhfm",
         },
         {
           value: "Twitter",
-          url: "#0",
+          url: "https://twitter.com/bepronet",
           external: true,
         },
         {
           value: "LinkedIn",
-          url: "#0",
+          url: "https://linkedin.com/company/bepronet",
           external: true,
         },
         {
           value: "YouTube",
-          url: "#0",
+          url: "https://youtube.com/c/BEPRONetwork",
           external: true,
         },
       ],

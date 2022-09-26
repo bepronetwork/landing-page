@@ -5,18 +5,22 @@ const menu = [
   {
     label: "Organizations",
     url: "#0",
+    external: true,
   },
   {
     label: "Developers",
     url: "#0",
+    external: true,
   },
   {
     label: "Explore Bounties",
     url: "#0",
+    external: true,
   },
   {
     label: "Blog",
-    url: "#0",
+    url: "https://blog.bepro.network",
+    external: true,
   },
 ];
 
@@ -27,7 +31,7 @@ const Nav = () => {
     <Navbar
       menu={menu}
       ctaValue="Open App"
-      ctaUrl="#0"
+      ctaUrl="https://development.bepro.network"
       drawerOpened={drawerOpened}
       drawerOnClick={() => {
         setDrawerOpened(!drawerOpened);

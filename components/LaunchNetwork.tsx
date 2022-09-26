@@ -18,9 +18,10 @@ const LaunchNetwork = () => {
         <div>
           <ButtonLink
             color="blue500"
-            url="#0"
+            url="https://development.bepro.network"
             value="Start building now"
             rounded
+            blank
           />
           <ButtonLink
             variant="outline"
@@ -28,6 +29,7 @@ const LaunchNetwork = () => {
             url="#0"
             value="Talk with us for a demo"
             rounded
+            blank
           />
         </div>
       </CustomNetwork>

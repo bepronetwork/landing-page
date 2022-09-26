@@ -1,6 +1,7 @@
 export type MenuProps = {
   label: string,
-  url: string
+  url: string,
+  external?: boolean
 }
 
 export interface NavbarProps {

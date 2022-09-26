@@ -10,7 +10,13 @@ const Community = () => (
       imgSrc="/product-shot--discord.svg"
       imgAlt="Bepro Network - Discord"
     >
-      <ButtonLink color="blue500" url="#0" value="Join our Discord" rounded />
+      <ButtonLink
+        color="blue500"
+        url="https://discord.gg/9aUufhzhfm"
+        value="Join our Discord"
+        rounded
+        blank
+      />
     </ProductShot>
   </Section>
 );
