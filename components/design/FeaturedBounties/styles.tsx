@@ -14,11 +14,14 @@ export const Bounties = styled.div`
   margin-bottom: calc(${layout.sectionTopBottomPadding} / 2);
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  grid-gap: ${rem("16px")};
+  grid-gap: ${layout.sidePadding};
 
   @media ${device.m} {
     margin-bottom: ${layout.sectionTopBottomPadding};
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media ${device.l} {
     grid-gap: calc(${layout.sectionTopBottomPadding} / 2);
   }
 
@@ -47,13 +50,29 @@ export const Bounties = styled.div`
 
 export const Bounty = styled.div<BountyStatusProps>`
   a {
+    position: relative;
     display: block;
-    border: ${rem("1px")} solid ${bounties.cardBorderColor};
+    border: ${rem("1px")} solid transparent;
     border-radius: ${bounties.cardBorderRadius};
-    background-color: ${bounties.cardBackgroundColor};
     padding: ${bounties.cardPadding};
     text-decoration: none;
     transition-duration: ${global.hoverTransitionDuration};
+    background-color: ${bounties.cardBackgroundColor};
+    background-clip: padding-box;
+    -webkit-background-clip: padding-box;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: ${rem("-1px")};
+      border-radius: inherit;
+      background: ${global.gradientBorderColor};
+      z-index: -1;
+    }
 
     &:hover {
       border-color: ${bounties.cardBorderColorHover};
@@ -74,9 +93,7 @@ export const Bounty = styled.div<BountyStatusProps>`
 
         span {
           font-size: ${rem("12px")};
-          font-weight: ${typography.fontWeigthMedium};
           line-height: 1;
-          text-transform: uppercase;
           letter-spacing: ${rem("1px")};
           white-space: nowrap;
           overflow: hidden;
@@ -86,16 +103,15 @@ export const Bounty = styled.div<BountyStatusProps>`
         &.network {
           flex: 1;
           max-width: min-content;
+          height: ${rem("28px")};
           margin-right: ${rem("30px")};
-          border-radius: ${rem("4px")};
+          border-radius: ${rem("999px")};
           background-color: ${bounties.networkBackgroundColor};
           padding: ${rem("7px")} ${rem("8px")};
           color: ${colors.white};
 
-          img {
+          .logo {
             margin-right: ${rem("6px")};
-            width: auto;
-            height: ${rem("14px")};
           }
         }
 
@@ -120,6 +136,7 @@ export const Bounty = styled.div<BountyStatusProps>`
 
           span {
             color: var(--status);
+            text-transform: uppercase;
           }
 
           ${(props) =>
@@ -169,7 +186,8 @@ export const Bounty = styled.div<BountyStatusProps>`
             }
 
             &.currency {
-              color: ${(props) => props.color ?? colors.blue500};
+              color: ${colors.grey600};
+              text-transform: uppercase;
             }
           }
         }

@@ -5,6 +5,7 @@ const CreateBounty = () => (
   <Section
     title="How to create a Bounty"
     subheading="For developers and organizations"
+    lightOn
   >
     <ProductShot
       title="Launch your Bounties"

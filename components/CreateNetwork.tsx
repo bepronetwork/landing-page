@@ -7,6 +7,7 @@ const CreateNetwork = () => (
   <Section
     title="How to create a custom network"
     subheading="For organizations"
+    lightOn
   >
     <ProductShot
       title="Custom Network"
@@ -19,7 +20,7 @@ const CreateNetwork = () => (
         their own Bounty Network using their own branding, token and community.
       </p>
       <Link href="#0">
-        <a target="_blank" rel="">
+        <a target="_blank" rel="noopener noreferrer" className="minimal">
           <span>Learn more</span> <Icon icon="arrowRight" />
         </a>
       </Link>

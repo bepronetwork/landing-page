@@ -1,3 +1,4 @@
+import Image from "next/image";
 import numeral from "numeral";
 import * as Styles from "./styles";
 import { BountiesProps, FeaturedBountiesProps } from "./types";
@@ -16,7 +17,15 @@ const FeaturedBounties = (props: FeaturedBountiesProps) => {
           <a href={bounty.url}>
             <div>
               <div className="network">
-                <img src="/bepro-symbol.svg" alt="" />
+                <div className="logo">
+                  <Image
+                    layout="fixed"
+                    width="14"
+                    height="14"
+                    src="/bepro-symbol.svg"
+                    alt={bounty.network}
+                  />
+                </div>
                 <span className="network">{bounty.network}</span>
               </div>
               {bounty.status && (

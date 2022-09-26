@@ -9,18 +9,20 @@ const ForWhomItem = (props: ForWhomItemProps) => {
   return (
     <Styles.Wrapper className={className}>
       <div>
-        {icon}
-        <span>{subheading}</span>
-        <h2>{title}</h2>
-        {children}
+        <div>
+          {icon}
+          <span>{subheading}</span>
+          <h2>{title}</h2>
+          {children}
+        </div>
+        <ButtonLink
+          color={className === "for-developers" ? "white" : "blue500"}
+          txtColor={className === "for-developers" ? "blue500" : "white"}
+          url={url}
+          value={buttonLabel}
+          rounded
+        />
       </div>
-      <ButtonLink
-        color={className === "for-developers" ? "white" : "blue500"}
-        txtColor={className === "for-developers" ? "blue500" : "white"}
-        url={url}
-        value={buttonLabel}
-        rounded
-      />
     </Styles.Wrapper>
   );
 };

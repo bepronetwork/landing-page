@@ -5,12 +5,12 @@ const CreateNetwork = () => (
   <Section
     title="How to participate in a Bounty"
     subheading="For developers and curators"
+    lightOn
   >
     <ProductShot
       title="Get recognized for your work"
       imgSrc="/product-shot--recognized.svg"
       imgAlt="Bepro Network - Custom network product shot"
-      invert
     >
       <p>
         All the contributors on a Bounty (developers and council members) will
@@ -21,6 +21,7 @@ const CreateNetwork = () => (
       title="Take part in new projects"
       imgSrc="/product-shot--new-projects.svg"
       imgAlt="Bepro Network - Your own tokens product shot"
+      invert
     >
       <p>Discover new projects to contribute to and get paid for your work.</p>
     </ProductShot>
@@ -28,7 +29,6 @@ const CreateNetwork = () => (
       title="Curate the network"
       imgSrc="/product-shot--curate.svg"
       imgAlt="Bepro Network - Delegate product shot"
-      invert
     >
       <p>
         Review proposals of Bounty payment distributions and curate the Bepro

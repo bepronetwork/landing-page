@@ -1,22 +1,54 @@
 import styled, { css } from "styled-components";
-import { rem } from "polished";
-import { layout, global, colors, typography } from "@/styles/variables";
+import { rem, rgba } from "polished";
+import { layout, global, colors, typography, device } from "@/styles/variables";
 import { WrapperProps, HeaderProps } from "./types";
 
 export const Wrapper = styled.div<WrapperProps>`
+  position: relative;
   border-bottom: ${rem("1px")} solid ${global.sectionBorderBottom};
-  padding: ${layout.sectionTopBottomPadding} var(--sidePadding);
+  padding: ${(props) =>
+    props.fullWidth
+      ? `${layout.sectionTopBottomPadding} 0`
+      : `${layout.sectionTopBottomPadding} var(--sidePadding)`};
+  overflow: hidden;
 
   ${(props) =>
-    props.headerMargin === "xl" &&
+    props.lightOn &&
     css`
-      padding: calc(${layout.sectionTopBottomPadding} * 2) var(--sidePadding);
+      &:before {
+        content: "";
+        position: absolute;
+        top: ${rem("-135px")};
+        left: 0;
+        width: 100%;
+        height: ${rem("270px")};
+        background: radial-gradient(
+          50% 50% at 50% 50%,
+          ${rgba(colors.grey900, 0.4)} 0%,
+          ${rgba(global.backgroundColor, 0)} 100%
+        );
+        z-index: -1;
+      }
     `}
+
+  @media ${device.m} {
+    ${(props) =>
+      props.padding === "s" &&
+      css`
+        padding: calc(${layout.sectionTopBottomPadding} / 2) var(--sidePadding);
+      `}
+
+    ${(props) =>
+      props.padding === "xl" &&
+      css`
+        padding: calc(${layout.sectionTopBottomPadding} * 2) var(--sidePadding);
+      `}
+  }
 `;
 
-export const Container = styled.div`
+export const Container = styled.div<WrapperProps>`
   margin: 0 auto;
-  max-width: ${layout.contentMaxWidth};
+  max-width: ${(props) => (props.fullWidth ? "100%" : layout.contentMaxWidth)};
   text-align: center;
 
   h4 {
@@ -25,6 +57,7 @@ export const Container = styled.div`
     font-weight: ${typography.fontWeigthRegular};
     color: ${colors.grey600};
     text-transform: uppercase;
+    letter-spacing: ${rem("1px")};
   }
 `;
 
@@ -42,5 +75,6 @@ export const Header = styled.div<HeaderProps>`
     font-size: ${layout.sectionSubHeadingFontSize};
     color: ${layout.sectionSubHeadingColor};
     text-transform: uppercase;
+    letter-spacing: ${rem("1px")};
   }
 `;

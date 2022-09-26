@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { rem } from 'polished';
-import { layout, colors, typography, device } from './variables';
+import { layout, colors, typography, device, global } from './variables';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -26,7 +26,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
-    background-color: ${colors.grey950};
+    background-color: ${global.backgroundColor};
     font-family: ${typography.fontFamily};
     font-size: var(--fontSize);
     font-weight: ${typography.fontWeigthRegular};
