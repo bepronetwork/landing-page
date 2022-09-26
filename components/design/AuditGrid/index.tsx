@@ -8,9 +8,9 @@ const AuditGrid = (props: AuditGridProps) => {
   return (
     <Styles.Wrapper>
       {items.map((item: ItemsProps, index: number) => (
-        <Link href="#0" key={index}>
+        <Link href={item.url} key={index}>
           <a target="_blank" rel="noopener noreferrer">
-            {item.logo}
+            <div>{item.logo}</div>
             <span>{item.desc}</span>
           </a>
         </Link>

@@ -1,24 +1,24 @@
 import Section from "@/ui/Section";
 import AuditGrid from "@/ui/AuditGrid";
 import { colors } from "@/styles/variables";
-import { Bepro } from "@/utils/brands";
+import { Bepro, Hacken, Certik } from "@/utils/brands";
 
 const Audited = () => {
   const audits = [
     {
-      url: "#0",
-      logo: <Bepro symbol={colors.white} lettering={colors.white} />,
-      desc: "Secutiry Audit",
+      url: "https://hacken.io/audits/#bepro",
+      logo: <Hacken fill={colors.white} />,
+      desc: "Security Audit",
+    },
+    {
+      url: "https://certik.com/projects/bepro",
+      logo: <Certik fill={colors.white} />,
+      desc: "Security Audit",
     },
     {
       url: "#0",
       logo: <Bepro symbol={colors.white} lettering={colors.white} />,
-      desc: "Secutiry Audit",
-    },
-    {
-      url: "#0",
-      logo: <Bepro symbol={colors.white} lettering={colors.white} />,
-      desc: "Secutiry Audit",
+      desc: "Security Audit",
     },
   ];
 

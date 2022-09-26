@@ -26,6 +26,8 @@ export const Wrapper = styled.div`
     position: relative;
     border: ${rem("1px")} solid transparent;
     border-radius: ${audit.cardBorderRadius};
+    display: flex;
+    flex-direction: column;
     padding: ${rem("40px")};
     transition-duration: ${global.hoverTransitionDuration};
     text-decoration: none;
@@ -50,13 +52,20 @@ export const Wrapper = styled.div`
       border-color: ${audit.cardBorderColorHover};
     }
 
-    svg {
-      width: auto;
-      max-height: ${rem("60px")};
+    div {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+        width: auto;
+        max-width: ${rem("300px")};
+        max-height: ${rem("60px")};
+      }
     }
 
     span {
-      display: block;
       margin-top: calc(${layout.sectionTopBottomPadding} / 2);
       font-size: ${rem("16px")};
       font-weight: ${typography.fontWeigthMedium};
