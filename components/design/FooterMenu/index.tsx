@@ -16,7 +16,10 @@ const FooterMenu = (props: FooterMenuProps) => {
               {item.links.map((item: LinkProps, index: number) => (
                 <li key={index}>
                   <Link href={item.url}>
-                    <a target="_blank" rel="noopener noreferrer">
+                    <a
+                      target={item.external ? "_blank" : undefined}
+                      rel="noopener noreferrer"
+                    >
                       {item.value}
                     </a>
                   </Link>
@@ -27,7 +30,12 @@ const FooterMenu = (props: FooterMenuProps) => {
         ))}
       </Styles.Menu>
       <Styles.Copyright>
-        <Bepro />
+        <Link href="/" prefetch={false}>
+          <a>
+            {" "}
+            <Bepro />
+          </a>
+        </Link>
         <span>{copyright}</span>
       </Styles.Copyright>
     </>

@@ -14,6 +14,7 @@ export const Wrapper = styled.div`
   align-items: center;
   z-index: 4;
 
+  a,
   svg {
     width: auto;
     height: ${rem("40px")};
