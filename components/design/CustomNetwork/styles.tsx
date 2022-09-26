@@ -39,6 +39,7 @@ export const Content = styled.div`
     font-weight: ${typography.fontWeigthMedium};
     color: ${customNetwork.subHeadingColor};
     text-transform: uppercase;
+    letter-spacing: ${rem("1px")};
   }
 
   h2 {
@@ -51,16 +52,27 @@ export const Content = styled.div`
 
   > div {
     margin: ${rem("28px")} 0 0 ${rem("-12px")};
-    display: flex;
-    justify-content: center;
 
     a {
-      margin: ${rem("12px")};
+      width: 100%;
+      margin: ${rem("12px")} 0;
 
       &:last-child {
         span {
           color: ${colors.white};
         }
+      }
+    }
+  }
+
+  @media ${device.s} {
+    > div {
+      display: flex;
+      justify-content: center;
+
+      a {
+        margin: ${rem("12px")};
+        width: inherit;
       }
     }
   }

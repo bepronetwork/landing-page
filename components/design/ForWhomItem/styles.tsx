@@ -41,6 +41,7 @@ export const Wrapper = styled.div`
         font-size: ${forWhomItem.subHeadingFontSize};
         font-weight: ${typography.fontWeigthMedium};
         text-transform: uppercase;
+        letter-spacing: ${rem("1px")};
       }
 
       h2 {
