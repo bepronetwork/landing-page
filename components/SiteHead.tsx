@@ -6,7 +6,7 @@ const SiteHead = () => {
   const { publicRuntimeConfig } = getConfig();
   const title = "Bepro.network | Web 3.0 codebase protocol";
   const description = "A Protocol for Decentralized Development";
-  const thumbnail = "bepro-default-opengraph.jpg";
+  const thumbnail = "/bepro-default-opengraph.jpg";
 
   return (
     <Head>
