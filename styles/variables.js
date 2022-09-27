@@ -187,3 +187,10 @@ export const newsletter = {
   placeholderColor: colors.grey800,
   disabledBackgroundColor: colors.grey900,
 };
+
+export const textFormatter = {
+  maxWidth: rem("960px"),
+  color: colors.white,
+  headingFontSize: rem("36px"),
+  fontSize: rem("16px"),
+};
