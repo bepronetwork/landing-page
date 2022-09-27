@@ -15,7 +15,7 @@ const CreateNetwork = () => (
     >
       <p>
         Any Organization, DAO, Layer 1 or Layer 2 protocols is able to launch
-        their own Bounty Network using their own branding, token and community.
+        their own bounty network using their own branding, token and community.
       </p>
     </ProductShot>
     <ProductShot
@@ -36,7 +36,7 @@ const CreateNetwork = () => (
     >
       <p>
         Select your own curators or delegate it to the community to review and
-        create proposals for Bounty distributions.
+        create proposals for bounty distributions.
       </p>
     </ProductShot>
   </Section>

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Bepro } from "@/utils/brands";
 import { NavbarProps, MenuProps } from "./types";
 import { ButtonLink } from "@taikai/rocket-kit";
+import { useAnalytics } from "@/utils/analytics";
 import * as Styles from "./styles";
 
 const Navbar = (props: NavbarProps) => {
@@ -12,6 +13,8 @@ const Navbar = (props: NavbarProps) => {
     drawerOpened = false,
     drawerOnClick = () => {},
   } = props;
+
+  const analytics = useAnalytics();
 
   return (
     <>
@@ -48,6 +51,13 @@ const Navbar = (props: NavbarProps) => {
             iconPosition="right"
             value={ctaValue}
             url={ctaUrl}
+            action={() => {
+              analytics.pushEvent({
+                category: "engagement",
+                action: "open-app-button",
+                label: "open-app-button",
+              });
+            }}
             blank
           />
         </Styles.Menu>

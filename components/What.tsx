@@ -6,7 +6,7 @@ const What = () => (
   <Section padding="xl">
     <ProductShot
       subheading="Decentralized platform"
-      title="What is a Bounty Network?"
+      title="What is a bounty network?"
       imgSrc="/product-shot--what.svg"
       imgAlt="Bepro Network - Bounty product shot"
     >

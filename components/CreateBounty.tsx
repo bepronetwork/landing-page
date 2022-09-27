@@ -3,12 +3,12 @@ import ProductShot from "@/ui/ProductShot";
 
 const CreateBounty = () => (
   <Section
-    title="How to create a Bounty"
+    title="How to create a bounty"
     subheading="For developers and organizations"
     lightOn
   >
     <ProductShot
-      title="Launch your Bounties"
+      title="Launch your bounties"
       imgSrc="/product-shot--bounty.svg"
       imgAlt="Bepro Network - Bounty product shot"
     >

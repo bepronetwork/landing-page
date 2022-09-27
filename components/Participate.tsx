@@ -13,7 +13,7 @@ const CreateNetwork = () => (
       imgAlt="Bepro Network - Custom network product shot"
     >
       <p>
-        All the contributors on a Bounty (developers and council members) will
+        All the contributors on a bounty (developers and council members) will
         receive a non-transferable NFT as a recognition of their work.
       </p>
     </ProductShot>
@@ -31,7 +31,7 @@ const CreateNetwork = () => (
       imgAlt="Bepro Network - Delegate product shot"
     >
       <p>
-        Review proposals of Bounty payment distributions and curate the Bepro
+        Review proposals of bounty payment distributions and curate the Bepro
         Network.
       </p>
     </ProductShot>
