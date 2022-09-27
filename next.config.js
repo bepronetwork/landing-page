@@ -9,6 +9,8 @@ const nextConfig = {
     imageProxySalt: process.env.IMAGE_PROXY_SALT || "",
     webnetVersion: process.env.WEBNET_VERSION || "2.0",
     robots: process.env.ROBOTS || "false",
+    sendgridApiKey: process.env.SENDGRID_API_KEY || "",
+    sendgridListId: process.env.SENDGRID_LIST_ID || "",
     gaDisabled: process.env.GA_ENABLED || "true",
     gaDebug: process.env.GA_DEBUG || "false",
     gaProperty: process.env.GA_PROPERTY || "",

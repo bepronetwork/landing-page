@@ -11,9 +11,9 @@ const NewsletterSubscription = (props: NewsletterSubscriptionProps) => {
         <h2>{title}</h2>
         <p>{description}</p>
       </Styles.Description>
-      <Styles.Field>
-        <Styles.Input>{children}</Styles.Input>
-      </Styles.Field>
+      <Styles.Form>
+        <Styles.Field>{children}</Styles.Field>
+      </Styles.Form>
     </Styles.Container>
   );
 };

@@ -25,6 +25,7 @@ export const colors = {
   purple700: "#281964",
   purple800: "#1B1042",
   purple850: "#140C32",
+  red500: "#EB5757",
   oracle500: "#9669ED",
   oracle850: "#2D2047",
   green500: "#35E0AD",

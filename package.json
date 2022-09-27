@@ -12,6 +12,7 @@
   "dependencies": {
     "@apollo/client": "^3.6.9",
     "@taikai/rocket-kit": "^3.0.0-beta.2",
+    "axios": "^0.27.2",
     "deepmerge": "^4.2.2",
     "graphql": "^16.6.0",
     "imgproxy": "^1.0.0",
