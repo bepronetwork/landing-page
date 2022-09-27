@@ -4,9 +4,11 @@ import { baseUrl } from "../config";
 
 const SiteHead = () => {
   const { publicRuntimeConfig } = getConfig();
-  const title = "Bepro.network | Web 3.0 codebase protocol";
-  const description = "A Protocol for Decentralized Development";
-  const thumbnail = "bepro-default-opengraph.jpg";
+  const title =
+    "Bepro Network - The bounty network platform for open-source projects";
+  const description =
+    "Bepro Network is a bounty network created to help organizations manage their decentralized development.";
+  const thumbnail = "/bepro-default-opengraph.jpg";
 
   return (
     <Head>

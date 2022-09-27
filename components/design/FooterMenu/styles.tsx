@@ -63,6 +63,7 @@ export const Copyright = styled.div`
   align-items: center;
   padding: ${rem("32px")} 0 ${rem("8px")} 0;
 
+  a,
   svg {
     width: auto;
     height: ${rem("40px")};

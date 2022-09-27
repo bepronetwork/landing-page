@@ -16,7 +16,11 @@ const Navbar = (props: NavbarProps) => {
   return (
     <>
       <Styles.Wrapper>
-        <Bepro />
+        <Link href="/" prefetch={false}>
+          <a>
+            <Bepro />
+          </a>
+        </Link>
         <Styles.HamburgerButton
           className={drawerOpened ? "opened" : ""}
           onClick={drawerOnClick}

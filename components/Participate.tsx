@@ -3,7 +3,7 @@ import ProductShot from "@/ui/ProductShot";
 
 const CreateNetwork = () => (
   <Section
-    title="How to participate in a Bounty"
+    title="Participate in bounties"
     subheading="For developers and curators"
     lightOn
   >

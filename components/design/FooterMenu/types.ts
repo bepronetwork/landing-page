@@ -1,6 +1,7 @@
 export type LinkProps = {
   value: string,
-  url: string
+  url: string,
+  external?: boolean
 }
 
 export type SubenuProps = {

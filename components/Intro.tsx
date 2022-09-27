@@ -17,11 +17,12 @@ const Intro = () => {
           <Icon icon="arrowForward" />
         </a>
       </Link>
-      <h1>Bounty Network for Open-source Projects</h1>
+      <h1>Web3 bounty network for open-source development</h1>
       <p>
-        Bepro Network is a decentralized marketplace and system that connects
-        developers with operators or anyone looking to build open-source
-        development projects.
+        Bepro is a bounty network created to help organizations manage their
+        decentralized development. We simplified the process of launching
+        multiple development bounties, managing disputes and reward
+        collaboration using smart contracts to handle payments.
       </p>
       <div>
         <ButtonLink

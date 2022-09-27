@@ -25,6 +25,7 @@ export const Description = styled.div`
     font-size: ${layout.sectionSubHeadingFontSize};
     color: ${layout.sectionSubHeadingColor};
     text-transform: uppercase;
+    letter-spacing: ${rem("1px")};
   }
 
   p {

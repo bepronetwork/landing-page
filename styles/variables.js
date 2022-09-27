@@ -98,8 +98,8 @@ export const nav = {
 };
 
 export const hero = {
-  maxWidth: rem("900px"),
-  subHeadingMaxWidth: "75%",
+  maxWidth: rem("1000px"),
+  subHeadingMaxWidth: "90%",
 };
 
 export const bounties = {
@@ -186,4 +186,11 @@ export const newsletter = {
   color: colors.white,
   placeholderColor: colors.grey800,
   disabledBackgroundColor: colors.grey900,
+};
+
+export const textFormatter = {
+  maxWidth: rem("960px"),
+  color: colors.white,
+  headingFontSize: rem("36px"),
+  fontSize: rem("16px"),
 };

@@ -4,17 +4,17 @@ import Navbar from "@/ui/NavBar";
 const menu = [
   {
     label: "Organizations",
-    url: "#0",
-    external: true,
+    url: "#org",
+    external: false,
   },
   {
     label: "Developers",
-    url: "#0",
-    external: true,
+    url: "#dev",
+    external: false,
   },
   {
     label: "Explore Bounties",
-    url: "#0",
+    url: "https://development.bepro.network/bepro",
     external: true,
   },
   {

@@ -1,11 +1,9 @@
-import Link from "next/link";
 import Section from "@/ui/Section";
 import ProductShot from "@/ui/ProductShot";
-import { Icon } from "@taikai/rocket-kit";
 
 const CreateNetwork = () => (
   <Section
-    title="How to create a custom network"
+    title="Create a custom bounty network"
     subheading="For organizations"
     lightOn
   >
@@ -19,14 +17,9 @@ const CreateNetwork = () => (
         Any Organization, DAO, Layer 1 or Layer 2 protocols is able to launch
         their own Bounty Network using their own branding, token and community.
       </p>
-      <Link href="#0">
-        <a target="_blank" rel="noopener noreferrer" className="minimal">
-          <span>Learn more</span> <Icon icon="arrowRight" />
-        </a>
-      </Link>
     </ProductShot>
     <ProductShot
-      title="Use your $tokens"
+      title="Reward with your $token"
       imgSrc="/product-shot--tokens.svg"
       imgAlt="Bepro Network - Your own tokens product shot"
     >
@@ -36,7 +29,7 @@ const CreateNetwork = () => (
       </p>
     </ProductShot>
     <ProductShot
-      title="Delegate your power"
+      title="Power to the community"
       imgSrc="/product-shot--delegate.svg"
       imgAlt="Bepro Network - Delegate product shot"
       invert

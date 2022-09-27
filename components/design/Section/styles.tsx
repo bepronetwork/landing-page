@@ -5,12 +5,15 @@ import { WrapperProps, HeaderProps } from "./types";
 
 export const Wrapper = styled.div<WrapperProps>`
   position: relative;
-  border-bottom: ${rem("1px")} solid ${global.sectionBorderBottom};
   padding: ${(props) =>
     props.fullWidth
       ? `${layout.sectionTopBottomPadding} 0`
       : `${layout.sectionTopBottomPadding} var(--sidePadding)`};
   overflow: hidden;
+
+  &:not(:last-child) {
+    border-bottom: ${rem("1px")} solid ${global.sectionBorderBottom};
+  }
 
   ${(props) =>
     props.lightOn &&
