@@ -10,19 +10,16 @@ const How = () => {
   const router = useRouter();
   const tabs = [{ label: "Organizations" }, { label: "Developers" }];
   const [tab, setTab] = useState(0);
-  const [id, setId] = useState("org");
 
   useEffect(() => {
     const asPath = router.asPath;
 
     if (asPath === "/#org") {
       setTab(0);
-      setId("dev");
     }
 
     if (asPath === "/#dev") {
       setTab(1);
-      setId("org");
     }
   }, [router.query]);
 
@@ -30,7 +27,10 @@ const How = () => {
     <>
       <div id="org" className="sr-only" />
       <div id="dev" className="sr-only" />
-      <Section subheading="Subheading" title="Workflows for different people">
+      <Section
+        subheading="Step by step"
+        title="Decentralized development for everyone"
+      >
         <PillTabs
           buttons={tabs}
           selectedTab={tab}

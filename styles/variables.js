@@ -98,8 +98,8 @@ export const nav = {
 };
 
 export const hero = {
-  maxWidth: rem("900px"),
-  subHeadingMaxWidth: "75%",
+  maxWidth: rem("1000px"),
+  subHeadingMaxWidth: "90%",
 };
 
 export const bounties = {

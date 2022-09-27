@@ -3,7 +3,7 @@ import ProductShot from "@/ui/ProductShot";
 
 const CreateNetwork = () => (
   <Section
-    title="How to create a custom network"
+    title="Create a custom bounty network"
     subheading="For organizations"
     lightOn
   >
@@ -19,7 +19,7 @@ const CreateNetwork = () => (
       </p>
     </ProductShot>
     <ProductShot
-      title="Use your $tokens"
+      title="Reward with your $token"
       imgSrc="/product-shot--tokens.svg"
       imgAlt="Bepro Network - Your own tokens product shot"
     >
@@ -29,7 +29,7 @@ const CreateNetwork = () => (
       </p>
     </ProductShot>
     <ProductShot
-      title="Delegate your power"
+      title="Power to the community"
       imgSrc="/product-shot--delegate.svg"
       imgAlt="Bepro Network - Delegate product shot"
       invert

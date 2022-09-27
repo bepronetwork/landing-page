@@ -8,7 +8,7 @@ const Newsletter = () => {
       <NewsletterSubscription
         subheading="News and updates"
         title="Subscribe to our newsletter"
-        description="Get a summary of what we’ve shipped during the last month, behind the scenes updates, and ecosystem news."
+        description="Subscribe to stay tuned on the latest bounties, platform updates and ecosystem news."
       >
         <input
           type="emai"

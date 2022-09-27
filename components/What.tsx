@@ -5,7 +5,7 @@ import { rem } from "polished";
 const What = () => (
   <Section padding="xl">
     <ProductShot
-      subheading="What is a Bounty Network?"
+      subheading="Decentralized platform"
       title="What is a Bounty Network?"
       imgSrc="/product-shot--what.svg"
       imgAlt="Bepro Network - Bounty product shot"
