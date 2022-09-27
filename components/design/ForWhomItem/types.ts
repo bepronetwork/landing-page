@@ -8,4 +8,5 @@ export interface ForWhomItemProps {
   url: string;
   buttonLabel: string;
   children: ReactNode;
+  action?: (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
 }

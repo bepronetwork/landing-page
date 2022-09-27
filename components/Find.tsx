@@ -3,9 +3,11 @@ import FeaturedBounties from "@/ui/FeaturedBounties";
 import { ButtonLink } from "@taikai/rocket-kit";
 import { BountiesCarrousel } from "@/utils/ldjson";
 import { bounties } from "@/utils/bounties";
+import { useAnalytics } from "@/utils/analytics";
 
 const Find = () => {
-  const title = "Find a Bounty to work on";
+  const title = "Find a bounty to work on";
+  const analytics = useAnalytics();
 
   return (
     <>
@@ -18,6 +20,13 @@ const Find = () => {
           txtColor="white"
           url="https://development.bepro.network"
           value="See all bounties"
+          action={() => {
+            analytics.pushEvent({
+              category: "engagement",
+              action: "see-all-bounties-button",
+              label: "see-all-bounties-button",
+            });
+          }}
           rounded
           blank
         />

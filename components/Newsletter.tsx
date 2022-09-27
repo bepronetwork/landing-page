@@ -1,8 +1,11 @@
 import { Button } from "@taikai/rocket-kit";
 import Section from "@/ui/Section";
 import NewsletterSubscription from "@/ui/NewsletterSubscription";
+import { useAnalytics } from "@/utils/analytics";
 
 const Newsletter = () => {
+  const analytics = useAnalytics();
+
   return (
     <Section>
       <NewsletterSubscription
@@ -24,6 +27,13 @@ const Newsletter = () => {
           value="Subscribe"
           loading={false}
           disabled={false}
+          action={() => {
+            analytics.pushEvent({
+              category: "engagement",
+              action: "newsletter-button",
+              label: "newsletter-button",
+            });
+          }}
         />
       </NewsletterSubscription>
     </Section>

@@ -3,6 +3,7 @@ import { rem } from "polished";
 import Section from "@/ui/Section";
 import ProductShot from "@/ui/ProductShot";
 import { ButtonLink } from "@taikai/rocket-kit";
+import { useAnalytics } from "@/utils/analytics";
 
 const CustomProductShot = styled.div`
   img {
@@ -10,25 +11,36 @@ const CustomProductShot = styled.div`
   }
 `;
 
-const Community = () => (
-  <Section>
-    <CustomProductShot>
-      <ProductShot
-        subheading="Community"
-        title="Join our Discord server and access exclusive community channels"
-        imgSrc="/product-shot--discord.svg"
-        imgAlt="Bepro Network - Discord"
-      >
-        <ButtonLink
-          color="blue500"
-          url="https://discord.gg/9aUufhzhfm"
-          value="Join our Discord"
-          rounded
-          blank
-        />
-      </ProductShot>
-    </CustomProductShot>
-  </Section>
-);
+const Community = () => {
+  const analytics = useAnalytics();
+
+  return (
+    <Section>
+      <CustomProductShot>
+        <ProductShot
+          subheading="Community"
+          title="Join our Discord server and access exclusive community channels"
+          imgSrc="/product-shot--discord.svg"
+          imgAlt="Bepro Network - Discord"
+        >
+          <ButtonLink
+            color="blue500"
+            url="https://discord.gg/9aUufhzhfm"
+            value="Join our Discord"
+            action={() => {
+              analytics.pushEvent({
+                category: "engagement",
+                action: "discord-button",
+                label: "discord-button",
+              });
+            }}
+            rounded
+            blank
+          />
+        </ProductShot>
+      </CustomProductShot>
+    </Section>
+  );
+};
 
 export default Community;

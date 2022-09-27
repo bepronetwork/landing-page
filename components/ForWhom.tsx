@@ -2,8 +2,11 @@ import Section from "@/ui/Section";
 import ForWhomGrid from "@/ui/ForWhomGrid";
 import ForWhomItem from "@/ui/ForWhomItem";
 import { Brackets, Crown } from "@/utils/icons";
+import { useAnalytics } from "@/utils/analytics";
 
 const ForWhom = () => {
+  const analytics = useAnalytics();
+
   return (
     <Section>
       <ForWhomGrid>
@@ -11,9 +14,16 @@ const ForWhom = () => {
           className="for-developers"
           icon={<Brackets />}
           subheading="For developers"
-          title="Earn $tokens by solving Bounties"
+          title="Earn $tokens by solving bounties"
           url="#0"
           buttonLabel="Get started"
+          action={() => {
+            analytics.pushEvent({
+              category: "engagement",
+              action: "get-started-button",
+              label: "get-started-button",
+            });
+          }}
         >
           <p>Discover new projects to contribute and get paid for your work.</p>
           <p>
@@ -28,6 +38,13 @@ const ForWhom = () => {
           title="Contribute and get paid"
           url="#0"
           buttonLabel="How to contribute"
+          action={() => {
+            analytics.pushEvent({
+              category: "engagement",
+              action: "contribute-button",
+              label: "contribute-button",
+            });
+          }}
         >
           <p>
             Create bounty distribution proposals and curate the Bepro Network.

@@ -1,3 +1,5 @@
+import getConfig from "next/config";
+import { useEffect } from "react";
 import type { NextPage } from "next";
 import SiteHead from "components/SiteHead";
 import Nav from "components/Nav";
@@ -23,12 +25,24 @@ import {
 } from "../config/apolloClient";
 import { useStories } from "../hooks/use-stories";
 import { STORIES_QUERY } from "../graphql/stories-list-query";
+import { useAnalytics, AnalyticsContext } from "@/utils/analytics";
 
 const Home: NextPage = () => {
+  const { publicRuntimeConfig } = getConfig();
   const { loading, error, data } = useStories({ page: 0 });
+  const analytics = useAnalytics();
+
+  analytics.init({
+    disabled: publicRuntimeConfig.gaDisabled || false,
+    debug: publicRuntimeConfig.gaDebug || false,
+  });
+
+  useEffect(() => {
+    analytics.pageview(window.location.pathname + window.location.search);
+  }, [analytics]);
 
   return (
-    <>
+    <AnalyticsContext.Provider value={analytics}>
       <SiteHead />
       <Nav />
       <Intro />
@@ -47,7 +61,7 @@ const Home: NextPage = () => {
       <Stories data={data} loading={loading} error={error} />
       <Newsletter />
       <Footer />
-    </>
+    </AnalyticsContext.Provider>
   );
 };
 

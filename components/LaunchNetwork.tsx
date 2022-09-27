@@ -1,15 +1,18 @@
 import { ButtonLink } from "@taikai/rocket-kit";
 import Section from "@/ui/Section";
 import CustomNetwork from "@/ui/CustomNetwork";
+import { useAnalytics } from "@/utils/analytics";
 
 const LaunchNetwork = () => {
+  const analytics = useAnalytics();
+
   return (
     <Section padding="s">
       <CustomNetwork
         title="Customization"
-        subheading="Launch your own Bounty Network"
+        subheading="Launch your own bounty network"
         imgSrc="product-shot--launch-network.svg"
-        imgAlt="Launch your own Bounty Network"
+        imgAlt="Launch your own bounty network"
       >
         <p>
           Create bounties and have a Web3 developer community building the right
@@ -20,6 +23,13 @@ const LaunchNetwork = () => {
             color="blue500"
             url="https://development.bepro.network"
             value="Start building now"
+            action={() => {
+              analytics.pushEvent({
+                category: "engagement",
+                action: "start-building-button",
+                label: "start-building-button",
+              });
+            }}
             rounded
             blank
           />
@@ -28,6 +38,13 @@ const LaunchNetwork = () => {
             color="blue400"
             url="#0"
             value="Talk with us for a demo"
+            action={() => {
+              analytics.pushEvent({
+                category: "engagement",
+                action: "demo-button",
+                label: "demo-button",
+              });
+            }}
             rounded
             blank
           />
