@@ -21,7 +21,7 @@ const How = () => {
     if (asPath === "/#dev") {
       setTab(1);
     }
-  }, [router.query]);
+  }, [router.query, router.asPath]);
 
   return (
     <>

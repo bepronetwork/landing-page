@@ -7,14 +7,15 @@ const TermsAndConditions = () => {
       <TextFormatter>
         <h1>Terms & Conditions</h1>
         <p className="caps grey">
-          PLEASE READ THESE TERMS & CONDITIONS (“TERMS”) CAREFULLY PRIOR TO YOUR
-          USE OF TAIKAI S.A. SERVICES OR PRODUCTS. THESE TERMS CONSTITUTES A
-          LEGALLY BINDING AGREEMENT BETWEEN YOU AND TAIKAI S.A., A COMPANY
-          INCORPORATED UNDER THE LAWS OF PORTUGAL (REFERRED TO HEREIN AS
-          “TAIKAI”, “US”, “WE”, “OUR”) WHICH OWN BEPRO NETWORK (“NETWORK”,
-          “PLATFORM” AND “WEBSITE” ). BY USING OUR PLATFORM, YOU CERTIFY THAT
-          YOU HAVE READ, UNDERSTOOD AND REVIEWED THESE TERMS AND THAT YOU AGREE
-          TO COMPLY WITH ITS TERMS. IF YOU DO NOT AGREE WITH THESE TERMS, YOU
+          PLEASE READ THESE TERMS & CONDITIONS (&quot;TERMS&quot;) CAREFULLY
+          PRIOR TO YOUR USE OF TAIKAI S.A. SERVICES OR PRODUCTS. THESE TERMS
+          CONSTITUTES A LEGALLY BINDING AGREEMENT BETWEEN YOU AND TAIKAI S.A., A
+          COMPANY INCORPORATED UNDER THE LAWS OF PORTUGAL (REFERRED TO HEREIN AS
+          &quot;TAIKAI&quot;, &quot;US&quot;, &quot;WE&quot;, &quot;OUR&quot;)
+          WHICH OWN BEPRO NETWORK (&quot;NETWORK&quot;, &quot;PLATFORM&quot; AND
+          &quot;WEBSITE&quot; ). BY USING OUR PLATFORM, YOU CERTIFY THAT YOU
+          HAVE READ, UNDERSTOOD AND REVIEWED THESE TERMS AND THAT YOU AGREE TO
+          COMPLY WITH ITS TERMS. IF YOU DO NOT AGREE WITH THESE TERMS, YOU
           SHOULD NOT ACCESS OUR NETWORK. TAIKAI ONLY GRANT USE AND ACCESS OF
           THIS WEBSITE, ITS SERVICES AND PRODUCTS TO THOSE WHO HAVE ACCEPTED ITS
           TERMS.
@@ -24,13 +25,14 @@ const TermsAndConditions = () => {
         <p>
           Taikai is building an ecosystem of tools and resources for developers
           and companies that intend to build centralized applications. Our
-          Services and Products (together referred to as “Services”) includes
-          the Bepro Network Protocol, which is a decentralized marketplace and
-          system that connects developers with operators or anyone looking to
-          build open-source development repositories, as well as the possibility
-          to manage disputes in the network, participate in it and earn token
-          rewards by curating the system & providing development resources. The
-          Network uses a native utility token, the $BEPRO.
+          Services and Products (together referred to as &quot;Services&quot;)
+          includes the Bepro Network Protocol, which is a decentralized
+          marketplace and system that connects developers with operators or
+          anyone looking to build open-source development repositories, as well
+          as the possibility to manage disputes in the network, participate in
+          it and earn token rewards by curating the system & providing
+          development resources. The Network uses a native utility token, the
+          $BEPRO.
         </p>
 
         <h2>B. ELIGIBILITY</h2>
@@ -51,7 +53,7 @@ const TermsAndConditions = () => {
             Not be subject to any sanctions imposed by any government, including
             without limitation those imposed by the United Nations, the European
             Union, any EU country, the UK Treasury, or the U.S. Office of
-            Foreign Assets Control (“OFAC”).
+            Foreign Assets Control (&quot;OFAC&quot;).
           </li>
         </ol>
         <p>
@@ -120,13 +122,14 @@ const TermsAndConditions = () => {
         <p>
           All content on our website including, but not limited to, the images,
           pictures, graphics, photographs, animations, videos, music, audio, and
-          text (“Our Content”) and all intellectual property rights related are
-          our exclusive property.
+          text (&quot;Our Content&quot;) and all intellectual property rights
+          related are our exclusive property.
         </p>
         <p>
-          The terms “Bepro”, “Bepro Network”, “$Bepro”, our domain names and any
-          other trademarks, or services marks used by us as part of our
-          Services, are exclusively owned by us.
+          The terms &quot;Bepro&quot;, &quot;Bepro Network&quot;,
+          &quot;$Bepro&quot;, our domain names and any other trademarks, or
+          services marks used by us as part of our Services, are exclusively
+          owned by us.
         </p>
         <p>
           By using our Services, it does not provide you any rights on use our
@@ -159,8 +162,8 @@ const TermsAndConditions = () => {
           with your User Content in all media formats and channels now known or
           later developed without compensation to you. You may be allowed to
           create, post, store and share content, including messages, text,
-          photos, videos, software, and other materials (collectively, “User
-          Content”).
+          photos, videos, software, and other materials (collectively,
+          &quot;User Content&quot;).
         </p>
         <p>
           You may not create, post, store or share any User Content that
@@ -194,10 +197,10 @@ const TermsAndConditions = () => {
         <p>
           We may modify these Terms at any time. When we make changes to these
           Terms, we will post the revised Terms on the Website and update the
-          “Last Updated” date at the top of these Terms. You should therefore
-          refer to and read these Terms from time to time. Any amended Terms
-          will become effective no earlier than 14 days after they are posted
-          and prospective use of the Services after such changes become
+          &quot;Last Updated&quot; date at the top of these Terms. You should
+          therefore refer to and read these Terms from time to time. Any amended
+          Terms will become effective no earlier than 14 days after they are
+          posted and prospective use of the Services after such changes become
           effective, except those changes addressing new functions of the
           Services or changes made to comply to any legal requirement will be
           effective immediately. Your continued use of the Services following
@@ -215,34 +218,34 @@ const TermsAndConditions = () => {
           in any jurisdiction. These Terms or any other document available with
           information about $BEPRO on the Website do not constitute a prospectus
           or an offer document of any sort and is not intended to constitute an
-          offer of securities (“$BEPRO”).
+          offer of securities (&quot;$BEPRO&quot;).
         </p>
         <p>
           $BEPRO shall only be acquired and used with the purpose of using the
           Services, including TAIKAI or BEPRO network products as well as TAIKAI
           or BEPRO network smart contracts - therefore to access its services,
-          as accessing new features, curation or managing disputes in "The
-          Network". $BEPRO should not be construed, interpreted, classified, or
-          treated as enabling, or according to any opportunity for the User to
-          participate in or receive profits, income, or other payments or
-          returns arising from or in connection with the vendor, the project,
-          the tokens, or the proceeds of the token sale, or to receive sums paid
-          out of such profits, income, or other payments or returns.
+          as accessing new features, curation or managing disputes in &quot;The
+          Network&quot;. $BEPRO should not be construed, interpreted,
+          classified, or treated as enabling, or according to any opportunity
+          for the User to participate in or receive profits, income, or other
+          payments or returns arising from or in connection with the vendor, the
+          project, the tokens, or the proceeds of the token sale, or to receive
+          sums paid out of such profits, income, or other payments or returns.
         </p>
 
         <h2>J. IDEMNIFICATION</h2>
         <p>
           You agree to indemnify and hold harmless each member of TAIKAI and
           their respective directors, officers, employees, agents, contractors
-          and licensors (together, the “Associated Parties”) immediately upon
-          demand from and against any and all claims, demands, lawsuits,
-          actions, proceedings, investigations, liabilities, damages, losses,
-          costs or expenses, including reasonable attorneys’ fees, in any way
-          arising out of, in relation to or in connection with, directly or
-          indirectly, your or your authorized representatives: a) use of, or
-          conduct in connection with, the Services; b) breach of these Terms or
-          any other of Our policies; or c) violation of any Applicable Law or
-          the rights of any other person or entity.
+          and licensors (together, the &quot;Associated Parties&quot;)
+          immediately upon demand from and against any and all claims, demands,
+          lawsuits, actions, proceedings, investigations, liabilities, damages,
+          losses, costs or expenses, including reasonable attorneys&apos; fees,
+          in any way arising out of, in relation to or in connection with,
+          directly or indirectly, your or your authorized representatives: a)
+          use of, or conduct in connection with, the Services; b) breach of
+          these Terms or any other of Our policies; or c) violation of any
+          Applicable Law or the rights of any other person or entity.
         </p>
 
         <h2>K. ABSENCE OF WAIVER</h2>
@@ -264,8 +267,8 @@ const TermsAndConditions = () => {
           unenforceable, or illegal by a court, the validity and enforceability
           of the other provisions shall not be affected. If any provision is
           determined to be unenforceable, you agree to an amendment by Us of
-          such provision to provide for enforcement of the provision’s intent,
-          to the extent permitted by the Applicable Law.
+          such provision to provide for enforcement of the provision&apos;s
+          intent, to the extent permitted by the Applicable Law.
         </p>
 
         <h2>M. CONTACT US</h2>
