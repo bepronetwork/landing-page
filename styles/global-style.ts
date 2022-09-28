@@ -48,27 +48,19 @@ const GlobalStyle = createGlobalStyle`
 
   h2 {
     font-size: ${rem('32px')};
-    /* line-height: 1.3; */
   }
 
   h3, h4 {
     font-size: var(--fontSize);
-    /* line-height: 1.2; */
   }
 
   span {
     font-size: var(--fontSize);
-    /* line-height: 1.3; */
   }
 
   p {
     margin: 0;
     font-size: var(--fontSize);
-    /* line-height: 1.3; */
-
-    /* &:not(:last-child) {
-      margin-bottom: ${rem('10px')};
-    } */
   }
 
   ul {

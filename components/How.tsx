@@ -10,7 +10,7 @@ const How = () => (
       repositories.
     </p>
     <p>
-      Our protocol requires GitHub in order to function and to manage pull
+      Our protocol interacts with GitHub in order to function and to manage pull
       requests, issues and branches.
     </p>
     <h4>
