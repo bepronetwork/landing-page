@@ -5,11 +5,11 @@ import getConfig from "next/config";
 const { publicRuntimeConfig } = getConfig();
 
 class AnalyticsHelper {
-  disabled = false;
-  debug: boolean | undefined;
+  disabled = true;
+  debug = false;
 
   init(options: { disabled: boolean; debug: boolean }) {
-    this.disabled = options.disabled || false;
+    this.disabled = options.disabled || true;
     this.debug = options.debug || false;
     ReactGA.initialize(publicRuntimeConfig.gaProperty, {});
     if (this.debug) {

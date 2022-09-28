@@ -11,7 +11,7 @@ const nextConfig = {
     robots: process.env.ROBOTS || "false",
     sendgridApiKey: process.env.SENDGRID_API_KEY || "",
     sendgridListId: process.env.SENDGRID_LIST_ID || "",
-    gaDisabled: process.env.GA_ENABLED || "true",
+    gaDisabled: process.env.GA_DISABLED || "true",
     gaDebug: process.env.GA_DEBUG || "false",
     gaProperty: process.env.GA_PROPERTY || "",
     backendGraphql:

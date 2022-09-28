@@ -30,12 +30,18 @@ import { useAnalytics, AnalyticsContext } from "@/utils/analytics";
 const Home: NextPage = () => {
   const { publicRuntimeConfig } = getConfig();
   const { loading, error, data } = useStories({ page: 0 });
+  const disableAnalytics = publicRuntimeConfig.gaDisabled || "true";
+  const debugAnalytics = publicRuntimeConfig.gaDebug || "false";
   const analytics = useAnalytics();
 
-  analytics.init({
-    disabled: publicRuntimeConfig.gaDisabled || false,
-    debug: publicRuntimeConfig.gaDebug || false,
-  });
+  if (disableAnalytics === "false") {
+    analytics.init({
+      disabled: false,
+      debug: debugAnalytics === "true",
+    });
+  } else {
+    analytics.disable(true);
+  }
 
   useEffect(() => {
     analytics.pageview(window.location.pathname + window.location.search);
