@@ -38,7 +38,7 @@ const Footer = () => {
       links: [
         {
           value: "Docs",
-          url: "https://docs.bepro.network",
+          url: "https://support.bepro.network",
           external: true,
         },
         {

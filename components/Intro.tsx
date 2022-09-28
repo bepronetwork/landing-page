@@ -29,7 +29,7 @@ const Intro = () => {
       <div>
         <ButtonLink
           color="blue500"
-          url="#0"
+          url="https://support.bepro.network/en/articles/5585715-how-to-open-an-issue"
           value="Launch your first bounty"
           icon="arrow-external"
           iconPosition="right"
@@ -44,7 +44,7 @@ const Intro = () => {
         <ButtonLink
           variant="outline"
           color="blue500"
-          url="#0"
+          url="https://development.bepro.network"
           value="Discover bounties"
           icon="arrow-external"
           iconPosition="right"

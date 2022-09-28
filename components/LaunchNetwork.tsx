@@ -36,7 +36,7 @@ const LaunchNetwork = () => {
           <ButtonLink
             variant="outline"
             color="blue400"
-            url="#0"
+            url="https://taikai.typeform.com/to/o31JUE8t"
             value="Talk with us for a demo"
             action={() => {
               analytics.pushEvent({
