@@ -861,6 +861,8 @@ export const Subvisual = ({ fill = "#ffffff", name = "Subvisual" }) => (
 
 export const Hacken = ({ fill = "#ffffff", name = "Hacken" }) => (
   <svg
+    width={126}
+    height={15}
     viewBox="0 0 126 15"
     xmlns="http://www.w3.org/2000/svg"
     aria-labelledby="hackenTitle"
@@ -878,6 +880,8 @@ export const Hacken = ({ fill = "#ffffff", name = "Hacken" }) => (
 
 export const Certik = ({ fill = "#ffffff", name = "CertiK" }) => (
   <svg
+    width={168}
+    height={40}
     viewBox="0 0 168 40"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -931,6 +935,8 @@ export const Certik = ({ fill = "#ffffff", name = "CertiK" }) => (
 
 export const Red4Sec = ({ fill = "#ffffff", name = "Red4Sec" }) => (
   <svg
+    width={138}
+    height={58}
     viewBox="0 0 138 58"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

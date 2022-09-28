@@ -59,9 +59,10 @@ export const Wrapper = styled.div`
       align-items: center;
 
       svg {
-        width: auto;
-        max-width: ${rem("300px")};
-        max-height: ${rem("60px")};
+        width: 100%;
+        height: 100%;
+        max-width: ${rem("240px")};
+        max-height: ${rem("70px")};
       }
     }
 
