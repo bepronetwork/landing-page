@@ -56,6 +56,11 @@ const Footer = () => {
           url: "https://github.com/bepronetwork/grants-program",
           external: true,
         },
+        {
+          value: "Bepro Network v1",
+          url: "#0",
+          external: true,
+        },
       ],
     },
     {
