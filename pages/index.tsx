@@ -39,6 +39,7 @@ const Home: NextPage = () => {
       disabled: false,
       debug: debugAnalytics === "true",
     });
+    analytics.disable(false);
   } else {
     analytics.disable(true);
   }
