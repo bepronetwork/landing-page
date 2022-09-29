@@ -16,6 +16,8 @@ const nextConfig = {
     gaProperty: process.env.GA_PROPERTY || "",
     backendGraphql:
       process.env.BACKEND_GRAPHQL || "http://localhost:4444/api/graphql",
+    buyToken: process.env.BUY_TOKEN || "false",
+    transakApiKey: process.env.TRANSAK_API_KEY || "",
   },
   reactStrictMode: true,
   swcMinify: true,

@@ -3,6 +3,7 @@ import { Bepro } from "@/utils/brands";
 import { NavbarProps, MenuProps } from "./types";
 import { ButtonLink } from "@taikai/rocket-kit";
 import { useAnalytics } from "@/utils/analytics";
+import BuyBepro from "components/BuyBepro";
 import * as Styles from "./styles";
 
 const Navbar = (props: NavbarProps) => {
@@ -59,7 +60,9 @@ const Navbar = (props: NavbarProps) => {
               });
             }}
             blank
+            rounded
           />
+          <BuyBepro />
         </Styles.Menu>
       </Styles.Wrapper>
       <Styles.Drawer className={drawerOpened ? "opened" : ""}>

@@ -54,20 +54,29 @@ export const Menu = styled.div`
     }
   }
 
-  > a {
+  > a,
+  button {
     height: ${rem("38px")};
-    border-radius: 999px;
-    padding: 0 ${rem("20px")};
+    padding: 0 ${rem("16px")} 0 ${rem("20px")};
 
     span {
       margin-top: ${rem("1px")};
       font-size: ${nav.fontSize};
       line-height: 1;
     }
+  }
+
+  > a svg {
+    width: ${rem("16px")};
+    height: auto;
+  }
+
+  > button {
+    margin-left: ${rem("10px")};
 
     svg {
-      width: ${rem("16px")};
-      height: auto;
+      width: auto;
+      height: ${rem("26px")};
     }
   }
 `;

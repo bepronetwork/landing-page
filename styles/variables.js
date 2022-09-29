@@ -92,7 +92,7 @@ export const nav = {
   color: colors.white,
   colorHover: colors.grey100,
   fontWeight: typography.fontWeigthMedium,
-  breakpoint: "(min-width: 960px)",
+  breakpoint: "(min-width: 1110px)",
   hamburgerWidth: rem("30px"),
   hamburgerLineHeight: rem("4px"),
   drawerTransitionDuration: "0.5s",
