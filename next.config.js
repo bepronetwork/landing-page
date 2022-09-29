@@ -18,6 +18,7 @@ const nextConfig = {
       process.env.BACKEND_GRAPHQL || "http://localhost:4444/api/graphql",
     buyToken: process.env.BUY_TOKEN || "false",
     transakApiKey: process.env.TRANSAK_API_KEY || "",
+    transakEnvironment: process.env.TRANSAK_ENVIRONMENT || "STAGING",
   },
   reactStrictMode: true,
   swcMinify: true,

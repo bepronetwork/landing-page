@@ -10,7 +10,7 @@ const BuyBepro = () => {
 
   let transak = new transakSDK({
     apiKey: publicRuntimeConfig.transakApiKey,
-    environment: "STAGING",
+    environment: publicRuntimeConfig.transakEnvironment,
     defaultCryptoCurrency: "BTC",
     cryptoCurrencyList: "BTC,ETH",
     defaultCryptoAmount: "0.005",
@@ -20,7 +20,7 @@ const BuyBepro = () => {
     themeColor: "4250E4",
     widgetHeight: "710px",
     widgetWidth: "450px",
-    hostURL: typeof window !== "undefined" ? window.location.origin : null,
+    hostURL: typeof window !== "undefined" ? window.location.origin : "",
   });
 
   return (
