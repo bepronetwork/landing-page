@@ -22,6 +22,11 @@ const Footer = () => {
           external: true,
         },
         {
+          value: "Blog RSS Feed",
+          url: "https://api.taikai.network/sitemap-blog.xml?blogSource=BEPRO",
+          external: true,
+        },
+        {
           value: "Roadmap",
           url: "https://taikai.notion.site/8c8fef2ea0a14e50bb254ee16a8c15e4",
           external: true,
