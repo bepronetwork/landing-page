@@ -23,7 +23,7 @@ const Footer = () => {
         },
         {
           value: "Blog RSS Feed",
-          url: "https://api.taikai.network/sitemap-blog.xml?blogSource=BEPRO",
+          url: "https://api.taikai.network/rss-blog.xml?blogSource=BEPRO",
           external: true,
         },
         {
