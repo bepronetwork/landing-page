@@ -14,15 +14,15 @@ const Intro = () => {
         <a target="_blank" rel="noopener noreferrer">
           <span className="status">New</span>
           <span className="version">
-            Version {publicRuntimeConfig.webnetVersion} released
+            Version {publicRuntimeConfig.webnetVersion} is live!
           </span>
           <Icon icon="arrowForward" />
         </a>
       </Link>
       <h1>Web3 bounty network for open-source development</h1>
       <p>
-        Bepro is a bounty network created to help organizations manage their
-        decentralized development. We simplified the process of launching
+        Bepro Network is a bounty network created to help organizations manage
+        their decentralized development. We simplified the process of launching
         multiple development bounties, managing disputes and reward
         collaboration using smart contracts to handle payments.
       </p>
