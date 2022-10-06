@@ -1,21 +1,21 @@
+import Marquee from "react-fast-marquee";
 import * as Styles from "./styles";
-import { ItemProps, PartnersSliderProps } from "./types";
+import { PartnersSliderProps } from "./types";
 
 const PartnersSlider = (props: PartnersSliderProps) => {
-  const { partners, speed } = props;
+  const { partners } = props;
 
   if (!partners) return <></>;
 
   return (
-    <Styles.Slider speed={speed}>
-      <ul>
-        {partners.map((item: ItemProps, index: number) => (
-          <li key={index}>{item.logo}</li>
-        ))}
-        {partners.map((item: any, index: number) => (
-          <li key={index}>{item.logo}</li>
-        ))}
-      </ul>
+    <Styles.Slider>
+      <Marquee gradient={false}>
+        <ul>
+          {partners.map((item, index) => (
+            <li key={index}>{item.logo}</li>
+          ))}
+        </ul>
+      </Marquee>
     </Styles.Slider>
   );
 };

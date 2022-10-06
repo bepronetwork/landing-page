@@ -1,25 +1,18 @@
 import Section from "@/ui/Section";
 import PartnersSlider from "@/ui/PartnersSlider";
 import {
-  Nissan,
-  Microsoft,
-  Pfizer,
-  EuropeanCommission,
-  Hilti,
-  Altran,
-  Outsystems,
-  Nos,
-  Ctt,
-  Edp,
-  Sonae,
-  CalousteGulbenkian,
-  NordicInnovation,
-  TikTok,
   Harmony,
   ETHFoundation,
-  Telos,
-  Galp,
   Aurora,
+  CryptoCom,
+  Solana,
+  ProtocolLabs,
+  Polkamarkets,
+  Caduceus,
+  RealFevr,
+  Holon,
+  Filecoin,
+  UcoNetwork,
 } from "@/utils/brands";
 import { colors } from "@/styles/variables";
 
@@ -28,80 +21,52 @@ const Partners = () => {
 
   const partners = [
     {
-      logo: <Microsoft fill={logoFill} />,
-      name: "Microsoft",
-    },
-    {
-      logo: <TikTok fill={logoFill} />,
-      name: "TikTok",
-    },
-    {
-      logo: <Pfizer fill={logoFill} />,
-      name: "Pfizer",
-    },
-    {
       logo: <ETHFoundation fill={logoFill} />,
       name: "ETH Foundation",
+    },
+    {
+      logo: <CryptoCom fill={logoFill} />,
+      name: "Crypto.com",
     },
     {
       logo: <Aurora fill={logoFill} />,
       name: "Aurora",
     },
     {
-      logo: <Telos fill={logoFill} />,
-      name: "Telos",
+      logo: <Solana fill={logoFill} />,
+      name: "Solana",
     },
     {
       logo: <Harmony fill={logoFill} />,
       name: "Harmony",
     },
     {
-      logo: <Nissan fill={logoFill} />,
-      name: "Nissan",
+      logo: <ProtocolLabs fill={logoFill} />,
+      name: "Protocol Labs",
     },
     {
-      logo: <EuropeanCommission fill={logoFill} />,
-      name: "European Commission",
+      logo: <Polkamarkets fill={logoFill} />,
+      name: "Polkamarkets",
     },
     {
-      logo: <Hilti fill={logoFill} />,
-      name: "Hilti",
+      logo: <Caduceus fill={logoFill} />,
+      name: "Caduceus",
     },
     {
-      logo: <Altran fill={logoFill} />,
-      name: "Altran",
+      logo: <RealFevr fill={logoFill} />,
+      name: "RealFevr",
     },
     {
-      logo: <Galp fill={logoFill} />,
-      name: "Galp",
+      logo: <Holon fill={logoFill} />,
+      name: "Holon",
     },
     {
-      logo: <Outsystems fill={logoFill} />,
-      name: "OutSystems",
+      logo: <Filecoin fill={logoFill} />,
+      name: "Filecoin",
     },
     {
-      logo: <Nos fill={logoFill} />,
-      name: "NOS",
-    },
-    {
-      logo: <Ctt fill={logoFill} />,
-      name: "CTT",
-    },
-    {
-      logo: <Edp fill={logoFill} />,
-      name: "EDP",
-    },
-    {
-      logo: <Sonae fill={logoFill} />,
-      name: "Sonae",
-    },
-    {
-      logo: <CalousteGulbenkian fill={logoFill} />,
-      name: "Fundação Calouste Gulbenkian",
-    },
-    {
-      logo: <NordicInnovation fill={logoFill} />,
-      name: "Nordic Innovation",
+      logo: <UcoNetwork fill={logoFill} />,
+      name: "UCO Network",
     },
   ];
 
@@ -112,7 +77,7 @@ const Partners = () => {
       headerMargin="s"
       fullWidth
     >
-      <PartnersSlider partners={partners} speed={60} />
+      <PartnersSlider partners={partners} />
     </Section>
   );
 };
