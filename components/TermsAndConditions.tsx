@@ -221,16 +221,106 @@ const TermsAndConditions = () => {
           offer of securities (&quot;$BEPRO&quot;).
         </p>
         <p>
-          $BEPRO shall only be acquired and used with the purpose of using the
-          Services, including TAIKAI or BEPRO network products as well as TAIKAI
-          or BEPRO network smart contracts - therefore to access its services,
-          as accessing new features, curation or managing disputes in &quot;The
-          Network&quot;. $BEPRO should not be construed, interpreted,
-          classified, or treated as enabling, or according to any opportunity
-          for the User to participate in or receive profits, income, or other
-          payments or returns arising from or in connection with the vendor, the
-          project, the tokens, or the proceeds of the token sale, or to receive
-          sums paid out of such profits, income, or other payments or returns.
+          $BEPRO shall only be acquired, received or used, including $BEPRO
+          rewards, for the purpose of using the Services, including TAIKAI or
+          BEPRO network products as well as TAIKAI or BEPRO network smart
+          contracts - therefore to access its services, as accessing new
+          features, curation or managing disputes in "The Network". $BEPRO
+          should not be construed, interpreted, classified, or treated as
+          enabling, or according to any opportunity for the User to participate
+          in or receive profits, income, or other payments or returns arising
+          from or in connection with the vendor, the project, the tokens, or the
+          proceeds of the token sale, or to receive sums paid out of such
+          profits, income, or other payments or returns.
+        </p>
+        <p>
+          By accepting these Terms, You further represent, warrant and undertake
+          to Us, that You:
+        </p>
+        <ol>
+          <li>
+            Are not an individual / a person who is a citizen, domiciled in,
+            resident of, or physically present / located in an Excluded
+            Jurisdiction;
+          </li>
+          <li>
+            Are not a corporate body which is incorporated in, or operates out
+            of, an Excluded Jurisdiction, or which is under the control of one
+            or more individuals who is/are citizen(s) of, domiciled in,
+            residents of, or physically present / located in, an Excluded
+            Jurisdiction; and/or
+          </li>
+          <li>
+            Are not an individual or corporate body which is otherwise
+            prohibited or ineligible in any way, whether in full or in part,
+            under any law applicable to such individual or body corporate from
+            participating in any part of the transactions contemplated in these
+            Terms (collectively, “Excluded Persons”);
+          </li>
+          <li>Use the Services at your sole risk and discretion;</li>
+          <li>
+            The sole responsible for any applicable taxes that may be payable on
+            your own jurisdiction or others through the use of the Services;
+          </li>
+          <li>
+            Will not carry out any activity that: (i) involves proceeds from any
+            illegal or unlawful activity (including activities relating to
+            cryptocurrency tumblers, darknet markets, money laundering or
+            terrorism financing); (ii) publishes, distributes or disseminates
+            any illegal or unlawful material or information; or (iii) otherwise
+            violates, or could violate, any applicable law;
+          </li>
+          <li>
+            Are aware of the risks in using the Services and/or the $BEPRO token
+            provided by Us and have the necessary experience and knowledge to
+            understand the risks involved in relation to the Services provided
+            by Us and the trading of the $BEPRO token. These risks include the
+            high volatility risk of $BEPRO token, and that you may lose all of
+            the funds in your digital wallet if the market moves against you and
+            you will not be involved or initiate any form of market
+            manipulation.
+          </li>
+        </ol>
+        <p>Under these Terms, Excluded Jurisdictions are:</p>
+        <ol style={{ listStyleType: "decimal" }}>
+          <li>Bahamas;</li>
+          <li>Botswana;</li>
+          <li>British Virgin Islands;</li>
+          <li>Cambodia;</li>
+          <li>Cayman Islands</li>
+          <li>Democratic People’s Republic of Korea;</li>
+          <li>Democratic Republic of the Congo;</li>
+          <li>Eritrea;</li>
+          <li>Ghana;</li>
+          <li>Iceland;</li>
+          <li>Iran:</li>
+          <li>Libya;</li>
+          <li>Mongolia;</li>
+          <li>Pakistan;</li>
+          <li>Panama;</li>
+          <li>Republic of China;</li>
+          <li>Singapore;</li>
+          <li>Somalia;</li>
+          <li>South Sudan;</li>
+          <li>Sudan;</li>
+          <li>Syria;</li>
+          <li>Trinidad and Tobago;</li>
+          <li>United States of America;</li>
+          <li>Yemen;</li>
+          <li>Zimbabwe;</li>
+          <li>
+            Any jurisdiction in which the $BEPRO Token sale or our Services are
+            prohibited, restricted or unauthorised in any form or manner whether
+            in full or in part under the Laws, regulatory requirements, or rules
+            in such Jurisdiction.
+          </li>
+        </ol>
+        <p>
+          We may implement controls to restrict access to the Services from any
+          Excluded Jurisdiction pursuant to these Terms or to any other
+          Jurisdictions, at our own discretion, but You agree to comply with
+          these Terms even if Our methods to prevent use of the Services are not
+          effective or can be bypassed.
         </p>
 
         <h2>J. IDEMNIFICATION</h2>
