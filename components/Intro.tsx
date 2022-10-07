@@ -10,7 +10,7 @@ const Intro = () => {
 
   return (
     <Hero>
-      <Link href="#0">
+      <Link href={publicRuntimeConfig.webnetUrl}>
         <a target="_blank" rel="noopener noreferrer">
           <span className="status">New</span>
           <span className="version">
@@ -44,7 +44,7 @@ const Intro = () => {
         <ButtonLink
           variant="outline"
           color="blue500"
-          url="https://development.bepro.network"
+          url="https://app.bepro.network"
           value="Discover bounties"
           icon="arrow-external"
           iconPosition="right"

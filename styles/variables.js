@@ -167,6 +167,7 @@ export const customNetwork = {
 };
 
 export const card = {
+  borderColor: colors.grey800,
   borderRadius: rem("8px"),
   coverBackgroundColor: colors.grey900,
   color: colors.white,

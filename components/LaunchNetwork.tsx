@@ -21,7 +21,7 @@ const LaunchNetwork = () => {
         <div>
           <ButtonLink
             color="blue500"
-            url="https://development.bepro.network"
+            url="https://app.bepro.network"
             value="Start building now"
             action={() => {
               analytics.pushEvent({

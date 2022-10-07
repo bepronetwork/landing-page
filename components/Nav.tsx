@@ -14,7 +14,7 @@ const menu = [
   },
   {
     label: "Explore Bounties",
-    url: "https://development.bepro.network/bepro",
+    url: "https://app.bepro.network",
     external: true,
   },
   {
@@ -31,7 +31,7 @@ const Nav = () => {
     <Navbar
       menu={menu}
       ctaValue="Open App"
-      ctaUrl="https://development.bepro.network"
+      ctaUrl="https://app.bepro.network"
       drawerOpened={drawerOpened}
       drawerOnClick={() => {
         setDrawerOpened(!drawerOpened);
