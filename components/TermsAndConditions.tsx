@@ -225,8 +225,8 @@ const TermsAndConditions = () => {
           rewards, for the purpose of using the Services, including TAIKAI or
           BEPRO network products as well as TAIKAI or BEPRO network smart
           contracts - therefore to access its services, as accessing new
-          features, curation or managing disputes in "The Network". $BEPRO
-          should not be construed, interpreted, classified, or treated as
+          features, curation or managing disputes in &quot;The Network&quot;.
+          $BEPRO should not be construed, interpreted, classified, or treated as
           enabling, or according to any opportunity for the User to participate
           in or receive profits, income, or other payments or returns arising
           from or in connection with the vendor, the project, the tokens, or the
@@ -255,7 +255,7 @@ const TermsAndConditions = () => {
             prohibited or ineligible in any way, whether in full or in part,
             under any law applicable to such individual or body corporate from
             participating in any part of the transactions contemplated in these
-            Terms (collectively, “Excluded Persons”);
+            Terms (collectively, &quot;Excluded Persons&quot;);
           </li>
           <li>Use the Services at your sole risk and discretion;</li>
           <li>
