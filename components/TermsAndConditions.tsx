@@ -287,13 +287,13 @@ const TermsAndConditions = () => {
           <li>Botswana;</li>
           <li>British Virgin Islands;</li>
           <li>Cambodia;</li>
-          <li>Cayman Islands</li>
-          <li>Democratic People’s Republic of Korea;</li>
+          <li>Cayman Islands;</li>
+          <li>Democratic People&apos;s Republic of Korea;</li>
           <li>Democratic Republic of the Congo;</li>
           <li>Eritrea;</li>
           <li>Ghana;</li>
           <li>Iceland;</li>
-          <li>Iran:</li>
+          <li>Iran;</li>
           <li>Libya;</li>
           <li>Mongolia;</li>
           <li>Pakistan;</li>
