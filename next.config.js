@@ -8,7 +8,7 @@ const nextConfig = {
     imageProxyKey: process.env.IMAGE_PROXY_KEY || "",
     imageProxySalt: process.env.IMAGE_PROXY_SALT || "",
     webnetVersion: process.env.WEBNET_VERSION || "2.0",
-    webnetUrl: process.env.WEBNET_URL || "https://development.bepro.network",
+    webnetUrl: process.env.WEBNET_URL || "https://app.bepro.network",
     robots: process.env.ROBOTS || "false",
     sendgridApiKey: process.env.SENDGRID_API_KEY || "",
     sendgridListId: process.env.SENDGRID_LIST_ID || "",

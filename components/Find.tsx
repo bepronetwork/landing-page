@@ -18,7 +18,7 @@ const Find = () => {
           variant="outline"
           color="blue500"
           txtColor="white"
-          url="https://development.bepro.network"
+          url="https://app.bepro.network"
           value="See all bounties"
           action={() => {
             analytics.pushEvent({
