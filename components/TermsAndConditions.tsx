@@ -221,16 +221,17 @@ const TermsAndConditions = () => {
           offer of securities (&quot;$BEPRO&quot;).
         </p>
         <p>
-          $BEPRO shall only be acquired and used with the purpose of using the
-          Services, including TAIKAI or BEPRO network products as well as TAIKAI
-          or BEPRO network smart contracts - therefore to access its services,
-          as accessing new features, curation or managing disputes in &quot;The
-          Network&quot;. $BEPRO should not be construed, interpreted,
-          classified, or treated as enabling, or according to any opportunity
-          for the User to participate in or receive profits, income, or other
-          payments or returns arising from or in connection with the vendor, the
-          project, the tokens, or the proceeds of the token sale, or to receive
-          sums paid out of such profits, income, or other payments or returns.
+          $BEPRO shall only be acquired, received or used, including $BEPRO
+          rewards, for the purpose of using the Services, including TAIKAI or
+          BEPRO network products as well as TAIKAI or BEPRO network smart
+          contracts - therefore to access its services, as accessing new
+          features, curation or managing disputes in "The Network". $BEPRO
+          should not be construed, interpreted, classified, or treated as
+          enabling, or according to any opportunity for the User to participate
+          in or receive profits, income, or other payments or returns arising
+          from or in connection with the vendor, the project, the tokens, or the
+          proceeds of the token sale, or to receive sums paid out of such
+          profits, income, or other payments or returns.
         </p>
 
         <h2>J. IDEMNIFICATION</h2>
