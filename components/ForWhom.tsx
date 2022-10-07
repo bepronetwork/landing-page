@@ -15,7 +15,7 @@ const ForWhom = () => {
           icon={<Brackets />}
           subheading="For developers"
           title="Earn $tokens by solving bounties"
-          url="#0"
+          url="https://app.bepro.network"
           buttonLabel="Get started"
           action={() => {
             analytics.pushEvent({
@@ -36,7 +36,7 @@ const ForWhom = () => {
           icon={<Crown />}
           subheading="For contributors"
           title="Contribute and get paid"
-          url="#0"
+          url="https://support.bepro.network"
           buttonLabel="How to contribute"
           action={() => {
             analytics.pushEvent({
