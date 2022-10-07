@@ -10,7 +10,7 @@ const Intro = () => {
 
   return (
     <Hero>
-      <Link href="#0">
+      <Link href={publicRuntimeConfig.webnetUrl}>
         <a target="_blank" rel="noopener noreferrer">
           <span className="status">New</span>
           <span className="version">

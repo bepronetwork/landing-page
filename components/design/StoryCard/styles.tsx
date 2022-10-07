@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { device, card, typography, colors, global } from "@/styles/variables";
+import { device, card, typography, global } from "@/styles/variables";
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -17,6 +17,7 @@ export const Wrapper = styled.div`
 
 export const CoverWrapper = styled.div`
   position: relative;
+  border: ${rem("1px")} solid ${card.borderColor};
   border-radius: ${card.borderRadius};
   background-color: ${card.coverBackgroundColor};
   width: 100%;
