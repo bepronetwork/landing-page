@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { rem } from "polished";
-import { device, card, typography, global } from "@/styles/variables";
+import { layout, device, card, typography, global } from "@/styles/variables";
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -49,10 +49,36 @@ export const Content = styled.div`
     margin: ${rem("7px")} ${rem("-5px")} ${rem("19px")} ${rem("-5px")};
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
 
     li {
       list-style: none;
-      margin: ${rem("5px")};
+      margin: calc(${rem("5px")} / 2) ${rem("5px")};
+
+      .tag {
+        max-width: calc(100vw - calc(${layout.sidePadding} * 2));
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        @media ${device.s} {
+          max-width: calc((100vw - var(--sidePadding) * 3) / 2);
+        }
+
+        @media ${device.l} {
+          max-width: calc(
+            (100vw - ${layout.sectionTopBottomPadding} * 3) / 4 -
+              var(--sidePadding) * 2
+          );
+        }
+
+        @media (min-width: ${layout.contentMaxWidth}) {
+          max-width: calc(
+            (${layout.contentMaxWidth} - ${layout.sectionTopBottomPadding} * 2) /
+              4 - var(--sidePadding) * 2
+          );
+        }
+      }
     }
   }
 
