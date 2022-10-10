@@ -10,7 +10,7 @@ import Workflows from "components/Workflows";
 import CreateBounty from "components/CreateBounty";
 import CreateNetwork from "components/CreateNetwork";
 import Participate from "components/Participate";
-// import Find from "components/Find";
+import Find from "components/Find";
 import ForWhom from "components/ForWhom";
 import Audited from "components/Audited";
 import LaunchNetwork from "components/LaunchNetwork";
@@ -59,7 +59,7 @@ const Home: NextPage = () => {
       <CreateBounty />
       <CreateNetwork />
       <Participate />
-      {/* <Find /> */}
+      <Find />
       <ForWhom />
       <Audited />
       <LaunchNetwork />
