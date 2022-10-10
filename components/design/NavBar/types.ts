@@ -9,5 +9,5 @@ export interface NavbarProps {
   ctaValue: string;
   ctaUrl: string;
   drawerOpened?: boolean;
-  drawerOnClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+  drawerOnClick?: (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement, MouseEvent>) => void;
 }

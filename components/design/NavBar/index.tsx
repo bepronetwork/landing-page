@@ -69,12 +69,15 @@ const Navbar = (props: NavbarProps) => {
         <ul>
           {menu.map((item: MenuProps, index: number) => (
             <li key={index}>
-              <a
-                href={item.external ? "_blank" : undefined}
-                rel="noopener noreferrer"
-              >
-                {item.label}
-              </a>
+              <Link href={item.url} prefetch={false}>
+                <a
+                  target={item.external ? "_blank" : undefined}
+                  rel="noopener noreferrer"
+                  onClick={drawerOnClick}
+                >
+                  {item.label}
+                </a>
+              </Link>
             </li>
           ))}
           <li>
