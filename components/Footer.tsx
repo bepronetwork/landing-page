@@ -23,7 +23,7 @@ const Footer = () => {
         },
         {
           value: "Blog RSS Feed",
-          url: "https://blog.bepro.network/rss",
+          url: "https://bepro.network/blog/rss",
           external: true,
         },
         {
