@@ -4,13 +4,13 @@ import { Button } from "@taikai/rocket-kit";
 import getConfig from "next/config";
 
 const BuyBepro = () => {
-  const { publicRuntimeConfig } = getConfig();
+  const { publicRuntimeConfig, serverRuntimeConfig } = getConfig();
 
   if (publicRuntimeConfig.buyToken === "false") return <></>;
 
   let transak = new transakSDK({
-    apiKey: publicRuntimeConfig.transakApiKey,
-    environment: publicRuntimeConfig.transakEnvironment,
+    apiKey: serverRuntimeConfig.transakApiKey,
+    environment: serverRuntimeConfig.transakEnvironment,
     defaultCryptoCurrency: "BTC",
     cryptoCurrencyList: "BTC,ETH",
     defaultCryptoAmount: "0.005",

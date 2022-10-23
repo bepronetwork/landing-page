@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import axios from "axios";
 import getConfig from "next/config";
 
-const { publicRuntimeConfig } = getConfig();
+const { serverRuntimeConfig } = getConfig();
 
 async function createContact(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "PUT") {
@@ -11,12 +11,12 @@ async function createContact(req: NextApiRequest, res: NextApiResponse) {
         "https://api.sendgrid.com/v3/marketing/contacts",
         {
           contacts: [{ email: `${req.body.email}` }],
-          list_ids: [publicRuntimeConfig.sendgridListId],
+          list_ids: [serverRuntimeConfig.sendgridListId],
         },
         {
           headers: {
             "content-type": "application/json",
-            Authorization: `Bearer ${publicRuntimeConfig.sendgridApiKey}`,
+            Authorization: `Bearer ${serverRuntimeConfig.sendgridApiKey}`,
           },
         }
       )
