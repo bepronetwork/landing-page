@@ -14,10 +14,10 @@ const nextConfig = {
     backendGraphql:
       process.env.BACKEND_GRAPHQL || "http://localhost:4444/api/graphql",
     buyToken: process.env.BUY_TOKEN || "false",
-  },
-  serverRuntimeConfig: {
     imageProxyKey: process.env.IMAGE_PROXY_KEY || "",
     imageProxySalt: process.env.IMAGE_PROXY_SALT || "",
+  },
+  serverRuntimeConfig: {
     sendgridApiKey: process.env.SENDGRID_API_KEY || "",
     sendgridListId: process.env.SENDGRID_LIST_ID || "",
     transakApiKey: process.env.TRANSAK_API_KEY || "",
