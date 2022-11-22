@@ -1,3 +1,5 @@
+import styled from "styled-components";
+import { rem } from "polished";
 import Section from "@/ui/Section";
 import PartnersSlider from "@/ui/PartnersSlider";
 import {
@@ -15,6 +17,13 @@ import {
   UcoNetwork,
 } from "@/utils/brands";
 import { colors } from "@/styles/variables";
+
+const CustomWrapper = styled.div`
+  h2 {
+    margin: 0 auto;
+    max-width: ${rem("900px")};
+  }
+`;
 
 const Partners = () => {
   const logoFill = colors.grey700;
@@ -71,14 +80,16 @@ const Partners = () => {
   ];
 
   return (
-    <Section
-      title="Powering the Web3 Ecosystem"
-      subheading="Partners and clients"
-      headerMargin="s"
-      fullWidth
-    >
-      <PartnersSlider partners={partners} />
-    </Section>
+    <CustomWrapper>
+      <Section
+        title="Join over 100 corporate partners that organize their hackathons and bounties with our lab"
+        subheading="Partners and clients"
+        headerMargin="s"
+        fullWidth
+      >
+        <PartnersSlider partners={partners} />
+      </Section>
+    </CustomWrapper>
   );
 };
 
