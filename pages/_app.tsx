@@ -29,8 +29,10 @@ function MyApp({ Component, pageProps }: AppProps) {
 		<>
 			<GlobalStyle />
 			<GoogleAnalytics
-				trackPageViews
 				debugMode={publicRuntimeConfig.gaDebug}
+				trackPageViews={
+					process.env.NODE_ENV === "production" || !IS_ANALYTICS_DISABLED
+				}
 				gaMeasurementId={publicRuntimeConfig.gaProperty}
 			/>
 
