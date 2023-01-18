@@ -3,17 +3,44 @@ import type { AppProps } from "next/app";
 import { ApolloProvider } from "@apollo/client";
 import { useApollo } from "../config/apolloClient";
 import "../styles/globals.css";
+import { GoogleAnalytics } from "nextjs-google-analytics";
+import getConfig from "next/config";
+import { AnalyticsContext, useAnalytics } from "@/utils/analytics";
+
+const { publicRuntimeConfig } = getConfig();
+
+const IS_ANALYTICS_DISABLED = publicRuntimeConfig.gaDisabled || true;
+const IS_ANAYTICS_DEBUG_ENABLED = publicRuntimeConfig.gaDebug || false;
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const apolloClient = useApollo(pageProps);
-  return (
-    <>
-      <GlobalStyle />
-      <ApolloProvider client={apolloClient}>
-        <Component {...pageProps} />
-      </ApolloProvider>
-    </>
-  );
+	const analytics = useAnalytics();
+	const apolloClient = useApollo(pageProps);
+
+	if (IS_ANALYTICS_DISABLED === false) {
+		analytics.init({
+			disabled: false,
+			debug: IS_ANAYTICS_DEBUG_ENABLED === true,
+		});
+	} else {
+		analytics.disable(true);
+	}
+
+	return (
+		<>
+			<GlobalStyle />
+			<GoogleAnalytics
+				trackPageViews
+				debugMode={publicRuntimeConfig.gaDebug}
+				gaMeasurementId={publicRuntimeConfig.gaProperty}
+			/>
+
+			<AnalyticsContext.Provider value={analytics}>
+				<ApolloProvider client={apolloClient}>
+					<Component {...pageProps} />
+				</ApolloProvider>
+			</AnalyticsContext.Provider>
+		</>
+	);
 }
 
 export default MyApp;
