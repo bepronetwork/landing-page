@@ -28,11 +28,7 @@ const Community = () => {
             url="https://discord.gg/9aUufhzhfm"
             value="Join our Discord"
             action={() => {
-              analytics.pushEvent({
-                category: "engagement",
-                action: "discord-button",
-                label: "discord-button",
-              });
+              analytics.pushEvent("discord_button");
             }}
             rounded
             blank
