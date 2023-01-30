@@ -21,11 +21,7 @@ const Find = () => {
           url="https://app.bepro.network"
           value="See all bounties"
           action={() => {
-            analytics.pushEvent({
-              category: "engagement",
-              action: "see-all-bounties-button",
-              label: "see-all-bounties-button",
-            });
+            analytics.pushEvent("see_all_bounties_button");
           }}
           rounded
           blank

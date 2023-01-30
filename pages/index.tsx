@@ -1,5 +1,3 @@
-import getConfig from "next/config";
-import { useEffect } from "react";
 import type { NextPage } from "next";
 import SiteHead from "components/SiteHead";
 import Nav from "components/Nav";
@@ -20,70 +18,51 @@ import Stories from "components/Stories";
 import Newsletter from "components/Newsletter";
 import Footer from "components/Footer";
 import {
-  initializeApollo,
-  APOLLO_STATE_PROP_NAME,
+	initializeApollo,
+	APOLLO_STATE_PROP_NAME,
 } from "../config/apolloClient";
 import { useStories } from "../hooks/use-stories";
 import { STORIES_QUERY } from "../graphql/stories-list-query";
-import { useAnalytics, AnalyticsContext } from "@/utils/analytics";
 
 const Home: NextPage = () => {
-  const { publicRuntimeConfig } = getConfig();
-  const { loading, error, data } = useStories({ page: 0 });
-  const disableAnalytics = publicRuntimeConfig.gaDisabled || "true";
-  const debugAnalytics = publicRuntimeConfig.gaDebug || "false";
-  const analytics = useAnalytics();
+	const { loading, error, data } = useStories({ page: 0 });
 
-  if (disableAnalytics === "false") {
-    analytics.init({
-      disabled: false,
-      debug: debugAnalytics === "true",
-    });
-    analytics.disable(false);
-  } else {
-    analytics.disable(true);
-  }
-
-  useEffect(() => {
-    analytics.pageview(window.location.pathname + window.location.search);
-  }, [analytics]);
-
-  return (
-    <AnalyticsContext.Provider value={analytics}>
-      <SiteHead />
-      <Nav />
-      <Intro />
-      <What />
-      <How />
-      <Workflows />
-      <CreateBounty />
-      <CreateNetwork />
-      <Participate />
-      <Find />
-      <ForWhom />
-      <Audited />
-      <LaunchNetwork />
-      <Partners />
-      <Community />
-      <Stories data={data} loading={loading} error={error} />
-      <Newsletter />
-      <Footer />
-    </AnalyticsContext.Provider>
-  );
+	return (
+		<>
+			<SiteHead />
+			<Nav />
+			<Intro />
+			<What />
+			<How />
+			<Workflows />
+			<CreateBounty />
+			<CreateNetwork />
+			<Participate />
+			<Find />
+			<ForWhom />
+			<Audited />
+			<LaunchNetwork />
+			<Partners />
+			<Community />
+			<Stories data={data} loading={loading} error={error} />
+			<Newsletter />
+			<Footer />
+		</>
+	);
 };
 
 export async function getServerSideProps() {
-  const apolloClient = initializeApollo();
+	const apolloClient = initializeApollo();
 
-  await apolloClient.query({
-    query: STORIES_QUERY,
-  });
+	await apolloClient.query({
+		query: STORIES_QUERY,
+	});
 
-  return {
-    props: {
-      [APOLLO_STATE_PROP_NAME]: apolloClient.cache.extract(),
-    },
-  };
+	return {
+		props: {
+			[APOLLO_STATE_PROP_NAME]: apolloClient.cache.extract(),
+		},
+	};
 }
 
 export default Home;

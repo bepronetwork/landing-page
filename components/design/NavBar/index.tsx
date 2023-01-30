@@ -53,11 +53,7 @@ const Navbar = (props: NavbarProps) => {
             value={ctaValue}
             url={ctaUrl}
             action={() => {
-              analytics.pushEvent({
-                category: "engagement",
-                action: "open-app-button",
-                label: "open-app-button",
-              });
+              analytics.pushEvent("open_app_button");
             }}
             blank
             rounded

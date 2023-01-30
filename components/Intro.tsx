@@ -34,11 +34,7 @@ const Intro = () => {
           icon="arrow-external"
           iconPosition="right"
           action={() => {
-            analytics.pushEvent({
-              category: "engagement",
-              action: "launch-first-bounty-button",
-              label: "launch-first-bounty-button",
-            });
+            analytics.pushEvent("launch_first_bounty_button");
           }}
         />
         <ButtonLink
@@ -49,11 +45,7 @@ const Intro = () => {
           icon="arrow-external"
           iconPosition="right"
           action={() => {
-            analytics.pushEvent({
-              category: "engagement",
-              action: "discover-bounties-button",
-              label: "discover-bounties-button",
-            });
+            analytics.pushEvent("discover_bounties_button");
           }}
         />
       </div>
