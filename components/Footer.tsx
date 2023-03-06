@@ -23,7 +23,7 @@ const Footer = () => {
         },
         {
           value: "Blog RSS Feed",
-          url: "https://blog.bepro.network/rss",
+          url: "https://bepro.network/blog/rss",
           external: true,
         },
         {
@@ -48,12 +48,12 @@ const Footer = () => {
         },
         {
           value: "I am a developer",
-          url: "https://support.bepro.network/en/collections/3143249-developers",
+          url: "https://support.bepro.network/en/collections/3680434-developers",
           external: true,
         },
         {
           value: "I am a holder",
-          url: "https://support.bepro.network/en/collections/3143296-bepro-holder",
+          url: "https://support.bepro.network/en/collections/3680436-bepro-holder",
           external: true,
         },
         {
@@ -87,7 +87,7 @@ const Footer = () => {
       links: [
         {
           value: "Tokenomics",
-          url: "https://support.bepro.network/en/articles/5585549-tokenomics-distribution-schedule",
+          url: "https://support.bepro.network/en/articles/6664430-bepro-tokenomics-distribution-schedule",
           external: true,
         },
         {
@@ -97,7 +97,7 @@ const Footer = () => {
         },
         {
           value: "Community FAQ",
-          url: "https://support.bepro.network/en/collections/3143271-community",
+          url: "https://support.bepro.network/en/collections/3680438-community",
           external: true,
         },
       ],
