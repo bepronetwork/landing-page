@@ -41,11 +41,7 @@ const Newsletter = () => {
           setError(err.response.data.message);
         });
 
-      analytics.pushEvent({
-        category: "engagement",
-        action: "newsletter-button",
-        label: "newsletter-button",
-      });
+      analytics.pushEvent("newsletter_button");
     }
   };
 

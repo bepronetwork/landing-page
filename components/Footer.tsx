@@ -28,12 +28,12 @@ const Footer = () => {
         },
         {
           value: "Roadmap",
-          url: "https://taikai.notion.site/8c8fef2ea0a14e50bb254ee16a8c15e4",
+          url: "https://layerxlabs.notion.site/8c8fef2ea0a14e50bb254ee16a8c15e4?v=98c43e733f04481d83f0e1a075fe24ac",
           external: true,
         },
         {
           value: "Press Kit",
-          url: "https://taikai.notion.site/Bepro-Network-Community-Press-Kit-4dd9c5f6d968444fb2ffd55d85617a71",
+          url: "https://layerxlabs.notion.site/Bepro-Network-Community-Press-Kit-4dd9c5f6d968444fb2ffd55d85617a71",
           external: true,
         },
       ],
@@ -112,7 +112,7 @@ const Footer = () => {
         },
         {
           value: "Discord",
-          url: "https://discord.gg/9aUufhzhfm",
+          url: "https://discord.gg/layerx",
           external: true,
         },
         {

@@ -18,11 +18,7 @@ const ForWhom = () => {
           url="https://app.bepro.network"
           buttonLabel="Get started"
           action={() => {
-            analytics.pushEvent({
-              category: "engagement",
-              action: "get-started-button",
-              label: "get-started-button",
-            });
+            analytics.pushEvent("get_started_button");
           }}
         >
           <p>Discover new projects to contribute and get paid for your work.</p>
@@ -39,11 +35,7 @@ const ForWhom = () => {
           url="https://support.bepro.network"
           buttonLabel="How to contribute"
           action={() => {
-            analytics.pushEvent({
-              category: "engagement",
-              action: "contribute-button",
-              label: "contribute-button",
-            });
+            analytics.pushEvent("contribute_button");
           }}
         >
           <p>
