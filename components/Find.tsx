@@ -36,12 +36,4 @@ const Find = ({ bounties }: FindProps) => {
 	);
 };
 
-export async function getServerSideProps() {
-	const data = await getRequest(`search/issues`);
-	console.log("data", data);
-	return {
-		props: {},
-	};
-};
-
 export default Find;
