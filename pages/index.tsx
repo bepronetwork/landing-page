@@ -64,7 +64,7 @@ export async function getServerSideProps() {
 
 	return {
 		props: {
-			bounties: data?.rows.filter((r) => r.state === State.Open).slice(0, 4),
+			bounties: data?.rows ?? [],
 			[APOLLO_STATE_PROP_NAME]: apolloClient.cache.extract(),
 		},
 	};

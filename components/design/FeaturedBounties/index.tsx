@@ -4,15 +4,31 @@ import numeral from "numeral";
 import * as Styles from "./styles";
 import { FeaturedBountiesProps } from "./types";
 import getConfig from "next/config";
+import { useMemo } from "react";
+import { State } from "lib/types";
 
 const { publicRuntimeConfig } = getConfig();
 
 const FeaturedBounties = (props: FeaturedBountiesProps) => {
 	const { bounties } = props;
 
+	const openAndClosedBounties = useMemo(() => {
+		const openBounties = bounties
+			.filter((r) => r.state === State.Open)
+			.slice(0, 4);
+
+		if (openBounties.length === 4) return openBounties;
+
+		const closedBounties = bounties
+			.filter((r) => r.state === State.Closed)
+			.slice(0, 4 - openBounties.length);
+
+		return [...openBounties, ...closedBounties];
+	}, [bounties]);
+
 	return (
 		<Styles.Bounties>
-			{bounties.map((bounty) => (
+			{openAndClosedBounties.map((bounty) => (
 				<Styles.Bounty key={bounty.id} status={bounty.state} color="purple500">
 					<Link
 						href={`${publicRuntimeConfig.webnetUrl}/bepro/bounty?id=${bounty.githubId}&repoId=${bounty.repository_id}`}
