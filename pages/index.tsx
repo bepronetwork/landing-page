@@ -23,8 +23,10 @@ import {
 } from "../config/apolloClient";
 import { useStories } from "../hooks/use-stories";
 import { STORIES_QUERY } from "../graphql/stories-list-query";
+import { getRequest } from "lib/fetch-api";
+import { IBeproApi, State } from "lib/types";
 
-const Home: NextPage = () => {
+const Home: NextPage = ({ bounties }: any) => {
 	const { loading, error, data } = useStories({ page: 0 });
 
 	return (
@@ -38,7 +40,7 @@ const Home: NextPage = () => {
 			<CreateBounty />
 			<CreateNetwork />
 			<Participate />
-			<Find />
+			<Find bounties={bounties ?? []} />
 			<ForWhom />
 			<Audited />
 			<LaunchNetwork />
@@ -54,12 +56,15 @@ const Home: NextPage = () => {
 export async function getServerSideProps() {
 	const apolloClient = initializeApollo();
 
+	const { data } = await getRequest<IBeproApi>(`/search/issues`);
+
 	await apolloClient.query({
 		query: STORIES_QUERY,
 	});
 
 	return {
 		props: {
+			bounties: data?.rows ?? [],
 			[APOLLO_STATE_PROP_NAME]: apolloClient.cache.extract(),
 		},
 	};
