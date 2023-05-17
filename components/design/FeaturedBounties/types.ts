@@ -1,19 +1,19 @@
-type Status = 'open' | 'funding' | 'proposal';
+import { IBeproApi, State } from "lib/types";
 
 export type BountiesProps = {
-  url: string,
-  status: Status,
-  currencyColor: string,
-  network: string,
-  description: string,
-  prize: number,
-  currency: string,
-}
+	url: string;
+	status: `${State}`;
+	currencyColor: string;
+	network: string;
+	description: string;
+	prize: number;
+	currency: string;
+};
 
 export interface BountyStatusProps {
-  status: Status;
+	status: `${State}`;
 }
 
 export interface FeaturedBountiesProps {
-  bounties: any;
+	bounties: IBeproApi["rows"];
 }

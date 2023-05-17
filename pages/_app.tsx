@@ -6,6 +6,7 @@ import "../styles/globals.css";
 import { GoogleAnalytics } from "nextjs-google-analytics";
 import getConfig from "next/config";
 import { AnalyticsContext, useAnalytics } from "@/utils/analytics";
+import CookieConsent from "components/CookieConsent";
 
 const { publicRuntimeConfig } = getConfig();
 
@@ -41,6 +42,8 @@ function MyApp({ Component, pageProps }: AppProps) {
 					<Component {...pageProps} />
 				</ApolloProvider>
 			</AnalyticsContext.Provider>
+
+			<CookieConsent />
 		</>
 	);
 }
