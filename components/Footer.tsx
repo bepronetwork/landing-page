@@ -107,7 +107,7 @@ const Footer = () => {
       links: [
         {
           value: "GitHub",
-          url: "https://github.com/bepronetwork",
+          url: "https://github.com/layerx-labs",
           external: true,
         },
         {
